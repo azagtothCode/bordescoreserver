@@ -1,0 +1,62 @@
+*:focus { outline: none; }
+
+@media only screen and (max-width: 667px) {
+    #navbar{
+      background: #000;
+    }
+
+    #icon-logo{
+     width: 100px;
+     margin: 20px;
+    }
+
+    #input-project{
+      width: 235px;
+      margin-left: 193px;
+      margin-top: -55px;
+    }
+
+    md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder {
+      color: #CCC;
+      font-family: 'Montserrat';
+      letter-spacing:1px;
+    }
+
+    md-select.md-default-theme:not([disabled]):focus .md-select-value.md-select-placeholder, md-select:not([disabled]):focus .md-select-value.md-select-placeholder {
+      color:#CCC;
+      font-family: 'Montserrat';
+      letter-spacing:1px;
+    }
+
+    md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value {
+      border-bottom-color: transparent;
+    }
+
+    md-content.md-default-theme, md-content {
+      background-color: #000;
+    }
+
+    md-select-menu.md-default-theme md-option:focus:not([disabled]):not([selected]), md-select-menu md-option:focus:not([disabled]):not([selected]) {
+      background:#EE4656;
+    }
+
+    md-select-menu.md-default-theme md-option[selected], md-select-menu md-option[selected] {
+      background:#EE4656;
+    }
+
+    #icon-menu {
+     width: 27px;
+    }
+
+    #boton-menu{
+      background: #EE4353;
+      margin-top: 14px;
+      margin-left: 22px;
+    }
+
+    #boton-borde{
+      background: #EE4353;
+      margin-top: 14px;
+      margin-left: 65px;
+    }
+}

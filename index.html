@@ -1,100 +1,123 @@
-<!DOCTYPE HTML>
 <html>
 <head>
-<!--Meta content-->
-<meta charset="UTF-8"></meta>
-<meta name="description" content="Web Site For Present Information about legislators"></meta>
-<meta name="keywords" content="Legisladores,Senadores,Diputados"></meta>
-<meta name="author" content="Michelle Garduño"></meta>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-<title>Borde Score</title>
-<link rel="shortcut icon" href="imgs/logo_borde.png"  type="image/x-icon" sizes="16x16">
+  <meta charset="UTF-8"></meta>
+  <meta name="description" content="Web Site For Present Information about legislators"></meta>
+  <meta name="keywords" content="Legisladores,Senadores,Diputados"></meta>
+  <meta name="author" content="Michelle Garduño"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <title>Borde Score</title>
+  <link rel="shortcut icon" href="imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
+  <link rel="stylesheet" href="css/angular-material.css">
+  <link rel="stylesheet" href="css/styles_index_667.css">
+  <link rel="stylesheet" href="css/styles_index_panel_667.css">
+  <link rel="stylesheet" href="css/styles_index_568.css">
+  <link rel="stylesheet" href="css/styles_index_panel_568.css">
+  <link rel="stylesheet" href="css/styles_index_480.css">
+  <link rel="stylesheet" href="css/styles_index_375.css">
+  <link rel="stylesheet" href="css/styles_index_320.css">
+  <link rel="stylesheet" href="css/styles_index_panel_320.css">
 
-<!-- Angular Material style sheet -->
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.css">
 
-<!-- Azagtoth style sheet -->
-<link href="css/styles_index.css" rel="stylesheet">
-<link href="css/styles_hover.css" rel="stylesheet">
-<link href="css/styles_panel.css" rel="stylesheet">
-<link href="css/styles_listlegislators.css" rel="stylesheet">
-<link href="css/styles_filters_profiles.css" rel="stylesheet">
-<link href="css/styles_index_filters.css" rel="stylesheet">
-<link href="css/styles_footer.css" rel="stylesheet">
-<link href="css/chrome.css" rel="stylesheet">
-<link href="css/styles_2560_1920.css" rel="stylesheet">
-<link href="css/styles_1680_1600.css" rel="stylesheet">
-<link href="css/styles_1536_1440.css" rel="stylesheet">
-<link href="css/styles_1366_1280.css" rel="stylesheet">
-<link href="css/styles_1279_1023.css" rel="stylesheet">
-<link href="css/styles_1024.css" rel="stylesheet">
-<link href="css/styles_768.css" rel="stylesheet">
-<link href="css/styles_320.css" rel="stylesheet">
-<link href="css/pixel_pixel.css" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-<link rel="stylesheet" href="css/angular-material.css">
-<!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css"> -->
-<link rel="css/jquery.circliful.css" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css">
 </head>
+<body ng-app="score_federal" ng-cloak>
+  <div id="navbar" layout-xs="row" layout-sm="row">
+    <div flex-xs="65" flex-sm="65">
+      <div layout-xs="column" layout-sm="column">
+        <img id="icon-logo" src="imgs/svg/logo.svg">
+      </div>
+      <div layout-xs="column" layout-sm="column" >
+        <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
+            <md-select id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
+              <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+            </md-select>
+        </div>
+      </div>
+    </div>
+    <div flex-xs="35" flex-sm="35">
+      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+        <img id="icon-menu" src="imgs/png/logo_borde.png">
+       </md-button>
+       <md-button   id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+         <img id="icon-menu" src="imgs/svg/menu.svg">
+        </md-button>
+    </div>
+  </div>
 
-<!-- Angular Material requires Angular.js Libraries -->
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<!-- Angular Material Library -->
-<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
+  <!--panel section head-->
+  <md-toolbar flex="row"  id="nav-menu-index" >
+    <div>
+      <img ng-controller="OpenBordePanel" ng-click="openBordePanel()" flex id="img-site-panel" src="imgs/png/logo_borde.png">
+      <span flex id="text-site-panel-menu">Menú Principal</span>
+        <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+          <img id="icon-close" src="imgs/svg/close.svg">
+        </md-button>
+    </div>
+  </md-toolbar>
+  <!--panel section content-->
+  <md-content ng-controller="RightCtrl" layout-padding="">
+    <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+    <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+      <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+        <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        <div class="md-list-item-text" layout="column">
+          <span class="links-panel">{{ item.who }}</span>
+        </div>
+      </md-list-item>
+    </md-list>
+    <md-divider ></md-divider>
+    <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
+    <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+      <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
+        <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        <div class="md-list-item-text" layout="column">
+          <span class="links-panel">{{ item.who }}</span>
+        </div>
+      </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+    <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
+    <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
+      <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
+        <img id="icon-panel" ng-src="{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
+        <div class="md-list-item-text" layout="column">
+          <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
+        </div>
+      </md-list-item>
+    </md-list>
+    <!-- class="fabSpeedDialdemoBasicUsage" -->
+    <div style="text-align:center;" ng-cloak=""  >
+      <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+        <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+        <img id="facebook-panel" src="imgs/svg/facebook.svg" aria-label="Facebook">
+      </md-button>
+      <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+        <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+        <img id="twiter-panel" src="imgs/svg/twitter.svg" aria-label="Twitter">
+      </md-button>
+      <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+        <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
+        <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+      </md-button>
+    </div>
+  </md-content>
+</md-sidenav>
 
-<script src="http://angular-data-grid.github.io/dist/pagination.js"></script>
-<script src="http://angular-data-grid.github.io/dist/dataGrid.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/angular-sanitize.js"></script>
-<!-- ng-controller="filterController"
-PARA VER .OS ICONSO DE SEX AGE ETC.
- -->
-<body >
-
-
-  <!--Esternal Scripts-->
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/methods.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/jquery.circliful.js"></script>
-  <script src="js/function_circliful.js"> </script>
-  <script src="js/function_top.js"></script>
-  <!-- <script src="js/score.js"></script> -->
-  <!-- <script src="js/input.js"></script> -->
-  <script type="text/javascript">
-  var objlegislators ={}
-  supurl='http://localhost:8000';
 
-  $.ajax({
-    url: supurl+'/diputados/get',
-    method: "POST",
-    data:  {},//{ where : {camara:"senadores", ordenDeGobierno:"federal"} },
-    dataType: "json"
-  }).done(function(data) {
-    subject=data.dip;
-    for (var i = 0; i < subject.length; i++) {
-	      val=subject[i];
-          var name = val.legislator_name_sil;
-          var text;
-          var partyimg;
-          var valor = val.legislator_party_sil;
-
-          mas= name+valor;
-
-        $("#fresco_lista").append(mas);
-
-      }
-  });
-
-  </script>
-
-<div id="fresco_lista">
-</div>
 </body>
 </html>

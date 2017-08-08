@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: 480px) {
+
+  #icon-logo {
+    margin: 5px;
+  }
+
+  #input-project {
+    width: 225px;
+    margin-left: 1px;
+    margin-top: -5px;
+  }
+
+  #boton-menu {
+    margin-left: 103px;
+    margin-top: 10px;
+  }
+
+}
