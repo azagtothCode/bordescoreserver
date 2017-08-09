@@ -12882,7 +12882,7 @@ md-select {
     white-space: nowrap;
     overflow: hidden;
     -webkit-transform: translate3d(0, 2px, 0);
-            transform: translate3d(0, 2px, 0); }
+            transform: translate3d(0, 2px, 0); color: #EE4656;}
   .md-select-value .md-select-icon {
     display: block;
     -webkit-align-items: flex-end;
@@ -12892,7 +12892,7 @@ md-select {
     width: 24px;
     margin: 0 4px;
     -webkit-transform: translate3d(0, 1px, 0);
-            transform: translate3d(0, 1px, 0); }
+            transform: translate3d(0, 1px, 0); color: #EE4656;}
   .md-select-value .md-select-icon:after {
     display: block;
     content: '\25BC';
@@ -12900,7 +12900,7 @@ md-select {
     top: 2px;
     speak: none;
     -webkit-transform: scaleY(0.6) scaleX(1);
-            transform: scaleY(0.6) scaleX(1); }
+            transform: scaleY(0.6) scaleX(1); color: #EE4656;}
   .md-select-value.md-select-placeholder {
     display: -webkit-flex;
     display: -ms-flexbox;

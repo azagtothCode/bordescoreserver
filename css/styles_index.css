@@ -1,0 +1,115 @@
+*:focus { outline: none; }
+html, body{ font-family: 'Montserrat'; text-decoration: none;}
+
+@media only screen and (max-width: 2560px) {
+
+  #navbar{
+    background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #icon-logo{
+   width: 100px;
+   margin: 19px;
+  }
+
+  #input-project{
+    width: 235px;
+    margin-left: 250px;
+    margin-top: -55px;
+    z-index: 1;
+  }
+
+  md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder {
+    color: #CCC;
+    letter-spacing:1px;
+  }
+
+  md-select.md-default-theme:not([disabled]):focus .md-select-value.md-select-placeholder, md-select:not([disabled]):focus .md-select-value.md-select-placeholder {
+    color:#CCC;
+    letter-spacing:1px;
+  }
+
+  md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value {
+    border-bottom-color: transparent;
+  }
+
+  md-content.md-default-theme, md-content {
+    background-color: #000;
+  }
+
+  md-select-menu.md-default-theme md-option:focus:not([disabled]):not([selected]), md-select-menu md-option:focus:not([disabled]):not([selected]) {
+    background:#EE4656;
+  }
+
+  md-select-menu.md-default-theme md-option[selected], md-select-menu md-option[selected] {
+    background:#EE4656;
+  }
+
+  #icon-menu {
+   width: 27px;
+  }
+
+  #boton-menu{
+    background: #EE4353;
+    margin-top: 14px;
+    margin-left: 5px;
+  }
+
+  #boton-borde{
+    background: #EE4353;
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+
+
+  #tit-federal{
+    background: #EE4656;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #tit-federal span{
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-left: 33px;
+  }
+
+  #tit-puebla{
+    /*background: #EE4656;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #tit-puebla span{
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-left: 36px;
+  }
+
+  #tit-jalisco{
+    /*background: #EE4656;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #tit-jalisco span{
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-left: 38px;
+  }
+
+  #tit-cdmx{
+    /*background: #EE4656;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #tit-cdmx span{
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-left: 46px;
+  }
+}

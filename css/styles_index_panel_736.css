@@ -1,43 +1,9 @@
 @media only screen and (max-width: 736px) {
   #img-site-panel{
-    width: 50px;
     margin-top: -2px;
-    position: absolute;
-    margin-left: 7px;
   }
 
   #text-site-panel-menu{
     margin-top: 18px;
-    margin-left: 60px;
-    letter-spacing: 1px;
-    color: #FFF;
-    font-family: 'Montserrat';
-    position: absolute;
-  }
-
-  #close-btn{
-    margin-left: 274px;
-    margin-top: -3px;
-  }
-
-  #icon-close{
-    width: 18px;
-  }
-
-  .links-panel{
-    color: #FFF;
-    font-size: 12px;
-  }
-
-  #facebook-panel{
-    width: 15px;
-  }
-
-  #twiter-panel{
-    width: 15px;
-  }
-
-  #heart-panel{
-    width: 15px;
   }
 }

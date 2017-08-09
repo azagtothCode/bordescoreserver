@@ -2,4 +2,12 @@
     #boton-menu{
       margin-left:128px;
     }
+
+    #boton-borde{
+      margin-left: 65px;
+    }
+
+    #input-project{
+      margin-left: 167px;
+    }
 }

@@ -2,3 +2,122 @@
 320 - 480
 360 - 640
 375 - 667
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<!--Meta content-->
+<meta charset="UTF-8"></meta>
+<meta name="description" content="Web Site For Present Information about legislators"></meta>
+<meta name="keywords" content="Legisladores,Senadores,Diputados"></meta>
+<meta name="author" content="Michelle Garduño"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<title>Borde Score</title>
+<link rel="shortcut icon" href="imgs/logo_borde.png"  type="image/x-icon" sizes="16x16">
+
+<!-- Angular Material style sheet -->
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.css">
+<link href="css/styles_index.css" rel="stylesheet">
+
+<!-- Azagtoth style sheet -->
+<!-- <link href="css/styles_index.css" rel="stylesheet">
+<link href="css/styles_hover.css" rel="stylesheet">
+<link href="css/styles_panel.css" rel="stylesheet">
+<link href="css/styles_listlegislators.css" rel="stylesheet">
+<link href="css/styles_filters_profiles.css" rel="stylesheet">
+<link href="css/styles_index_filters.css" rel="stylesheet">
+<link href="css/styles_footer.css" rel="stylesheet">
+<link href="css/chrome.css" rel="stylesheet">
+<link href="css/styles_2560_1920.css" rel="stylesheet">
+<link href="css/styles_1680_1600.css" rel="stylesheet">
+<link href="css/styles_1536_1440.css" rel="stylesheet">
+<link href="css/styles_1366_1280.css" rel="stylesheet">
+<link href="css/styles_1279_1023.css" rel="stylesheet">
+<link href="css/styles_1024.css" rel="stylesheet">
+<link href="css/styles_768.css" rel="stylesheet">
+<link href="css/styles_320.css" rel="stylesheet">
+<link href="css/pixel_pixel.css" rel="stylesheet"> -->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="css/angular-material.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css">
+<!-- <link rel="css/jquery.circliful.css" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css"> -->
+</head>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+
+<!-- <script src="http://angular-data-grid.github.io/dist/pagination.js"></script>
+<script src="http://angular-data-grid.github.io/dist/dataGrid.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/angular-sanitize.js"></script>
+<!-- ng-controller="filterController"
+PARA VER .OS ICONSO DE SEX AGE ETC.
+ -->
+<body >
+  <div>
+
+    <div layout="row">
+
+      <div flex>First item in row</div>
+      <div flex="20">Second item in row</div>
+
+    </div>
+    <div layout="column">
+
+      <div flex="66">First item in column</div>
+      <div flex="33">Second item in column</div>
+
+    </div>
+
+  </div>
+
+  <!--Esternal Scripts-->
+  <script src="js/methods.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/jquery.circliful.js"></script>
+  <script src="js/function_circliful.js"> </script>
+  <script src="js/function_top.js"></script>
+  <!-- <script src="js/score.js"></script> -->
+  <!-- <script src="js/input.js"></script> -->
+  <!-- <script type="text/javascript">
+  var objlegislators ={}
+  supurl='http://localhost:8000';
+
+  $.ajax({
+    url: supurl+'/diputados/get',
+    method: "POST",
+    data:  {},//{ where : {camara:"senadores", ordenDeGobierno:"federal"} },
+    dataType: "json"
+  }).done(function(data) {
+    subject=data.dip;
+    for (var i = 0; i < subject.length; i++) {
+	      val=subject[i];
+          var name = val.legislator_name_sil;
+          var text;
+          var partyimg;
+          var valor = val.legislator_party_sil;
+
+          mas= name+valor;
+
+        $("#fresco_lista").append(mas);
+
+      }
+  });
+
+  </script> -->
+
+<div id="fresco_lista">
+</div>
+</body>
+</html>
