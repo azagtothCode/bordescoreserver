@@ -1,0 +1,14 @@
+
+@media only screen and (max-width: 736px) {
+    #input-project{
+      margin-left: 233px;
+    }
+
+    #icon-menu {
+     width: 27px;
+    }
+
+    #boton-borde{
+      margin-left: 90px;
+    }
+}

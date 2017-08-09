@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 480px) {
 
   #icon-logo {
@@ -14,6 +13,55 @@
   #boton-menu {
     margin-left: 103px;
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #boton-menu {
+    margin-left: 80px;
+  }
+
+  #img-site-panel {
+    width: 55px;
+  }
+
+  #text-site-panel-menu {
+    margin-top: 22px;
+    margin-left: 77px;
+  }
+
+  #close-btn {
+    margin-left: 309px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  #img-site-panel {
+    width: 55px;
+  }
+
+  #text-site-panel-menu {
+    margin-top: 22px;
+    margin-left: 77px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #close-btn {
+      margin-left: 272px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  #close-btn {
+    margin-left: 258px;
+  }
+
+  #boton-menu {
+    margin-left: 62px;
   }
 
 }

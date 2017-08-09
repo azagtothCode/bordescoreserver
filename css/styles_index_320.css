@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 320px) {
 
   #icon-logo{
@@ -11,7 +10,7 @@
   }
 
   #input-project{
-    width: 235px;
+    width: 215px;
     margin-left: 4px;
     margin-top: -10px;
   }
