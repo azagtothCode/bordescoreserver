@@ -9,13 +9,16 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
   }
 
   #icon-logo{
-    width: 100%;
+    background: url(../imgs/svg/logo.svg);
+    background-size: 158px;
+    margin-top: 1px;
+    background-repeat: no-repeat;
   }
 
   #input-project{
     width: 235px;
-    margin-left: 250px;
-    margin-top: -46px;
+    margin-left: 120px;
+    margin-top: 17px;
     z-index: 1;
   }
 
@@ -51,34 +54,37 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
 
   #boton-menu{
     background: #EE4353;
-    margin-top: 14px;
+    margin-top: 5px;
     margin-left: 5px;
   }
 
   #boton-borde{
     background: #EE4353;
-    margin-top: 14px;
+    margin-top: 5px;
     margin-left: 10px;
   }
 
 
   #tit-federal{
     background: #EE4656;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-align: center;
+    transition: all 500ms;
   }
 
   #tit-federal span{
     color: #FFF;
     letter-spacing: 1px;
+    transition: all 500ms;
   }
 
   #tit-puebla{
     /*background: #EE4656;*/
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-align: center;
+    transition: all 500ms;
   }
 
   #tit-puebla span{
@@ -88,9 +94,10 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
 
   #tit-jalisco{
     /*background: #EE4656;*/
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-align: center;
+    transition: all 500ms;
   }
 
   #tit-jalisco span{
@@ -100,9 +107,10 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
 
   #tit-cdmx{
     /*background: #EE4656;*/
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-align: center;
+    transition: all 500ms;
   }
 
   #tit-cdmx span{

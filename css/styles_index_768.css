@@ -3,16 +3,16 @@
 
     #boton-menu{
       margin-top: 4px;
-      margin-left: 22px;
+      margin-left: 20px;
     }
 
     #boton-borde{
       margin-top: 4px;
-      margin-left: 98px;
+      margin-left: 4px;
     }
 
     #icon-logo{
-      width: 100px;
-      margin: 11px;
+      background-size: 79px;
+      margin-top: 16px;
     }
 }

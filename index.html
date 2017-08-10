@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="css/styles_index_panel_320.css">
 
   <link rel="stylesheet" href="css/styles_index.css">
-  <link rel="stylesheet" href="css/styles_index_2560.css">
+  <link rel="stylesheet" href="css/styles_hover.css">
+  <!-- <link rel="stylesheet" href="css/styles_index_2560.css"> -->
   <link rel="stylesheet" href="css/styles_index_1920.css">
   <link rel="stylesheet" href="css/styles_index_1440.css">
   <link rel="stylesheet" href="css/styles_index_1366.css">
@@ -36,46 +37,43 @@
 </head>
 <body ng-app="score_federal" ng-cloak>
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-    <div flex-xs="65" flex-sm="65" flex-md="70" flex-gt-md="70" flex-lg="70" flex-gt-lg="70" flex-xl="70" >
-      <div hide show-xs show-sm layout-xs="column" layout-sm="column">
-        <img id="icon-logo" src="imgs/svg/logo.svg">
-      </div>
-      <div hide show-xs show-sm layout-xs="column" layout-sm="column" >
-        <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
-            <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
-              <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
-            </md-select>
+     <div id="icon-logo" flex-xs="30" flex-offset-sm="5" flex-sm="10"  flex-offset-md="20" flex-md="10"  flex-offset-gt-md="20" flex-gt-md="10" flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10"  flex-offset-lg="20"  flex-offset-xl="20"  flex-xl="10" >
+     </div>
+     <div flex-xs="40" flex-sm="60" flex-md="40" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
+        <div hide show-xs show-sm layout-xs="column">
+          <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
+              <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
+                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+              </md-select>
+          </div>
         </div>
-      </div>
-      <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
-        <div flex-offset-md="20" flex-md="10" flex-offset-gt-md="20" flex-gt-md="10" flex-offset-gt-lg="30" flex-gt-lg="10" flex-offset-lg="30" flex-lg="10" flex-offset-xl="30" flex-xl="10" flex-offset-xl="30" flex-xl="10" >
-          <img id="icon-logo" src="imgs/svg/logo.svg">
-        </div>
-        <div flex-offset-md="10" flex-md="60" flex-offset-gt-md="10" flex-gt-md="60" flex-offset-gt-lg="5" flex-gt-lg="55" flex-offset-lg="5" flex-lg="55" flex-offset-xl="5" flex-xl="55" flex-offset-xl="5" flex-xl="55" >
-          <div layout-md="row" layout-lg="row" layout-gt-md="row">
-            <div id="tit-federal" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
-              <span>FEDERAL</span>
-            </div>
-            <div id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-              <span>PUEBLA</span>
-            </div>
-            <div id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-              <span>JALISCO</span>
-            </div>
-            <div id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-              <span>CDMX</span>
+        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
+          <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
+            <div layout-md="row" layout-lg="row" layout-gt-md="row">
+              <div id="tit-federal" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
+                <span>FEDERAL</span>
+              </div>
+              <div id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>PUEBLA</span>
+              </div>
+              <div id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>JALISCO</span>
+              </div>
+              <div id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>CDMX</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div flex-xs="35" flex-sm="35" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+     </div>
+     <div flex-xs="30" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
       <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
         <img id="icon-menu" src="imgs/png/logo_borde.png">
        </md-button>
-       <md-button id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
-         <img id="icon-menu" src="imgs/svg/menu.svg">
+       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+         <img id="icon-menu" src="imgs/svg/menu.svg"  >
        </md-button>
+       <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
     </div>
   </div>
 

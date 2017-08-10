@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px) {
 
   #icon-logo {
-    margin: 5px;
+    background-size: 71px;
   }
 
   #input-project {
@@ -17,8 +17,9 @@
 }
 
 @media only screen and (max-width: 414px) {
-  #boton-menu {
-    margin-left: 80px;
+
+  #icon-logo {
+    background-size: 71px;
   }
 
   #img-site-panel {
@@ -33,6 +34,16 @@
   #close-btn {
     margin-left: 309px;
   }
+
+  #icon-menu {
+    width: 38px;
+    margin-left: 80px;
+  }
+
+  #input-project {
+    margin-left: -20px;
+    margin-top: 2px;
+  }
 }
 
 @media only screen and (max-width: 414px) {
@@ -42,8 +53,12 @@
   }
 
   #text-site-panel-menu {
-    margin-top: 22px;
-    margin-left: 77px;
+    margin-top: 24px;
+    margin-left: 65px;
+  }
+
+  #icon-logo {
+    margin-top: 5px;
   }
 }
 
@@ -55,13 +70,12 @@
 }
 
 @media only screen and (max-width: 360px) {
-
-  #close-btn {
-    margin-left: 258px;
-  }
-
   #boton-menu {
     margin-left: 62px;
+  }
+
+  #close-btn {
+    margin-left: 218px;
   }
 
 }

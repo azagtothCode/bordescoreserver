@@ -2,11 +2,6 @@
   #input-project{
     margin-left: 193px;
   }
-
-  #boton-menu{
-    margin-left: 22px;
-  }
-
   #boton-borde{
     margin-left: 65px;
   }
@@ -15,19 +10,19 @@
 @media only screen and (max-width: 667px) {
 
   #boton-borde {
-      margin-left: 55px;
+      margin-left: 4px;
+  }
+
+  #boton-menu {
+    margin-left: 3px;
   }
 
   #input-project {
-    margin-left: 188px;
+    margin-left: 103px;
   }
 }
 
 @media only screen and (max-width: 580px) {
-
-  #boton-menu {
-    margin-left: 121px;
-  }
 
   #input-project {
     margin-left: 167px;

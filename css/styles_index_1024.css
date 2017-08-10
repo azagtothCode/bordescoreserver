@@ -1,8 +1,7 @@
 
 @media only screen and (max-width: 1024px) {
   #icon-logo {
-    width: 110px;
-    margin-top: 17px;
-    margin-left: 16px;
+    background-size: 95px;
+    margin-top: 16px;
   }
 }

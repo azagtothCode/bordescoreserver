@@ -31,6 +31,7 @@
   .links-panel{
     color: #FFF;
     font-size: 12px;
+    text-decoration: none;
   }
 
   #facebook-panel{
@@ -43,5 +44,10 @@
 
   #heart-panel{
     width: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+#img-site-panel {
+    margin-top: -3px;
   }
 }

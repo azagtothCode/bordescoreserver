@@ -1,6 +1,22 @@
 @media only screen and (max-width: 1920px) {
-  #icon-logo {
+  /*#icon-logo {
       width: 100%;
       margin-top: 13px;
+  }*/
+
+}
+
+
+@media only screen and (max-width: 1680px) {
+  #icon-logo {
+    background-size: 160px;
+    margin-top: -0.5px;
+  }
+}
+
+@media only screen and (max-width: 1560px){
+  #icon-logo {
+    background-size: 150px;
+    margin-top: 2.5px;
   }
 }
