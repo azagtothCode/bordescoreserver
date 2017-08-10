@@ -1,24 +1,13 @@
 @media only screen and (max-width: 667px) {
-  #navbar{
-    background: #000;
-  }
-
-  #icon-logo{
-   width: 100px;
-   margin: 20px;
-  }
-
   #input-project{
     margin-left: 193px;
   }
 
   #boton-menu{
-    margin-top: 14px;
     margin-left: 22px;
   }
 
   #boton-borde{
-    margin-top: 14px;
     margin-left: 65px;
   }
 }

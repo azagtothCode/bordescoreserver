@@ -1,18 +1,8 @@
 
 @media only screen and (max-width: 1024px) {
-  #tit-federal span{
-    padding-left: 13px;
-  }
-
-  #tit-puebla span{
-    padding-left: 17px;
-  }
-
-  #tit-jalisco span{
-    padding-left: 17px;
-  }
-
-  #tit-cdmx span{
-    padding-left: 24px;
+  #icon-logo {
+    width: 110px;
+    margin-top: 17px;
+    margin-left: 16px;
   }
 }

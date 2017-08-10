@@ -1,8 +1,6 @@
 *:focus { outline: none; }
 html, body{ font-family: 'Montserrat'; text-decoration: none;}
 
-@media only screen and (max-width: 2560px) {
-
   #navbar{
     background: #000;
     position: fixed;
@@ -11,14 +9,13 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
   }
 
   #icon-logo{
-   width: 100px;
-   margin: 19px;
+    width: 100%;
   }
 
   #input-project{
     width: 235px;
     margin-left: 250px;
-    margin-top: -55px;
+    margin-top: -46px;
     z-index: 1;
   }
 
@@ -69,47 +66,46 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     background: #EE4656;
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: center;
   }
 
   #tit-federal span{
     color: #FFF;
     letter-spacing: 1px;
-    padding-left: 33px;
   }
 
   #tit-puebla{
     /*background: #EE4656;*/
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: center;
   }
 
   #tit-puebla span{
     color: #FFF;
     letter-spacing: 1px;
-    padding-left: 36px;
   }
 
   #tit-jalisco{
     /*background: #EE4656;*/
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: center;
   }
 
   #tit-jalisco span{
     color: #FFF;
     letter-spacing: 1px;
-    padding-left: 38px;
   }
 
   #tit-cdmx{
     /*background: #EE4656;*/
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: center;
   }
 
   #tit-cdmx span{
     color: #FFF;
     letter-spacing: 1px;
-    padding-left: 46px;
   }
-}
