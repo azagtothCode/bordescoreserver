@@ -33,22 +33,36 @@
    opacity: 1.0;
  }
 
- .color-btn-search{
-   background: #000;
-   opacity: 1.0;
+
+ .btn-text-one{
+   color: #FFF;
+   font-size: 6.5px;
+   margin-top: 2px;
+   position: absolute;
  }
 
- .color-btn span{
+ .btn-text-two-csv{
    color: #FFF;
-   font-size: 4.5px;
-   z-index: 1;
-   margin-left: -3px;
+   font-size: 6.5px;
+   margin-top: -9px;
+   position: absolute;
+   margin-left: 20px;
  }
- .color-btn-search span{
+
+ .btn-text-two-func{
    color: #FFF;
-   font-size: 4.5px;
-   z-index: 1;
-   margin-left: -4px;
+   font-size: 6.5px;
+   margin-top: -9px;
+   position: absolute;
+   margin-left: 15px;
+ }
+
+ .btn-text-two{
+   color: #FFF;
+   font-size: 6.5px;
+   margin-top: -9px;
+   position: absolute;
+   margin-left: 17px;
  }
 
  .icon-dwn{
