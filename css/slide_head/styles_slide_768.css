@@ -1,0 +1,87 @@
+@media only screen and (max-width: 736px) {
+ #slide-head{
+   background-image: url(../../imgs/png/slide_head.png);
+   min-height: 270px;
+   background-size: 736px 270px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+ }
+
+ #div-circle-score{
+   width: 736px;
+   /*background: purple;*/
+   margin-top: 86px;
+   height: 139px;
+ }
+
+ #div-buttons-score{
+   width: 736px;
+   opacity: 0.5;
+   margin-top: 16px;
+   height: 19px;
+ }
+
+ #logo_score{
+   background: url(../../imgs/svg/logo_circle.svg);
+   background-size: 131px;
+   margin-top: 4px;
+   background-repeat: no-repeat;
+ }
+
+ .color-btn{
+   background: #000;
+   opacity: 1.0;
+ }
+
+
+ .btn-text-one{
+   color: #FFF;
+   font-size: 8.5px;
+   margin-top: 0px;
+   position: absolute;
+ }
+
+ .btn-text-two-csv{
+   color: #FFF;
+   font-size: 8.5px;
+   margin-top: -10px;
+   position: absolute;
+   margin-left: 20px;
+ }
+
+ .btn-text-two-func{
+   color: #FFF;
+   font-size: 8.5px;
+   margin-top: -10px;
+   position: absolute;
+   margin-left: 15px;
+ }
+
+ .btn-text-two{
+   color: #FFF;
+   font-size: 8.5px;
+   margin-top: -10px;
+   position: absolute;
+   margin-left: 17px;
+ }
+
+ .icon-dwn{
+   width: 13px;
+   margin-left: 3px;
+ }
+
+ .icon-question{
+   width: 8px;
+   margin-left: 3px;
+ }
+
+ .icon-party{
+   width: 10px;
+   margin-left: 3px;
+ }
+
+ .icon-search{
+   width: 11px;
+   margin-left: 1.5px;
+ }
+}

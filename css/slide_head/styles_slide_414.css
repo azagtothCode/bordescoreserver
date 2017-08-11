@@ -1,0 +1,23 @@
+@media only screen and (max-width: 414px) {
+ #slide-head{
+   min-height: 222px;
+   background-size: 414px 222px;
+ }
+
+ #div-circle-score{
+   width: 414px;
+   /*background: purple;*/
+   margin-top: 59px;
+   height: 114px;
+ }
+
+ #div-buttons-score{
+   width: 414px;
+ }
+
+ #logo_score{
+   background-size: 82px;
+   margin-top: 20px;
+ }
+
+}

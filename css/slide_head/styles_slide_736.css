@@ -1,21 +1,21 @@
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 736px) {
  #slide-head{
    background-image: url(../../imgs/png/slide_head.png);
-   min-height: 184px;
-   background-size: 320px 184px;
+   min-height: 270px;
+   background-size: 736px 270px;
    background-attachment: fixed;
    background-repeat: no-repeat;
  }
 
  #div-circle-score{
-   width: 320px;
+   width: 736px;
    /*background: purple;*/
-   margin-top: 67px;
-   height: 69px;
+   margin-top: 86px;
+   height: 139px;
  }
 
  #div-buttons-score{
-   width: 320px;
+   width: 736px;
    opacity: 0.5;
    margin-top: 16px;
    height: 19px;
@@ -23,8 +23,8 @@
 
  #logo_score{
    background: url(../../imgs/svg/logo_circle.svg);
-   background-size: 64px;
-   margin-top: 2px;
+   background-size: 131px;
+   margin-top: 4px;
    background-repeat: no-repeat;
  }
 
@@ -36,31 +36,31 @@
 
  .btn-text-one{
    color: #FFF;
-   font-size: 6.5px;
-   margin-top: 2px;
+   font-size: 8.5px;
+   margin-top: 0px;
    position: absolute;
  }
 
  .btn-text-two-csv{
    color: #FFF;
-   font-size: 6.5px;
-   margin-top: -11px;
+   font-size: 8.5px;
+   margin-top: -10px;
    position: absolute;
    margin-left: 20px;
  }
 
  .btn-text-two-func{
    color: #FFF;
-   font-size: 6.5px;
-   margin-top: -11px;
+   font-size: 8.5px;
+   margin-top: -10px;
    position: absolute;
    margin-left: 15px;
  }
 
  .btn-text-two{
    color: #FFF;
-   font-size: 6.5px;
-   margin-top: -11px;
+   font-size: 8.5px;
+   margin-top: -10px;
    position: absolute;
    margin-left: 17px;
  }
