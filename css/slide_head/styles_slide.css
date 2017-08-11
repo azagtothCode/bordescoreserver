@@ -33,9 +33,20 @@
    opacity: 1.0;
  }
 
- .color-btn-search span{
+ .color-btn-search{
+   background: #000;
+   opacity: 1.0;
+ }
+
+ .color-btn span{
    color: #FFF;
    font-size: 4.5px;
+   z-index: 1;
+   margin-left: -3px;
+ }
+ .color-btn-search span{
+   color: #FFF;
+   font-size: 4px;
    z-index: 1;
    margin-left: -5px;
  }
