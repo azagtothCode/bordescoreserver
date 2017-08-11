@@ -33,11 +33,11 @@
    opacity: 1.0;
  }
 
- .color-btn span{
+ .color-btn-search span{
    color: #FFF;
    font-size: 4.5px;
    z-index: 1;
-   margin-left: -4px;
+   margin-left: -5px;
  }
 
  .icon-dwn{
