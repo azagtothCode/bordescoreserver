@@ -48,7 +48,7 @@
    color: #FFF;
    font-size: 4.5px;
    z-index: 1;
-   margin-left: -5px;
+   margin-left: -4.5px;
  }
 
  .icon-dwn{
@@ -68,6 +68,6 @@
 
  .icon-search{
    width: 11px;
-   margin-left: 3px;
+   margin-left: 2px;
  }
 }
