@@ -77,6 +77,7 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     color: #FFF;
     letter-spacing: 1px;
     transition: all 500ms;
+    font-size: 20px;
   }
 
   #tit-puebla{
@@ -90,6 +91,8 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
   #tit-puebla span{
     color: #FFF;
     letter-spacing: 1px;
+    transition: all 500ms;
+    font-size: 20px;
   }
 
   #tit-jalisco{
@@ -103,6 +106,8 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
   #tit-jalisco span{
     color: #FFF;
     letter-spacing: 1px;
+    transition: all 500ms;
+    font-size: 20px;
   }
 
   #tit-cdmx{
@@ -116,4 +121,94 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
   #tit-cdmx span{
     color: #FFF;
     letter-spacing: 1px;
+    transition: all 500ms;
+    font-size: 20px;
+  }
+
+  #slide-head{
+    background-image: url(../imgs/png/slide_head.png);
+    min-height: 800px;
+    background-size: 100% 800px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: auto;
+  }
+
+  #div-circle-score{
+    width: auto;
+    /* background: purple; */
+    margin-top: 205px;
+    height: 365px;
+  }
+
+  #div-buttons-score{
+    width: auto;
+    opacity: 0.5;
+    margin-top: 10px;
+    height: 19px;
+  }
+
+  #logo_score{
+    background: url(../imgs/svg/logo_circle.svg);
+    background-size: 255px;
+    margin-top: 4px;
+    background-repeat: no-repeat;
+  }
+
+  .color-btn{
+    background: #000;
+    opacity: 1.0;
+    min-height: 80px;
+    z-index: 1;
+    transition: all 500ms;
+
+  }
+
+
+  .btn-text-one{
+    color: #FFF;
+    margin-top: 33px;
+    position: absolute;
+    margin-left: 13px;
+    letter-spacing: 2px;
+  }
+
+  .icon-dwn{
+    width: 40px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .icon-question{
+    width: 30px;
+    margin-left: 14px;
+    margin-top: 15px;
+  }
+
+  .icon-party{
+    width: 30px;
+    margin-left: 15px;
+    margin-top: 25px;
+  }
+
+  .icon-search{
+    width: 40px;
+    margin-left: 15px;
+    margin-top: 18px;
+  }
+
+  #content-senado{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  #content-dip{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: none;
   }
