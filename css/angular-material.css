@@ -1912,7 +1912,7 @@ input {
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
     max-width: 40%;
-    max-height: 100%;
+    /*max-height: 100%;*/
     box-sizing: border-box; }
   .layout-row > .flex-xs-40,
   .layout-xs-row > .flex-xs-40 {
@@ -1920,7 +1920,7 @@ input {
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
     max-width: 40%;
-    max-height: 100%;
+    /*max-height: 100%;*/
     box-sizing: border-box; }
   .layout-column > .flex-xs-40,
   .layout-xs-column > .flex-xs-40 {

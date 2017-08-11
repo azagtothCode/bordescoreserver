@@ -19,4 +19,31 @@
    background-size: 75px;
  }
 
+ .btn-text-one{
+   margin-left: 0px;
+ }
+
+ .btn-text-two-csv{
+   font-size: 8.5px;
+   margin-top: -10px;
+   margin-left: 20px;
+ }
+
+ .btn-text-two-func{
+   font-size: 8.5px;
+   margin-top: -10px;
+   margin-left: 15px;
+ }
+
+ .btn-text-two{
+   font-size: 8.5px;
+   margin-top: -10px;
+   margin-left: 17px;
+ }
+
+ .btn-text-two-search{
+   font-size: 8.5px;
+   margin-top: -10px;
+   margin-left: 17px;
+ }
 }

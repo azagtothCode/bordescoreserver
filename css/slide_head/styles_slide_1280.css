@@ -1,0 +1,113 @@
+@media only screen and (max-width: 1280px) {
+ #slide-head{
+   background-image: url(../../imgs/png/slide_head.png);
+   min-height: 380px;
+   background-size: 1280px 380px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+ }
+
+ #div-circle-score{
+   width: 1280px;
+   /*background: purple;*/
+   margin-top: 86px;
+   height: 211px;
+ }
+
+ #div-buttons-score{
+   width: 1280px;
+   opacity: 0.5;
+   margin-top: 15px;
+   height: 19px;
+ }
+
+ #logo_score{
+   background: url(../../imgs/svg/logo_circle.svg);
+   background-size: 204px;
+   margin-top: 4px;
+   background-repeat: no-repeat;
+ }
+
+ .color-btn{
+   background: #000;
+   opacity: 1.0;
+   min-height: 30px;
+ }
+
+
+ .btn-text-one{
+   color: #FFF;
+   font-size: 13px;
+   margin-top: 7px;
+   position: absolute;
+   margin-left: 5px;
+ }
+
+ .btn-text-two-csv{
+   color: #FFF;
+   font-size: 13px;
+   margin-top: 7px;
+   position: absolute;
+   margin-left: 96px;
+ }
+
+ .btn-text-two-func{
+   color: #FFF;
+   font-size: 13px;
+   margin-top: 7px;
+   position: absolute;
+   margin-left: 56px;
+ }
+
+ .btn-text-two{
+   color: #FFF;
+   font-size: 13px;
+   margin-top: 7px;
+   position: absolute;
+   margin-left: 41px;
+ }
+
+ .btn-text-two-search{
+   color: #FFF;
+   font-size: 13px;
+   margin-top: 7px;
+   position: absolute;
+   margin-left: 68px;
+ }
+
+ .icon-dwn{
+   width: 30px;
+   margin-left: 3px;
+ }
+
+ .icon-question{
+   width: 20px;
+   margin-left: 3px;
+ }
+
+ .icon-party{
+   width: 20px;
+   margin-left: 3px;
+   margin-top: 5px;
+ }
+
+ .icon-search{
+   width: 28px;
+   margin-left: 1.5px;
+ }
+
+
+  #content-senado{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  #content-dip{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
