@@ -254,3 +254,33 @@ angular.module('score_federal', ['ngMaterial'])
    window.open("http://bordepolitico.com/",'_blank');
    };
 })
+
+.controller('OpenHomeController', function($scope) {
+   $scope.openHome = function() {
+   window.open("http://app.bordepolitico.com/",'_self');
+   };
+})
+
+.controller('OpenFederalController', function($scope) {
+   $scope.openFederal = function() {
+   window.open("http://app.bordepolitico.com/",'_self');
+   };
+})
+
+.controller('OpenJaliscoController', function($scope) {
+   $scope.openJalisco = function() {
+   window.open("http://appjalisco.bordepolitico.com/",'_blank');
+   };
+})
+
+.controller('OpenPueblaController', function($scope) {
+   $scope.openPuebla = function() {
+   window.open("http://apppuebla.bordepolitico.com/",'_blank');
+   };
+})
+
+.controller('OpenCDMXController', function($scope) {
+   $scope.openCDMX = function() {
+   window.open("http://appcdmx.bordepolitico.com/",'_blank');
+   };
+})

@@ -1,0 +1,62 @@
+@media only screen and (max-width: 320px) {
+ #slide-head{
+   background-image: url(../../imgs/png/slide_head.png);
+   min-height: 184px;
+   background-size: 320px 184px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+ }
+
+ #div-circle-score{
+   width: 320px;
+   /*background: purple;*/
+   margin-top: 67px;
+   height: 69px;
+ }
+
+ #div-buttons-score{
+   width: 320px;
+   opacity: 0.5;
+   margin-top: 16px;
+   height: 19px;
+ }
+
+ #logo_score{
+   background: url(../../imgs/svg/logo_circle.svg);
+   background-size: 64px;
+   margin-top: 2px;
+   background-repeat: no-repeat;
+ }
+
+ .color-btn{
+   background: #000;
+   opacity: 0.7;
+ }
+
+ .color-btn span{
+   color: #FFF;
+   font-size: 4.5px;
+   z-index: 1;
+   margin-left: -3px;
+ }
+
+ .icon-dwn{
+   width: 13px;
+   margin-left: 3px;
+ }
+
+ .icon-question{
+   width: 8px;
+   margin-left: 3px;
+ }
+
+ .icon-party{
+   width: 10px;
+   margin-left: 3px;
+ }
+
+ .icon-search{
+   width: 11px;
+   margin-left: 3px;
+ }
+}

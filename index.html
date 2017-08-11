@@ -34,10 +34,14 @@
   <link rel="stylesheet" href="css/styles_index_375.css">
   <link rel="stylesheet" href="css/styles_index_320.css">
 
+
+  <link rel="stylesheet" href="css/slide_head/styles_slide.css">
+
 </head>
 <body ng-app="score_federal" ng-cloak>
+  <!--navbar content-->
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-     <div id="icon-logo" flex-xs="30" flex-offset-sm="5" flex-sm="10"  flex-offset-md="20" flex-md="10"  flex-offset-gt-md="20" flex-gt-md="10" flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10"  flex-offset-lg="20"  flex-offset-xl="20"  flex-xl="10" >
+     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-xs="30" flex-offset-sm="5" flex-sm="10"  flex-offset-md="20" flex-md="10"  flex-offset-gt-md="20" flex-gt-md="10" flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10"  flex-offset-lg="20"  flex-offset-xl="20"  flex-xl="10" >
      </div>
      <div flex-xs="40" flex-sm="60" flex-md="40" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
         <div hide show-xs show-sm layout-xs="column">
@@ -50,16 +54,16 @@
         <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
           <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
             <div layout-md="row" layout-lg="row" layout-gt-md="row">
-              <div id="tit-federal" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
+              <div ng-controller="OpenFederalController" ng-click="openFederal()" id="tit-federal" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
                 <span>FEDERAL</span>
               </div>
-              <div id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+              <div ng-controller="OpenPueblaController" ng-click="openPuebla()" id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
                 <span>PUEBLA</span>
               </div>
-              <div id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+              <div ng-controller="OpenJaliscoController" ng-click="openJalisco()" id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
                 <span>JALISCO</span>
               </div>
-              <div id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+              <div ng-controller="OpenCDMXController" ng-click="openCDMX()" id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
                 <span>CDMX</span>
               </div>
             </div>
@@ -67,75 +71,114 @@
         </div>
      </div>
      <div flex-xs="30" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
-      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
         <img id="icon-menu" src="imgs/png/logo_borde.png">
        </md-button>
-       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab btn-index-menu"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
          <img id="icon-menu" src="imgs/svg/menu.svg"  >
        </md-button>
        <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
     </div>
   </div>
 
+  <!--slide content-->
+  <div id="slide-head" layout-xs="column" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+    <div layout-xs="row" id="div-circle-score">
+       <div flex-xs="40" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+       </div>
+       <div id="logo_score" flex-xs="20" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+       </div>
+       <div flex-xs="40" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+       </div>
+    </div>
+    <div layout-xs="row" id="div-buttons-score">
+       <div flex-xs="50" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+         <div layout-xs="row">
+           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+             <img class="icon-dwn" src="imgs/svg/download_logo.svg">
+             <span>DESCARGAR CSV</span>
+           </div>
+           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+             <img class="icon-question" src="imgs/svg/question_logo.svg">
+             <span>COMO FUNCIONA</span>
+           </div>
+         </div>
+       </div>
+       <div flex-xs="50" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+         <div layout-xs="row">
+           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+             <img class="icon-party" src="imgs/svg/party_logo.svg">
+             <span>POR PARTIDO</span>
+           </div>
+           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+             <img class="icon-search" src="imgs/svg/search_logo.svg">
+             <span>BUSCAR LEGISLADOR</span>
+           </div>
+           <div  flex-xs="5" flex-xs="50" flex-sm="25" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+           </div>
+         </div>
+       </div>
+    </div>
+  </div>
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
-  <!--panel section head-->
-  <md-toolbar flex="row"  id="nav-menu-index" >
-    <div>
-      <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="imgs/png/logo_borde.png">
-      <span flex id="text-site-panel-menu">Menú Principal</span>
-        <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
-          <img id="icon-close" src="imgs/svg/close.svg">
+    <!--panel section head-->
+    <md-toolbar flex="row"  id="nav-menu-index" >
+      <div>
+        <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="imgs/png/logo_borde.png">
+        <span flex id="text-site-panel-menu">Menú Principal</span>
+          <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+            <img id="icon-close" src="imgs/svg/close.svg">
+          </md-button>
+      </div>
+    </md-toolbar>
+    <!--panel section content-->
+    <md-content ng-controller="RightCtrl" layout-padding="">
+      <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider ></md-divider>
+      <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
+          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+      <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
+        <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
+          <img id="icon-panel" ng-src="{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
+          <div class="md-list-item-text" layout="column">
+            <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
+          </div>
+        </md-list-item>
+      </md-list>
+      <!-- class="fabSpeedDialdemoBasicUsage" -->
+      <div style="text-align:center;" ng-cloak=""  >
+        <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+          <img id="facebook-panel" src="imgs/svg/facebook.svg" aria-label="Facebook">
         </md-button>
-    </div>
-  </md-toolbar>
-  <!--panel section content-->
-  <md-content ng-controller="RightCtrl" layout-padding="">
-    <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
-    <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-      <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
-        <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-        <div class="md-list-item-text" layout="column">
-          <span class="links-panel">{{ item.who }}</span>
-        </div>
-      </md-list-item>
-    </md-list>
-    <md-divider ></md-divider>
-    <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
-    <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-      <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
-        <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-        <div class="md-list-item-text" layout="column">
-          <span class="links-panel">{{ item.who }}</span>
-        </div>
-      </md-list-item>
-    </md-list>
-    <md-divider></md-divider>
-    <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
-    <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
-      <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
-        <img id="icon-panel" ng-src="{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
-        <div class="md-list-item-text" layout="column">
-          <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
-        </div>
-      </md-list-item>
-    </md-list>
-    <!-- class="fabSpeedDialdemoBasicUsage" -->
-    <div style="text-align:center;" ng-cloak=""  >
-      <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-        <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
-        <img id="facebook-panel" src="imgs/svg/facebook.svg" aria-label="Facebook">
-      </md-button>
-      <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-        <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
-        <img id="twiter-panel" src="imgs/svg/twitter.svg" aria-label="Twitter">
-      </md-button>
-      <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-        <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
-        <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
-      </md-button>
-    </div>
-  </md-content>
-</md-sidenav>
+        <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+          <img id="twiter-panel" src="imgs/svg/twitter.svg" aria-label="Twitter">
+        </md-button>
+        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
+          <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+        </md-button>
+      </div>
+    </md-content>
+  </md-sidenav>
 
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -148,6 +191,5 @@
   <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/methods.js"></script>
-
 </body>
 </html>
