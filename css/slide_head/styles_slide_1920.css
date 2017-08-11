@@ -1,25 +1,26 @@
-@media only screen and (max-width: 1024px) {
+
+
+@media only screen and (max-width: 1920px) {
  #slide-head{
    background-image: url(../../imgs/png/slide_head.png);
-   min-height: 395px;
-   background-size: 1024px 395px;
+   min-height: 380px;
+   background-size: 1920px 380px;
    background-attachment: fixed;
    background-repeat: no-repeat;
-   width: 1024px;
-
+   width: 1920px;
  }
 
  #div-circle-score{
-   width: 1024px;
+   width: 1920px;
    /*background: purple;*/
    margin-top: 86px;
    height: 211px;
  }
 
  #div-buttons-score{
-   width: 1024px;
+   width: 1920px;
    opacity: 0.5;
-   margin-top: 20px;
+   margin-top: 15px;
    height: 19px;
  }
 
@@ -27,7 +28,7 @@
    background: url(../../imgs/svg/logo_circle.svg);
    background-size: 204px;
    margin-top: 4px;
-   margin-left: 0px;
+   margin-left: 154px;
    background-repeat: no-repeat;
  }
 
@@ -40,42 +41,42 @@
 
  .btn-text-one{
    color: #FFF;
-   font-size: 10px;
-   margin-top: 2px;
+   font-size: 13px;
+   margin-top: 7px;
    position: absolute;
    margin-left: 5px;
  }
 
  .btn-text-two-csv{
    color: #FFF;
-   font-size: 10px;
-   margin-top: -18px;
+   font-size: 13px;
+   margin-top: 7px;
    position: absolute;
-   margin-left:42px;
+   margin-left: 96px;
  }
 
  .btn-text-two-func{
    color: #FFF;
-   font-size: 10px;
-   margin-top: -20px;
+   font-size: 13px;
+   margin-top: 7px;
    position: absolute;
-   margin-left: 33px;
+   margin-left: 56px;
  }
 
  .btn-text-two{
    color: #FFF;
-   font-size: 10px;
-   margin-top: -15px;
+   font-size: 13px;
+   margin-top: 7px;
    position: absolute;
-   margin-left: 33px;
+   margin-left: 41px;
  }
 
  .btn-text-two-search{
    color: #FFF;
-   font-size: 10px;
-   margin-top: -18px;
+   font-size: 13px;
+   margin-top: 7px;
    position: absolute;
-   margin-left: 39px;
+   margin-left: 68px;
  }
 
  .icon-dwn{
@@ -99,4 +100,18 @@
    margin-left: 1.5px;
  }
 
+
+  #content-senado{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  #content-dip{
+    color: #FFF;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 }

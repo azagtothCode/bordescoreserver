@@ -2,6 +2,7 @@
  #slide-head{
    min-height: 270px;
    background-size: 667px 270px;
+   width: 667px;
  }
 
  #div-circle-score{

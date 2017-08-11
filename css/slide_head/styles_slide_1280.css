@@ -5,6 +5,8 @@
    background-size: 1280px 380px;
    background-attachment: fixed;
    background-repeat: no-repeat;
+   width: 1280px;
+
  }
 
  #div-circle-score{
@@ -25,6 +27,7 @@
    background: url(../../imgs/svg/logo_circle.svg);
    background-size: 204px;
    margin-top: 4px;
+   margin-left: 45px;
    background-repeat: no-repeat;
  }
 
