@@ -1,7 +1,6 @@
 @media only screen and (max-width: 667px) {
  #slide-head{
-   min-height: 270px;
-   background-size: 667px 270px;
+   background-size: 667px 290px;
    width: 667px;
  }
 

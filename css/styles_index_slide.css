@@ -6,6 +6,8 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: auto;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 #div-circle-score{
@@ -27,6 +29,8 @@
   background-size: 255px;
   margin-top: 4px;
   background-repeat: no-repeat;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .color-btn{
@@ -35,7 +39,7 @@
   min-height: 80px;
   z-index: 1;
   transition: all 500ms;
-
+  -webkit-transition: all 500ms;
 }
 
 
@@ -55,6 +59,8 @@
   margin-left: 10px;
   margin-top: 20px;
   position: absolute;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .icon-question{
@@ -62,6 +68,8 @@
   margin-left: 14px;
   margin-top: 13px;
   position: absolute;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .icon-party{
@@ -69,6 +77,8 @@
   margin-left: 14px;
   margin-top: 25px;
   position: absolute;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .icon-search{
@@ -76,6 +86,8 @@
   margin-left: 10px;
   margin-top: 20px;
   position: absolute;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 #content-senado{
@@ -98,43 +110,50 @@
 
 
 @media only screen and (max-width: 2420px) {
-.btn-text-one {
-  font-size: 17px;
-}
+  .btn-text-one {
+    font-size: 17px;
+  }
 
-#content-senado{
-  font-size: 47px;
-}
+  #content-senado{
+    font-size: 47px;
+  }
 
-#content-dip {
-  font-size: 47px;
-}
+  #content-dip {
+    font-size: 47px;
+  }
+
+  #logo_score {
+    margin-left: -10px;
+  }
 }
 
 @media only screen and (max-width: 2250px) {
-.btn-text-one {
-  font-size: 15px;
-}
+  .btn-text-one {
+    font-size: 15px;
+  }
 
-#content-senado{
-  font-size: 45px;
-}
+  #content-senado{
+    font-size: 45px;
+  }
 
-#content-dip {
-  font-size: 45px;
-}
+  #content-dip {
+    font-size: 45px;
+  }
 }
 
 @media only screen and (max-width: 2060px) {
-.btn-text-one {
-  font-size: 13px;
-}
-#content-senado{
-  font-size: 40px;
-}
+  .btn-text-one {
+    font-size: 13px;
+  }
+  #content-senado{
+    font-size: 40px;
+  }
 
-#content-dip {
-  font-size: 40px;
-}
+  #content-dip {
+    font-size: 40px;
+  }
 
+  #logo_score {
+    margin-left: -25px;
+  }
 }

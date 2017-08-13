@@ -1,3 +1,12 @@
+@media only screen and (max-width: 1920px) {
+  #content-dip {
+    font-size: 37px;
+  }
+
+  #content-senado {
+    font-size: 37px;
+  }
+}
 @media only screen and (max-width: 1919px) {
  /*#slide-head{
    background-image: url(../../imgs/png/slide_head.png);
@@ -121,7 +130,7 @@
   }
 
   #logo_score {
-    margin-left: -30px;
+    margin-left: 100px;
   }
 
   #content-senado {
@@ -134,5 +143,81 @@
 
   #boton-borde {
     margin-left: 62px;
+  }
+
+  .icon-dwn{
+    width: 30px;
+  }
+
+  .icon-question{
+    width: 25px;
+  }
+
+  .icon-party{
+    width: 25px;
+  }
+
+  .icon-search{
+    width: 30px;
+  }
+
+  .btn-text-one {
+    margin-left: 43px;
+  }
+}
+
+
+@media only screen and (max-width: 1780px) {
+  #logo_score {
+    margin-left: 80px;
+  }
+
+  .btn-text-one {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  #content-dip {
+    font-size: 36px;
+  }
+
+  #content-senado {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  #logo_score {
+    margin-left: 60px;
+  }
+
+  .btn-text-one {
+    font-size: 12px;
+  }
+
+  #content-dip {
+    font-size: 34px;
+  }
+
+  #content-senado {
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 1540px) {
+  #logo_score {
+    margin-left: 40px;
+  }
+
+  .btn-text-one {
+    font-size: 11px;
+  }
+
+  #content-dip {
+    font-size: 32px;
+  }
+
+  #content-senado {
+    font-size: 32px;
   }
 }

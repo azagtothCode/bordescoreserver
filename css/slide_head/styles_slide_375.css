@@ -12,17 +12,19 @@
 
  #div-buttons-score{
    width: 375px;
-   margin-top: -15px;
+   margin-top: -27px;
    height: 0px;
 
  }
 
  #logo_score{
    background-size: 75px;
+   margin-top: -5px
  }
 
  .btn-text-one{
-   margin-left: 0px;
+   margin-left: 28px;
+   font-size: 9px;
  }
 
  .btn-text-two-csv{

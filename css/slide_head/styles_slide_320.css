@@ -1,19 +1,19 @@
 @media only screen and (max-width: 320px) {
  #slide-head{
-   min-height: 184px;
-   background-size: 320px 184px;
+   min-height: 160px;
+   background-size: 320px 160px;
    width: 320px;
-
  }
 
  #div-circle-score{
    width: 320px;
    height: 69px;
+   margin-top: 39px;
  }
 
  #div-buttons-score{
    width: 320px;
-   margin-top: 18px;
+   margin-top: 6px;
  }
 
  #logo_score{
@@ -22,8 +22,9 @@
  }
 
  .btn-text-one{
-   font-size: 6.5px;
-   margin-top: 2px;
+   font-size: 7.5px;
+   margin-top: 5px;
+   margin-left: 25px;
  }
 
  .btn-text-two-csv{

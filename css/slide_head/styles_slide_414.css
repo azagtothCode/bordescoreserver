@@ -3,7 +3,6 @@
    min-height: 222px;
    background-size: 414px 222px;
    width: 414px;
-
  }
 
  #div-circle-score{
@@ -14,12 +13,18 @@
  }
 
  #div-buttons-score{
-   width: 414px;
+  width: 414px;
+  margin-top: -9px
  }
 
  #logo_score{
-   background-size: 82px;
-   margin-top: 2px;
+  background-size: 82px;
+  margin-top: 2px;
  }
 
+ .btn-text-one {
+  font-size: 10px;
+  margin-top: 4px;
+  margin-left: 26px;
+ }
 }

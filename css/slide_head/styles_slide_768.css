@@ -1,9 +1,8 @@
 @media only screen and (max-width: 768px) {
  #slide-head{
-   min-height: 270px;
-   background-size: 768px 270px;
+   min-height: 290px;
+   background-size: 768px 290px;
    width: 768px;
-
  }
 
  #div-circle-score{
@@ -21,12 +20,12 @@
  }
 
  .color-btn{
-   min-height: 0px;
+   min-height: 20px;
  }
 
  .btn-text-one{
-   font-size: 8.5px;
-   margin-top: 0px;
+   font-size: 14px;
+   margin-top: 1px;
  }
 
  .btn-text-two-csv{
@@ -54,19 +53,22 @@
  }
 
  .icon-dwn{
-   width: 13px;
+   width: 19px;
+   margin-top: 1px;
  }
 
  .icon-question{
-   width: 8px;
- }
-
- .icon-party{
-   width: 10px;
+   width: 12px;
    margin-top: 0px;
  }
 
+ .icon-party{
+   width: 15px;
+   margin-top: 2px;
+ }
+
  .icon-search{
-   width: 11px;
+   width: 19px;
+   margin-top: 1px;
  }
 }
