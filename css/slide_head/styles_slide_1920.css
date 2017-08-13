@@ -1,5 +1,5 @@
-@media only screen and (max-width: 1920px) {
- #slide-head{
+@media only screen and (max-width: 1919px) {
+ /*#slide-head{
    background-image: url(../../imgs/png/slide_head.png);
    min-height: 380px;
    background-size: 1920px 380px;
@@ -10,7 +10,7 @@
 
  #div-circle-score{
    width: 1920px;
-   /*background: purple;*/
+   background: purple;
    margin-top: 86px;
    height: 211px;
  }
@@ -109,5 +109,30 @@
     font-size: 19px;
     letter-spacing: 2px;
     text-transform: uppercase;
+  }*/
+
+  #div-buttons-score {
+    margin-top: -15px;
+  }
+
+  #slide-head{
+    min-height: 735px;
+    background-size: 100% 735px;
+  }
+
+  #logo_score {
+    margin-left: -30px;
+  }
+
+  #content-senado {
+    font-size: 38px;
+  }
+
+  #content-dip {
+    font-size: 38px;
+  }
+
+  #boton-borde {
+    margin-left: 62px;
   }
 }
