@@ -60,11 +60,12 @@
   }
 
   #content-senado {
-    margin-top: 23px;
+    margin-top: 44px;
+    margin-left: -20px;
   }
 
   #content-dip {
-    margin-top: 23px;
+    margin-top: 44px;
     margin-left: 640px;
   }
 }
