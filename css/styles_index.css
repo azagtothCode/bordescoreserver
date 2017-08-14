@@ -1,5 +1,9 @@
-*:focus { outline: none; }
-html, body{ font-family: 'Montserrat'; text-decoration: none;}
+@font-face {
+  font-family: 'generic';
+  src: url('../fonts/montserrat.otf');
+}
+*:focus { font-family: 'generic'; outline: none; }
+html, body{  text-decoration: none;}
 
   #navbar{
     background: #000;
@@ -14,6 +18,7 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     background-size: 158px;
     margin-top: 3px;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
 
   #input-project{
@@ -71,14 +76,17 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
+    cursor: pointer;
     transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-federal span{
     color: #FFF;
     letter-spacing: 1px;
-    transition: all 500ms;
     font-size: 20px;
+    transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-puebla{
@@ -86,14 +94,17 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
+    cursor: pointer;
     transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-puebla span{
     color: #FFF;
     letter-spacing: 1px;
-    transition: all 500ms;
     font-size: 20px;
+    transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-jalisco{
@@ -101,14 +112,17 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
+    cursor: pointer;
     transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-jalisco span{
     color: #FFF;
     letter-spacing: 1px;
-    transition: all 500ms;
     font-size: 20px;
+    transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-cdmx{
@@ -116,14 +130,15 @@ html, body{ font-family: 'Montserrat'; text-decoration: none;}
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
+    cursor: pointer;
     transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
 
   #tit-cdmx span{
     color: #FFF;
     letter-spacing: 1px;
-    transition: all 500ms;
     font-size: 20px;
+    transition: all 500ms;
+    -webkit-transition:all 500ms;
   }
-
-  

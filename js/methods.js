@@ -1,4 +1,5 @@
-angular.module('score_federal', ['ngMaterial'])
+var app = angular.module('score_federal', ['ngMaterial'])
+
 .controller('SelectAsyncController', function($timeout, $scope) {
   $scope.user = null;
   $scope.users = null;
@@ -229,58 +230,4 @@ angular.module('score_federal', ['ngMaterial'])
       }
     }
   ];
-})
-
-.controller('OpenWindowController', function($scope) {
-   $scope.openBorde = function() {
-   window.open("http://bordepolitico.com/",'_blank');
-   };
-})
-
-.controller('OpenFacebookController', function($scope) {
-   $scope.openFace = function() {
-   window.open("https://es-la.facebook.com/BordePolitico/",'_blank');
-   };
-})
-
-.controller('OpenTwitterController', function($scope) {
-   $scope.openTwit = function() {
-   window.open("https://twitter.com/bordepolitico?lang=es",'_blank');
-   };
-})
-
-.controller('OpenBordePanel', function($scope) {
-   $scope.openBordePanel = function() {
-   window.open("http://bordepolitico.com/",'_blank');
-   };
-})
-
-.controller('OpenHomeController', function($scope) {
-   $scope.openHome = function() {
-   window.open("http://app.bordepolitico.com/",'_self');
-   };
-})
-
-.controller('OpenFederalController', function($scope) {
-   $scope.openFederal = function() {
-   window.open("http://app.bordepolitico.com/",'_self');
-   };
-})
-
-.controller('OpenJaliscoController', function($scope) {
-   $scope.openJalisco = function() {
-   window.open("http://appjalisco.bordepolitico.com/",'_blank');
-   };
-})
-
-.controller('OpenPueblaController', function($scope) {
-   $scope.openPuebla = function() {
-   window.open("http://apppuebla.bordepolitico.com/",'_blank');
-   };
-})
-
-.controller('OpenCDMXController', function($scope) {
-   $scope.openCDMX = function() {
-   window.open("http://appcdmx.bordepolitico.com/",'_blank');
-   };
 })

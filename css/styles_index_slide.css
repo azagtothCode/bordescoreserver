@@ -1,8 +1,8 @@
 /*SLIDE STYLES*/
 #slide-head{
   background-image: url(../imgs/png/slide_head.png);
-  min-height: 800px;
-  background-size: 100% 800px;
+  min-height: 715px;
+  background-size: 100% 715px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: auto;
@@ -20,7 +20,7 @@
 #div-buttons-score{
   width: auto;
   opacity: 0.5;
-  margin-top: 10px;
+  margin-top: -13px;
   height: 19px;
 }
 
@@ -37,7 +37,7 @@
   background: #000;
   opacity: 1.0;
   min-height: 80px;
-  z-index: 1;
+  cursor: pointer;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
@@ -95,7 +95,8 @@
   font-size: 50px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 95px;
+  margin-top: 80px;
+  font-family: 'Montserrat';
   transition: all 500ms;
   -webkit-transition:all 500ms;
 }
@@ -104,8 +105,11 @@
   color: #FFF;
   font-size: 50px;
   letter-spacing: 2px;
+  font-family: 'Montserrat';
   text-transform: uppercase;
-  margin-top: 95px;
+  margin-top: 80px;
+  transition: all 500ms;
+  -webkit-transition:all 500ms;
 }
 
 

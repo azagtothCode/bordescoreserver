@@ -8,20 +8,19 @@
   <title>Borde Score</title>
   <link rel="shortcut icon" href="imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
   <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="css/angular-material.css">
-
+  <!--Sty-->
+  <link rel="stylesheet" href="css/styles_index.css">
+  <link rel="stylesheet" href="css/styles_index_slide.css">
+  <link rel="stylesheet" href="css/styles_hover.css">
   <link rel="stylesheet" href="css/styles_index_panel_2560.css">
   <link rel="stylesheet" href="css/styles_index_panel_736.css">
   <link rel="stylesheet" href="css/styles_index_panel_667.css">
   <link rel="stylesheet" href="css/styles_index_panel_320.css">
-
-  <link rel="stylesheet" href="css/styles_index.css">
-  <link rel="stylesheet" href="css/styles_index_slide.css">
-  <link rel="stylesheet" href="css/styles_hover.css">
-  <!-- <link rel="stylesheet" href="css/styles_index_2560.css"> -->
   <link rel="stylesheet" href="css/styles_index_1920.css">
   <link rel="stylesheet" href="css/styles_index_1440.css">
   <link rel="stylesheet" href="css/styles_index_1366.css">
@@ -34,7 +33,6 @@
   <link rel="stylesheet" href="css/styles_index_480.css">
   <link rel="stylesheet" href="css/styles_index_375.css">
   <link rel="stylesheet" href="css/styles_index_320.css">
-
   <link rel="stylesheet" href="css/slide_head/styles_slide_1920.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_1440.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_1280.css">
@@ -46,7 +44,6 @@
   <link rel="stylesheet" href="css/slide_head/styles_slide_414.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_375.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_320.css">
-
 </head>
 <body ng-app="score_federal" ng-cloak>
   <!--navbar content-->
@@ -88,7 +85,7 @@
          <img id="icon-menu" src="imgs/svg/menu.svg"  >
        </md-button>
        <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
-    </div>
+     </div>
   </div>
 
   <!--slide content-->
@@ -102,13 +99,13 @@
        </div>
     </div>
     <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-lg="row" id="div-buttons-score">
-       <div flex-xs="45" flex-offset-sm="5" flex-sm="40" flex-offset-md="20" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
+       <div  flex-xs="45" flex-offset-sm="5" flex-sm="40" flex-offset-md="20" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
          <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-lg="row" layout-xl="row">
-           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="50"   flex-md="50"  flex-offset-lg="40" flex-lg="25" flex-offset-xl="40" flex-xl="25">
+           <div  class="color-btn" ng-controller="OpenCSVController" ng-click="openCSV()" flex-offset-xs="5" flex-xs="45" flex-sm="50"   flex-md="50"  flex-offset-lg="40" flex-lg="25" flex-offset-xl="40" flex-xl="25">
              <img class="icon-dwn" src="imgs/svg/download_logo.svg">
              <span class="btn-text-one" >DESCARGAR CSV</span>
            </div>
-           <div class="color-btn" flex-offset-xs="5" flex-xs="45" flex-sm="50"  flex-md="50" flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+           <div class="color-btn" ng-controller="OpenHowAboutController" ng-click="openAbout()" flex-offset-xs="5" flex-xs="45" flex-sm="50"  flex-md="50" flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
              <img class="icon-question" src="imgs/svg/question_logo.svg">
              <span class="btn-text-one">COMO FUNCIONA</span>
            </div>
@@ -118,7 +115,7 @@
        </div>
        <div flex-offset-xs="10" flex-xs="40" flex-offset-sm="10" flex-sm="40"  flex-offset-md="10" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
          <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="row" layout-lg="row" layout-xl="row">
-           <div class="color-btn"  flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+           <div class="color-btn" ng-controller="OpenPartyScoreController" ng-click="openParty()" flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
              <img class="icon-party" src="imgs/svg/party_logo.svg">
              <span class="btn-text-one">POR PARTIDO</span>
            </div>
@@ -131,7 +128,7 @@
          </div>
        </div>
     </div>
-    <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row" id="div-buttons-score">
+    <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
        <div  id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
            <div   flex-offset-md="45" flex-md="55" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="40" flex-xl="60">
@@ -231,5 +228,6 @@
   <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/methods.js"></script>
+  <script src="js/external_windows.js"></script>
 </body>
 </html>
