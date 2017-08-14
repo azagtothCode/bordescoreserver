@@ -44,13 +44,16 @@
   <link rel="stylesheet" href="css/slide_head/styles_slide_414.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_375.css">
   <link rel="stylesheet" href="css/slide_head/styles_slide_320.css">
+  <link rel="stylesheet" href="css/loader.css">
 </head>
-<body ng-app="score_federal" ng-cloak>
+<body ng-app="score_federal" ng-cloak onload="myFunction()" >
+  <div layout="row" style="display:none;" id="myDiv" class="animate-bottom">
+
   <!--navbar content-->
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
      </div>
-     <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="45" >
+     <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
         <div hide show-xs show-sm layout-xs="column">
           <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
               <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
@@ -77,7 +80,7 @@
           </div>
         </div>
      </div>
-     <div flex-xs="30" flex-sm="25" flex-md="35" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="25">
+     <div flex-xs="30" flex-sm="25" flex-md="35" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
       <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
         <img id="icon-menu" src="imgs/svg/logo_b.svg">
        </md-button>
@@ -157,6 +160,14 @@
        </div>
     </div>
   </div>
+  </div>
+  <div >
+    <div id="loader"></div>
+    <div id="loader-img"> </div>
+    <span id="loader-text">Cargando Información de API...</span>
+
+
+  </div>
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
     <!--panel section head-->
     <md-toolbar flex="row"  id="nav-menu-index" >
@@ -227,7 +238,10 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/methods.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/methods_nav.js"></script>
   <script src="js/external_windows.js"></script>
+  <script src="js/methods_panel.js"></script>
+  <script src="js/loader.js"></script>
 </body>
 </html>

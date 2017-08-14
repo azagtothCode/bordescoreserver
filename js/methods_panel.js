@@ -1,25 +1,4 @@
-var app = angular.module('score_federal', ['ngMaterial'])
-
-.controller('SelectAsyncController', function($timeout, $scope) {
-  $scope.user = null;
-  $scope.users = null;
-
-  $scope.loadUsers = function() {
-
-    // Use timeout to simulate a 650ms request.
-    return $timeout(function() {
-
-      $scope.users =  $scope.users  || [
-        { id: 1, name: 'Federal' },
-        { id: 2, name: 'Puebla' },
-        { id: 3, name: 'Jalisco' },
-        { id: 4, name: 'CDMX' }
-      ];
-    }, 650);
-  };
-})
-
-.controller('PanelCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+app.controller('PanelCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.toggleLeft = buildDelayedToggler('left');
     $scope.toggleRight = buildToggler('right');
     $scope.isOpenRight = function(){
@@ -72,7 +51,7 @@ var app = angular.module('score_federal', ['ngMaterial'])
     }
   })
   //controller open panel side left
-  .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  app.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav('left').close()
@@ -84,7 +63,7 @@ var app = angular.module('score_federal', ['ngMaterial'])
   })
 
   //controller open panel side left
-  .controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  app.controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav('right').close()
@@ -94,23 +73,7 @@ var app = angular.module('score_federal', ['ngMaterial'])
     };
   })
 
-
-
-  //controller panel
-  // .controller('DemoCtrl', function() {
-  //   this.topDirections = ['left', 'up'];
-  //   this.bottomDirections = ['down', 'right'];
-  //
-  //   this.isOpen = false;
-  //
-  //   this.availableModes = ['md-fling', 'md-scale'];
-  //   this.selectedMode = 'md-fling';
-  //
-  //   this.availableDirections = ['up', 'down', 'left', 'right'];
-  //   this.selectedDirection = 'right';
-  // })
-
-  .controller('PanelContentIndexController', function($scope) {
+  app.controller('PanelContentIndexController', function($scope) {
 
     var imagePathLegis   = 'imgs/svg/logo_borde.svg';
     var imagePathSen     = 'imgs/svg/logo_borde.svg';
@@ -172,7 +135,7 @@ var app = angular.module('score_federal', ['ngMaterial'])
       }
     ];
 })
-.controller('PanelContentProfileController', function($scope) {
+app.controller('PanelContentProfileController', function($scope) {
 
   var imagePathLegis   = '../svg/logo_borde.svg';
   var imagePathSen     = '../svg/logo_juridico.svg';

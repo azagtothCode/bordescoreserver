@@ -4,4 +4,19 @@
     background-size: 95px;
     margin-top: 16px;
   }
+  #tit-federal span{
+    font-size: 12px;
+  }
+
+  #tit-puebla span{
+    font-size: 12px;
+  }
+
+  #tit-jalisco span{
+    font-size: 12px;
+  }
+
+  #tit-cdmx span{
+    font-size: 12px;
+  }
 }
