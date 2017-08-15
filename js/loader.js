@@ -6,6 +6,6 @@ function myFunction() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("loader-text").style.display = "none";
-  document.getElementById("loader-img").style.display = "none";
+  document.getElementById("loader-text-br").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }

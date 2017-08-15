@@ -12,7 +12,6 @@
   border-top: 16px solid #EE4656;
   width: 120px;
   height: 120px;
-
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -22,23 +21,17 @@
   left: 50%;
   top: 50%;
   z-index: 1;
-  margin: 95px 0 0 -120px;
+  margin: 95px 0 0 -125px;
   color: #EE4656;
 }
 
-#loader-img {
+#loader-text-br {
   position: absolute;
-  left: 54%;
-  top: 40%;
-  margin: 95px 0 0 -140px;
-  background: url(../imgs/png/logo_borde.png);
-  background-size: 126px;
-  margin-top: 10px;
-  background-repeat: no-repeat;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  height: 127px;
-  width: 127px;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: 115px 0 0 -120px;
+  color: #EE4656;
 }
 
 @-webkit-keyframes spin {
