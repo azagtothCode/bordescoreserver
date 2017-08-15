@@ -132,9 +132,22 @@
        </div>
     </div>
     <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
+      <div id="content-dip" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
+        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
+          <div  flex-offset-md="35" flex-md="65" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="33" flex-lg="63" flex-offset-xl="40" flex-xl="60">
+            <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
+              <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
+                <span>diputados</span>
+              </div>
+              <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
+              </div>
+           </div>
+          </div>
+        </div>
+      </div>
        <div  id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-           <div   flex-offset-md="45" flex-md="55" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="40" flex-xl="60">
+           <div   flex-offset-md="45" flex-md="55" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="35" flex-xl="50">
              <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
                <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
                  <span>senadores</span>
@@ -145,28 +158,18 @@
            </div>
          </div>
        </div>
-       <div id="content-dip" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
-         <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-           <div  flex-offset-md="35" flex-md="65" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="33" flex-lg="63" flex-offset-xl="35" flex-xl="65">
-             <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-               <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
-                 <span>diputados</span>
-               </div>
-               <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
-               </div>
-            </div>
-           </div>
-         </div>
-       </div>
+      </div>
+    </div>
+    <div ng-controller="DeputysController" id="content-deputys" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+      <div layout="row"  ng-repeat="item in deputys">
+        {{item.name}}
+      </div>
     </div>
   </div>
-  </div>
-  <div >
+  <div>
     <div id="loader"></div>
     <span id="loader-text">Cargando información necesaria</span><br>
     <span id="loader-text-br">Espere un momento por favor...</span>
-
-
   </div>
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
     <!--panel section head-->
@@ -243,5 +246,6 @@
   <script src="js/external_windows.js"></script>
   <script src="js/methods_panel.js"></script>
   <script src="js/loader.js"></script>
+  <script src="js/deputy_content.js"></script>
 </body>
 </html>
