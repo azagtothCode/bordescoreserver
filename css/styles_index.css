@@ -16,7 +16,7 @@ html, body{  text-decoration: none;}
   #icon-logo{
     background: url(../imgs/svg/logo.svg);
     background-size: 158px;
-    margin-top: 3px;
+    margin-top: 5px;
     background-repeat: no-repeat;
     cursor: pointer;
   }
