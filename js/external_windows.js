@@ -72,7 +72,7 @@ app.controller('OpenHowAboutController', function($scope) {
   $scope.showAdvanced = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'party.score.html',
+      templateUrl: 'other_sites/party.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
@@ -80,8 +80,10 @@ app.controller('OpenHowAboutController', function($scope) {
     })
     .then(function(answer) {
       $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
     }, function() {
       $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
     });
   };
 
@@ -100,3 +102,5 @@ app.controller('OpenHowAboutController', function($scope) {
   }
 
 })
+
+// open /Applications/Google\ Chrome.app --args --allow-file-access-from-files
