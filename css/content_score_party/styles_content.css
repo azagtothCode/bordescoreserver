@@ -1,0 +1,61 @@
+#toolbar-score-party{
+  background:#EE4556;
+}
+
+.title-score-party{
+  font-size:16;
+}
+#content-row-party-score{
+  margin-bottom: 5px;
+}
+#content-score-party{
+  background:#000;
+}
+
+#content-bars-party-score{
+  text-align: center;
+  max-width: 100%;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.content-deputy-party{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.content-senator-party{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+#content-res-party-score{
+  color: #EE4556;
+  padding: 12px;
+}
+
+#content-imgs-party-score img{
+  max-width: 45px;
+  margin-top: 4px;
+}
+
+.icon-dwn-dialog{
+  width: 25px;
+  margin-top: 7px;
+}
+
+.text-icon-dialog{
+    font-size: 13px;
+}
+
+@keyframes example {
+    from {  max-width: 10%;
+}
+    to { max-width: 100%;}
+}

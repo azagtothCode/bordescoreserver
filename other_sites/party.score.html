@@ -2,8 +2,8 @@
 <md-dialog aria-label="Mango (Fruit)">
   <form ng-cloak>
     <md-toolbar>
-      <div style="background:#000;" class="md-toolbar-tools">
-        <span style="font-size:16;">Borde Score <br hide show-xs>
+      <div id="toolbar-score-party"  class="md-toolbar-tools">
+        <span class="title-score-party">Borde Score <br hide show-xs>
         (por Partido Politico)</span>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
@@ -13,17 +13,183 @@
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content">
+      <div id="content-score-party"  class="md-dialog-content" >
+        <div id="content-row-party-score"  layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/movimiento.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img  src="imgs/svg/partys/verde.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pan.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="50">
+              20
+            </div>
+            <div class="content-senator-party" flex-xs="50">
+              29
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              30
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/encuentro.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="50">
+              8
+            </div>
+            <div class="content-senator-party" flex-xs="50">
+              26
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              30
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/prd.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pri.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/alianza.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/morena.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+            32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pt.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/indi.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-party-score" flex-xs="65" layout-xs="row">
+            <div class="content-deputy-party" flex-xs="65">
+              37
+            </div>
+            <div class="content-senator-party" flex-xs="35">
+              34
+            </div>
+          </div>
+          <div id="content-res-party-score" flex-xs="15" >
+              32
+          </div>
+        </div>
       </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-      <md-button href="http://bordepolitico.com/infografia-borde-score/" target="_blank" md-autofocus>
-        Como funciona
-      </md-button>
-      <md-button ng-click="answer('not useful')">
+      <div flex-xs="25">
+        <img class="icon-dwn-dialog" src="imgs/svg/download_logo.svg"> <span class="text-icon-dialog">CSV<span>
+      </div>
+      <div flex-xs="75">
+        <md-button href="http://bordepolitico.com/infografia-borde-score/" target="_blank" md-autofocus>
+          Como funciona
+        </md-button>
+        </div>
+
+      <!-- <md-button ng-click="answer('not useful')" >
       Cerrar
-      </md-button>
+      </md-button> -->
       <!-- <md-button ng-click="answer('useful')">
         Useful
       </md-button> -->
