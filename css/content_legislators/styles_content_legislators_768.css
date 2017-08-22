@@ -37,7 +37,6 @@
     font-family: 'Montserrat';
     text-align: right;
     font-size: 19px;
-    font-weight: bold;
   }
 
   #text-state-card span{
@@ -45,7 +44,6 @@
     letter-spacing: 3px;
     text-align: right;
     margin-top: 3px;
-    font-weight: bold;
   }
 
   #image-card img{
@@ -96,10 +94,8 @@
     letter-spacing: 1px;
     font-family: 'Montserrat';
     text-align: right;
-    font-weight: bold;
     font-size: 17px;
     margin-top: 3px;
-
   }
 
   #text-election-card{
@@ -108,7 +104,6 @@
     letter-spacing: 3px;
     font-family: 'Montserrat';
     font-size: 15px;
-    text-align: right;
     margin-top: 3px;
   }
 
@@ -118,12 +113,10 @@
     letter-spacing: 2px;
     font-family: 'Montserrat';
     font-size: 15px;
-    text-align: right;
     margin-top: 3px;
   }
 
   #tabs-responsive{
     min-height: 735px;
   }
-
 }

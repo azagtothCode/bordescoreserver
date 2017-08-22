@@ -1,18 +1,58 @@
 @media only screen and (max-width: 320px) {
 
+  #tabs-responsive{
+    min-height:405px;
+  }
 
   #content-cards{
     padding:5px;
   }
 
-  #califichas-content img{
+  #califichas-content-happy img{
     width:30px;
     margin-top: -10px;
   }
 
-  #text-chamber-card{
+  #califichas-content-sad img{
+    width:30px;
     margin-top: -10px;
+  }
+
+  #califichas-content-bad img{
+    width:30px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -11px;
+    margin-top: -6px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+    z-index: 1;
+  }
+
+  #score-card img{
+    margin-top: -25px;
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  #score-card span{
+    margin-top: -40px;
+    position: absolute;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-left: 11px;
+  }
+
+  #text-chamber-card{
     font-size: 20px;
+    margin-top: 0px;
   }
 
   #text-state-card{
@@ -25,27 +65,22 @@
   }
 
   #image-card img{
-    width: 100px;
-    height: 105px;
-    margin-top: 8px;
-    margin-left: 0px;
+    width: 120px;
+    height: 130px;
+    margin-top: -25px;
+    margin-left: 36px;
   }
 
   #image-party-card img{
-    width: 45px;
-    margin-left: 65px;
-    margin-top: -26px;
+    width: 50px;
+    margin-left: -10px;
+    margin-top: 79px;
   }
 
-  #score-card{
-    margin-top: -1px;
-    width: 45px;
-    margin-left: -8px;
-  }
-
-  #score-card span{
-    margin-top: -49px;
-    font-size: 17px;
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
   }
 
   #facebook-card img{
@@ -71,16 +106,18 @@
   }
 
   #text-election-card{
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 3px;
+    margin-left: 11px;
   }
+
 
   #text-commission-card{
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 3px;
+    margin-left: 11px;
+    padding-bottom: 5px;
   }
 
-  #tabs-responsive{
-    min-height:405px;
-  }
+
 }

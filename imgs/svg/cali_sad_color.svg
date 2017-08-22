@@ -6,13 +6,17 @@
 <g id="Layer_3">
 </g>
 <g id="Layer_2">
-	<rect x="-430.405" y="-498.451" fill="none" stroke="#00FF00" stroke-miterlimit="10" width="799.29" height="1027.268"/>
 	<g>
+		<g>
+			<circle fill="#BEBEBE" cx="16" cy="16" r="15"/>
+			<circle fill="#F3972B" cx="16" cy="16" r="15"/>
+			<ellipse fill="#565656" cx="8.595" cy="13.039" rx="2.279" ry="4.012"/>
+			<ellipse fill="#565656" cx="23.405" cy="13.039" rx="2.278" ry="4.012"/>
+		</g>
 		
-			<rect x="-0.548" y="14.479" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 39.1692 14.8657)" fill="#AAAAAA" width="34.107" height="2.132"/>
-		
-			<rect x="-0.547" y="14.479" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 17.1862 38.2086)" fill="#AAAAAA" width="34.107" height="2.132"/>
+			<line fill="none" stroke="#565656" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10.017" y1="24.812" x2="21.126" y2="24.812"/>
 	</g>
+	<rect x="-510.498" y="-131" fill="none" stroke="#00FF00" stroke-miterlimit="10" width="799.29" height="1027.268"/>
 </g>
 <g id="Capa_4">
 </g>
