@@ -8,6 +8,7 @@
 #content-row-party-score{
   margin-bottom: 5px;
 }
+
 #content-score-party{
   background:#000;
 }
@@ -15,29 +16,53 @@
 #content-bars-party-score{
   text-align: center;
   max-width: 100%;
-  animation-name: example;
-  animation-duration: 4s;
 }
 
-.content-deputy-party{
+.content-deputy-party-mc{
   background: #EE4556;
   color: #FFF;
   padding-top: 5px;
   height: 30px;
-  margin-top: 10px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
 }
 
-.content-senator-party{
+.content-senator-party-mc{
   background:#FFF;
   color: #EE4556;
   padding-top: 5px;
   height: 30px;
-  margin-top: 10px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+}
+
+.content-deputy-party-pvem{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.content-senator-party-pvem{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: 2s;
 }
 
 #content-res-party-score{
   color: #EE4556;
-  padding: 12px;
+  padding: 10px;
 }
 
 #content-imgs-party-score img{
@@ -54,8 +79,14 @@
     font-size: 13px;
 }
 
-@keyframes example {
-    from {  max-width: 10%;
+@keyframes animation-mc {
+  from {  max-width: 10%;
 }
-    to { max-width: 100%;}
+  to { max-width: 100%;}
+}
+
+@keyframes animation-pvem {
+  from {  max-width: 10%;
+}
+  to { max-width: 100%;}
 }

@@ -1,0 +1,66 @@
+@media only screen and (max-width: 375px) {
+  #score-card {
+      margin-top: -1px;
+      width: 50px;
+      margin-left: 15px;
+  }
+
+  #score-card span {
+    margin-top: -50px;
+    font-size: 20px;
+  }
+
+  #califichas-content img {
+    width: 30px;
+  }
+
+  #image-card img{
+    width: 130px;
+    height: 145px;
+  }
+
+  #image-party-card img{
+    width: 50px;
+  }
+
+  #facebook-card img {
+    width: 35px;
+  }
+
+  #twitter-card img {
+    width: 35px;
+  }
+
+  #mail-card img {
+    width: 35px;
+  }
+
+  #tabs-responsive {
+    min-height: 520px;
+  }
+
+  #text-chamber-card {
+    font-size: 27px;
+  }
+
+  #text-state-card span {
+    font-size: 12px;
+  }
+
+  #text-state-card {
+    font-size: 15px;
+  }
+
+  #text-name-card {
+    font-size: 15px;
+  }
+
+  #text-election-card{
+    font-size: 12px;
+  }
+
+  #text-commission-card{
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,86 @@
+@media only screen and (max-width: 320px) {
+
+
+  #content-cards{
+    padding:5px;
+  }
+
+  #califichas-content img{
+    width:30px;
+    margin-top: -10px;
+  }
+
+  #text-chamber-card{
+    margin-top: -10px;
+    font-size: 20px;
+  }
+
+  #text-state-card{
+    font-size: 16px;
+  }
+
+  #text-state-card span{
+    font-size: 9px;
+    margin-top: 3px;
+  }
+
+  #image-card img{
+    width: 100px;
+    height: 105px;
+    margin-top: 8px;
+    margin-left: 0px;
+  }
+
+  #image-party-card img{
+    width: 45px;
+    margin-left: 65px;
+    margin-top: -26px;
+  }
+
+  #score-card{
+    margin-top: -1px;
+    width: 45px;
+    margin-left: -8px;
+  }
+
+  #score-card span{
+    margin-top: -49px;
+    font-size: 17px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 12px;
+    margin-top: 3px;
+
+  }
+
+  #text-election-card{
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  #text-commission-card{
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  #tabs-responsive{
+    min-height:405px;
+  }
+}

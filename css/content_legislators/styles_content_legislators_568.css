@@ -1,0 +1,9 @@
+@media only screen and (max-width: 568px) {
+  #tabs-responsive {
+      min-height: 517px;
+  }
+  #score-card {
+    margin-left: -4px;
+  }
+
+}

@@ -1,0 +1,126 @@
+/*@media only screen and (max-width: 736px) {
+
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+      color: #FFF;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      color: #FFF;
+  }
+
+  #content-cards{
+    background:#EEE;
+    padding:5px;
+  }
+
+  #califichas-content img{
+    width:40px;
+    margin-top: -10px;
+  }
+
+  #text-chamber-card{
+    text-transform: uppercase;
+    color: #BBB;
+    letter-spacing: 3px;
+    font-family: 'Montserrat';
+    text-align: right;
+    margin-top: -10px;
+    font-size: 35px;
+  }
+
+  #text-state-card{
+    text-transform: uppercase;
+    color: #BBB;
+    letter-spacing: 3px;
+    font-family: 'Montserrat';
+    text-align: right;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  #text-state-card span{
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-align: right;
+    margin-top: 3px;
+    font-weight: bold;
+  }
+
+  #image-card img{
+    width: 130px;
+    border-radius: 50%;
+    height: 145px;
+    margin-top: 8px;
+    margin-left: 11px;
+  }
+
+  #image-party-card img{
+    width: 50px;
+    margin-left: 105px;
+    margin-top: -41px;
+  }
+
+  #score-card{
+    margin-top: 12px;
+    width: 65px;
+    margin-left: -28px;
+  }
+
+  #score-card span{
+    margin-top: -55px;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card{
+    text-transform: uppercase;
+    color: #EE4656;
+    letter-spacing: 1px;
+    font-family: 'Montserrat';
+    text-align: right;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 3px;
+
+  }
+
+  #text-election-card{
+    text-transform: uppercase;
+    color: #BBB;
+    letter-spacing: 3px;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    text-align: right;
+    margin-top: 3px;
+  }
+
+  #text-commission-card{
+    text-transform: uppercase;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    text-align: right;
+    margin-top: 3px;
+  }
+
+  #tabs-responsive{
+    min-height:495px;
+  }
+}*/

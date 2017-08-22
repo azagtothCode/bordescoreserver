@@ -79,10 +79,10 @@ app.controller('OpenHowAboutController', function($scope) {
       fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
     })
     .then(function(answer) {
-      $scope.status = 'You said the information was "' + answer + '".';
+      // $scope.status = 'You said the information was "' + answer + '".';
       console.log(answer);
     }, function() {
-      $scope.status = 'You cancelled the dialog.';
+      // $scope.status = 'You cancelled the dialog.';
       console.log("close dialog");
     });
   };
@@ -101,6 +101,12 @@ app.controller('OpenHowAboutController', function($scope) {
     };
   }
 
+})
+
+app.controller('OpenPerfilController', function($scope) {
+   $scope.openPerfil = function(legId){
+     window.open("profile_dates_"+legId+".php",'_blank');
+   };
 })
 
 // open /Applications/Google\ Chrome.app --args --allow-file-access-from-files
