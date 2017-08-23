@@ -53,14 +53,15 @@
  }
 
  .icon-dwn{
-   width: 19px;
-   margin-top: 1px;
+   width: 20px;
+   margin-top: 0px;
+   margin-left: 1px;
  }
 
  .icon-question{
-   width: 19px;
+   width: 20px;
    margin-top: 0px;
-   margin-left: 3px;
+   margin-left: 1px;
  }
 
  .icon-party{

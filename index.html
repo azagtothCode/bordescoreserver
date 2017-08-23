@@ -179,9 +179,9 @@
                   <md-list ng-controller="AppCtrl">
                     <div id="content-cards"  layout-xs="column" layout-sm="column">
                       <div layout-xs="row" layout-sm="row">
-                        <div flex-xs="20" flex-sm="20">
+                        <div  flex-xs="20" flex-sm="20">
                         </div>
-                        <div flex-xs="60" flex-sm="60">
+                        <div  flex-xs="60" flex-sm="60">
                           <div layout-xs="row" layot-sm="row">
                             <div id="califichas-content-happy"  flex-xs="25" flex-sm="25">
                               <a href="pac.bordepolitico.com">
@@ -199,7 +199,7 @@
                               </a>
                             </div>
                             <div  id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
-                              <img src="imgs/svg/score.svg">
+                              <img src="imgs/svg/score_color.svg">
                               <span>{{item.score}}</span>
                             </div>
                           </div>
@@ -277,84 +277,102 @@
           </md-tab>
           <md-tab class="md-display-2" label="Senadores">
             <md-content style="background:#EEE;" class="md-padding">
-              <div ng-controller="SenatorsController" id="content-senators" >
+              <div ng-controller="SenatorsController" >
                 <div layout-xs="column" layout-sm="column" ng-repeat="item in senators">
                   <md-list ng-controller="AppCtrl">
-                    <div id="content-cards"  layout-xs="row" layout-sm="row">
-                        <div flex-xs="30" flex-sm="30">
-                          <div id="califichas-content" layout-xs="column" layout-sm="column">
-                            <div layout-xs="row" layout-sm="row">
-                              <div flex-xs="33" flex-sm="33">
-                                <a href="pac.bordepolitico.com" target="_blank">
-                                  <img src="imgs/svg/cali_happy.svg">
-                                </a>
-                              </div>
-                              <div flex-xs="33" flex-sm="33">
-                                <a href="pac.bordepolitico.com">
-                                  <img src="imgs/svg/cali_sad.svg">
-                                </a>
-                              </div>
-                              <div flex-xs="33" flex-sm="33">
-                                <a href="pac.bordepolitico.com">
-                                  <img src="imgs/svg/cali_bad.svg">
-                                </a>
-                              </div>
-                           </div>
-                            <div id="image-card" layout-xs="column" layout-sm="column">
-                              <!-- <img ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  src="http:{{item.image}}"> -->
-                              <img ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  src="http://{{item.image}}">
+                    <div id="content-cards"  layout-xs="column" layout-sm="column">
+                      <div layout-xs="row" layout-sm="row">
+                        <div  flex-xs="20" flex-sm="20">
+                        </div>
+                        <div  flex-xs="60" flex-sm="60">
+                          <div layout-xs="row" layot-sm="row">
+                            <div id="califichas-content-happy"  flex-xs="25" flex-sm="25">
+                              <a href="pac.bordepolitico.com">
+                                <img src="imgs/svg/cali_happy.svg">
+                              </a>
                             </div>
-                            <div id="image-party-card" layout-xs="column" layout-sm="column">
-                              <img src="{{item.image_party}}">
+                            <div id="califichas-content-sad"  flex-xs="25" flex-sm="25">
+                              <a href="pac.bordepolitico.com">
+                                <img src="imgs/svg/cali_sad.svg">
+                              </a>
                             </div>
-                         </div>
+                            <div id="califichas-content-bad"  flex-xs="25" flex-sm="25">
+                              <a href="pac.bordepolitico.com">
+                                <img src="imgs/svg/cali_bad.svg">
+                              </a>
+                            </div>
+                            <div  id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
+                              <img src="imgs/svg/score_color.svg">
+                              <span>{{item.score}}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div flex-xs="20" flex-sm="20">
+                        </div>
                        </div>
-                        <div style="text-align:center;" flex-xs="10" flex-sm="10">
-                          <div id="score-card"  layout-xs="column" layout-sm="column">
-                            <img ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  src="imgs/svg/score.svg">
-                            <span>{{item.score}}</span>
+                      <div layout-xs="row" layout-sm="row">
+                        <div flex-xs="15" flex-sm="15">
+                        </div>
+                        <div flex-xs="70" flex-sm="70">
+                          <div layout-xs="row" layot-sm="row">
+                            <div id="image-card" flex-xs="60" flex-sm="60">
+                              <img  src="http://{{item.image}}" class="md-avatar">
+                            </div>
+                            <div id="image-party-card" flex-xs="20" flex-sm="20">
+                                <img src="{{item.image_party}}">
+                            </div>
+                            <div id="content-socials-card" flex-xs="20" flex-sm="20">
+                                <div style="text-align:right;" layout-xs="column" layout-sm="column">
+                                  <div id="facebook-card">
+                                      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                                        <img src="imgs/svg/facebook_cards.svg">
+                                      </a>
+                                  </div>
+                                  <div id="twitter-card">
+                                    <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                                      <img src="imgs/svg/twiter_cards.svg">
+                                    </a>
+                                  </div>
+                                  <div id="mail-card" >
+                                    <a href="mailto:{{item.mail}}">
+                                      <img src="imgs/svg/mail_cards.svg">
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div flex-xs="15" flex-sm="15">
                           </div>
                         </div>
-                        <div flex-xs="60" flex-sm="60">
-                          <div id="text-chamber-card" layout-xs="column" layout-sm="column">
-                            {{item.chamber}}
-                          </div>
-                          <div id="text-state-card" layout-xs="column" layout-sm="column">
-                          <span>  Nacido en: </span>
-                            {{item.state}}
-                            <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
-                          </div>
-                          <div ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  id="text-name-card" layout-xs="column">
-                            {{item.name}}
-                          </div>
-                          <div ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  id="text-election-card" layout-xs="column">
-                            {{item.election}}
-                          </div>
-                          <div ng-controller="OpenPerfilController" ng-click="openPerfil(item.id)" ng-cloak=""  id="text-commission-card" layout-xs="column">
-                            {{item.commission}}
-                          </div>
-                          <div style="text-align:right;" layout-xs="row" layout-sm="row">
-                            <div id="facebook-card" flex-xs="33" flex-sm="33">
-                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                                  <img src="imgs/svg/facebook_cards.svg">
-                                </a>
+                        </div>
+                        <div layout-xs="row">
+                        <div flex-offset-xs="15" flex-xs="70">
+                          <div layout-xs="column">
+                            <div id="text-chamber-card" layout-xs="column" layout-sm="column">
+                              {{item.chamber}}
                             </div>
-                            <div id="twitter-card" flex-xs="33" flex-sm="33">
-                              <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                                <img src="imgs/svg/twiter_cards.svg">
-                              </a>
+                            <div id="text-state-card" layout-xs="column" layout-sm="column">
+                            <span>  Nacido en: </span>
+                              {{item.state}}
+                              <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                             </div>
-                            <div id="mail-card" flex-sm="33" flex-xs="33">
-                              <a href="mailto:{{item.mail}}">
-                                <img src="imgs/svg/mail_cards.svg">
-                              </a>
+                            <div id="text-name-card" layout-xs="column" layout-sm="column">
+                              {{item.name}}
+                            </div>
+                            <div id="text-election-card" layout-xs="column" layout-sm="column">
+                              {{item.election}}
+                            </div>
+                            <div id="text-commission-card" layout-xs="column" layout-sm="column">
+                              {{item.commission}}
                             </div>
                           </div>
                         </div>
-
-                    </div>
+                        <div flex-xs="15">
+                          <img id="image-state-card" src="{{item.img_state}}">
+                        </div>
+                      </div>
                     <md-divider ng-if="!$last"></md-divider>
-
                   </md-list>
                 </div>
               </div>

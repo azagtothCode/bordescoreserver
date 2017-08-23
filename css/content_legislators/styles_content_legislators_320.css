@@ -9,30 +9,32 @@
   }
 
   #califichas-content-happy img{
-    width:30px;
+    width: 30px;
     margin-top: -10px;
+    margin-left: 15px;
   }
 
   #califichas-content-sad img{
-    width:30px;
+    width: 30px;
     margin-top: -10px;
+    margin-left: 8px;
   }
 
   #califichas-content-bad img{
-    width:30px;
+    width: 30px;
     margin-top: -10px;
   }
 
   #content-socials-card{
     text-align: center;
-    margin-left: -11px;
-    margin-top: -6px;
+    margin-left: 14px;
+    margin-top: 0px;
   }
 
   #score-card {
     margin-top: 15px;
     width: 50px;
-    margin-left: -35px;
+    margin-left: -25px;
     z-index: 1;
   }
 
@@ -47,7 +49,8 @@
     position: absolute;
     font-size: 17px;
     letter-spacing: 2px;
-    margin-left: 11px;
+    margin-left: 12px;
+    font-weight: bold;
   }
 
   #text-chamber-card{
@@ -68,13 +71,13 @@
     width: 120px;
     height: 130px;
     margin-top: -25px;
-    margin-left: 36px;
+    margin-left: 43px;
   }
 
   #image-party-card img{
-    width: 50px;
-    margin-left: -10px;
-    margin-top: 79px;
+    width: 45px;
+    margin-left: -3px;
+    margin-top: 75px;
   }
 
   #image-state-card {
@@ -108,14 +111,14 @@
   #text-election-card{
     font-size: 11px;
     margin-top: 3px;
-    margin-left: 11px;
+    margin-left: 6px;
   }
 
 
   #text-commission-card{
     font-size: 11px;
     margin-top: 3px;
-    margin-left: 11px;
+    margin-left: 6px;
     padding-bottom: 5px;
   }
 
