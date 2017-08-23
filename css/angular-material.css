@@ -13614,7 +13614,7 @@ md-tabs {
     border-width: 0 0 1px;
     border-style: solid; }
   md-tabs[md-border-bottom]:not(.md-dynamic-height) md-tabs-content-wrapper {
-    top: 49px; }
+    top: 26px; }
 
 md-tabs-wrapper {
   display: block;
@@ -13695,7 +13695,7 @@ md-tabs-canvas {
       display: inline-block; }
 
 md-pagination-wrapper {
-  height: 48px;
+  height: 25px;
   display: block;
   transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
   transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
@@ -13785,12 +13785,12 @@ md-tab {
   transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
   cursor: pointer;
   white-space: nowrap;
-  position: relative;
+  /*position: relative;*/
   text-transform: uppercase;
-  float: left;
+  /*float: left;*/
   font-weight: 500;
   box-sizing: border-box;
-  overflow: hidden;
+  /*overflow: hidden;*/
   text-overflow: ellipsis;
   margin-left: 30px;
 text-transform: capitalize;}
