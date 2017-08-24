@@ -1,7 +1,8 @@
 @media only screen and (max-width: 568px) {
   #tabs-responsive {
-      min-height: 517px;
+    min-height: 517px;
   }
+
   #content-cards{
     padding:5px;
   }
@@ -102,7 +103,6 @@
   #text-name-card{
     font-size: 17px;
     margin-top: 3px;
-
   }
 
   #text-election-card{
@@ -110,9 +110,7 @@
     margin-top: 3px;
     margin-left: 6px;
     text-align: right;
-
   }
-
 
   #text-commission-card{
     font-size: 13px;
@@ -120,7 +118,61 @@
     margin-left: 6px;
     padding-bottom: 5px;
     text-align: right;
-
   }
 
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 107px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      margin-left: 55px;
+  }
+
+  #score-card img {
+    margin-top: -25px;
+    width: 80px;
+    margin-left: 30px;
+  }
+
+  #score-card span {
+    margin-top: -57px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 18px;
+    font-weight: bold;
+  }
+
+  #image-card img {
+    width: 150px;
+    height: 160px;
+    margin-top: -39px;
+    margin-left: 65px;
+  }
+
+  #content-socials-card {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  #califichas-content-happy img {
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 34px;
+  }
+
+  #califichas-content-sad img {
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 18px;
+  }
+
+  #icon-menu {
+    width: 38px;
+    margin-left: 80px;
+    margin-top: -1.5px;
+  }
 }

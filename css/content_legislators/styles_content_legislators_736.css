@@ -1,126 +1,127 @@
-/*@media only screen and (max-width: 736px) {
-
-  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
-      color: #FFF;
-  }
-
-  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-      color: #FFF;
+@media only screen and (max-width: 736px) {
+  #tabs-responsive {
+    min-height: 615px;
   }
 
   #content-cards{
-    background:#EEE;
     padding:5px;
   }
 
-  #califichas-content img{
-    width:40px;
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 108px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 55px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
     margin-top: -10px;
   }
 
-  #text-chamber-card{
-    text-transform: uppercase;
-    color: #BBB;
-    letter-spacing: 3px;
-    font-family: 'Montserrat';
-    text-align: right;
-    margin-top: -10px;
-    font-size: 35px;
+  #content-socials-card{
+    text-align: center;
+    margin-left: -70px;
+    margin-top: 5px;
   }
 
-  #text-state-card{
-    text-transform: uppercase;
-    color: #BBB;
-    letter-spacing: 3px;
-    font-family: 'Montserrat';
-    text-align: right;
-    font-size: 19px;
-    font-weight: bold;
-  }
-
-  #text-state-card span{
-    font-size: 15px;
-    letter-spacing: 3px;
-    text-align: right;
-    margin-top: 3px;
-    font-weight: bold;
-  }
-
-  #image-card img{
-    width: 130px;
-    border-radius: 50%;
-    height: 145px;
-    margin-top: 8px;
-    margin-left: 11px;
-  }
-
-  #image-party-card img{
+  #score-card {
+    margin-top: 15px;
     width: 50px;
-    margin-left: 105px;
-    margin-top: -41px;
+    margin-left: -35px;
+    z-index: 1;
   }
 
-  #score-card{
-    margin-top: 12px;
-    width: 65px;
-    margin-left: -28px;
+  #score-card img{
+    margin-top: -25px;
+    width: 85px;
+    margin-left: 5px;
   }
 
   #score-card span{
-    margin-top: -55px;
-    color: #FFF;
-    text-align: center;
-    font-size: 28px;
+    margin-top: 2px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: -62px;
+    font-weight: bold;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  #text-state-card{
+    font-size: 17px;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #image-card img{
+    width: 185px;
+    height: 200px;
+    margin-top: -50px;
+    margin-left: 135px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -5px;
+    margin-top: 100px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
   }
 
   #facebook-card img{
     margin-top: 5px;
-    width: 40px;
+    width: 30px;
   }
 
   #twitter-card img{
-    margin-top: 5px;
-    width: 40px;
+    margin-top: 10px;
+    width: 30px;
   }
 
   #mail-card img{
-    margin-top: 5px;
-    width: 40px;
+    margin-top: 10px;
+    width: 30px;
   }
 
   #text-name-card{
-    text-transform: uppercase;
-    color: #EE4656;
-    letter-spacing: 1px;
-    font-family: 'Montserrat';
-    text-align: right;
-    font-weight: bold;
     font-size: 17px;
     margin-top: 3px;
-
   }
 
   #text-election-card{
-    text-transform: uppercase;
-    color: #BBB;
-    letter-spacing: 3px;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    text-align: right;
+    font-size: 13px;
     margin-top: 3px;
+    margin-left: 6px;
+    text-align: right;
   }
+
 
   #text-commission-card{
-    text-transform: uppercase;
-    color: #BBB;
-    letter-spacing: 2px;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    text-align: right;
+    font-size: 13px;
     margin-top: 3px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    text-align: right;
   }
 
-  #tabs-responsive{
-    min-height:495px;
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 145px;
   }
-}*/
+}

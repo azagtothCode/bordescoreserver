@@ -4,19 +4,11 @@
     min-height:405px;
   }
 
-  #content-cards{
-    padding:5px;
-  }
-
   #califichas-content-happy img{
-    width: 30px;
-    margin-top: -10px;
     margin-left: 15px;
   }
 
   #califichas-content-sad img{
-    width: 30px;
-    margin-top: -10px;
     margin-left: 8px;
   }
 
@@ -26,9 +18,7 @@
   }
 
   #content-socials-card{
-    text-align: center;
     margin-left: 14px;
-    margin-top: 0px;
   }
 
   #score-card {
@@ -39,23 +29,18 @@
   }
 
   #score-card img{
-    margin-top: -25px;
     width: 60px;
     margin-left: 20px;
   }
 
   #score-card span{
     margin-top: -40px;
-    position: absolute;
     font-size: 17px;
-    letter-spacing: 2px;
     margin-left: 12px;
-    font-weight: bold;
   }
 
   #text-chamber-card{
     font-size: 20px;
-    margin-top: 0px;
   }
 
   #text-state-card{
@@ -77,7 +62,6 @@
   #image-party-card img{
     width: 45px;
     margin-left: -3px;
-    margin-top: 75px;
   }
 
   #image-state-card {
@@ -88,39 +72,38 @@
 
   #facebook-card img{
     margin-top: 5px;
-    width: 30px;
   }
 
   #twitter-card img{
     margin-top: 5px;
-    width: 30px;
   }
 
 
   #mail-card img{
     margin-top: 5px;
-    width: 30px;
   }
 
   #text-name-card{
     font-size: 12px;
-    margin-top: 3px;
-
   }
 
   #text-election-card{
     font-size: 11px;
-    margin-top: 3px;
-    margin-left: 6px;
   }
 
 
   #text-commission-card{
     font-size: 11px;
-    margin-top: 3px;
-    margin-left: 6px;
-    padding-bottom: 5px;
   }
 
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      margin-left:25px;
+  }
+
+  #icon-menu {
+    margin-left: 70px;
+    width: 25px;
+    margin-top: 4px;
+  }
 
 }

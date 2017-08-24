@@ -9,6 +9,7 @@
   #input-project{
     width: 136px;
     margin-top: 3px;
+    margin-left: 27px;
   }
 
   #text-site-panel-menu {
@@ -16,10 +17,6 @@
     margin-left: 50px;
   }
 
-  #icon-menu {
-    margin-left: 70px;
-    width: 25px;
-    margin-top: 4px;
-  }
+
 
 }

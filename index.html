@@ -54,10 +54,7 @@
   <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_320.css">
 </head>
 <body ng-app="score_federal" ng-cloak onload="myFunction()" >
-
-
   <div layout="row" style="display:none;" id="myDiv" class="animate-bottom">
-
   <!--navbar content-->
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
@@ -99,7 +96,6 @@
        <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
      </div>
   </div>
-
   <!--slide content-->
   <div id="slide-head" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
     <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row" id="div-circle-score">
@@ -172,9 +168,9 @@
     <div hide-md hide-lg hide-xl ng-cloak layout-xs="column" layout-sm="column">
       <md-content  style="background:#000;">
         <md-tabs id="tabs-responsive"  md-border-bottom>
-          <md-tab style="max-width:320px;" class="md-display-2" label="Diputados">
+          <md-tab  class="md-display-2" label="Diputados">
             <md-content style="background:#EEE;" class="md-padding">
-              <div ng-controller="DeputysController" >
+              <div ng-controller="DeputysController">
                 <div layout-xs="column" layout-sm="column" ng-repeat="item in deputys">
                   <md-list ng-controller="AppCtrl">
                     <div id="content-cards"  layout-xs="column" layout-sm="column">
@@ -182,7 +178,7 @@
                         <div  flex-xs="20" flex-sm="20">
                         </div>
                         <div  flex-xs="60" flex-sm="60">
-                          <div layout-xs="row" layot-sm="row">
+                          <div layout-xs="row" layout-sm="row">
                             <div id="califichas-content-happy"  flex-xs="25" flex-sm="25">
                               <a href="pac.bordepolitico.com">
                                 <img src="imgs/svg/cali_happy.svg">
@@ -211,7 +207,7 @@
                         <div flex-xs="15" flex-sm="15">
                         </div>
                         <div flex-xs="70" flex-sm="70">
-                          <div layout-xs="row" layot-sm="row">
+                          <div layout-xs="row" layout-sm="row">
                             <div id="image-card" flex-xs="60" flex-sm="60">
                               <img  src="http://{{item.image}}" class="md-avatar">
                             </div>
@@ -243,9 +239,9 @@
                           </div>
                         </div>
                         </div>
-                        <div layout-xs="row">
-                        <div flex-offset-xs="15" flex-xs="70">
-                          <div layout-xs="column">
+                        <div layout-xs="row" layout-sm="row">
+                        <div flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70">
+                          <div layout-xs="column" layout-sm="column">
                             <div id="text-chamber-card" layout-xs="column" layout-sm="column">
                               {{item.chamber}}
                             </div>
@@ -265,7 +261,7 @@
                             </div>
                           </div>
                         </div>
-                        <div flex-xs="15">
+                        <div flex-xs="15" flex-sm="15">
                           <img id="image-state-card" src="{{item.img_state}}">
                         </div>
                       </div>
@@ -451,7 +447,6 @@
       </div>
     </md-content>
   </md-sidenav>
-
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
