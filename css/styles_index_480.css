@@ -38,6 +38,7 @@
   #icon-menu {
     width: 38px;
     margin-left: 80px;
+    margin-top: -1.5px;
   }
 
   #input-project {
@@ -58,7 +59,7 @@
   }
 
   #icon-logo {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 }
 

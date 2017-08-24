@@ -23,8 +23,28 @@
  }
 
  .btn-text-one {
-  font-size: 10px;
-  margin-top: 4px;
-  margin-left: 26px;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-left: 26px;
+ }
+
+ .color-btn {
+  min-height: 25px;
+ }
+
+ .icon-dwn{
+   margin-top: 5px;
+ }
+
+ .icon-question{
+   margin-top: 5px;
+ }
+
+ .icon-party{
+   margin-top: 7px;
+ }
+
+ .icon-search{
+   margin-top: 6px;
  }
 }

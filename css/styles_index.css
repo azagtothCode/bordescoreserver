@@ -10,7 +10,7 @@ html, body{  text-decoration: none;}
     position: fixed;
     width: 100%;
     opacity: 0.7;
-    z-index: 1;
+    z-index: 2;
   }
 
   #icon-logo{
@@ -52,6 +52,11 @@ html, body{  text-decoration: none;}
 
   md-select-menu.md-default-theme md-option[selected], md-select-menu md-option[selected] {
     background:#EE4656;
+  }
+
+  md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #EE4656;
+    background: #EE4656;
   }
 
   #icon-menu {
