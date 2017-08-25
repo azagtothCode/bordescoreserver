@@ -1,11 +1,11 @@
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
   #tabs-responsive {
     min-height: 734px;
   }
 
   #content-cards{
     padding:5px;
-    height: 200px;
+    height: 190px;
   }
 
   #califichas-content-happy img{
