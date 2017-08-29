@@ -24,30 +24,4 @@
     transition: all 500ms;
   }
 
-  @media only screen and (max-width: 768px) {
-
-      #tit-federal:hover {
-        background:transparent;
-        transition: all 500ms;
-      }
-
-      #tit-federal:hover span{
-        color:#FFF;
-        transition: all 500ms;
-      }
-
-      #tit-puebla:hover {
-        background:transparent;
-        transition: all 500ms;
-      }
-
-      #tit-jalisco:hover {
-        background:transparent;
-        transition: all 500ms;
-      }
-
-      #tit-cdmx:hover {
-        background:transparent;
-        transition: all 500ms;
-      }
-  }
+  
