@@ -108,7 +108,7 @@
 
   <!--slide content-->
   <div id="slide-head" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row" id="div-circle-score">
+    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" id="div-circle-score">
        <div flex-xs="40" flex-sm="40" flex-md="40" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="45">
        </div>
        <div id="logo_score" flex-xs="20" flex-sm="20" flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20" flex-xl="15">
@@ -116,7 +116,7 @@
        <div flex-xs="40" flex-sm="40" flex-md="40" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40">
        </div>
     </div>
-    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-lg="row" id="div-buttons-score">
+    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" id="div-buttons-score">
        <div  flex-xs="45" flex-offset-sm="5" flex-sm="40" flex-offset-md="20" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
          <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-lg="row" layout-xl="row">
            <div  class="color-btn" ng-controller="OpenCSVController" ng-click="openCSV()" flex-offset-xs="5" flex-xs="45" flex-sm="50"   flex-md="50"  flex-offset-lg="40" flex-lg="25" flex-offset-xl="40" flex-xl="25">
@@ -146,7 +146,7 @@
          </div>
        </div>
     </div>
-    <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
+    <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" layout-xl="row">
       <div id="content-dip" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
         <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
           <div flex-offset-md="40" flex-md="60" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="40" flex-xl="60">
@@ -175,7 +175,7 @@
        </div>
     </div>
    </div>
-    <div hide-md hide-lg hide-xl ng-cloak layout-xs="column" layout-sm="column">
+    <div hide-md hide-gt-lg hide-lg hide-xl ng-cloak layout-xs="column" layout-sm="column">
       <md-content  style="background:#000;">
         <md-tabs id="tabs-responsive"  md-border-bottom>
           <md-tab  class="md-display-2" label="Diputados">
@@ -387,14 +387,14 @@
         </md-tabs>
       </md-content>
     </div>
-    <div show-md show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
+    <div show-md show-gt-lg  show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
       <md-content ng-controller="DeputysController" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
         <div style="background:#EEE;" ng-repeat="item in deputys" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-          <div flex-md="40" flex-gt-md="40" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+          <div flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" >
           </div>
-          <div flex-md="60" flex-gt-md="60" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+          <div flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
             <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="30" >
                 <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                     <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
@@ -431,6 +431,27 @@
                     </div>
                 </div>
               </div>
+              <div style="text-align:right;" id="content-socials-card" hide show-xl flex-xl="10">
+                <div layout-xl="row" >
+                  <div layout-xl="column">
+                    <div  id="facebook-card">
+                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                          <img src="imgs/svg/facebook_cards.svg">
+                        </a>
+                    </div>
+                    <div layout-xl="column" id="twitter-card">
+                      <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                        <img src="imgs/svg/twiter_cards.svg">
+                      </a>
+                    </div>
+                    <div layout-xl="column" id="mail-card" >
+                      <a href="mailto:{{item.mail}}">
+                        <img src="imgs/svg/mail_cards.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
                 <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                   <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
@@ -452,7 +473,7 @@
                       <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
                         <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                           <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
                               <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
@@ -474,6 +495,9 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div flex-xl="10">
+                <img id="image-state-card" src="{{item.img_state}}">
               </div>
             </div>
             <md-divider ng-if="!$last"></md-divider>
@@ -482,9 +506,9 @@
       </md-content>
       <md-content ng-controller="SenatorsController"  flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
         <div style="background:#EEE;" ng-repeat="item in senators" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-          <div flex-md="60" flex-gt-md="60" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+          <div flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
             <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="30" >
                 <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                     <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
@@ -521,6 +545,27 @@
                     </div>
                 </div>
               </div>
+              <div style="text-align:right;" id="content-socials-card" hide show-xl flex-xl="10">
+                <div layout-xl="row" >
+                  <div layout-xl="column">
+                    <div  id="facebook-card">
+                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                          <img src="imgs/svg/facebook_cards.svg">
+                        </a>
+                    </div>
+                    <div layout-xl="column" id="twitter-card">
+                      <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                        <img src="imgs/svg/twiter_cards.svg">
+                      </a>
+                    </div>
+                    <div layout-xl="column" id="mail-card" >
+                      <a href="mailto:{{item.mail}}">
+                        <img src="imgs/svg/mail_cards.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
                 <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                   <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
@@ -542,7 +587,7 @@
                       <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
                         <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                           <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
                               <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
@@ -565,10 +610,13 @@
                   </div>
                 </div>
               </div>
+              <div flex-xl="10">
+                <img id="image-state-card" src="{{item.img_state}}">
+              </div>
             </div>
             <md-divider ng-if="!$last"></md-divider>
           </div>
-          <div flex-md="40" flex-gt-md="40" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+          <div flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" >
           </div>
         </div>
       </md-content>
