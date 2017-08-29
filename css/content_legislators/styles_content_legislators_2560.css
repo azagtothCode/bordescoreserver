@@ -33,8 +33,8 @@
   }
 
   #score-card {
-    margin-top: 3px;
-    margin-left: -45px;
+    margin-top: 20px;
+    margin-left: -66px;
     z-index: 1;
   }
 
@@ -49,13 +49,13 @@
     position: absolute;
     font-size: 20px;
     letter-spacing: 2px;
-    margin-left: 30px;
+    margin-left: 24px;
     font-weight: bold;
     color: #FFF;
   }
 
   #text-chamber-card{
-    font-size: 22px;
+    font-size: 25px;
     margin-top: 7px;
     text-transform: uppercase;
     text-align: right;
@@ -63,14 +63,14 @@
   }
 
   #text-state-card{
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
   }
 
   #text-state-card span{
-    font-size: 11px;
+    font-size: 13px;
     /*margin-top: 2px;*/
     text-transform: uppercase;
     text-align: right;
@@ -78,42 +78,42 @@
   }
 
   #image-card img{
-    width: 140px;
-    height: 140px;
-    margin-top: -30px;
-    margin-left: 17px;
+    width: 145px;
+    height: 145px;
+    margin-top: -51px;
+    margin-left: 0px;
     border-radius: 50%;
   }
 
   #image-party-card img{
-    width: 45px;
-    margin-left: 5px;
-    margin-top: 67px;
+    width: 50px;
+    margin-left: -18px;
+    margin-top: 47px;
   }
 
   #image-state-card {
-    width: 35px;
+    width: 40px;
     margin-left: 12px;
     margin-top: 30px;
   }
 
   #facebook-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #twitter-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #mail-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #text-name-card{
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
@@ -121,7 +121,7 @@
   }
 
   #text-election-card{
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 3px;
     margin-left: 6px;
     color: #BBB;
@@ -130,7 +130,7 @@
   }
 
   #text-commission-card{
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 6px;
     padding-bottom: 5px;
     text-transform: uppercase;

@@ -55,7 +55,7 @@
   }
 
   #text-chamber-card{
-    font-size: 22px;
+    font-size: 25px;
     margin-top: 7px;
     text-transform: uppercase;
     text-align: right;
@@ -63,14 +63,14 @@
   }
 
   #text-state-card{
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
   }
 
   #text-state-card span{
-    font-size: 11px;
+    font-size: 13px;
     /*margin-top: 2px;*/
     text-transform: uppercase;
     text-align: right;
@@ -113,7 +113,7 @@
   }
 
   #text-name-card{
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
@@ -121,7 +121,7 @@
   }
 
   #text-election-card{
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 3px;
     margin-left: 6px;
     color: #BBB;
@@ -130,7 +130,7 @@
   }
 
   #text-commission-card{
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 6px;
     padding-bottom: 5px;
     text-transform: uppercase;
