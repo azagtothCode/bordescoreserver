@@ -28,48 +28,48 @@
  .color-btn{
    background: #000;
    opacity: 1.0;
-   min-height: 30px;
+   min-height: 45px;
  }
 
  .btn-text-one {
    font-size: 11px;
-   margin-left: 28px;
-   margin-top: 9px;
+   margin-left: 33px;
+   margin-top: 16px;
  }
 
  .icon-dwn{
    width: 25px;
-   margin-left: 2px;
-   margin-top: 2px;
+   margin-left: 5px;
+   margin-top: 6px;
  }
 
  .icon-question{
-   width: 20px;
-   margin-left: 3px;
-   margin-top: -1px;
+   width: 24px;
+   margin-left: 5px;
+   margin-top: 7px;
  }
 
  .icon-party{
    width: 20px;
-   margin-left: 3px;
-   margin-top: 5px;
+   margin-left: 7px;
+   margin-top: 10px;
  }
 
  .icon-search{
-   width: 25px;
-   margin-left: 1.5px;
-   margin-top: 3px;
+   width: 23px;
+   margin-left: 3.5px;
+   margin-top: 7px;
  }
 
 
   #content-senado{
     font-size: 22px;
-    margin-top: 35px
+    margin-top: 45px
   }
 
   #content-dip{
     font-size: 22px;
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   #boton-borde {
@@ -90,6 +90,42 @@
 
   #div-buttons-score{
     width: 1366px;
+  }
+
+  .btn-text-one {
+    font-size: 11px;
+    margin-left: 28px;
+    margin-top: 18px;
+  }
+
+  .icon-dwn {
+    width: 25px;
+    margin-left: 2px;
+    margin-top: 9px;
+  }
+
+  .icon-question {
+    width: 25px;
+    margin-left: 2px;
+    margin-top: 9px;
+  }
+
+  .icon-party {
+    width: 20px;
+    margin-left: 3px;
+    margin-top: 11px;
+  }
+
+  .icon-search {
+    width: 23px;
+    margin-left: 1.5px;
+    margin-top: 12px;
+  }
+
+  .color-btn {
+    background: #000;
+    opacity: 1.0;
+    min-height: 50px;
   }
 
 }

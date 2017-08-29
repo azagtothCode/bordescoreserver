@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8"></meta>
   <meta name="description" content="Web Site For Present Information about legislators"></meta>
-  <meta name="keywords" content="Legisladores,Senadores,Diputados"></meta>
+  <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
   <meta name="author" content="Michelle Garduño"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
   <title>Borde Score</title>
@@ -46,6 +46,9 @@
   <link rel="stylesheet" href="css/slide_head/styles_slide_320.css">
   <link rel="stylesheet" href="css/loader.css">
   <link rel="stylesheet" href="css/content_score_party/styles_content.css">
+  <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_2560.css">
+  <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_1920.css">
+  <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_1440.css">
   <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_1366.css">
   <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_1280.css">
   <link rel="stylesheet" href="css/content_legislators/styles_content_legislators_1024.css">
@@ -157,7 +160,7 @@
           </div>
         </div>
       </div>
-       <div  id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
+      <div  id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
            <div flex-offset-md="10" flex-md="90" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="15" flex-lg="85"  flex-offset-gt-lg="15" flex-gt-lg="85" flex-offset-xl="15" flex-xl="85">
              <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
@@ -170,8 +173,8 @@
            </div>
          </div>
        </div>
-      </div>
     </div>
+   </div>
     <div hide-md hide-lg hide-xl ng-cloak layout-xs="column" layout-sm="column">
       <md-content  style="background:#000;">
         <md-tabs id="tabs-responsive"  md-border-bottom>
@@ -384,84 +387,84 @@
         </md-tabs>
       </md-content>
     </div>
-    <div show-md show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-      <md-content ng-controller="DeputysController" flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
-        <div style="background:#EEE;" ng-repeat="item in deputys" layout-md="row" layout-gt-md="row">
-          <div flex-md="40" flex-gt-md="40" flex-lg="50" flex-xl="50" >
+    <div show-md show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
+      <md-content ng-controller="DeputysController" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+        <div style="background:#EEE;" ng-repeat="item in deputys" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+          <div flex-md="40" flex-gt-md="40" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
           </div>
-          <div flex-md="60" flex-gt-md="60" flex-lg="50" flex-xl="50" >
-            <div id="content-cards"  layout-md="row" layout-gt-md="row">
-              <div  flex-md="40" flex-gt-md="30" flex-lg="50" flex-xl="50" >
-                <div layout-md="column" layout-gt-md="column">
-                  <div layout-md="row" layout-gt-md="row">
-                    <div  flex-md="100" flex-gt-md="100">
-                      <div layout-md="row" layout-gt-md="row">
-                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25">
+          <div flex-md="60" flex-gt-md="60" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+            <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                  <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                    <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_happy.svg">
                           </a>
                         </div>
-                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25">
+                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_sad.svg">
                           </a>
                         </div>
-                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25">
+                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
-                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25">
+                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <img src="imgs/svg/score_color.svg">
                           <span>{{item.score}}</span>
                         </div>
                       </div>
                     </div>
                    </div>
-                   <div layout-md="row" layout-gt-md="row">
-                     <div id="image-card" flex-md="60" flex-gt-md="60">
+                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                     <div id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60">
                        <img  src="http://{{item.image}}" class="md-avatar">
                      </div>
-                     <div id="image-party-card" flex-md="20" flex-gt-md="20">
+                     <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20">
                          <img src="{{item.image_party}}">
                      </div>
                     </div>
                 </div>
               </div>
-              <div flex-md="60" flex-gt-md="70" flex-lg="50" flex-xl="50" >
-                <div layout-md="row" layout-gt-md="row">
-                  <div flex-md="100" flex-gt-md="100">
-                    <div layout-md="column" layout-gt-md="column">
-                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column">
+              <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                  <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                    <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.chamber}}
                       </div>
-                      <div id="text-state-card"  layout-md="column" layout-gt-md="column">
+                      <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                       <span>  Nacido en: </span>
                         {{item.state}}
                         <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                       </div>
-                      <div id="text-name-card" layout-md="column" layout-gt-md="column" >
+                      <div id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.name}}
                       </div>
-                      <div id="text-election-card" layout-md="column"  layout-gt-md="column">
+                      <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.election}}
                       </div>
-                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column">
+                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column">
-                        <div layout-md="row" layout-gt-md="row">
-                          <div flex-md="33" flex-gt-md="33" id="facebook-card">
+                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                        <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                          <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
                               <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                                 <img src="imgs/svg/facebook_cards.svg">
                               </a>
                           </div>
-                          <div flex-md="33"  flex-gt-md="33" id="twitter-card">
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
                             <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
                               <img src="imgs/svg/twiter_cards.svg">
                             </a>
                           </div>
-                          <div flex-md="33"  flex-gt-md="33" id="mail-card" >
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
                             <a href="mailto:{{item.mail}}">
                               <img src="imgs/svg/mail_cards.svg">
                             </a>
@@ -478,81 +481,80 @@
         </div>
       </md-content>
       <md-content ng-controller="SenatorsController"  flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
-        <div style="background:#EEE;" ng-repeat="item in senators" layout-md="row" layout-gt-md="row">
-
-          <div flex-md="60" flex-gt-md="60" flex-lg="50" flex-xl="50" >
-            <div id="content-cards"  layout-md="row" layout-gt-md="row">
-              <div  flex-md="40" flex-gt-md="30" flex-lg="50" flex-xl="50" >
-                <div layout-md="column" layout-gt-md="column">
-                  <div layout-md="row" layout-gt-md="row">
-                    <div  flex-md="100" flex-gt-md="100">
-                      <div layout-md="row" layout-gt-md="row">
-                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25">
+        <div style="background:#EEE;" ng-repeat="item in senators" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+          <div flex-md="60" flex-gt-md="60" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+            <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                  <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                    <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_happy.svg">
                           </a>
                         </div>
-                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25">
+                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_sad.svg">
                           </a>
                         </div>
-                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25">
+                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <a href="pac.bordepolitico.com">
                             <img src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
-                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25">
+                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <img src="imgs/svg/score_color.svg">
                           <span>{{item.score}}</span>
                         </div>
                       </div>
                     </div>
                    </div>
-                   <div layout-md="row" layout-gt-md="row">
-                     <div id="image-card" flex-md="60" flex-gt-md="60">
+                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                     <div id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60">
                        <img  src="http://{{item.image}}" class="md-avatar">
                      </div>
-                     <div id="image-party-card" flex-md="20" flex-gt-md="20">
+                     <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20">
                          <img src="{{item.image_party}}">
                      </div>
                     </div>
                 </div>
               </div>
-              <div flex-md="60" flex-gt-md="70" flex-lg="50" flex-xl="50" >
-                <div layout-md="row" layout-gt-md="row">
-                  <div flex-md="100" flex-gt-md="100">
-                    <div layout-md="column" layout-gt-md="column">
-                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column">
+              <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                  <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                    <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.chamber}}
                       </div>
-                      <div id="text-state-card"  layout-md="column" layout-gt-md="column">
+                      <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                       <span>  Nacido en: </span>
                         {{item.state}}
                         <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                       </div>
-                      <div id="text-name-card" layout-md="column" layout-gt-md="column" >
+                      <div id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.name}}
                       </div>
-                      <div id="text-election-card" layout-md="column"  layout-gt-md="column">
+                      <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.election}}
                       </div>
-                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column">
+                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column">
-                        <div layout-md="row" layout-gt-md="row">
-                          <div flex-md="33" flex-gt-md="33" id="facebook-card">
+                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                        <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                          <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
                               <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                                 <img src="imgs/svg/facebook_cards.svg">
                               </a>
                           </div>
-                          <div flex-md="33"  flex-gt-md="33" id="twitter-card">
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
                             <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
                               <img src="imgs/svg/twiter_cards.svg">
                             </a>
                           </div>
-                          <div flex-md="33"  flex-gt-md="33" id="mail-card" >
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
                             <a href="mailto:{{item.mail}}">
                               <img src="imgs/svg/mail_cards.svg">
                             </a>
@@ -566,7 +568,7 @@
             </div>
             <md-divider ng-if="!$last"></md-divider>
           </div>
-          <div flex-md="40" flex-gt-md="40" flex-lg="50" flex-xl="50" >
+          <div flex-md="40" flex-gt-md="40" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
           </div>
         </div>
       </md-content>

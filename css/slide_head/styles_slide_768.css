@@ -20,12 +20,12 @@
  }
 
  .color-btn{
-   min-height: 20px;
+   min-height: 22px;
  }
 
  .btn-text-one{
-   font-size: 14px;
-   margin-top: 1px;
+   font-size: 16px;
+   margin-top: 2px;
  }
 
  .btn-text-two-csv{
@@ -53,24 +53,24 @@
  }
 
  .icon-dwn{
-   width: 20px;
+   width: 22px;
    margin-top: 0px;
-   margin-left: 1px;
+   margin-left: 3px;
  }
 
  .icon-question{
-   width: 20px;
-   margin-top: 0px;
-   margin-left: 1px;
+   width: 25px;
+   margin-top: -1px;
+   margin-left: 0px;
  }
 
  .icon-party{
-   width: 15px;
-   margin-top: 2px;
+   width: 20px;
+   margin-top: 1px;
  }
 
  .icon-search{
-   width: 19px;
+   width: 20px;
    margin-top: 1px;
  }
 }

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1920px) {
   #tabs-responsive {
     min-height: 734px;
   }
@@ -17,13 +17,13 @@
   #califichas-content-sad img{
     width: 30px;
     margin-top: 10px;
-    margin-left: 0px;
+    margin-left:-20px;
   }
 
   #califichas-content-bad img{
     width: 30px;
     margin-top: 10px;
-    margin-left: 0px;
+    margin-left:-40px;
   }
 
   #content-socials-card{
