@@ -65,7 +65,7 @@ app.controller('OpenHowAboutController', function($scope) {
    };
 })
 
-.controller('OpenPartyScoreController', function($scope, $mdDialog) {
+.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.status = '  ';
   $scope.customFullscreen = false;
 
@@ -73,6 +73,24 @@ app.controller('OpenHowAboutController', function($scope) {
     $mdDialog.show({
       controller: DialogController,
       templateUrl: 'other_sites/party.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openAbout = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'other_sites/about.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,

@@ -135,10 +135,12 @@
 
   #content-senado {
     font-size: 38px;
+    margin-top: 90px;
   }
 
   #content-dip {
     font-size: 38px;
+    margin-top: 90px;
   }
 
   #boton-borde {
@@ -186,6 +188,16 @@
   }
 }
 
+@media only screen and (max-width: 1680px) {
+  #content-senado {
+    font-size: 32px;
+  }
+
+  #content-dip {
+    font-size: 32px;
+  }
+}
+
 @media only screen and (max-width: 1640px) {
   #logo_score {
     margin-left: 60px;
@@ -219,5 +231,25 @@
 
   #content-senado {
     font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  #content-senado {
+      font-size: 27px;
+  }
+
+  #content-dip {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  #content-senado {
+      font-size: 22px;
+  }
+
+  #content-dip {
+    font-size: 22px;
   }
 }

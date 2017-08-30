@@ -33,9 +33,9 @@
   }
 
   #score-card {
-    margin-top: 15px;
+    margin-top: 30px;
     width: 50px;
-    margin-left: -35px;
+    margin-left: -50px;
     z-index: 1;
   }
 
@@ -50,7 +50,7 @@
     position: absolute;
     font-size: 17px;
     letter-spacing: 2px;
-    margin-left: 30px;
+    margin-left: 22px;
     font-weight: bold;
     color: #FFF;
   }
@@ -79,10 +79,10 @@
   }
 
   #image-card img{
-    width: 110px;
-    height: 110px;
-    margin-top: -20px;
-    /* margin-left: 180px; */
+    width: 135px;
+    height: 135px;
+    margin-top: -35px;
+    margin-left: 5px;
     border-radius: 50%;
   }
 
@@ -137,15 +137,6 @@
     text-transform: uppercase;
     color: #BBB;
     text-align: right;
-  }
-
-  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-    margin-left: 170px;
-    color:#FFF;
-  }
-
-  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
-    color:#FFF;
   }
 
 }

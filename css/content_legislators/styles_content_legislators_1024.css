@@ -4,8 +4,8 @@
   }
 
   #content-cards{
-    padding:5px;
-    height: 200px;
+    padding: 5px;
+    height: 220px;
   }
 
   #califichas-content-happy img{
@@ -79,17 +79,17 @@
   }
 
   #image-card img{
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     margin-top: -20px;
-    /* margin-left: 180px; */
+    margin-left: -3px;
     border-radius: 50%;
   }
 
   #image-party-card img{
     width: 45px;
-    margin-left: -5px;
-    margin-top: 65px;
+    margin-left: 7px;
+    margin-top: 72px;
   }
 
   #image-state-card {

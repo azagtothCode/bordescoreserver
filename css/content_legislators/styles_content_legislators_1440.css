@@ -4,8 +4,8 @@
   }
 
   #content-cards{
-    padding:5px;
-    height: 190px;
+    padding: 5px;
+    height: 210px;
   }
 
   #califichas-content-happy img{
@@ -33,24 +33,24 @@
   }
 
   #score-card {
-    margin-top: 15px;
-    width: 50px;
-    margin-left: -35px;
+    margin-top: 25px;
+    width: 55px;
+    margin-left: -50px;
     z-index: 1;
   }
 
   #score-card img{
     margin-top: -3px;
-    width: 52px;
+    width: 55px;
     margin-left: 35px;
   }
 
   #score-card span{
-    margin-top: -36px;
+    margin-top: -39px;
     position: absolute;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 2px;
-    margin-left: 30px;
+    margin-left: 19px;
     font-weight: bold;
     color: #FFF;
   }
@@ -79,17 +79,17 @@
   }
 
   #image-card img{
-    width: 110px;
-    height: 110px;
-    margin-top: -20px;
-    /* margin-left: 180px; */
+    /* width: 110px; */
+    /* height: 110px; */
+    margin-top: -35px;
+    margin-left: 15px;
     border-radius: 50%;
   }
 
   #image-party-card img{
     width: 45px;
     margin-left: -5px;
-    margin-top: 65px;
+    margin-top: 74px;
   }
 
   #image-state-card {
@@ -138,6 +138,8 @@
     color: #BBB;
     text-align: right;
   }
+
+
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     margin-left: 170px;
