@@ -137,7 +137,7 @@
              <img class="icon-party" src="imgs/svg/party_logo.svg">
              <span class="btn-text-one">POR PARTIDO</span>
            </div>
-           <div class="color-btn" flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+           <div class="color-btn" ng-controller="OpenPanelScoreController" ng-click="openPerfil($event)" flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
              <img class="icon-search" src="imgs/svg/search_logo.svg">
              <span class="btn-text-one">BUSCAR LEGISLADOR</span>
            </div>
@@ -435,7 +435,7 @@
               <div style="text-align:right;" id="content-socials-card" hide show-xl flex-xl="10">
                 <div layout-xl="row" >
                   <div layout-xl="column">
-                    <div  id="facebook-card">
+                    <div  layout-xl="column" id="facebook-card">
                         <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                           <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
                         </a>
@@ -477,18 +477,18 @@
                       <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
                         <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                           <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
-                              <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                                <img src="imgs/svg/facebook_cards.svg">
-                              </a>
+                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                              <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                            </a>
                           </div>
                           <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
                             <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                              <img src="imgs/svg/twiter_cards.svg">
+                              <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
                             </a>
                           </div>
                           <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
                             <a href="mailto:{{item.mail}}">
-                              <img src="imgs/svg/mail_cards.svg">
+                              <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
                             </a>
                           </div>
                         </div>
@@ -594,18 +594,18 @@
                       <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
                         <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                           <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
-                              <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                                <img src="imgs/svg/facebook_cards.svg">
-                              </a>
+                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                              <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                            </a>
                           </div>
                           <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
                             <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                              <img src="imgs/svg/twiter_cards.svg">
+                              <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
                             </a>
                           </div>
                           <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
                             <a href="mailto:{{item.mail}}">
-                              <img src="imgs/svg/mail_cards.svg">
+                              <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
                             </a>
                           </div>
                         </div>
