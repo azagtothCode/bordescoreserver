@@ -35,7 +35,7 @@
   #score-card {
     margin-top: 3px;
     margin-left: -45px;
-    z-index: 1;
+    z-index: 2;
   }
 
   #score-card img{
@@ -187,7 +187,7 @@
   #score-card {
     margin-top: 30px;
     margin-left: -75px;
-    z-index: 1;
+    z-index: 2;
   }
 
   #score-card img{
@@ -304,7 +304,7 @@
   #score-card {
     margin-top: 35px;
     margin-left: -85px;
-    z-index: 1;
+    z-index: 2;
   }
 
   #image-party-card img {
