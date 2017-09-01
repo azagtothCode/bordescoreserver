@@ -204,9 +204,9 @@
                                 <img src="imgs/svg/cali_bad.svg">
                               </a>
                             </div>
-                            <div  id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
-                              <img src="imgs/svg/score.svg">
-                              <span>{{item.score}}</span>
+                            <div ng-controller="OpenPanelScoreController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
+                              <img ng-click="openPerfil($event)" src="imgs/svg/score.svg">
+                              <span ng-click="openPerfil($event)">{{item.score}}</span>
                             </div>
                           </div>
                         </div>
@@ -218,8 +218,8 @@
                         </div>
                         <div flex-xs="70" flex-sm="70">
                           <div layout-xs="row" layout-sm="row">
-                            <div id="image-card" flex-xs="60" flex-sm="60">
-                              <img  src="http://{{item.image}}" class="md-avatar">
+                            <div id="image-card" ng-controller="OpenPanelScoreController" flex-xs="60" flex-sm="60">
+                              <img ng-click="openPerfil($event)" src="http://{{item.image}}" class="md-avatar">
                             </div>
                             <div id="image-party-card" flex-xs="20" flex-sm="20">
                                 <img src="imgs/svg/partys/{{item.image_party}}">
@@ -266,7 +266,7 @@
                             <div id="text-election-card" layout-xs="column" layout-sm="column">
                               {{item.election}}
                             </div>
-                            <div id="text-commission-card" layout-xs="column" layout-sm="column">
+                            <div id="text-commission-card" ng-controller="OpenPanelScoreController" ng-click="openPerfil($event)" layout-xs="column" layout-sm="column">
                               {{item.commission}}
                             </div>
                           </div>
@@ -686,7 +686,9 @@
         </md-button>
         <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
           <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
-          <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+            <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+          </a>
         </md-button>
       </div>
     </md-content>
