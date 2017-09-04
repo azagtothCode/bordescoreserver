@@ -46,7 +46,7 @@
   margin-top: 12px;
   animation-name: animation-pvem;
   animation-duration: 4s;
-  animation-delay: 2s;
+  animation-delay: .1s;
 }
 
 .content-senator-party-pvem{
@@ -57,12 +57,145 @@
   margin-top: 12px;
   animation-name: animation-pvem;
   animation-duration: 4s;
-  animation-delay: 2s;
+  animation-delay: .1s;
+}
+
+.content-deputy-party-pan{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .2s;
+}
+
+.content-senator-party-pan{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .2s;
+}
+
+.content-deputy-party-pes{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .3s;
+}
+
+.content-senator-party-pes{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .3s;
+}
+
+.content-deputy-party-prd{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .4s;
+}
+
+.content-senator-party-prd{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .4s;
+}
+
+.content-deputy-party-pri{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .5s;
+}
+
+.content-senator-party-pri{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .5s;
+}
+
+.content-deputy-party-panal{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .6s;
+}
+
+.content-senator-party-panal{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .6s;
+}
+
+.content-deputy-party-morena{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .7s;
+}
+
+.content-senator-party-morena{
+  background:#FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-pvem;
+  animation-duration: 4s;
+  animation-delay: .7s;
 }
 
 #content-res-party-score{
   color: #EE4556;
   padding: 10px;
+  margin-top: 9px;
 }
 
 #content-imgs-party-score img{

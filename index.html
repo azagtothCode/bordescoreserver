@@ -190,17 +190,17 @@
                         <div  flex-xs="60" flex-sm="60">
                           <div layout-xs="row" layout-sm="row">
                             <div id="califichas-content-happy"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_happy.svg">
                               </a>
                             </div>
                             <div id="califichas-content-sad"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_sad.svg">
                               </a>
                             </div>
                             <div id="califichas-content-bad"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_bad.svg">
                               </a>
                             </div>
@@ -250,7 +250,7 @@
                         </div>
                         </div>
                         <div layout-xs="row" layout-sm="row">
-                        <div flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70">
+                        <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70">
                           <div layout-xs="column" layout-sm="column">
                             <div id="text-chamber-card" layout-xs="column" layout-sm="column">
                               {{item.chamber}}
@@ -293,17 +293,17 @@
                         <div  flex-xs="60" flex-sm="60">
                           <div layout-xs="row" layout-sm="row">
                             <div id="califichas-content-happy"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_happy.svg">
                               </a>
                             </div>
                             <div id="califichas-content-sad"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_sad.svg">
                               </a>
                             </div>
                             <div id="califichas-content-bad"  flex-xs="25" flex-sm="25">
-                              <a href="pac.bordepolitico.com">
+                              <a href="pac.bordepolitico.com" target="_blank">
                                 <img src="imgs/svg/cali_bad.svg">
                               </a>
                             </div>
@@ -353,7 +353,7 @@
                         </div>
                         </div>
                         <div layout-xs="row" layout-sm="row">
-                        <div flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70">
+                        <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70">
                           <div layout-xs="column" layout-sm="column">
                             <div id="text-chamber-card" layout-xs="column" layout-sm="column">
                               {{item.chamber}}
@@ -363,13 +363,13 @@
                               {{item.state}}
                               <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                             </div>
-                            <div id="text-name-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                            <div ng-click="openPerfil(item.id)" id="text-name-card" layout-xs="column" layout-sm="column">
                               {{item.name}}
                             </div>
                             <div id="text-election-card" layout-xs="column" layout-sm="column">
                               {{item.election}}
                             </div>
-                            <div id="text-commission-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                            <div ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column">
                               {{item.commission}}
                             </div>
                           </div>
@@ -400,17 +400,17 @@
                     <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
                       <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                         <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_happy_color.svg'" onmouseout="this.src='imgs/svg/cali_happy.svg'" src="imgs/svg/cali_happy.svg">
                           </a>
                         </div>
                         <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_sad_color.svg'" onmouseout="this.src='imgs/svg/cali_sad.svg'" src="imgs/svg/cali_sad.svg">
                           </a>
                         </div>
                         <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
@@ -456,7 +456,7 @@
               <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
                 <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                   <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
-                    <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                    <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                       <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.chamber}}
                       </div>
@@ -516,17 +516,17 @@
                     <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
                       <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                         <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_happy_color.svg'" onmouseout="this.src='imgs/svg/cali_happy.svg'" src="imgs/svg/cali_happy.svg">
                           </a>
                         </div>
                         <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_sad_color.svg'" onmouseout="this.src='imgs/svg/cali_sad.svg'" src="imgs/svg/cali_sad.svg">
                           </a>
                         </div>
                         <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com">
+                          <a href="pac.bordepolitico.com" target="_blank">
                             <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
@@ -573,7 +573,7 @@
               <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
                 <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                   <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
-                    <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                    <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                       <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.chamber}}
                       </div>

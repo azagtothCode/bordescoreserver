@@ -42,7 +42,6 @@
   #score-card {
     margin-top: 20px;
     margin-left: -66px;
-    z-index: 1;
   }
 
   #score-card img{
@@ -171,6 +170,10 @@
 
   md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
     color:#FFF;
+  }
+
+  #score-card {
+    z-index: 2;
   }
 
 }
