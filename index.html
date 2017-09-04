@@ -204,9 +204,9 @@
                                 <img src="imgs/svg/cali_bad.svg">
                               </a>
                             </div>
-                            <div ng-controller="OpenPanelScoreController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
-                              <img ng-click="openPerfil($event)" src="imgs/svg/score.svg">
-                              <span ng-click="openPerfil($event)">{{item.score}}</span>
+                            <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
+                              <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg">
+                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
                             </div>
                           </div>
                         </div>
@@ -218,8 +218,8 @@
                         </div>
                         <div flex-xs="70" flex-sm="70">
                           <div layout-xs="row" layout-sm="row">
-                            <div id="image-card" ng-controller="OpenPanelScoreController" flex-xs="60" flex-sm="60">
-                              <img ng-click="openPerfil($event)" src="http://{{item.image}}" class="md-avatar">
+                            <div id="image-card" ng-controller="OpenPerfilController" flex-xs="60" flex-sm="60">
+                              <img ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
                             </div>
                             <div id="image-party-card" flex-xs="20" flex-sm="20">
                                 <img src="imgs/svg/partys/{{item.image_party}}">
@@ -260,13 +260,13 @@
                               {{item.state}}
                               <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                             </div>
-                            <div id="text-name-card" layout-xs="column" layout-sm="column">
+                            <div id="text-name-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
                               {{item.name}}
                             </div>
                             <div id="text-election-card" layout-xs="column" layout-sm="column">
                               {{item.election}}
                             </div>
-                            <div id="text-commission-card" ng-controller="OpenPanelScoreController" ng-click="openPerfil($event)" layout-xs="column" layout-sm="column">
+                            <div id="text-commission-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
                               {{item.commission}}
                             </div>
                           </div>
@@ -307,9 +307,9 @@
                                 <img src="imgs/svg/cali_bad.svg">
                               </a>
                             </div>
-                            <div  id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
-                              <img src="imgs/svg/score.svg">
-                              <span>{{item.score}}</span>
+                            <div  ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
+                              <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg">
+                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
                             </div>
                           </div>
                         </div>
@@ -321,8 +321,8 @@
                         </div>
                         <div flex-xs="70" flex-sm="70">
                           <div layout-xs="row" layout-sm="row">
-                            <div id="image-card" flex-xs="60" flex-sm="60">
-                              <img  src="http://{{item.image}}" class="md-avatar">
+                            <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60">
+                              <img  ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
                             </div>
                             <div id="image-party-card" flex-xs="20" flex-sm="20">
                                 <img src="imgs/svg/partys/{{item.image_party}}">
@@ -363,13 +363,13 @@
                               {{item.state}}
                               <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                             </div>
-                            <div id="text-name-card" layout-xs="column" layout-sm="column">
+                            <div id="text-name-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
                               {{item.name}}
                             </div>
                             <div id="text-election-card" layout-xs="column" layout-sm="column">
                               {{item.election}}
                             </div>
-                            <div id="text-commission-card" layout-xs="column" layout-sm="column">
+                            <div id="text-commission-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
                               {{item.commission}}
                             </div>
                           </div>
@@ -414,16 +414,16 @@
                             <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
-                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <img onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
-                          <span>{{item.score}}</span>
+                        <div  ng-controller="OpenPerfilController"  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
+                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
                         </div>
                       </div>
                     </div>
                    </div>
                    <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                     <div id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60">
-                       <img  src="http://{{item.image}}" class="md-avatar">
+                     <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60">
+                       <img ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
                      </div>
                      <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
                        <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
@@ -465,13 +465,13 @@
                         {{item.state}}
                         <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                       </div>
-                      <div id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div id="text-name-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.name}}
                       </div>
                       <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.election}}
                       </div>
-                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div id="text-commission-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
                       <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
@@ -530,17 +530,17 @@
                             <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
                           </a>
                         </div>
-                        <div  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <img onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
-                          <span>{{item.score}}</span>
+                        <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
+                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
                         </img>
                         </div>
                       </div>
                     </div>
                    </div>
                    <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                     <div id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
-                       <img  ng-src="http://{{item.image}}" class="md-avatar">
+                     <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
+                       <img ng-click="openPerfilPage(item.id)" ng-src="http://{{item.image}}" class="md-avatar">
                      </div>
                      <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
                        <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
@@ -582,13 +582,13 @@
                         {{item.state}}
                         <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
                       </div>
-                      <div id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.name}}
                       </div>
                       <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.election}}
                       </div>
-                      <div id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
                       <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>

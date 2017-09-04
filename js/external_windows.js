@@ -65,7 +65,7 @@ app.controller('OpenHowAboutController', function($scope) {
    };
 })
 
-.controller('OpenPanelScoreController', function($scope, $mdDialog) {
+app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.status = '  ';
   $scope.customFullscreen = false;
 
@@ -140,8 +140,9 @@ app.controller('OpenHowAboutController', function($scope) {
 })
 
 app.controller('OpenPerfilController', function($scope) {
-   $scope.openPerfil = function(legId){
-     window.open("profile_dates_"+legId+".php",'_blank');
+   $scope.openPerfilPage = function(legId){
+    //  window.open("other_sites/profile_"+legId+".html",'_blank');
+     window.open("other_sites/profile.html",'_blank');
    };
 })
 

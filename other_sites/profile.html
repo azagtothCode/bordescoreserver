@@ -1,0 +1,186 @@
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="description" content="Web Site For Present Information about legislators"></meta>
+  <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
+  <meta name="author" content="Michelle Garduño"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <title>Borde Score</title>
+  <link rel="shortcut icon" href="../imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="../css/angular-material.css">
+  <!--Styles Azagtoth-->
+  <link rel="stylesheet" href="../css/styles_profile_index.css">
+  <link rel="stylesheet" href="../css/styles_index.css">
+  <link rel="stylesheet" href="../css/styles_index_slide.css">
+  <link rel="stylesheet" href="../css/styles_hover.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_2560.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_736.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_667.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_320.css">
+  <link rel="stylesheet" href="../css/styles_index_1920.css">
+  <link rel="stylesheet" href="../css/styles_index_1440.css">
+  <link rel="stylesheet" href="../css/styles_index_1366.css">
+  <link rel="stylesheet" href="../css/styles_index_1280.css">
+  <link rel="stylesheet" href="../css/styles_index_1024.css">
+  <link rel="stylesheet" href="../css/styles_index_768.css">
+  <link rel="stylesheet" href="../css/styles_index_736.css">
+  <link rel="stylesheet" href="../css/styles_index_667.css">
+  <link rel="stylesheet" href="../css/styles_index_568.css">
+  <link rel="stylesheet" href="../css/styles_index_480.css">
+  <link rel="stylesheet" href="../css/styles_index_375.css">
+  <link rel="stylesheet" href="../css/styles_index_320.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1920.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1440.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1280.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1024.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_768.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_736.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_667.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_568.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_414.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_375.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_320.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <link rel="stylesheet" href="../css/content_score_party/styles_content.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_2560.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1920.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1440.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1366.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1280.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1024.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_768.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_736.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_667.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_568.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
+</head>
+<body ng-app="score_federal" >
+  <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
+     </div>
+     <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
+        <div hide show-xs show-sm layout-xs="column">
+          <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
+              <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
+                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+              </md-select>
+          </div>
+        </div>
+        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
+          <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
+            <div layout-md="row" layout-lg="row" layout-gt-md="row">
+              <div ng-controller="OpenFederalController" ng-click="openFederal()" id="tit-federal"  cflex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
+                <span>FEDERAL</span>
+              </div>
+              <div ng-controller="OpenPueblaController" ng-click="openPuebla()" id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>PUEBLA</span>
+              </div>
+              <div ng-controller="OpenJaliscoController" ng-click="openJalisco()" id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>JALISCO</span>
+              </div>
+              <div ng-controller="OpenCDMXController" ng-click="openCDMX()" id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>CDMX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div flex-xs="30" flex-sm="25" flex-md="35" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
+        <img id="icon-menu" src="../imgs/svg/logo_b.svg">
+       </md-button>
+       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+         <img id="icon-menu" src="../imgs/svg/menu.svg"  >
+       </md-button>
+       <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+     </div>
+  </div>
+
+  <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
+    <!--panel section head-->
+    <md-toolbar flex="row"  id="nav-menu-index" >
+      <div>
+        <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
+        <span flex id="text-site-panel-menu">Menú Principal</span>
+          <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+            <img id="icon-close" src="../imgs/svg/close.svg">
+          </md-button>
+      </div>
+    </md-toolbar>
+    <!--panel section content-->
+    <md-content ng-controller="RightCtrl" layout-padding="">
+      <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+          <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider ></md-divider>
+      <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
+          <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+      <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
+        <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
+          <img id="icon-panel" ng-src="../{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
+          <div class="md-list-item-text" layout="column">
+            <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
+          </div>
+        </md-list-item>
+      </md-list>
+      <!-- class="fabSpeedDialdemoBasicUsage" -->
+      <div style="text-align:center;" ng-cloak=""  >
+        <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+          <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
+        </md-button>
+        <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+          <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
+        </md-button>
+        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
+          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+            <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
+          </a>
+        </md-button>
+      </div>
+    </md-content>
+  </md-sidenav>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/methods_nav.js"></script>
+  <script src="../js/external_windows.js"></script>
+  <script src="../js/methods_panel.js"></script>
+  <script src="../js/loader.js"></script>
+  <script src="../js/deputy_content.js"></script>
+  <script src="../js/senator_content.js"></script>
+  <script src="../js/graphs.js"></script>
+</body>
+</html>

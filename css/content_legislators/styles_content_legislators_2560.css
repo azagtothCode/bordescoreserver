@@ -5,7 +5,7 @@
 
   #content-cards{
     padding:5px;
-    height: 190px;
+    height: 215px;
   }
 
   #califichas-content-happy img{
@@ -64,27 +64,32 @@
   }
 
   #text-chamber-card{
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 7px;
+    margin-right: 95px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
-    cursor: pointer;
   }
 
   #text-state-card{
-    font-size: 16px;
+    font-size: 23px;
     text-transform: uppercase;
     text-align: right;
+    margin-right: 95px;
     color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
   }
 
   #text-state-card span{
-    font-size: 13px;
-    /*margin-top: 2px;*/
+    font-size: 12px;
+    /* margin-top: 2px; */
+    margin-right: -2px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
+    letter-spacing: 3px;
   }
 
   #image-card img{
@@ -104,9 +109,10 @@
   }
 
   #image-state-card {
-    width: 40px;
-    margin-left: 12px;
-    margin-top: 30px;
+    width: 50px;
+    height: 70px;
+    margin-left: -85px;
+    margin-top: 14px;
     cursor: pointer;
   }
 
@@ -129,31 +135,32 @@
   }
 
   #text-name-card{
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
+    letter-spacing: 3px;
     cursor: pointer;
   }
 
   #text-election-card{
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 3px;
-    margin-left: 6px;
+    margin-left: 0px;
     color: #BBB;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     cursor: pointer;
   }
 
   #text-commission-card{
-    font-size: 15px;
-    margin-left: 6px;
+    font-size: 20px;
+    margin-left: 0px;
     padding-bottom: 5px;
     text-transform: uppercase;
     color: #BBB;
-    text-align: right;
+    text-align: left;
     cursor: pointer;
   }
 
