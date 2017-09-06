@@ -52,12 +52,6 @@
  }
 
  /*Styles Home - Profile*/
- #w {
-   position: relative;
-   height: 100px;
-   width: 317px;
-   /* border: 1px solid red; */
- }
 
  #d1{
    max-width: 90px;
@@ -65,9 +59,5 @@
    margin-left: 58px;
  }
 
- #d1 {
-     top: 0px;
-     left: 0px;
- }
  /*****/
 }

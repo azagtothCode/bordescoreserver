@@ -27,11 +27,24 @@
    margin-left: 25px;
  }
 
- #d1{
-     position: absolute;
-     max-width: 90px;
-     margin-left: 150px;
+ /*Styles Home - Profile*/
+ #w {
+   position: relative;
+   height: 100px;
+   width: 317px;
+   /* border: 1px solid red; */
  }
+
+ #d1{
+   max-width: 90px;
+   margin-left: 150px;
+   margin-top: 6px;
+ }
+
+  #d1 {
+    top: 0px;
+    left: 0px;
+  }
 }
 
 @media only screen and (max-width: 510px) {

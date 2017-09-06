@@ -69,4 +69,9 @@
  .icon-search{
    margin-top: 1px;
  }
+
+ #d1{
+    max-width: 105px;
+    margin-left: 65px;
+ }
 }

@@ -1,3 +1,7 @@
+/*
+    Styles Home
+    Styles Home - Profile
+*/
 @media only screen and (max-width: 568px) {
   #tabs-responsive {
     min-height: 517px;
@@ -123,17 +127,18 @@
     margin-left: 107px;
   }
 
+  /* ************** */
+
   /* Styles Profile */
   #califichas-content-happy-profile img{
     width: 35px;
-    margin-top:35px;
-    margin-left: 0px;
-    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 25px;
   }
 
   #califichas-content-sad-profile img{
     width: 35px;
-    margin-top: 35px;
+    margin-top: 40px;
     margin-left: 0px;
     cursor: pointer;
   }
@@ -144,14 +149,13 @@
 
   #califichas-content-bad-profile img{
     width: 35px;
-    margin-top: 35px;
-    margin-left: -2px;
-    cursor: pointer;
+    margin-top: 40px;
+    margin-left: -27px;
   }
 
   #content-socials-card-profile{
     text-align: center;
-    margin-left: -75px;
+    margin-left: -65px;
     margin-top: 72px;
   }
 
@@ -163,43 +167,39 @@
 
   #score-card-profile img{
     margin-top: 30px;
-    width: 100px;
+    width: 85px;
     margin-left: 2px;
-    cursor: pointer;
   }
 
   #score-card-profile span{
-    margin-top: -71px;
+    margin-top: -65px;
     position: absolute;
     font-size: 35px;
     letter-spacing: 2px;
-    margin-left: -21px;
+    margin-left: -27px;
     font-weight: bold;
     color: #FFF;
-    cursor: pointer;
   }
 
   #text-chamber-card-profile{
-    font-size: 15px;
-    margin-top: 38px;
+    font-size: 20px;
+    margin-top: 50px;
     margin-right: 45px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
     font-weight: bold;
-    cursor: pointer;
-    letter-spacing: 2px;
+    letter-spacing: 9px;
   }
 
-  #text-state-card-profile{
+  #text-state-card-profile {
     font-size: 15px;
     text-transform: uppercase;
     text-align: right;
-    margin-right: 45px;
+    margin-right: 53px;
     color: #BBB;
     letter-spacing: 2px;
     font-weight: bold;
-    cursor: pointer;
   }
 
   #text-state-card-profile span{
@@ -210,48 +210,43 @@
     text-align: right;
     color: #BBB;
     letter-spacing: 3px;
-    cursor: pointer;
   }
 
   #image-card-profile img{
-    width: 160px;
-    height: 160px;
-    margin-top: -10px;
+    width: 180px;
+    height: 180px;
+    margin-top: -5px;
     margin-left: 100px;
     border-radius: 50%;
   }
 
   #image-party-card-profile img{
-    width: 50px;
-    margin-left: -18px;
-    margin-top: 100px;
-    cursor: pointer;
+    width: 60px;
+    margin-left: -9px;
+    margin-top: 115px;
   }
 
   #image-state-card-profile {
-    width: 45px;
-    height: 45px;
-    margin-left: -24px;
-    margin-top: 40px;
+    width: 50px;
+    height: 50px;
+    margin-left: -43px;
+    margin-top: 53px;
   }
 
   #facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
-    cursor: pointer;
     margin-left: 2px;
   }
 
   #twitter-card-profile img{
     margin-top: 5px;
     width: 30px;
-    cursor: pointer;
   }
 
   #mail-card-profile img{
     margin-top: 5px;
     width: 30px;
-    cursor: pointer;
   }
 
   #text-name-card-profile{
@@ -267,7 +262,7 @@
   }
 
   #text-election-card-profile{
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 3px;
     color: #BBB;
     text-transform: uppercase;
@@ -278,7 +273,7 @@
   }
 
   #text-commission-card-profile{
-    font-size: 11px;
+    font-size: 12px;
     padding-bottom: 5px;
     text-transform: uppercase;
     color: #BBB;
@@ -293,33 +288,33 @@
     font-weight: bold;
     margin-top: 15px;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   #style-rol{
     color:#FFC73F;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   #style-extra{
     color:#FF974C;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   #style-trabajo .letter{
-    margin-left: -10px;
+    margin-left:0px;
   }
 
   #style-rol .letter{
-    margin-left: -10px;
+    margin-left:0px;
   }
 
   #style-extra .letter{
-    margin-left: -10px;
+    margin-left:0px;
   }
   /******/
 

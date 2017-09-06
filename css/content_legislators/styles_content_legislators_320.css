@@ -127,9 +127,6 @@
     cursor: pointer;
   }
 
-  #califichas-content-bad-profile{
-    z-index: 2;
-  }
 
   #califichas-content-bad-profile img{
     width: 35px;
@@ -276,18 +273,21 @@
     font-weight: bold;
     margin-top: 15px;
     letter-spacing: 1px;
+    font-size: 15px;
   }
 
   #style-rol{
     color:#FFC73F;
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 15px;
   }
 
   #style-extra{
     color:#FF974C;
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 15px;
   }
 
   #text-graphics-profile{
