@@ -293,18 +293,21 @@
     font-weight: bold;
     margin-top: 15px;
     letter-spacing: 2px;
+    font-size: 13px;
   }
 
   #style-rol{
     color:#FFC73F;
     font-weight: bold;
     letter-spacing: 2px;
+    font-size: 13px;
   }
 
   #style-extra{
     color:#FF974C;
     font-weight: bold;
     letter-spacing: 2px;
+    font-size: 13px;
   }
 
   #style-trabajo .letter{
