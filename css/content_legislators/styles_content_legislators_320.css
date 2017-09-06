@@ -158,11 +158,11 @@
   }
 
   #score-card-profile span{
-    margin-top: -59px;
+    margin-top: -56px;
     position: absolute;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 2px;
-    margin-left: -13px;
+    margin-left: -9px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -206,16 +206,14 @@
     width: 140px;
     height: 140px;
     margin-top: -20px;
-    margin-left: 37px;
+    margin-left: 35px;
     border-radius: 50%;
-    cursor: pointer;
   }
 
   #image-party-card-profile img{
     width: 50px;
     margin-left: 0px;
     margin-top: 72px;
-    cursor: pointer;
   }
 
   #image-state-card-profile {
@@ -235,45 +233,40 @@
   #twitter-card-profile img{
     margin-top: 5px;
     width: 30px;
-    cursor: pointer;
   }
 
   #mail-card-profile img{
     margin-top: 5px;
     width: 30px;
-    cursor: pointer;
   }
 
   #text-name-card-profile{
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 4px;
   }
 
   #text-election-card-profile{
-    font-size: 11px;
+    font-size: 10px;
     margin-top: 3px;
     color: #BBB;
     text-transform: uppercase;
     text-align: left;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 4px;
   }
 
   #text-commission-card-profile{
-    font-size: 11px;
+    font-size: 10px;
     padding-bottom: 5px;
     text-transform: uppercase;
     color: #BBB;
     text-align: left;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 4px;
   }
