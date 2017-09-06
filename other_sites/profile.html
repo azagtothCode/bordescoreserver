@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="../css/angular-material.css">
   <!--Styles Azagtoth-->
-  <link rel="stylesheet" href="../css/profiles/styles_profile_index_320.css">
   <link rel="stylesheet" href="../css/styles_index.css">
   <link rel="stylesheet" href="../css/styles_index_slide.css">
   <link rel="stylesheet" href="../css/styles_hover.css">
@@ -60,7 +59,7 @@
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
 </head>
-<body ng-app="score_federal" onresize="myFunction()">
+<body ng-app="score_federal">
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
      </div>
@@ -204,51 +203,52 @@
               </div>
             </div>
           </div>
-          <div ng-controller="OpenPanelScoreController" id="text-graphics-profile" layout-xs="column">
+          <!-- <div ng-controller="OpenPanelScoreController" id="text-graphics-profile" layout-xs="column">
             <span  ng-click="openGraphsProfile($event)">Ver Graficas</span>
-          </div>
+          </div> -->
         </div>
       <div flex-xs="15" flex-sm="15">
       </div>
     </div>
-
-    <!-- <div layout-xs="row" layout-sm="row">
-      <div flex-xs="50" flex-sm="50">
-        <canvas id="d1" height="400" width="400"></canvas>
+     <div layout-xs="row" layout-sm="row">
+        <div flex-xs="50" flex-sm="50">
+          <div id="w">
+              <canvas id="d1" height="400" width="400"></canvas>
+          </div>
+        </div>
+        <div flex-xs="50" flex-sm="50">
+          <div layout-xs="column" layout-sm="column">
+            <div id="style-trabajo" layout-xs="row" layout-sm="row">
+              <div  flex-xs="20">
+                <span class="number">20%</span>
+              </div>
+              <div flex-xs="80">
+                <span class="letter">Trabajo</span>
+              </div>
+            </div>
+          </div>
+          <div layout-xs="column" layout-sm="column">
+            <div id="style-rol"  layout-xs="row" layout-sm="row">
+              <div flex-xs="20">
+                <span class="number">50%</span>
+              </div>
+              <div flex-xs="80">
+                <span class="letter">Rol</span>
+              </div>
+            </div>
+          </div>
+          <div layout-xs="column" layout-sm="column">
+            <div id="style-extra"  layout-xs="row" layout-sm="row">
+              <div flex-xs="20">
+                <span class="number">30%</span>
+              </div>
+              <div flex-xs="80">
+                <span class="letter">Extra</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div flex-xs="50" flex-sm="50">
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-trabajo" layout-xs="row" layout-sm="row">
-            <div  flex-xs="20">
-              <span>20%</span>
-            </div>
-            <div flex-xs="80">
-              <span>Trabajo</span>
-            </div>
-          </div>
-        </div>
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-rol"  layout-xs="row" layout-sm="row">
-            <div flex-xs="20">
-              <span>50%</span>
-            </div>
-            <div flex-xs="80">
-              <span>Rol</span>
-            </div>
-          </div>
-        </div>
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-extra"  layout-xs="row" layout-sm="row">
-            <div flex-xs="20">
-              <span>30%</span>
-            </div>
-            <div flex-xs="80">
-              <span>Extra</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
@@ -328,7 +328,7 @@
   <script src="../js/methods_nav.js"></script>
   <script src="../js/external_windows.js"></script>
   <script src="../js/methods_panel.js"></script>
-  <script src="../js/loader.js"></script>
+  <!-- <script src="../js/loader.js"></script> -->
   <script src="../js/graphs.js"></script>
 </body>
 </html>

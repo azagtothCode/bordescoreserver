@@ -282,19 +282,19 @@
     color:#EE4455;
     font-weight: bold;
     margin-top: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   #style-rol{
     color:#FFC73F;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   #style-extra{
     color:#FF974C;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   #text-graphics-profile{
@@ -302,6 +302,18 @@
     color:#FFC73F;
     font-weight: bold;
     font-size: 10px
+  }
+
+  #style-trabajo .letter{
+    margin-left: 6px;
+  }
+
+  #style-rol .letter{
+    margin-left: 6px;
+  }
+
+  #style-extra .letter{
+    margin-left: 6px;
   }
   /******/
 

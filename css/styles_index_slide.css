@@ -220,14 +220,14 @@
 
 @media only screen and (max-width: 568px) {
   #slide-head-profile-dip{
-    min-height: 430px;
-    background-size: 100% 430px;
+    min-height: 485px;
+    background-size: 100% 321px;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  #slide-head-profile-dip{
-    min-height: 400px;
-    background-size: 100% 400px;
+  #slide-head-profile-dip {
+      min-height: 465px;
+      background-size: 100% 465px;
   }
 }

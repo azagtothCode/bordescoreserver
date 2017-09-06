@@ -52,15 +52,22 @@
  }
 
  /*Styles Home - Profile*/
-/*#dona svg{
-  width: 150px;
-}*/
-  #d1 {
-    max-width: 90px;
-    /* border: 1px solid red; */
-    margin-top: -1px;
-    margin-left: 57px;
-    max-height: 90px;
-  }
+ #w {
+   position: relative;
+   height: 100px;
+   width: 317px;
+   /* border: 1px solid red; */
+ }
+
+ #d1{
+   max-width: 90px;
+   max-height: 90px;
+   margin-left: 58px;
+ }
+
+ #d1 {
+     top: 0px;
+     left: 0px;
+ }
  /*****/
 }

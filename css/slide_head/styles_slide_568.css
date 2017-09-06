@@ -27,11 +27,10 @@
    margin-left: 25px;
  }
 
- #d1 {
-   max-width: 300px;
-   /* border: 1px solid red; */
-   margin-top: 2px;
-   margin-left: 19px;
+ #d1{
+     position: absolute;
+     max-width: 90px;
+     margin-left: 150px;
  }
 }
 

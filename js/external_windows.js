@@ -164,6 +164,33 @@ app.controller('OpenPerfilController', function($scope) {
    };
 })
 
+var doughnutData = [
+                {
+                    value: 20,
+                    color:"#EE4455",
+                    highlight: "#FF5A5E",
+                    label: "Trabajo",
+                },
+                {
+                    value: 50,
+                    color: "#FFC73F",
+                    highlight: "#FFC870",
+                    label: "Rol"
+                },
+                {
+                    value: 30,
+                    color: "#FF974C",
+                    highlight: "#FFC870",
+                    label: "Extra"
+                }
+
+            ];
+
+
+var ctx1 = $("#d1").get(0).getContext("2d");
+var myChart1 = new Chart(ctx1).Doughnut(doughnutData, {
+    percentageInnerCutout: 70
+});
 
 
 // open /Applications/Google\ Chrome.app --args --allow-file-access-from-files

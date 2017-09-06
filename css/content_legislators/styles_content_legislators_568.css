@@ -306,6 +306,18 @@
     font-weight: bold;
     letter-spacing: 2px;
   }
+
+  #style-trabajo .letter{
+    margin-left: -10px;
+  }
+
+  #style-rol .letter{
+    margin-left: -10px;
+  }
+
+  #style-extra .letter{
+    margin-left: -10px;
+  }
   /******/
 
 
