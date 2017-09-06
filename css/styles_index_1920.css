@@ -4,6 +4,9 @@
       margin-top: 13px;
   }*/
 
+  #boton-borde {
+    margin-left: 60px;
+  }
 }
 
 @media only screen and (max-width: 1680px) {

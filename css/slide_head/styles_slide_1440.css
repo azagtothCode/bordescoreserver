@@ -127,6 +127,10 @@
     min-height: 50px;
   }
 
-
+  #content-senado {
+    font-size: 24px;
+    margin-left: -16px;
+    margin-top: 43px;
+  }
 
 }

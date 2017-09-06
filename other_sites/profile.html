@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="../css/angular-material.css">
   <!--Styles Azagtoth-->
-  <link rel="stylesheet" href="../css/styles_profile_index.css">
+  <link rel="stylesheet" href="../css/profiles/styles_profile_index_320.css">
   <link rel="stylesheet" href="../css/styles_index.css">
   <link rel="stylesheet" href="../css/styles_index_slide.css">
   <link rel="stylesheet" href="../css/styles_hover.css">
@@ -60,7 +60,7 @@
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
 </head>
-<body ng-app="score_federal" >
+<body ng-app="score_federal" onresize="myFunction()">
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
      </div>
@@ -98,8 +98,157 @@
        <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
          <img id="icon-menu" src="../imgs/svg/menu.svg"  >
        </md-button>
-       <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+       <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
      </div>
+  </div>
+  <div id="slide-head-profile-dip" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+  <div id="content-cards"  layout-xs="column" layout-sm="column">
+    <div layout-xs="row" layout-sm="row">
+      <div flex-xs="20" flex-sm="20">
+      </div>
+      <div flex-xs="60" flex-sm="60">
+        <div layout-xs="row" layout-sm="row">
+          <div id="califichas-content-happy-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_happy.svg">
+            </a>
+          </div>
+          <div id="califichas-content-sad-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_sad.svg">
+            </a>
+          </div>
+          <div id="califichas-content-bad-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_bad.svg">
+            </a>
+          </div>
+          <div ng-controller="OpenPerfilController" id="score-card-profile" style="text-align:center;" flex-xs="25" flex-sm="25">
+            <img ng-click="openPerfilPage(item.id)" src="../imgs/svg/score.svg">
+            <span ng-click="openPerfilPage(item.id)">100</span>
+          </div>
+        </div>
+      </div>
+      <div flex-xs="20" flex-sm="20">
+      </div>
+     </div>
+    <div layout-xs="row" layout-sm="row">
+      <div flex-xs="15" flex-sm="15">
+      </div>
+      <div flex-xs="70" flex-sm="70">
+        <div layout-xs="row" layout-sm="row">
+          <div id="image-card-profile" ng-controller="OpenPerfilController" flex-xs="60" flex-sm="60">
+            <img ng-click="openPerfilPage(item.id)" src="http://sil.gobernacion.gob.mx/Archivos/Fotos/9218979.jpg" class="md-avatar">
+          </div>
+          <div id="image-party-card-profile" flex-xs="20" flex-sm="20">
+              <img src="../imgs/svg/partys/pri.svg">
+          </div>
+          <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
+              <div style="text-align:right;" layout-xs="column" layout-sm="column">
+                <div id="facebook-card-profile">
+                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                      <img src="../imgs/svg/facebook_cards.svg">
+                    </a>
+                </div>
+                <div id="twitter-card-profile">
+                  <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                    <img src="../imgs/svg/twiter_cards.svg">
+                  </a>
+                </div>
+                <div id="mail-card-profile" >
+                  <a href="mailto:{{item.mail}}">
+                    <img src="../imgs/svg/mail_cards.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div flex-xs="15" flex-sm="15">
+        </div>
+      </div>
+    </div>
+    <div layout-xs="row" layout-sm="row">
+      <div flex-xs="15" flex-sm="15">
+      </div>
+      <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
+        <div layout-xs="row">
+           <div flex-xs="100" flex-sm="100">
+             <div layout-xs="column" layout-sm="column">
+               <div layout-xs="row" layout-sm="row">
+                 <div flex-xs="85" flex-sm="85">
+                    <div id="text-chamber-card-profile" layout-xs="column" layout-sm="column">
+                      diputado
+                    </div>
+                    <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
+                    <span>  Nacido en: </span>
+                      Jalisco
+                      <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
+                    </div>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <img id="image-state-card-profile" src="../imgs/svg/states/jalisco.svg">
+                  </div>
+                </div>
+              </div>
+              <div layout-xs="column" layout-sm="column">
+                <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                  José Luis Orozco Sánchez Aldana
+                </div>
+                <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
+                  Representación Proporcional
+                </div>
+                <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                  Secretario
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-controller="OpenPanelScoreController" id="text-graphics-profile" layout-xs="column">
+            <span  ng-click="openGraphsProfile($event)">Ver Graficas</span>
+          </div>
+        </div>
+      <div flex-xs="15" flex-sm="15">
+      </div>
+    </div>
+
+    <!-- <div layout-xs="row" layout-sm="row">
+      <div flex-xs="50" flex-sm="50">
+        <canvas id="d1" height="400" width="400"></canvas>
+      </div>
+      <div flex-xs="50" flex-sm="50">
+        <div layout-xs="column" layout-sm="column">
+          <div id="style-trabajo" layout-xs="row" layout-sm="row">
+            <div  flex-xs="20">
+              <span>20%</span>
+            </div>
+            <div flex-xs="80">
+              <span>Trabajo</span>
+            </div>
+          </div>
+        </div>
+        <div layout-xs="column" layout-sm="column">
+          <div id="style-rol"  layout-xs="row" layout-sm="row">
+            <div flex-xs="20">
+              <span>50%</span>
+            </div>
+            <div flex-xs="80">
+              <span>Rol</span>
+            </div>
+          </div>
+        </div>
+        <div layout-xs="column" layout-sm="column">
+          <div id="style-extra"  layout-xs="row" layout-sm="row">
+            <div flex-xs="20">
+              <span>30%</span>
+            </div>
+            <div flex-xs="80">
+              <span>Extra</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
 
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
@@ -174,13 +323,12 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" charset="utf-8"></script>
   <script src="../js/app.js"></script>
   <script src="../js/methods_nav.js"></script>
   <script src="../js/external_windows.js"></script>
   <script src="../js/methods_panel.js"></script>
   <script src="../js/loader.js"></script>
-  <script src="../js/deputy_content.js"></script>
-  <script src="../js/senator_content.js"></script>
   <script src="../js/graphs.js"></script>
 </body>
 </html>

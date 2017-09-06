@@ -3,39 +3,13 @@
     min-height: 734px;
   }
 
-  #content-cards{
-    padding:5px;
-    height: 190px;
-  }
-
-  #califichas-content-happy img{
-    width: 35px;
-    margin-top:0px;
-    margin-left: 0px;
-  }
-
-  #califichas-content-sad img{
-    width: 35px;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
-  #califichas-content-bad img{
-    width: 35px;
-    margin-top: 0px;
-    margin-left: -2px;
-  }
-
-  #content-socials-card{
-    text-align: center;
-    margin-left: 28px;
-    margin-top: 31px;
+  #content-cards {
+    height: 210px;
   }
 
   #score-card {
     margin-top: 3px;
     margin-left: -45px;
-    z-index: 2;
   }
 
   #score-card img{
@@ -46,35 +20,20 @@
 
   #score-card span{
     margin-top: -45px;
-    position: absolute;
     font-size: 20px;
-    letter-spacing: 2px;
     margin-left: 30px;
-    font-weight: bold;
-    color: #FFF;
   }
 
   #text-chamber-card{
     font-size: 25px;
-    margin-top: 7px;
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #text-state-card{
     font-size: 16px;
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #text-state-card span{
     font-size: 13px;
-    /*margin-top: 2px;*/
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #image-card img{
@@ -82,7 +41,6 @@
     height: 140px;
     margin-top: -30px;
     margin-left: 1px;
-    border-radius: 50%;
   }
 
   #image-party-card img{
@@ -92,59 +50,36 @@
   }
 
   #image-state-card {
-    width: 35px;
-    margin-left: 12px;
-    margin-top: 30px;
+    width: 40px;
+    margin-left: -10px;
+    margin-top: 5px;
   }
 
   #facebook-card img{
-    margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #twitter-card img{
-    margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #mail-card img{
-    margin-top: 5px;
-    width: 35px;
+    width: 40px;
   }
 
   #text-name-card{
     font-size: 17px;
-    margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
-    text-align: right;
+    margin-left: -15px;
   }
 
   #text-election-card{
-    font-size: 15px;
-    margin-top: 3px;
-    margin-left: 6px;
-    color: #BBB;
-    text-transform: uppercase;
-    text-align: right;
+    font-size: 14px;
+    margin-left: -15px;
   }
 
   #text-commission-card{
-    font-size: 15px;
-    margin-left: 6px;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
-    text-align: right;
-  }
-
-  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-    margin-left: 170px;
-    color:#FFF;
-  }
-
-  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
-    color:#FFF;
+    font-size: 14px;
+    margin-left: -15px;
   }
 
 }
@@ -155,139 +90,89 @@
     min-height: 734px;
   }
 
-  #content-cards{
-    padding: 5px;
-    height: 215px;
-  }
-
-  #califichas-content-happy img{
-    width: 35px;
-    margin-top:0px;
-    margin-left: 0px;
-  }
-
-  #califichas-content-sad img{
-    width: 35px;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
-  #califichas-content-bad img{
-    width: 35px;
-    margin-top: 0px;
-    margin-left: -2px;
-  }
-
-  #content-socials-card{
-    text-align: center;
-    margin-left: 28px;
-    margin-top: 0px;
+  #content-cards {
+    height: 200px;
   }
 
   #score-card {
-    margin-top: 30px;
-    margin-left: -75px;
-    z-index: 2;
+    margin-top: 20px;
+    margin-left: -68px;
   }
 
   #score-card img{
     margin-top: -3px;
-    width: 70px;
-    margin-left: 35px;
+    width: 80px;
+    margin-left: 20px;
   }
 
   #score-card span{
-    margin-top: -46px;
-    position: absolute;
-    font-size: 22px;
-    letter-spacing: 2px;
-    margin-left: 15px;
-    font-weight: bold;
-    color: #FFF;
+    margin-top: -55px;
+    font-size: 30px;
+    margin-left: -3px;
   }
 
   #text-chamber-card{
     font-size: 25px;
-    margin-top: 7px;
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #text-state-card{
     font-size: 16px;
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #text-state-card span{
     font-size: 13px;
-    /*margin-top: 2px;*/
-    text-transform: uppercase;
-    text-align: right;
-    color: #BBB;
   }
 
   #image-card img{
-    width: 150px;
-    height: 150px;
-    margin-top: -55px;
-    margin-left: 25px;
-    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    margin-top: -60px;
+    margin-left: 21px;
   }
 
   #image-party-card img{
-    width: 45px;
-    margin-left: -23px;
-    margin-top: 38px;
-  }
-
-  #image-state-card {
-    width: 35px;
-    margin-left: 12px;
+    width: 55px;
+    margin-left: -30px;
     margin-top: 30px;
   }
 
-  #facebook-card img{
+  #image-state-card {
+    width: 40px;
+    margin-left: -10px;
     margin-top: 5px;
-    width: 35px;
+  }
+
+  #facebook-card img{
+    width: 30px;
   }
 
   #twitter-card img{
-    margin-top: 5px;
-    width: 35px;
+    width: 30px;
   }
 
   #mail-card img{
-    margin-top: 5px;
-    width: 35px;
+    width: 30px;
   }
 
   #text-name-card{
     font-size: 17px;
-    margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
-    text-align: right;
+    margin-left: -20px;
   }
 
   #text-election-card{
-    font-size: 15px;
-    margin-top: 3px;
-    margin-left: 6px;
-    color: #BBB;
-    text-transform: uppercase;
-    text-align: right;
+    font-size: 14px;
+    margin-left: -20px;
   }
 
   #text-commission-card{
-    font-size: 15px;
-    margin-left: 6px;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
-    text-align: right;
+    font-size: 14px;
+    margin-left: -20px;
+  }
+
+  #content-socials-card {
+    text-align: center;
+    margin-left: -55px;
+    margin-top: 75px;
   }
 
 }
@@ -313,4 +198,22 @@
     margin-top: 60px;
   }
 
+  #content-socials-card {
+    text-align: center;
+    margin-left: -70px;
+    margin-top: 100px;
+  }
+
+  #text-name-card {
+    font-size: 15px;
+    margin-left: -5px;
+  }
+
+  #text-election-card{
+    margin-left: -5px;
+  }
+
+  #text-commission-card{
+    margin-left: -5px;
+  }
 }

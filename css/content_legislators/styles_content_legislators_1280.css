@@ -28,8 +28,8 @@
 
   #content-socials-card{
     text-align: center;
-    margin-left: 28px;
-    margin-top: -5px;
+    margin-left: -31px;
+    margin-top: 75px;
   }
 
   #score-card {
@@ -94,7 +94,7 @@
 
   #image-state-card {
     width: 46px;
-    margin-left: 3px;
+    margin-left: -12px;
     margin-top: 10px;
   }
 
@@ -114,29 +114,20 @@
   }
 
   #text-name-card{
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
-    text-align: right;
   }
 
   #text-election-card{
     font-size: 13px;
     margin-top: 3px;
     margin-left: 6px;
-    color: #BBB;
-    text-transform: uppercase;
-    text-align: right;
   }
 
   #text-commission-card{
     font-size: 13px;
     margin-left: 6px;
     padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
-    text-align: right;
   }
 
 }

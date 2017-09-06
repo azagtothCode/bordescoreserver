@@ -1,22 +1,19 @@
 @media only screen and (max-width: 320px) {
   #icon-logo{
-    margin-top: 2px;
+    margin-top: 1px;
   }
   #boton-menu{
     margin-top: 10px;
     margin-left: 45px;
   }
   #input-project{
-    width: 136px;
-    margin-top: 3px;
-    margin-left: 27px;
+    width: 165px;
+    margin-top: -2px;
+    margin-left: 10px;
   }
 
   #text-site-panel-menu {
     margin-top: 23px;
     margin-left: 50px;
   }
-
-
-
 }

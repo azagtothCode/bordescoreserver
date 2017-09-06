@@ -28,8 +28,8 @@
 
   #content-socials-card{
     text-align: center;
-    margin-left: 28px;
-    margin-top: -5px;
+    margin-left: -30px;
+    margin-top: 65px;
   }
 
   #score-card {
@@ -94,7 +94,7 @@
 
   #image-state-card {
     width: 46px;
-    margin-left: 3px;
+    margin-left: -10px;
     margin-top: 10px;
   }
 
@@ -114,38 +114,23 @@
   }
 
   #text-name-card{
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
-    text-align: right;
+    text-align: left;
   }
 
   #text-election-card{
     font-size: 13px;
     margin-top: 3px;
     margin-left: 6px;
-    color: #BBB;
-    text-transform: uppercase;
-    text-align: right;
+    text-align: left;
   }
 
   #text-commission-card{
     font-size: 13px;
     margin-left: 6px;
     padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
-    text-align: right;
-  }
-
-  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-    margin-left: 170px;
-    color:#FFF;
-  }
-
-  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
-    color:#FFF;
+    text-align: left;
   }
 
 }

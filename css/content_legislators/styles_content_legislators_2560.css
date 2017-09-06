@@ -5,7 +5,7 @@
 
   #content-cards{
     padding:5px;
-    height: 215px;
+    height: 235px;
   }
 
   #califichas-content-happy img{
@@ -35,28 +35,29 @@
 
   #content-socials-card{
     text-align: center;
-    margin-left: 28px;
-    margin-top: 31px;
+    margin-left: 10px;
+    margin-top: 50px;
   }
 
   #score-card {
-    margin-top: 20px;
-    margin-left: -66px;
+    margin-top: 7px;
+    margin-left: -10px;
+    z-index: 1;
   }
 
   #score-card img{
-    margin-top: -3px;
-    width: 70px;
-    margin-left: 35px;
+    /* margin-top: -3px; */
+    width: 85px;
+    /* margin-left: 35px; */
     cursor: pointer;
   }
 
   #score-card span{
-    margin-top: -45px;
+    margin-top: -59px;
     position: absolute;
-    font-size: 20px;
+    font-size: 32px;
     letter-spacing: 2px;
-    margin-left: 24px;
+    margin-left: -15px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -65,103 +66,112 @@
   #text-chamber-card{
     font-size: 30px;
     margin-top: 7px;
-    margin-right: 95px;
+    margin-right: 20px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
-    
+    font-weight: bold;
+    cursor: pointer;
   }
 
   #text-state-card{
     font-size: 23px;
     text-transform: uppercase;
     text-align: right;
-    margin-right: 95px;
+    margin-right: 15px;
     color: #BBB;
     letter-spacing: 2px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   #text-state-card span{
-    font-size: 12px;
+    font-size: 15px;
     /* margin-top: 2px; */
-    margin-right: -2px;
+    margin-right: 0px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
     letter-spacing: 3px;
+    cursor: pointer;
   }
 
   #image-card img{
-    width: 145px;
-    height: 145px;
-    margin-top: -51px;
+    width: 170px;
+    height: 170px;
+    margin-top: -56px;
     margin-left: 0px;
     border-radius: 50%;
     cursor: pointer;
   }
 
   #image-party-card img{
-    width: 50px;
-    margin-left: -18px;
+    width: 65px;
+    margin-left: 0px;
     margin-top: 47px;
     cursor: pointer;
   }
 
   #image-state-card {
-    width: 50px;
+    width: 70px;
     height: 70px;
-    margin-left: -85px;
+    margin-left: 0px;
     margin-top: 14px;
     cursor: pointer;
   }
 
   #facebook-card img{
     margin-top: 5px;
-    width: 40px;
+    width: 50px;
     cursor: pointer;
   }
 
   #twitter-card img{
     margin-top: 5px;
-    width: 40px;
+    width: 50px;
     cursor: pointer;
   }
 
   #mail-card img{
     margin-top: 5px;
-    width: 40px;
+    width: 50px;
     cursor: pointer;
   }
 
   #text-name-card{
-    font-size: 22px;
+    font-size: 19px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
+    font-weight: bold;
+    margin-left: -22px;
   }
 
   #text-election-card{
-    font-size: 20px;
+    font-size: 19px;
     margin-top: 3px;
     margin-left: 0px;
     color: #BBB;
     text-transform: uppercase;
     text-align: left;
     cursor: pointer;
+    font-weight: bold;
+    margin-left: -22px;
   }
 
   #text-commission-card{
-    font-size: 20px;
+    font-size: 19px;
     margin-left: 0px;
     padding-bottom: 5px;
     text-transform: uppercase;
     color: #BBB;
     text-align: left;
     cursor: pointer;
+    font-weight: bold;
+    margin-left: -22px;
   }
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
@@ -173,8 +183,5 @@
     color:#FFF;
   }
 
-  #score-card {
-    z-index: 2;
-  }
 
 }

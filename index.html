@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8"></meta>
+  <meta lang="mx"></meta>
   <meta name="description" content="Web Site For Present Information about legislators"></meta>
   <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
   <meta name="author" content="Michelle Garduño"></meta>
@@ -160,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div  id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
+      <div id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
            <div flex-offset-md="10" flex-md="90" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="15" flex-lg="85"  flex-offset-gt-lg="15" flex-gt-lg="85" flex-offset-xl="15" flex-xl="85">
              <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
@@ -285,7 +286,7 @@
             <md-content style="background:#EEE;" class="md-padding">
               <div ng-controller="SenatorsController" >
                 <div layout-xs="column" layout-sm="column" ng-repeat="item in senators">
-                  <md-list ng-controller="AppCtrl">
+                  <md-list >
                     <div id="content-cards"  layout-xs="column" layout-sm="column">
                       <div layout-xs="row" layout-sm="row">
                         <div  flex-xs="20" flex-sm="20">
@@ -388,129 +389,13 @@
       </md-content>
     </div>
     <div show-md show-gt-lg  show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
-      <md-content ng-controller="DeputysController" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+      <md-content ng-controller="DeputysController"  flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
         <div style="background:#EEE;" ng-repeat="item in deputys" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-          <div flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" >
+          <div flex-md="35" flex-gt-md="35" flex-gt-lg="35" flex-lg="40" flex-xl="35" >
           </div>
-          <div flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
+          <div flex-md="65" flex-gt-md="65" flex-gt-lg="65" flex-lg="60" flex-xl="65" >
             <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="30" >
-                <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                  <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                    <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
-                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com" target="_blank">
-                            <img onmouseover="this.src='imgs/svg/cali_happy_color.svg'" onmouseout="this.src='imgs/svg/cali_happy.svg'" src="imgs/svg/cali_happy.svg">
-                          </a>
-                        </div>
-                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com" target="_blank">
-                            <img onmouseover="this.src='imgs/svg/cali_sad_color.svg'" onmouseout="this.src='imgs/svg/cali_sad.svg'" src="imgs/svg/cali_sad.svg">
-                          </a>
-                        </div>
-                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <a href="pac.bordepolitico.com" target="_blank" >
-                            <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
-                          </a>
-                        </div>
-                        <div  ng-controller="OpenPerfilController"  id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
-                          <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
-                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                     <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60">
-                       <img ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
-                     </div>
-                     <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
-                       <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
-                       <img  ng-show="changeImage" src="imgs/svg/partys/colors/{{item.image_party}}" />
-                     </div>
-                    </div>
-                </div>
-              </div>
-              <div style="text-align:right;" id="content-socials-card" hide show-xl flex-xl="10">
-                <div layout-xl="row" >
-                  <div layout-xl="column">
-                    <div  layout-xl="column" id="facebook-card">
-                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                          <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
-                        </a>
-                    </div>
-                    <div layout-xl="column" id="twitter-card">
-                      <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                        <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
-                      </a>
-                    </div>
-                    <div layout-xl="column" id="mail-card" >
-                      <a href="mailto:{{item.mail}}">
-                        <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
-                <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                  <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
-                    <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.chamber}}
-                      </div>
-                      <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                      <span>  Nacido en: </span>
-                        {{item.state}}
-                        <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
-                      </div>
-                      <div id="text-name-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.name}}
-                      </div>
-                      <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.election}}
-                      </div>
-                      <div id="text-commission-card" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.commission}}
-                      </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
-                        <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-                          <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
-                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                              <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
-                            </a>
-                          </div>
-                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
-                            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                              <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
-                            </a>
-                          </div>
-                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
-                            <a href="mailto:{{item.mail}}">
-                              <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div hide show-xl flex-xl="10" flex-xl="10" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false">
-                <img  ng-hide="changeImageState" src="imgs/svg/states/{{item.img_state}}" id="image-state-card"/>
-                <img   ng-show="changeImageState" src="imgs/svg/states/colors/{{item.img_state}}" id="image-state-card"/>
-              </div>
-            </div>
-            <md-divider ng-if="!$last"></md-divider>
-          </div>
-        </div>
-      </md-content>
-      <md-content ng-controller="SenatorsController"  flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
-        <div style="background:#EEE;" ng-repeat="item in senators" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-          <div flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
-            <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-xl="30" >
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-offset-xl="10" flex-xl="30" >
                 <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                     <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
@@ -549,9 +434,9 @@
                     </div>
                 </div>
               </div>
-              <div style="text-align:right;" id="content-socials-card" hide show-xl flex-xl="10">
-                <div layout-xl="row" >
-                  <div layout-xl="column">
+              <div style="text-align:right;" id="content-socials-card" hide show-xl  show-lg flex-xl="10" flex-lg="10">
+                <div layout-xl="row" layout-lg="row" >
+                  <div layout-xl="column" layout-lg="column">
                     <div  id="facebook-card">
                         <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                           <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
@@ -574,24 +459,35 @@
                 <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                   <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
                     <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                      <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.chamber}}
-                      </div>
-                      <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                      <span>  Nacido en: </span>
-                        {{item.state}}
-                        <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
-                      </div>
-                      <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-                        {{item.name}}
-                      </div>
+                      <div layout-xl="column" layout-lg="column" layout-gt-lg="column" layout-md="column" layout-gt-md="column">
+                        <div layout-xl="row" layout-lg="row" layout-md="row" layout-gt-md="row">
+                          <div flex-xl="80" flex-lg="80" flex-gt-lg="80" flex-md="80" flex-gt-md="80">
+                            <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                              {{item.chamber}}
+                            </div>
+                            <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                            <span>  Nacido en: </span>
+                              {{item.state}}
+                              <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
+                            </div>
+
+                          </div>
+                          <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false">
+                            <img  ng-hide="changeImageState" src="imgs/svg/states/{{item.img_state}}" id="image-state-card"/>
+                            <img   ng-show="changeImageState" src="imgs/svg/states/colors/{{item.img_state}}" id="image-state-card"/>
+                          </div>
+                        </div>
+                        </div>
+                        <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                          {{item.name}}
+                        </div>
                       <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.election}}
                       </div>
                       <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
                         {{item.commission}}
                       </div>
-                      <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
+                      <!-- <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
                         <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                           <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
                             <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
@@ -609,19 +505,139 @@
                             </a>
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
               </div>
-              <div hide show-xl flex-xl="10" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false">
-                <img  ng-hide="changeImageState" src="imgs/svg/states/{{item.img_state}}" id="image-state-card"/>
-                <img   ng-show="changeImageState" src="imgs/svg/states/colors/{{item.img_state}}" id="image-state-card"/>
+            </div>
+            <md-divider ng-if="!$last"></md-divider>
+          </div>
+        </div>
+      </md-content>
+      <md-content ng-controller="SenatorsController"  flex-md="50" flex-gt-md="50" flex-lg="50" flex-xl="50" >
+        <div style="background:#EEE;" ng-repeat="item in senators" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+          <div flex-md="65" flex-gt-md="65" flex-gt-lg="65" flex-lg="60" flex-xl="65" >
+            <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+              <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50" flex-offset-xl="10" flex-xl="30" >
+                <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                  <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                    <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                        <div id="califichas-content-happy" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <a href="pac.bordepolitico.com" target="_blank">
+                            <img onmouseover="this.src='imgs/svg/cali_happy_color.svg'" onmouseout="this.src='imgs/svg/cali_happy.svg'" src="imgs/svg/cali_happy.svg">
+                          </a>
+                        </div>
+                        <div id="califichas-content-sad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <a href="pac.bordepolitico.com" target="_blank">
+                            <img onmouseover="this.src='imgs/svg/cali_sad_color.svg'" onmouseout="this.src='imgs/svg/cali_sad.svg'" src="imgs/svg/cali_sad.svg">
+                          </a>
+                        </div>
+                        <div id="califichas-content-bad"  flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <a href="pac.bordepolitico.com" target="_blank">
+                            <img onmouseover="this.src='imgs/svg/cali_bad_color.svg'" onmouseout="this.src='imgs/svg/cali_bad.svg'" src="imgs/svg/cali_bad.svg">
+                          </a>
+                        </div>
+                        <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
+                          <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
+                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                        </img>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                   <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                     <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
+                       <img ng-click="openPerfilPage(item.id)" ng-src="http://{{item.image}}" class="md-avatar">
+                     </div>
+                     <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
+                       <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
+                       <img  ng-show="changeImage" src="imgs/svg/partys/colors/{{item.image_party}}" />
+                     </div>
+                    </div>
+                </div>
+              </div>
+              <div style="text-align:right;" id="content-socials-card" hide show-xl  show-lg flex-xl="10" flex-lg="10">
+                <div layout-xl="row" layout-lg="row" >
+                  <div layout-xl="column" layout-lg="column">
+                    <div  id="facebook-card">
+                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                          <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                        </a>
+                    </div>
+                    <div layout-xl="column" id="twitter-card">
+                      <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                        <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                      </a>
+                    </div>
+                    <div layout-xl="column" id="mail-card" >
+                      <a href="mailto:{{item.mail}}">
+                        <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                  <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100">
+                    <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                      <div layout-xl="column" layout-lg="column" layout-gt-lg="column" layout-md="column" layout-gt-md="column">
+                        <div layout-xl="row" layout-lg="row" layout-md="row" layout-gt-md="row">
+                          <div flex-xl="80" flex-lg="80" flex-gt-lg="80" flex-md="80" flex-gt-md="80">
+                            <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                              {{item.chamber}}
+                            </div>
+                            <div id="text-state-card"  layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                            <span>  Nacido en: </span>
+                              {{item.state}}
+                              <!-- <img id="image-state-card" src="{{item.img_state}}"> -->
+                            </div>
+
+                          </div>
+                          <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false">
+                            <img  ng-hide="changeImageState" src="imgs/svg/states/{{item.img_state}}" id="image-state-card"/>
+                            <img   ng-show="changeImageState" src="imgs/svg/states/colors/{{item.img_state}}" id="image-state-card"/>
+                          </div>
+                        </div>
+                        </div>
+                        <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                          {{item.name}}
+                        </div>
+                      <div id="text-election-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                        {{item.election}}
+                      </div>
+                      <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+                        {{item.commission}}
+                      </div>
+                      <!-- <div style="text-align:right;" id="content-socials-card" layout-md="column"  layout-gt-md="column" layout-gt-lg="column" layout-lg="column" hide-xl>
+                        <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+                          <div flex-md="33" flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="facebook-card">
+                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                              <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                            </a>
+                          </div>
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="twitter-card">
+                            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                              <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                            </a>
+                          </div>
+                          <div flex-md="33"  flex-gt-md="33" flex-gt-lg="33" flex-lg="33" flex-xl="33" id="mail-card" >
+                            <a href="mailto:{{item.mail}}">
+                              <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                            </a>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <md-divider ng-if="!$last"></md-divider>
           </div>
-          <div flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" >
+          <div flex-md="35" flex-gt-md="35" flex-gt-lg="35" flex-lg="40" flex-xl="35" >
           </div>
         </div>
       </md-content>

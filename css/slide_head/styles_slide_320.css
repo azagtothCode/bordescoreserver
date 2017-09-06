@@ -1,3 +1,7 @@
+/*
+    Styles Home
+    Styles Home - Profile
+*/
 @media only screen and (max-width: 320px) {
  #slide-head{
    min-height: 160px;
@@ -46,4 +50,17 @@
    font-size: 6.5px;
    margin-top: -11px;
  }
+
+ /*Styles Home - Profile*/
+/*#dona svg{
+  width: 150px;
+}*/
+  #d1 {
+    max-width: 90px;
+    /* border: 1px solid red; */
+    margin-top: -1px;
+    margin-left: 57px;
+    max-height: 90px;
+  }
+ /*****/
 }
