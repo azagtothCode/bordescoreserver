@@ -65,13 +65,13 @@
 
   #content-socials-card-profile{
     text-align: center;
-    margin-left: 10px;
+    margin-left: -15px;
     margin-top: 50px;
   }
 
   #score-card-profile {
     margin-top: 7px;
-    margin-left: -10px;
+    margin-left: -20px;
     z-index: 1;
   }
 
@@ -87,7 +87,7 @@
     position: absolute;
     font-size: 28px;
     letter-spacing: 2px;
-    margin-left: -9px;
+    margin-left: -15px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -95,7 +95,7 @@
 
   #text-chamber-card-profile{
     font-size: 15px;
-    margin-top: 13px;
+    margin-top: 20px;
     margin-right: 20px;
     text-transform: uppercase;
     text-align: right;
@@ -128,16 +128,16 @@
   }
 
   #image-card-profile img{
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     margin-top: -20px;
     margin-left: 35px;
     border-radius: 50%;
   }
 
   #image-party-card-profile img{
-    width: 50px;
-    margin-left: 0px;
+    width: 60px;
+    margin-left: -15px;
     margin-top: 72px;
   }
 
@@ -145,7 +145,7 @@
     width: 45px;
     height: 45px;
     margin-left: -10px;
-    margin-top: 15px;
+    margin-top: 22px;
   }
 
   #facebook-card-profile img{
@@ -166,7 +166,7 @@
   }
 
   #text-name-card-profile{
-    font-size: 15px;
+    font-size: 12px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: uppercase;
@@ -177,7 +177,7 @@
   }
 
   #text-election-card-profile{
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 3px;
     color: #BBB;
     text-transform: uppercase;
@@ -187,13 +187,14 @@
   }
 
   #text-commission-card-profile{
-    font-size: 10px;
+    font-size: 11px;
     padding-bottom: 5px;
     text-transform: uppercase;
     color: #BBB;
     text-align: left;
     font-weight: bold;
     margin-left: 4px;
+    margin-bottom: 0px;
   }
 
   #style-trabajo{

@@ -64,7 +64,7 @@
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
      </div>
      <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
-        <div hide show-xs show-sm layout-xs="column">
+        <div hide show-xs show-sm layout-xs="column" layout-sm="column">
           <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
               <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
                 <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
@@ -171,7 +171,7 @@
       <div flex-xs="15" flex-sm="15">
       </div>
       <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
-        <div layout-xs="row">
+        <div layout-xs="row" layout-sm="row">
            <div flex-xs="100" flex-sm="100">
              <div layout-xs="column" layout-sm="column">
                <div layout-xs="row" layout-sm="row">
@@ -219,30 +219,30 @@
         <div flex-xs="50" flex-sm="50">
           <div layout-xs="column" layout-sm="column">
             <div id="style-trabajo" layout-xs="row" layout-sm="row">
-              <div  flex-xs="20">
+              <div  flex-xs="20" flex-sm="20">
                 <span class="number">20%</span>
               </div>
-              <div flex-xs="80">
+              <div flex-xs="80" flex-sm="80">
                 <span class="letter">Trabajo</span>
               </div>
             </div>
           </div>
           <div layout-xs="column" layout-sm="column">
             <div id="style-rol"  layout-xs="row" layout-sm="row">
-              <div flex-xs="20">
+              <div flex-xs="20" flex-sm="20">
                 <span class="number">50%</span>
               </div>
-              <div flex-xs="80">
+              <div flex-xs="80" flex-sm="80">
                 <span class="letter">Rol</span>
               </div>
             </div>
           </div>
           <div layout-xs="column" layout-sm="column">
             <div id="style-extra"  layout-xs="row" layout-sm="row">
-              <div flex-xs="20">
+              <div flex-xs="20" flex-sm="20">
                 <span class="number">30%</span>
               </div>
-              <div flex-xs="80">
+              <div flex-xs="80" flex-sm="80">
                 <span class="letter">Extra</span>
               </div>
             </div>

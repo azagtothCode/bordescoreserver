@@ -1,3 +1,7 @@
+/*
+    Styles Home
+    Styles Home - Profile
+*/
 @media only screen and (max-width: 667px) {
 
   #tabs-responsive {
@@ -125,4 +129,195 @@
     margin-left: 145px;
   }
 
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: 35px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: -36px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -110px;
+    margin-top: 87px;
+  }
+
+  #score-card-profile {
+    margin-top: 37px;
+    margin-left: -73px;
+    z-index: 1;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 85px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: 50px;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: -75px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 78px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 84px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  #image-card-profile img{
+    width: 140px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 145px;
+    border-radius: 50%;
+  }
+
+  #image-party-card-profile img{
+    width: 60px;
+    margin-left: -27px;
+    margin-top: 100px;
+  }
+
+  #image-state-card-profile {
+    width: 50px;
+    height: 50px;
+    margin-left: -80px;
+    margin-top: 53px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 16px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-election-card-profile{
+    font-size: 12px;
+    margin-top: 3px;
+    color: #BBB;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color:#EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:0px;
+  }
+
+  #style-rol .letter{
+    margin-left:0px;
+  }
+
+  #style-extra .letter{
+    margin-left:0px;
+  }
+  /******/
 }

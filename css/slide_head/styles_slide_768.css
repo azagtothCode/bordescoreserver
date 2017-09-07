@@ -73,4 +73,10 @@
    width: 20px;
    margin-top: 1px;
  }
+
+ #d1 {
+   max-width: 90px;
+   margin-left: 230px;
+   margin-top: 0px;
+  }
 }

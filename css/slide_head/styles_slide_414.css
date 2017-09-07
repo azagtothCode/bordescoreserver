@@ -47,4 +47,14 @@
  .icon-search{
    margin-top: 2px;
  }
+
+ /*
+ Profiles styles
+ */
+
+ #d1 {
+    max-width: 90px;
+    margin-left: 105px;
+    margin-top: 0px;
+  }
 }

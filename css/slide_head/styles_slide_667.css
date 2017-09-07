@@ -12,4 +12,9 @@
    width: 667px;
  }
 
+ #d1{
+   max-width: 105px;
+   margin-left: 180px;
+ }
+
 }
