@@ -1,6 +1,10 @@
 @media only screen and (max-width: 2560px) {
   #icon-logo {
-    margin-left: 195px;
+    margin-left: 518px;
+  }
+
+  #icon-logo-profile {
+    margin-left: 186px;
   }
 }
 
@@ -11,13 +15,17 @@
       width: 100%;
       margin-top: 13px;
   }*/
-
+/*
   #icon-logo {
     margin-left: 120px;
-  }
+  }*/
 
   #boton-borde {
     margin-left: 60px;
+  }
+
+  #icon-logo {
+    margin-left: 368px;
   }
 }
 

@@ -21,6 +21,14 @@ html, body{  text-decoration: none;}
     cursor: pointer;
   }
 
+  #icon-logo-profile{
+    background: url(../imgs/svg/logo.svg);
+    background-size: 158px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
   #input-project{
     width: 235px;
     margin-left: 120px;
