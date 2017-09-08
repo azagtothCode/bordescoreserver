@@ -141,8 +141,6 @@
     text-align: left;
   }
 
-
-
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     margin-left: 170px;
     color:#FFF;
@@ -151,5 +149,211 @@
   md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
     color:#FFF;
   }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+      margin-left: 11px;
+      margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -4px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 80px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -60px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -27px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 75px;
+    margin-right: 26px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  #image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: -39px;
+    margin-left: -20px;
+    border-radius: 50%;
+  }
+
+  #image-party-card-profile img{
+    width: 60px;
+    margin-left: -30px;
+    margin-top: 88px;
+  }
+
+  #image-state-card-profile {
+    width: 60px;
+    height: 60px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 40px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card-profile{
+    font-size: 21px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 14px;
+    margin-top: 3px;
+    color: #BBB;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 14px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 55px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:25px;
+  }
+
+  #style-rol .letter{
+    margin-left:25px;
+  }
+
+  #style-extra .letter{
+    margin-left:25px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 110px;
+  }
+
 
 }

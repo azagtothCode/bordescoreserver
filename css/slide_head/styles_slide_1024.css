@@ -69,4 +69,8 @@
     font-size: 14px;
     margin-top: 46px;
   }
+
+  #d1 {
+    max-width: 100px;
+  }
 }

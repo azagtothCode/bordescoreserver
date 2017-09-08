@@ -192,5 +192,10 @@ var myChart1 = new Chart(ctx1).Doughnut(doughnutData, {
     percentageInnerCutout: 70
 });
 
+var ctx1 = $("#d2").get(0).getContext("2d");
+var myChart1 = new Chart(ctx1).Doughnut(doughnutData, {
+    percentageInnerCutout: 80
+});
+
 
 // open /Applications/Google\ Chrome.app --args --allow-file-access-from-files

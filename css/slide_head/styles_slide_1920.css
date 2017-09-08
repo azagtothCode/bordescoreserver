@@ -1,3 +1,17 @@
+@media only screen and (max-width: 2560px) {
+  #d2 {
+    margin-left: 205px;
+    margin-top: 100px;
+   }
+}
+
+@media only screen and (max-width: 2560px) {
+  #d2 {
+      margin-left: 125px;
+      margin-top: 100px;
+  }
+}
+
 @media only screen and (max-width: 1920px) {
   #content-dip {
     font-size: 37px;
@@ -7,6 +21,11 @@
     font-size: 37px;
     margin-left: -5px;
   }
+
+  #d2 {
+    margin-left: 50px;
+    margin-top: 50px;
+   }
 }
 @media only screen and (max-width: 1919px) {
  /*#slide-head{
@@ -196,6 +215,11 @@
 
   #content-dip {
     font-size: 32px;
+  }
+
+  #d2 {
+    margin-left: 50px;
+    margin-top: 0px;
   }
 }
 

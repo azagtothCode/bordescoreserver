@@ -130,4 +130,15 @@
     padding-bottom: 5px;
   }
 
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 20px;
+  }
+
 }
