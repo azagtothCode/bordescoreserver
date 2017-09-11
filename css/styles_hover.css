@@ -24,4 +24,18 @@
     transition: all 500ms;
   }
 
-  
+  #divtrabajo:hover{
+    border-top: 6px solid #EE4455;
+    background:#EE4455;
+
+  }
+
+  #divrol:hover{
+    border-top: 6px solid #FF974C;
+    background:#FF974C;
+  }
+
+  #divextra:hover{
+    border-top: 6px solid #FFC73F;
+    background:#FFC73F;
+  }

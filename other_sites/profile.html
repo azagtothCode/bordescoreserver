@@ -58,6 +58,7 @@
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_568.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
+  <link rel="stylesheet" href="../css/styles_profile_navtab.css">
 </head>
 <body ng-app="score_federal">
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
@@ -388,9 +389,126 @@
           </div>
         </div>
       </div>
+     </div>
     </div>
 
+     <div hide-xs hide-sm layout-xl="column" layout-lg="column" layout-md="column" ng-controller="TabController">
+    	<div layout-xl="row" layout-lg="row" layout-md="row">
+        <div id="divtrabajo" ng-click="setTab(1)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(1) }">
+          <div layout-xl="row" layout-lg="row" layout-md="row">
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                <img src="../imgs/svg/scorewhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
+              </div>
+            </div>
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                <img src="../imgs/svg/workwhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="color:#FFF; text-transform:uppercase;">trabajo legislativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="divrol" ng-click="setTab(2)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(2) }">
+          <div layout-xl="row" layout-lg="row" layout-md="row">
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                <img src="../imgs/svg/scorewhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
+              </div>
+            </div>
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                <img src="../imgs/svg/rolwhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="color:#FFF; text-transform:uppercase;">Rol Politico</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="divextra" ng-click="setTab(3)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(3) }">
+          <div layout-xl="row" layout-lg="row" layout-md="row">
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" style="z-index:1;">
+                <img src="../imgs/svg/scorewhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
+              </div>
+            </div>
+            <div flex-xl="50" flex-lg="50" flex-md="50">
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                <img src="../imgs/svg/extrawhite.svg">
+              </div>
+              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                <span style="color:#FFF; text-transform:uppercase;">extra legislativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+       <div style="background:#EE4455; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)">
+     	  <div flex-xl="50" flex-lg="50" flex-md="50">
+          Contenido Trabajo legislativo con grafica
+        </div>
+        <div flex-xl="50" flex-lg="50" flex-md="50">
+          Contenido Trabajo legislativo con grafica
+        </div>
+       </div>
+       <div style="background:#FF974C; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
+     	  <div flex-xl="33" flex-lg="33" flex-md="33">
+        </div>
+        <div flex-xl="33" flex-lg="33" flex-md="33">
+          Contenido Rol politico
+        </div>
+        <div flex-xl="33" flex-lg="33" flex-md="33">
+        </div>
+       </div>
+       <div style="background:#FFC73F; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
+         <div flex-xl="33" flex-lg="33" flex-md="33">
+         </div>
+         <div flex-xl="33" flex-lg="33" flex-md="33">
+           Contenido Extra Legislativo
+         </div>
+         <div flex-xl="33" flex-lg="33" flex-md="33">
+         </div>
+       </div>
+    			<!-- <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
+            <h1>Profile page</h1>
+            <p>Profile information</p>
+         	</div>
+          <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
+            <h1>Messages</h1>
+            <p> Some messages </p>
+         	</div> -->
+     </div>
 
+
+
+     <div hide-lg hide-md hide-xl  ng-controller="AppCtrl" class="toolbardemoBasicUsage">
+      	<md-content>
+      		<div class="md-accordion" ng-repeat="data in accordianData">
+      			<md-toolbar ng-init="data.expanded = false" ng-click="collapseAll(data)">
+      				<div class="md-toolbar-tools">
+      					<h2>
+      						<span>{{data.heading}}</span>
+      					</h2>
+      					<span flex=""></span>
+      					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+      				</div>
+      			</md-toolbar>
+      			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+      		</div>
+      	</md-content>
+      </div>
 
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
     <!--panel section head-->
