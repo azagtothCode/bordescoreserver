@@ -168,8 +168,6 @@
   #text-name-card-profile{
     font-size: 12px;
     margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
     font-weight: bold;
@@ -179,8 +177,6 @@
   #text-election-card-profile{
     font-size: 11px;
     margin-top: 3px;
-    color: #BBB;
-    text-transform: uppercase;
     text-align: left;
     font-weight: bold;
     margin-left: 4px;
@@ -189,8 +185,6 @@
   #text-commission-card-profile{
     font-size: 11px;
     padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
     text-align: left;
     font-weight: bold;
     margin-left: 4px;

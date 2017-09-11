@@ -58,14 +58,12 @@
   #text-chamber-card{
     font-size: 22px;
     margin-top: 7px;
-    text-transform: uppercase;
     text-align: right;
     color: #BBB;
   }
 
   #text-state-card{
     font-size: 14px;
-    text-transform: uppercase;
     text-align: right;
     color: #BBB;
   }
@@ -73,7 +71,6 @@
   #text-state-card span{
     font-size: 11px;
     /*margin-top: 2px;*/
-    text-transform: uppercase;
     text-align: right;
     color: #BBB;
   }
@@ -119,7 +116,6 @@
     margin-top: 3px;
     color: #EE4656;
     margin-left: 6px;
-    text-transform: uppercase;
     text-align: left;
   }
 
@@ -128,7 +124,6 @@
     margin-top: 3px;
     margin-left: 6px;
     color: #BBB;
-    text-transform: uppercase;
     text-align: left;
   }
 
@@ -136,7 +131,6 @@
     font-size: 13px;
     margin-left: 6px;
     padding-bottom: 5px;
-    text-transform: uppercase;
     color: #BBB;
     text-align: left;
   }
@@ -276,7 +270,6 @@
     font-size: 21px;
     margin-top: 3px;
     color: #EE4656;
-    text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
@@ -288,7 +281,6 @@
     font-size: 14px;
     margin-top: 3px;
     color: #BBB;
-    text-transform: uppercase;
     text-align: left;
     cursor: pointer;
     font-weight: bold;
@@ -298,7 +290,6 @@
   #text-commission-card-profile{
     font-size: 14px;
     padding-bottom: 5px;
-    text-transform: uppercase;
     color: #BBB;
     text-align: left;
     cursor: pointer;

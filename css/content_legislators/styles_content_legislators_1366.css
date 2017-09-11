@@ -259,7 +259,6 @@
     font-size: 21px;
     margin-top: 3px;
     color: #EE4656;
-    text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
@@ -271,7 +270,6 @@
     font-size: 14px;
     margin-top: 3px;
     color: #BBB;
-    text-transform: uppercase;
     text-align: left;
     cursor: pointer;
     font-weight: bold;
@@ -281,7 +279,6 @@
   #text-commission-card-profile{
     font-size: 14px;
     padding-bottom: 5px;
-    text-transform: uppercase;
     color: #BBB;
     text-align: left;
     cursor: pointer;

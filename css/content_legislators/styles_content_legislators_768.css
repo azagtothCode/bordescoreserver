@@ -115,7 +115,6 @@
     font-size: 17px;
     margin-top: 3px;
     color: #EE4656;
-    text-transform: uppercase;
     text-align: right;
   }
 
@@ -124,7 +123,6 @@
     margin-top: 3px;
     margin-left: 6px;
     color: #BBB;
-    text-transform: uppercase;
     text-align: right;
   }
 
@@ -133,7 +131,6 @@
     margin-top: 3px;
     margin-left: 6px;
     padding-bottom: 5px;
-    text-transform: uppercase;
     color: #BBB;
     text-align: right;
   }
@@ -272,8 +269,6 @@
   #text-name-card-profile{
     font-size: 19px;
     margin-top: 3px;
-    color: #EE4656;
-    text-transform: uppercase;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
@@ -284,8 +279,6 @@
   #text-election-card-profile{
     font-size: 15px;
     margin-top: 3px;
-    color: #BBB;
-    text-transform: uppercase;
     text-align: left;
     cursor: pointer;
     font-weight: bold;
@@ -295,8 +288,6 @@
   #text-commission-card-profile{
     font-size: 15px;
     padding-bottom: 5px;
-    text-transform: uppercase;
-    color: #BBB;
     text-align: left;
     cursor: pointer;
     font-weight: bold;

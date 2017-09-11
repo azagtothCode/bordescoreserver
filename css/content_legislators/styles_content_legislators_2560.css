@@ -142,7 +142,7 @@
     font-size: 19px;
     margin-top: 3px;
     color: #EE4656;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
@@ -155,7 +155,7 @@
     margin-top: 3px;
     margin-left: 0px;
     color: #BBB;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: left;
     cursor: pointer;
     font-weight: bold;
@@ -166,7 +166,7 @@
     font-size: 19px;
     margin-left: 0px;
     padding-bottom: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #BBB;
     text-align: left;
     cursor: pointer;
@@ -311,7 +311,7 @@
     font-size: 25px;
     margin-top: 3px;
     color: #EE4656;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: left;
     letter-spacing: 3px;
     cursor: pointer;
@@ -323,7 +323,7 @@
     font-size: 20px;
     margin-top: 3px;
     color: #BBB;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: left;
     cursor: pointer;
     font-weight: bold;
@@ -333,7 +333,7 @@
   #text-commission-card-profile{
     font-size: 20px;
     padding-bottom: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #BBB;
     text-align: left;
     cursor: pointer;
@@ -452,7 +452,7 @@
   font-size: 30px;
   margin-top: 94px;
   margin-right: 26px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: right;
   color: #BBB;
   font-weight: bold;
@@ -461,7 +461,7 @@
 
 #text-state-card-profile {
   font-size: 25px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: right;
   margin-right: 36px;
   color: #BBB;
@@ -473,7 +473,7 @@
   font-size: 18px;
   /* margin-top: 2px; */
   margin-right: 0px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: right;
   color: #BBB;
   letter-spacing: 3px;
