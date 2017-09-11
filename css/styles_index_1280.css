@@ -2,7 +2,11 @@
   #icon-logo {
     background-size: 105px;
     margin-top: 12px;
-    margin-left: 90px;
+    margin-left: 255px;
+  }
+
+  #icon-logo-profile {
+    margin-left: 80px;
   }
 
   #tit-federal {

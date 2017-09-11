@@ -20,6 +20,13 @@
 
   #icon-logo {
     background-size: 71px;
+    margin-top: 4px;
+  }
+
+  #icon-logo-profile {
+    background-size: 71px;
+    margin-top: 4px;
+    margin-left: 7px;
   }
 
   #img-site-panel {
@@ -42,12 +49,9 @@
   }
 
   #input-project {
-    margin-left: -20px;
+    margin-left: -2px;
     margin-top: 2px;
   }
-}
-
-@media only screen and (max-width: 414px) {
 
   #img-site-panel {
     width: 55px;
@@ -56,10 +60,6 @@
   #text-site-panel-menu {
     margin-top: 24px;
     margin-left: 65px;
-  }
-
-  #icon-logo {
-    margin-top: 4px;
   }
 }
 

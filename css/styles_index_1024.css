@@ -1,10 +1,17 @@
 
 @media only screen and (max-width: 1024px) {
   #icon-logo {
-    background-size: 115px;
+    background-size: 105px;
     margin-top: 11px;
-    margin-left: 30px;
+    margin-left: 203px;
   }
+
+  #icon-logo-profile {
+    background-size: 105px;
+    margin-top: 11px;
+    margin-left: 20px;
+  }
+
   #tit-federal span{
     font-size: 12px;
   }

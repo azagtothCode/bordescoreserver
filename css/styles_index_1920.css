@@ -1,46 +1,52 @@
 @media only screen and (max-width: 2560px) {
   #icon-logo {
     margin-left: 518px;
+    margin-top: 3px;
   }
 
   #icon-logo-profile {
-    margin-left: 186px;
+    margin-left: 190px;
+    margin-top: 2px;
   }
 }
 
-
-
 @media only screen and (max-width: 1920px) {
-  /*#icon-logo {
-      width: 100%;
-      margin-top: 13px;
-  }*/
-/*
-  #icon-logo {
-    margin-left: 120px;
-  }*/
-
   #boton-borde {
     margin-left: 60px;
   }
 
   #icon-logo {
-    margin-left: 368px;
+    margin-left: 382px;
+  }
+
+  #icon-logo-profile {
+    margin-left: 111px;
+    margin-top: 2px;
   }
 }
 
 @media only screen and (max-width: 1680px) {
   #icon-logo {
     background-size: 160px;
-    margin-top: -0.5px;
-    margin-left: 100px;
+    margin-top: 3px;
+    margin-left: 317px;
+  }
 
+  #icon-logo-profile {
+    margin-left: 86px;
+    margin-top: 2px;
   }
 }
 
 @media only screen and (max-width: 1560px){
   #icon-logo {
     background-size: 150px;
-    margin-top: 2.5px;
+    margin-top: 6px;
+    margin-left: 285px;
+  }
+
+  #icon-logo-profile {
+    margin-left: 86px;
+    margin-top: 2px;
   }
 }
