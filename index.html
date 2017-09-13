@@ -643,6 +643,7 @@
       </md-content>
     </div>
   </div>
+  <span id="aquip"></span>
   <div>
     <div id="loader"></div>
     <span id="loader-text">Cargando información necesaria</span><br>
@@ -663,8 +664,8 @@
     <md-content ng-controller="RightCtrl" layout-padding="">
       <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
       <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
-          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  ng-cloak target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" ng-cloak class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
             <span class="links-panel">{{ item.who }}</span>
           </div>
@@ -729,8 +730,63 @@
   <script src="js/deputy_content.js"></script>
   <script src="js/senator_content.js"></script>
   <script src="js/graphs.js"></script>
-  <!-- <script src="components/angular/angular.min.js"></script>
-  <script src="components/chart.js/dist/Chart.min.js"></script>
-  <script src="components/angular-chart.js/dist/angular-chart.min.js"></script> -->
+   <script type="text/javascript">
+    var objlegislators ={}
+    supurl='http://localhost:8000';
+
+    $.ajax({
+      url: supurl+'/diputados/get',
+      method: "POST",
+      data:  {},//{ where : {camara:"senadores", ordenDeGobierno:"federal"} },
+      dataType: "json"
+    }).done(function(data) {
+      subject=data.dip;
+      for (var i = 0; i < subject.length; i++) {
+  	      val=subject[i];
+            name = val.legislator_name_sil;
+            var text;
+            var partyimg;
+            var valor = val.legislator_party_sil;
+
+            switch (valor) {
+                case "MORENA":
+                partyimg='<img src="svg/icon_party/partido_morena.svg" style="width:60px;">';
+                break;
+                case "PRD":
+                partyimg =' <img src="svg/icon_party/partido_prd.svg" style="width:60px;">';
+                break;
+                case "PRI":
+                text = "SOY PRI";
+                partyimg ='<img src="svg/icon_party/partido_pri.svg" style="width:60px;">';
+                break;
+                case "PAN":
+                text = "SOY PAN";
+                partyimg ='<img src="svg/icon_party/partido_pan.svg" style="width:60px;">';
+                break;
+                case "PVEM":
+                text = "SOY PVEM";
+                partyimg ='<img src="svg/icon_party/pvem.svg" style="width:60px;">';
+                break;
+                case "MC":
+                text = "SOY MC";
+                partyimg ='<img src="svg/icon_party/partido_movimientociudadano.svg" style="width:60px;">';
+                break;
+                case "PANAL":
+                text = "SOY PANAL";
+                partyimg ='<img src="svg/icon_party/partido_nuevaalianza.svg" style="width:60px;">';
+                break;
+                default:
+                text = "NO TENGO PARTIDO";
+            }
+
+            $("#aquip").append('<a functionFilter:selectedGroup href="perfil.php'+val.id_legislator_sil+'">'+partyimg + name + "</a><br>");
+            // alert(text);
+            // var myJSON = JSON.stringify(nueva);
+            // alert(myJSON);
+
+        }
+    });
+
+  </script>
 </body>
 </html>

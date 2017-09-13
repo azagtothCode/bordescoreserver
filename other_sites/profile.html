@@ -393,94 +393,328 @@
     </div>
 
      <div hide-xs hide-sm layout-xl="column" layout-lg="column" layout-md="column" ng-controller="TabController">
-    	<div layout-xl="row" layout-lg="row" layout-md="row">
-        <div id="divtrabajo" ng-click="setTab(1)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(1) }">
-          <div layout-xl="row" layout-lg="row" layout-md="row">
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                <img src="../imgs/svg/scorewhite.svg">
+      	<div style="background:#343434;" layout-xl="row" layout-lg="row" layout-md="row">
+         <div flex-xl="15" flex-lg="10" flex-md="0" >
+         </div>
+         <div style="border:1px solid ;" flex-xl="70" flex-lg="80"  flex-md="100">
+            <div layout-xl="row" layout-lg="row" layout-md="row">
+
+              <div id="divtrabajo" style="color:#FFF;" ng-click="setTab(1)" flex-xl="33" flex-lg="33" flex-md="33" >
+                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(1) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageScoreTrabajo" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px;  font-size: 22px;">100</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiTrabajo" style="margin-top:10px;" src="../imgs/svg/workwhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="text-transform:uppercase; margin-bottom:10px;">trabajo legislativo</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
+
+
+
+              <div id="divrol" style="color:#FFF;" ng-click="setTab(2)" flex-xl="33" flex-lg="33" flex-md="33">
+                <div layout-xl="row" layout-lg="row" layout-md="row"  ng-class="{ active: isSet(2) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageScoreRol" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiRol" style="margin-top:10px;" src="../imgs/svg/rolwhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="text-transform:uppercase; margin-bottom:10px;">Rol Politico</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                <img src="../imgs/svg/workwhite.svg">
-              </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="color:#FFF; text-transform:uppercase;">trabajo legislativo</span>
+              <div id="divextra" style="color:#FFF;" ng-click="setTab(3)" flex-xl="33" flex-lg="33" flex-md="33">
+                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(3) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" style="z-index:1;">
+                      <img id="imageScoreExtra" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiExtra" style="margin-top:10px;" src="../imgs/svg/extrawhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style=" text-transform:uppercase; margin-bottom:10px;">extra legislativo</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+         <div flex-xl="15" flex-lg="10"  flex-md="0">
+         </div>
         </div>
-        <div id="divrol" ng-click="setTab(2)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(2) }">
-          <div layout-xl="row" layout-lg="row" layout-md="row">
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                <img src="../imgs/svg/scorewhite.svg">
-              </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
-              </div>
-            </div>
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                <img src="../imgs/svg/rolwhite.svg">
-              </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="color:#FFF; text-transform:uppercase;">Rol Politico</span>
-              </div>
-            </div>
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
+          <div flex-xl="15">
           </div>
-        </div>
-        <div id="divextra" ng-click="setTab(3)" style="background:#343434; text-align:center; padding:20px; cursor:pointer;" flex-xl="33" flex-lg="33" flex-md="33" ng-class="{ active: isSet(3) }">
-          <div layout-xl="row" layout-lg="row" layout-md="row">
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" style="z-index:1;">
-                <img src="../imgs/svg/scorewhite.svg">
-              </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="margin-top: -50px; color: #FFF; font-size: 22px;">90</span>
-              </div>
-            </div>
-            <div flex-xl="50" flex-lg="50" flex-md="50">
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                <img src="../imgs/svg/extrawhite.svg">
-              </div>
-              <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                <span style="color:#FFF; text-transform:uppercase;">extra legislativo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-    	</div>
-       <div style="background:#EE4455; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)">
-     	  <div flex-xl="50" flex-lg="50" flex-md="50">
-          Contenido Trabajo legislativo con grafica
-        </div>
-        <div flex-xl="50" flex-lg="50" flex-md="50">
-          Contenido Trabajo legislativo con grafica
-        </div>
-       </div>
-       <div style="background:#FF974C; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
-     	  <div flex-xl="33" flex-lg="33" flex-md="33">
-        </div>
-        <div flex-xl="33" flex-lg="33" flex-md="33">
-          Contenido Rol politico
-        </div>
-        <div flex-xl="33" flex-lg="33" flex-md="33">
-        </div>
-       </div>
-       <div style="background:#FFC73F; text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
-         <div flex-xl="33" flex-lg="33" flex-md="33">
+         <div ng-controller="BarCtrlIniciativas" style="background:#EE4455;" flex-xl="35" flex-lg="50" flex-md="50">
+           <div layout-xl="column" layout-lg="column" id="bar">
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                 </canvas>
+                 <h1 style="color:#FFF; text-align:left;">Iniciativas</h1>
+
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+           </div>
+           <div style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column">
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                   </div>
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                   </div>
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                   </div>
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                   </div>
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                   </div>
+                   <div flex-xl="15">
+                     <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;"layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     05
+                   </div>
+                   <div flex-xl="15">
+                     01
+                   </div>
+                   <div flex-xl="15">
+                     00
+                   </div>
+                   <div flex-xl="15">
+                     02
+                   </div>
+                   <div flex-xl="15">
+                     08
+                   </div>
+                   <div flex-xl="15">
+                     05
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div style="color:#000; font-weight:bold;" flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     <span>Ambiente</span>
+                   </div>
+                   <div flex-xl="15">
+                     <span>Cultura</span>
+                   </div>
+                   <div flex-xl="15">
+                     <span>Gobierno</span>
+                   </div>
+                   <div flex-xl="15">
+                     <span>Seguridad</span>
+                   </div>
+                   <div flex-xl="15">
+                     <span>Economia</span>
+                   </div>
+                   <div flex-xl="15">
+                     <span>Desarrollo</span>
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+           </div>
          </div>
-         <div flex-xl="33" flex-lg="33" flex-md="33">
-           Contenido Extra Legislativo
+         <div ng-controller="BarCtrlPuntos" style="background:#EE4455;" flex-xl="35" flex-lg="50" flex-md="50">
+           <div layout-xl="column" layout-lg="column" id="bar">
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                 </canvas>
+                 <h1 style="color:#FFF; text-align:left;">Puntos de Acuerdo</h1>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+           </div>
+           <div style="background:#FFF; " layout-xl="column" layout-lg="column">
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     a
+                   </div>
+                   <div flex-xl="15">
+                     b
+                   </div>
+                   <div flex-xl="15">
+                     c
+                   </div>
+                   <div flex-xl="15">
+                     d
+                   </div>
+                   <div flex-xl="15">
+                     e
+                   </div>
+                   <div flex-xl="15">
+                     f
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     a
+                   </div>
+                   <div flex-xl="15">
+                     b
+                   </div>
+                   <div flex-xl="15">
+                     c
+                   </div>
+                   <div flex-xl="15">
+                     d
+                   </div>
+                   <div flex-xl="15">
+                     e
+                   </div>
+                   <div flex-xl="15">
+                     f
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+             <div layout-xl="row">
+               <div flex-xl="10">
+               </div>
+               <div flex-xl="80">
+                 <div layout-xl="row">
+                   <div flex-xl="15">
+                     a
+                   </div>
+                   <div flex-xl="15">
+                     b
+                   </div>
+                   <div flex-xl="15">
+                     c
+                   </div>
+                   <div flex-xl="15">
+                     d
+                   </div>
+                   <div flex-xl="15">
+                     e
+                   </div>
+                   <div flex-xl="15">
+                     f
+                   </div>
+                   <div flex-xl="10">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="10">
+               </div>
+             </div>
+           </div>
          </div>
-         <div flex-xl="33" flex-lg="33" flex-md="33">
+         <div flex-xl="15">
          </div>
-       </div>
+        </div>
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
+         <div flex-xl="15" flex-lg="33" flex-md="33">
+         </div>
+         <div style="background:#FF974C;"flex-xl="70" flex-lg="33" flex-md="33">
+           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+             <div style=""flex-xl="33" flex-lg="33" flex-md="33">aqui</div>
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+           </div>
+         </div>
+         <div flex-xl="15" flex-lg="33" flex-md="33">
+         </div>
+        </div>
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
+         <div flex-xl="15" flex-lg="33" flex-md="33">
+         </div>
+         <div style="background:#FFC73F;"flex-xl="70" flex-lg="33" flex-md="33">
+           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+             <div style=""flex-xl="33" flex-lg="33" flex-md="33">aqui</div>
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+           </div>
+         </div>
+         <div flex-xl="15" flex-lg="33" flex-md="33">
+         </div>
+        </div>
+      </div>
     			<!-- <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
             <h1>Profile page</h1>
             <p>Profile information</p>
@@ -589,5 +823,8 @@
   <script src="../js/methods_panel.js"></script>
   <!-- <script src="../js/loader.js"></script> -->
   <script src="../js/graphs.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 </body>
 </html>

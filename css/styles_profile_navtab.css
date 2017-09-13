@@ -66,3 +66,48 @@
   border-bottom:1px solid #343434;
   background:#343434;
 }
+
+#divtrabajo{
+  text-align:center;
+  border-top: 6px solid #EE4455;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divrol{
+  text-align:center;
+  border-top: 6px solid #FF974C;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divextra{
+  text-align:center;
+  border-top: 6px solid #FFC73F;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divtrabajo .active {
+  background:#EE4455;
+  color: #000;
+  transition: 500ms all;
+}
+
+#divrol .active {
+  background:#FF974C;
+  color: #000;
+  transition: 500ms all;
+}
+
+#divextra .active {
+  background:#FFC73F;
+  color: #000;
+  transition: 500ms all;
+}
+
+#bar{
+  margin-top: 30px;
+  width: auto;
+  border-left: 1px solid #FFF;
+}

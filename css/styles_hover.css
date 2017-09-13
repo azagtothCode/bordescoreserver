@@ -25,17 +25,19 @@
   }
 
   #divtrabajo:hover{
-    border-top: 6px solid #EE4455;
+    border-top: 6px solid #343434;
     background:#EE4455;
-
+    transition: 500ms all;
   }
 
   #divrol:hover{
-    border-top: 6px solid #FF974C;
+    border-top: 6px solid #343434;
     background:#FF974C;
+    transition: 500ms all;
   }
 
   #divextra:hover{
-    border-top: 6px solid #FFC73F;
+    border-top: 6px solid #343434;
     background:#FFC73F;
+    transition: 500ms all;
   }
