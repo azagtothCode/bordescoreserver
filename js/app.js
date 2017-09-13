@@ -98,21 +98,3 @@ app.config(['ChartJsProvider', function (ChartJsProvider) {
     });
     // Configure all line charts
   }])
-
-app.controller("BarCtrlIniciativas", function ($scope) {
-  $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
-  $scope.series = ['Iniciativas'];
-
-  $scope.data = [
-    [65, 59, 80, 81, 56]
-  ];
-})
-
-app.controller("BarCtrlPuntos", function ($scope) {
-  $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
-  $scope.series = ['P. de Acuerdo'];
-
-  $scope.data = [
-    [65, 59, 80, 81, 56]
-  ];
-})

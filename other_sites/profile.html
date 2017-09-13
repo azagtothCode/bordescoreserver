@@ -206,7 +206,7 @@
       </div>
       <div flex-xs="15" flex-sm="15">
       </div>
-    </div>
+  </div>
     <div hide show-xs show-sm layout-xs="row" layout-sm="row">
       <div flex-xs="50" flex-sm="50">
         <div id="w">
@@ -468,24 +468,23 @@
          </div>
         </div>
         <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
-          <div flex-xl="15">
-          </div>
-         <div ng-controller="BarCtrlIniciativas" style="background:#EE4455;" flex-xl="35" flex-lg="50" flex-md="50">
+         <div flex-xl="15" flex-lg="10" flex-md="0">
+         </div>
+         <div ng-controller="BarCtrlIniciativas" style="background:#EE4455;" flex-xl="35" flex-lg="40" flex-md="50">
            <div layout-xl="column" layout-lg="column" id="bar">
-             <div layout-xl="row">
-               <div flex-xl="10">
+             <div layout-xl="row" layout-lg="row">
+               <div flex-xl="10" flex-lg="5">
                </div>
-               <div flex-xl="80">
+               <div flex-xl="80" flex-lg="90">
                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                  </canvas>
                  <h1 style="color:#FFF; text-align:left;">Iniciativas</h1>
-
                </div>
-               <div flex-xl="10">
+               <div flex-xl="10" flex-lg="5">
                </div>
              </div>
            </div>
-           <div style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column">
+           <div ng-controller="IniciativasController" style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column">
              <div layout-xl="row">
                <div flex-xl="5">
                </div>
@@ -518,7 +517,7 @@
                <div flex-xl="5">
                </div>
              </div>
-             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;"layout-xl="row">
+             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;" layout-xl="row">
                <div flex-xl="5">
                </div>
                <div flex-xl="90">
@@ -553,7 +552,7 @@
              <div layout-xl="row">
                <div flex-xl="5">
                </div>
-               <div style="color: #000; font-weight: bold; border-bottom: 6px solid #EE4656; padding-bottom: 25px;" flex-xl="90">
+               <div style="color: #000; font-weight: bold; padding-bottom: 25px;" flex-xl="90">
                  <div layout-xl="row">
                    <div flex-xl="5">
                    </div>
@@ -582,23 +581,43 @@
                <div flex-xl="5">
                </div>
              </div>
+             <md-content style="background:#FFF; height:700px;">
+               <div  layout-xl="row" ng-repeat="item in iniciativas">
+               <div flex-xl="5">
+               </div>
+               <div style="color: #000; padding-bottom: 25px;" flex-xl="90">
+                 <div layout-xl="row">
+                   <div flex-xl="5">
+                   </div>
+                   <div style=" border-bottom: 3px solid #EE4656; padding:20px;  text-align:justify; letter-spacing:2px;" flex-xl="90">
+                      <span style="font-size:20px;">{{item.body}}</span><br><br>
+                      <span style="color:#EE4656; font-size:20px;">{{item.theme}} / <a style="color:#EE4656; font-size:20px;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                   </div>
+                   <div flex-xl="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5">
+               </div>
+             </div>
+             </md-content>
            </div>
          </div>
-         <div ng-controller="BarCtrlPuntos" style="background:#EE4455;" flex-xl="35" flex-lg="50" flex-md="50">
+         <div ng-controller="BarCtrlPuntos" style="background:#EE4455;" flex-xl="35" flex-lg="40" flex-md="50">
            <div layout-xl="column" layout-lg="column" id="bar">
-             <div layout-xl="row">
-               <div flex-xl="10">
+             <div layout-xl="row" layout-lg="row">
+               <div flex-xl="10" flex-lg="5">
                </div>
-               <div flex-xl="80">
+               <div flex-xl="80" flex-lg="90">
                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                  </canvas>
                  <h1 style="color:#FFF; text-align:left;">Puntos de Acuerdo</h1>
                </div>
-               <div flex-xl="10">
+               <div flex-xl="10" flex-lg="5">
                </div>
              </div>
            </div>
-           <div style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column">
+           <div ng-controller="IniciativasController" style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column">
              <div layout-xl="row">
                <div flex-xl="5">
                </div>
@@ -631,7 +650,7 @@
                <div flex-xl="5">
                </div>
              </div>
-             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;"layout-xl="row">
+             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;" layout-xl="row">
                <div flex-xl="5">
                </div>
                <div flex-xl="90">
@@ -666,7 +685,7 @@
              <div layout-xl="row">
                <div flex-xl="5">
                </div>
-               <div style="color: #000; font-weight: bold; border-bottom: 6px solid #EE4656; padding-bottom: 25px;" flex-xl="90">
+               <div style="color: #000; font-weight: bold; padding-bottom: 25px;" flex-xl="90">
                  <div layout-xl="row">
                    <div flex-xl="5">
                    </div>
@@ -695,9 +714,29 @@
                <div flex-xl="5">
                </div>
              </div>
+             <md-content style="background:#FFF; height:700px;">
+               <div  layout-xl="row" ng-repeat="item in puntos">
+               <div flex-xl="5">
+               </div>
+               <div style="color: #000; padding-bottom: 25px;" flex-xl="90">
+                 <div layout-xl="row">
+                   <div flex-xl="5">
+                   </div>
+                   <div style=" border-bottom: 3px solid #EE4656; padding:20px;  text-align:justify; letter-spacing:2px;" flex-xl="90">
+                      <span style="font-size:20px;">{{item.body}}</span><br><br>
+                      <span style="color:#EE4656; font-size:20px;">{{item.theme}} / <a style="color:#EE4656; font-size:20px;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                   </div>
+                   <div flex-xl="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5">
+               </div>
+             </div>
+             </md-content>
            </div>
          </div>
-         <div flex-xl="15">
+         <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
         </div>
         <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
@@ -736,8 +775,6 @@
             <p> Some messages </p>
          	</div> -->
      </div>
-
-
 
      <div hide-lg hide-md hide-xl  ng-controller="AppCtrl" class="toolbardemoBasicUsage">
       	<md-content>
@@ -835,6 +872,8 @@
   <script src="../js/methods_panel.js"></script>
   <!-- <script src="../js/loader.js"></script> -->
   <script src="../js/graphs.js"></script>
+  <script src="../js/iniciativas.js"></script>
+  <script src="../js/puntos.js"></script>
   <script src="../node_modules/angular/angular.min.js"></script>
   <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
   <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
