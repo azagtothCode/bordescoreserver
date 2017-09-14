@@ -219,7 +219,7 @@
                         <div flex-xs="70" flex-sm="70">
                           <div layout-xs="row" layout-sm="row">
                             <div id="image-card" ng-controller="OpenPerfilController" flex-xs="60" flex-sm="60">
-                              <img ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
+                              <img ng-click="openPerfilPage(item.id)" src="{{item.image}}" class="md-avatar">
                             </div>
                             <div id="image-party-card" flex-xs="20" flex-sm="20">
                                 <!-- <img src="imgs/svg/partys/{{item.image_party}}"> -->
@@ -322,7 +322,7 @@
                         <div flex-xs="70" flex-sm="70">
                           <div layout-xs="row" layout-sm="row">
                             <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60">
-                              <img  ng-click="openPerfilPage(item.id)" src="http://{{item.image}}" class="md-avatar">
+                              <img  ng-click="openPerfilPage(item.id)" src="{{item.image}}" class="md-avatar">
                             </div>
                             <div id="image-party-card" flex-xs="20" flex-sm="20">
                                 <img src="imgs/svg/partys/{{item.image_party}}">
@@ -424,7 +424,7 @@
                    </div>
                    <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                      <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
-                       <img ng-click="openPerfilPage(item.id)" ng-src="http://{{item.image}}" class="md-avatar">
+                       <img ng-click="openPerfilPage(item.id)" ng-src="{{item.image}}" class="md-avatar">
                      </div>
                      <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
                        <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
@@ -548,7 +548,7 @@
                    </div>
                    <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
                      <div ng-controller="OpenPerfilController" id="image-card" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
-                       <img ng-click="openPerfilPage(item.id)" ng-src="http://{{item.image}}" class="md-avatar">
+                       <img ng-click="openPerfilPage(item.id)" ng-src="{{item.image}}" class="md-avatar">
                      </div>
                      <div id="image-party-card" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" ng-mouseover="changeImage=true" ng-mouseleave="changeImage=false" ng-init="changeImage=false">
                        <img  ng-hide="changeImage" src="imgs/svg/partys/{{item.image_party}}" />
