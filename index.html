@@ -206,7 +206,13 @@
                             </div>
                             <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
                               <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg">
-                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                                <div ng-if="item.score >= 100">
+                                  <p  ng-click="openPerfilPage(item.id)">{{item.score}}</p>
+                                </div>
+                                <div ng-if="item.score < 100">
+                                  <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                                </div>
+                              </img>
                             </div>
                           </div>
                         </div>
@@ -309,7 +315,13 @@
                             </div>
                             <div  ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25">
                               <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg">
-                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                                <div ng-if="item.score >= 100">
+                                  <p  ng-click="openPerfilPage(item.id)">{{item.score}}</p>
+                                </div>
+                                <div ng-if="item.score < 100">
+                                  <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                                </div>
+                              </img>
                             </div>
                           </div>
                         </div>
@@ -416,8 +428,13 @@
                         </div>
                         <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
-                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
-                        </img>
+                            <div ng-if="item.score >= 100">
+                              <p  ng-click="openPerfilPage(item.id)">{{item.score}}</p>
+                            </div>
+                            <div ng-if="item.score < 100">
+                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                            </div>
+                          </img>
                         </div>
                       </div>
                     </div>
@@ -540,8 +557,13 @@
                         </div>
                         <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25">
                           <img ng-click="openPerfilPage(item.id)" onmouseover="this.src='imgs/svg/score_color.svg'" onmouseout="this.src='imgs/svg/score.svg'" src="imgs/svg/score.svg">
-                          <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
-                        </img>
+                            <div ng-if="item.score >= 100">
+                              <p  ng-click="openPerfilPage(item.id)">{{item.score}}</p>
+                            </div>
+                            <div ng-if="item.score < 100">
+                              <span ng-click="openPerfilPage(item.id)">{{item.score}}</span>
+                            </div>
+                          </img>
                         </div>
                       </div>
                     </div>

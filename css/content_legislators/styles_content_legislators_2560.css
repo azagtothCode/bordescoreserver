@@ -35,13 +35,13 @@
 
   #content-socials-card{
     text-align: center;
-    margin-left: 10px;
-    margin-top: 50px;
+    margin-left: -13px;
+    margin-top: 54px;
   }
 
   #score-card {
-    margin-top: 7px;
-    margin-left: -10px;
+    margin-top: 8px;
+    margin-left: -35px;
     z-index: 1;
   }
 
@@ -57,7 +57,18 @@
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -15px;
+    margin-left: -10px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  #score-card p{
+    margin-top: -61px;
+    position: absolute;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-left: 13px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -66,7 +77,7 @@
   #text-chamber-card{
     font-size: 30px;
     margin-top: 7px;
-    margin-right: 20px;
+    margin-right: 60px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
@@ -78,7 +89,7 @@
     font-size: 23px;
     text-transform: uppercase;
     text-align: right;
-    margin-right: 15px;
+    margin-right: 60px;
     color: #BBB;
     letter-spacing: 2px;
     font-weight: bold;
@@ -86,13 +97,13 @@
   }
 
   #text-state-card span{
-    font-size: 15px;
-    /* margin-top: 2px; */
-    margin-right: 0px;
+    font-size: 23px;
     text-transform: uppercase;
     text-align: right;
+    margin-right: 0px;
     color: #BBB;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-weight: bold;
     cursor: pointer;
   }
 
@@ -107,15 +118,15 @@
 
   #image-party-card img{
     width: 65px;
-    margin-left: 0px;
-    margin-top: 47px;
+    margin-left: -15px;
+    margin-top: 65px;
     cursor: pointer;
   }
 
   #image-state-card {
     width: 70px;
     height: 70px;
-    margin-left: 0px;
+    margin-left: -52px;
     margin-top: 14px;
     cursor: pointer;
   }

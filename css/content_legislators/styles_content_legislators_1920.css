@@ -7,6 +7,11 @@
     height: 210px;
   }
 
+  #content-socials-card {
+    margin-left: 5px;
+    margin-top: 55px;
+  }
+
   #score-card {
     margin-top: 3px;
     margin-left: -45px;
@@ -21,15 +26,23 @@
   #score-card span{
     margin-top: -45px;
     font-size: 20px;
-    margin-left: 30px;
+    margin-left: 34.5px;
+  }
+
+  #score-card p{
+    margin-top: -45px;
+    font-size: 20px;
+    margin-left: 50px;
   }
 
   #text-chamber-card{
     font-size: 25px;
+    margin-right: 50px;
   }
 
   #text-state-card{
     font-size: 16px;
+    margin-right: 50px;
   }
 
   #text-state-card span{
@@ -37,22 +50,23 @@
   }
 
   #image-card img{
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     margin-top: -30px;
     margin-left: 1px;
   }
 
   #image-party-card img{
-    width: 45px;
-    margin-left: 5px;
-    margin-top: 67px;
+    width: 50px;
+    margin-left: 0px;
+    margin-top: 70px;
   }
 
   #image-state-card {
-    width: 40px;
-    margin-left: -10px;
-    margin-top: 5px;
+    width: 50px;
+    height: 60px;
+    margin-left: -35px;
+    margin-top: 11px;
   }
 
   #facebook-card img{
@@ -68,7 +82,7 @@
   }
 
   #text-name-card{
-    font-size: 17px;
+    font-size: 16px;
     margin-left: -15px;
   }
 
@@ -308,15 +322,23 @@
   #score-card span{
     margin-top: -55px;
     font-size: 30px;
-    margin-left: -3px;
+    margin-left: 5px;
+  }
+
+  #score-card p{
+    margin-top: -56px;
+    font-size: 30px;
+    margin-left: 32px;
   }
 
   #text-chamber-card{
     font-size: 25px;
+    margin-right: 30px;
   }
 
   #text-state-card{
     font-size: 16px;
+    margin-right: 30px; 
   }
 
   #text-state-card span{
@@ -355,23 +377,23 @@
   }
 
   #text-name-card{
-    font-size: 17px;
-    margin-left: -20px;
+    font-size: 15px;
+    margin-left: -15px;
   }
 
   #text-election-card{
     font-size: 14px;
-    margin-left: -20px;
+    margin-left: -15px;
   }
 
   #text-commission-card{
     font-size: 14px;
-    margin-left: -20px;
+    margin-left: -15px;
   }
 
   #content-socials-card {
     text-align: center;
-    margin-left: -55px;
+    margin-left: -35px;
     margin-top: 75px;
   }
 
