@@ -9,11 +9,13 @@ $scope.puntos = [
   ];
 })
 
-app.controller("BarCtrlPuntos", function ($scope) {
-  $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
-  $scope.series = ['Iniciativas'];
+app.controller("BarCtrlRol", function ($scope) {
+  $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas'];
+  $scope.series = ['Rol Político'];
 
   $scope.data = [
-    [13, 17, 7, 12, 6],
+    [13, 17, 7, 12]
   ];
+
+  $scope.colors = ['#990000'];
 })

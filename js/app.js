@@ -93,8 +93,7 @@ app.controller('AppCtrl',
 app.config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
     ChartJsProvider.setOptions({
-      chartColors: ['#990000', '#990000'],
-      responsive: true
+      chartColors: ['#990000', '#990000']
     });
     // Configure all line charts
   }])

@@ -90,19 +90,19 @@
 
 #divtrabajo .active {
   background:#EE4455;
-  color: #000;
+  color: #343434;
   transition: 500ms all;
 }
 
 #divrol .active {
   background:#FF974C;
-  color: #000;
+  color: #343434;
   transition: 500ms all;
 }
 
 #divextra .active {
   background:#FFC73F;
-  color: #000;
+  color: #343434;
   transition: 500ms all;
 }
 
@@ -110,4 +110,8 @@
   margin-top: 30px;
   width: auto;
   border-left: 1px solid #FFF;
+}
+
+#doughnut{
+  width: 340px;
 }
