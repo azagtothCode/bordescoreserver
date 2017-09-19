@@ -1,3 +1,51 @@
+/*Styles for web*/
+
+#divtrabajo{
+  text-align:center;
+  border-top: 6px solid #EE4455;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divrol{
+  text-align:center;
+  border-top: 6px solid #FF974C;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divextra{
+  text-align:center;
+  border-top: 6px solid #FFC73F;
+  cursor:pointer;
+  transition: 500ms all;
+}
+
+#divtrabajo .active {
+  background:#EE4455;
+  color: #343434;
+  transition: 500ms all;
+}
+
+#divrol .active {
+  background:#FF974C;
+  color: #343434;
+  transition: 500ms all;
+}
+
+#divextra .active {
+  background:#FFC73F;
+  color: #343434;
+  transition: 500ms all;
+}
+
+#bar{
+  margin-top: 30px;
+  width: auto;
+  border-left: 1px solid #FFF;
+}
+
+/*Styles Mobile*/
 .md-accordion .expandCollapse {
   width:30px;
   height:30px;
@@ -67,51 +115,334 @@
   background:#343434;
 }
 
-#divtrabajo{
-  text-align:center;
-  border-top: 6px solid #EE4455;
-  cursor:pointer;
-  transition: 500ms all;
-}
+/*Content nav tabs set(1),set(2),set(3)*/
 
-#divrol{
-  text-align:center;
-  border-top: 6px solid #FF974C;
-  cursor:pointer;
-  transition: 500ms all;
-}
+/*Begin Set(1) Trabajo legislativo*/
 
-#divextra{
-  text-align:center;
-  border-top: 6px solid #FFC73F;
-  cursor:pointer;
-  transition: 500ms all;
-}
-
-#divtrabajo .active {
+/*Iniciativas*/
+#contentIniciativasProfile{
   background:#EE4455;
-  color: #343434;
-  transition: 500ms all;
 }
 
-#divrol .active {
+#barIniciativa h1{
+  color:#FFF; text-align:left; letter-spacing: 1px;
+}
+
+#bodyIniciativas{
+  background:#FFF; padding-top:30px;
+}
+
+/*#imageIniciativasTheme img{}*/
+
+#valueIniciativasTheme{
+  background:#FFF; color:#343434; padding-top:10px; font-size:19px; font-weight:bold;
+}
+
+#themeIniciativasTheme{
+  color: #343434; font-weight: bold; padding-bottom: 25px;
+}
+
+#iniciativasTextContent{
+  background:#FFF; height:550px;
+}
+
+#iniciativasDivContent{
+  padding:15px;  text-align:justify; letter-spacing:2px;
+}
+
+#iniciativasDivContent span{
+  font-size:20px;
+}
+
+#iniciativasDivContent a{
+  font-size:20px;
+}
+
+/*******************/
+/*Puntos de Acuerdo*/
+#contentPuntosProfile{
+  background:#EE4455;
+}
+
+#barPuntos h1{
+  color:#FFF; text-align:left; letter-spacing: 1px;
+}
+
+#bodyPuntos{
+  background:#FFF; padding-top:30px;
+}
+
+/*#imagePuntosTheme img{}*/
+
+#valuePuntosTheme{
+  background:#FFF; color:#343434; padding-top:10px; font-size:19px; font-weight:bold;
+}
+
+#themePuntosTheme{
+  color: #343434; font-weight: bold; padding-bottom: 25px;
+}
+
+#PuntosTextContent{
+  background:#FFF; height:550px;
+}
+
+#PuntosDivContent{
+  padding:20px;  text-align:justify; letter-spacing:2px;
+}
+
+#PuntosDivContent span{
+  font-size:20px;
+}
+
+#PuntosDivContent a{
+  font-size:20px;
+}
+/*Set(2) Rol*/
+
+#contentRolProfile{
   background:#FF974C;
-  color: #343434;
-  transition: 500ms all;
 }
 
-#divextra .active {
-  background:#FFC73F;
-  color: #343434;
-  transition: 500ms all;
+#columnRolProfile{
+  margin-left: 40px;
 }
 
-#bar{
+#columnRolProfile img{
+  width:50px; margin-top:20px;
+}
+
+#columnRolProfile span{
+  color: #993300;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 23px;
+  padding-right: 15px;
+}
+
+#divScoreRol{
+  border-bottom:1px solid #990000;
+  z-index:1;
+  width: 225px;
+  margin-left: -1px;
+}
+
+#divScoreRol img{
   margin-top: 30px;
-  width: auto;
-  border-left: 1px solid #FFF;
+  margin-bottom: 10px;
+  width: 60px;
+  margin-left: 10px;
 }
 
-#doughnut{
-  width: 340px;
+.valueScoreRol{
+  margin-top: -54px;
+  font-size: 22px;
+  margin-left: -101px;
+  color: #993300;
+}
+
+.valueRankingRol{
+  font-size: 20px;
+  color: #993300;
+  text-align: left;
+  margin-left:10px;
+}
+
+.scoreRol{
+ font-size: 20px;
+ color: #993300;
+ text-align: left;
+ margin-left:10px;
+}
+
+#commissionsRolExtra md-content{
+  background:transparent;
+  text-align:left;
+  margin-left:40px;
+  padding-bottom:30px;
+}
+
+#commissionsRolExtra p{
+  color:#990000;
+  text-transform:uppercase;
+  font-size:18px;
+  letter-spacing:1px;
+}
+#commissionsRolExtra span{
+  color:#FFF;
+  font-size:17px;
+  letter-spacing:1px;
+}
+/*Set(3) Extra*/
+/*End Content nav tabs set(1),set(2),set(3)*/
+
+#divImagesThemesNoticias img{
+  width:50px;
+}
+
+#divTextThemesNoticias span{
+  font-size:12px;
+  font-weight: bold;
+  color: #343434;
+}
+
+#NoticiasDivContent{
+  padding:5px;
+  text-align:justify;
+  letter-spacing:2px;
+  font-size: 15px;
+}
+
+/*Content nav tabs set(1),set(2),set(3) Mobile*/
+
+/*Begin Set(1) Trabajo legislativo*/
+@media only screen and (max-width: 1920px) {
+  #iniciativasDivContent {
+      padding: 5px;
+  }
+
+  #PuntosDivContent {
+      padding: 5px;
+  }
+
+  #columnRolProfile {
+    margin-left: 10px;
+  }
+
+  #commissionsRolExtra md-content{
+    margin-left:10px;
+  }
+
+  #columnRolProfile span {
+    margin-left: 6px;
+    font-size: 17px;
+  }
+
+  .valueScoreRol {
+    margin-left: -55px;
+  }
+
+  #divScoreRol {
+    width: 180px;
+  }
+
+}
+@media only screen and (max-width: 1860px) {
+  .valueScoreRol {
+    margin-left: -70px;
+  }
+}
+@media only screen and (max-width: 1540px) {
+  #themeIniciativasTheme {
+      font-size: 14px;
+  }
+
+  #themePuntosTheme {
+      font-size: 14px;
+  }
+
+  #columnRolProfile span {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .valueScoreRol {
+    margin-left: -42px;
+  }
+
+  #divTextThemesNoticias span {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #columnRolProfile img {
+    width: 45px;
+    margin-top: 20px;
+  }
+
+  #columnRolProfile span {
+    margin-left: 8px;
+  }
+
+  #divTextThemesNoticias span {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  #themeIniciativasTheme {
+    font-size: 13px;
+  }
+
+  #themePuntosTheme {
+    font-size: 13px;
+  }
+
+  #columnRolProfile img {
+    width: 40px;
+  }
+
+  #columnRolProfile span {
+    margin-left: 5px;
+  }
+
+  .valueScoreRol {
+    margin-left: -29px;
+  }
+
+  #divScoreRol {
+    width: 140px;
+  }
+
+  #divTextThemesNoticias span {
+    font-size:10px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #imageIniciativasTheme img {
+      width: 60px;
+  }
+
+  #imagePuntosTheme img {
+      width: 60px;
+  }
+
+  .valueScoreRol {
+    margin-left: -22px;
+  }
+
+  #commissionsRolExtra md-content {
+    height:auto;
+  }
+
+  #divTextThemesNoticias span {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  #iniciativasDivContent {
+    padding: 5px;
+  }
+
+  #PuntosDivContent {
+    padding: 5px;
+  }
+
+  #barIniciativa h1 {
+    margin-left: 30px;
+  }
+
+  #barPuntos h1 {
+    margin-left: 30px;
+  }
+
+  #columnRolProfile img {
+    width: 35px;
+  }
+
+  #columnRolProfile span {
+    margin-left: 2px;
+  }
 }

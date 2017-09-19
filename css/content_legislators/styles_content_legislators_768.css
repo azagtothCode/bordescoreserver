@@ -1,3 +1,34 @@
+
+@media only screen and (max-width: 959px) {
+
+  #slide-head-profile-dip {
+    min-height: 500px;
+    background-size: 100% 575px;
+  }
+
+  #califichas-content-happy-profile img {
+    width: 50px;
+    margin-top: 90px;
+    margin-left: 60px;
+  }
+
+  #califichas-content-sad-profile img {
+    width: 50px;
+    margin-top: 90px;
+  }
+
+  #califichas-content-bad-profile img {
+    width: 50px;
+    margin-top: 90px;
+    margin-left: -60px;
+  }
+
+  #image-card-profile img {
+    margin-top: 72px;
+    margin-left: 220px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #tabs-responsive {
     min-height: 734px;

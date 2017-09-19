@@ -52,6 +52,7 @@
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1366.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1280.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1024.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_960.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_768.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_736.css">
   <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_667.css">
@@ -62,7 +63,7 @@
 </head>
 <body ng-app="score_federal">
   <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo-profile" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-md="15" flex-gt-md="15"  flex-lg="15"  flex-xl="15" >
+     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo-profile" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="20" flex-md="15" flex-gt-md="15"  flex-lg="15"  flex-xl="15" >
      </div>
      <div flex-xs="40" flex-sm="60" flex-md="65" flex-gt-md="65" flex-lg="65" flex-gt-lg="65" flex-xl="65" >
         <div hide show-xs show-sm layout-xs="column" layout-sm="column">
@@ -470,26 +471,26 @@
         <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
          <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
-         <div ng-controller="BarCtrlIniciativas" style="background:#EE4455;" flex-xl="35" flex-lg="40" flex-md="50">
-           <div layout-xl="column" layout-lg="column" layout-md="column" id="bar">
+         <div id="contentIniciativasProfile" ng-controller="BarCtrlIniciativas" flex-xl="35" flex-lg="40" flex-md="50">
+           <div layout-xl="column" layout-lg="column" layout-md="column" id="barIniciativa">
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="10" flex-lg="5" flex-md="0">
                </div>
                <div flex-xl="80" flex-lg="90" flex-md="100">
                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                  </canvas>
-                 <h1 style="color:#FFF; text-align:left;">Iniciativas</h1>
+                 <h1>Iniciativas</h1>
                </div>
                <div flex-xl="10" flex-lg="5" flex-md="0">
                </div>
              </div>
            </div>
-           <div ng-controller="IniciativasController" style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column" layout-md="column">
+           <div id="bodyIniciativas" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                 <div id="imageIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
                    <div flex-xl="15" flex-lg="15" flex-md="15">
@@ -517,7 +518,7 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;" layout-xl="row" layout-lg="row" layout-md="row">
+             <div id="valueIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
@@ -552,7 +553,7 @@
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div style="color: #000; font-weight: bold; padding-bottom: 25px;" flex-xl="90" flex-lg="90" flex-md="90">
+               <div id="themeIniciativasTheme" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -581,17 +582,17 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <md-content style="background:#FFF; height:700px;">
+             <md-content id="iniciativasTextContent">
                <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
                  <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div style="color: #000; padding-bottom: 25px;" flex-xl="90" flex-lg="90" flex-md="90">
+               <div id="iniciativasDivContent" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
-                   <div style=" border-bottom: 3px solid #EE4656; padding:20px;  text-align:justify; letter-spacing:2px;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span style="font-size:20px;">{{item.body}}</span><br><br>
-                      <span style="color:#EE4656; font-size:20px;">{{item.theme}} / <a style="color:#EE4656; font-size:20px;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                   <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
+                      <span>{{item.body}}</span><br><br>
+                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
                    </div>
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -603,26 +604,26 @@
              </md-content>
            </div>
          </div>
-         <div ng-controller="BarCtrlPuntos" style="background:#EE4455;" flex-xl="35" flex-lg="40" flex-md="50">
-           <div layout-xl="column" layout-lg="column" layout-md="column" id="bar">
+         <div id="contentPuntosProfile" ng-controller="BarCtrlPuntos" flex-xl="35" flex-lg="40" flex-md="50">
+           <div layout-xl="column" layout-lg="column" layout-md="column" id="barPuntos">
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="10" flex-lg="5" flex-md="0">
                </div>
                <div flex-xl="80" flex-lg="90" flex-md="100">
                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                  </canvas>
-                 <h1 style="color:#FFF; text-align:left;">Iniciativas</h1>
+                 <h1>P. de Acuerdo</h1>
                </div>
                <div flex-xl="10" flex-lg="5" flex-md="0">
                </div>
              </div>
            </div>
-           <div ng-controller="PuntosController" style="background:#FFF; padding-top:30px;" layout-xl="column" layout-lg="column" layout-md="column">
+           <div id="bodyPuntos" ng-controller="PuntosController" layout-xl="column" layout-lg="column" layout-md="column">
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                 <div id="imagePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
                    <div flex-xl="15" flex-lg="15" flex-md="15">
@@ -650,7 +651,7 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <div style="background:#FFF; padding-top:10px; font-size:19px; font-weight:bold;" layout-xl="row" layout-lg="row" layout-md="row">
+             <div id="valuePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
@@ -685,7 +686,7 @@
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div style="color: #000; font-weight: bold; padding-bottom: 25px;" flex-xl="90" flex-lg="90" flex-md="90">
+               <div id="themePuntosTheme" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -714,17 +715,17 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <md-content style="background:#FFF; height:700px;">
+             <md-content id="PuntosTextContent">
                <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in puntos">
                  <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div style="color: #000; padding-bottom: 25px;" flex-xl="90" flex-lg="90" flex-md="90">
+               <div id="PuntosDivContent" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
-                   <div style=" border-bottom: 3px solid #EE4656; padding:20px;  text-align:justify; letter-spacing:2px;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span style="font-size:20px;">{{item.body}}</span><br><br>
-                      <span style="color:#EE4656; font-size:20px;">{{item.theme}} / <a style="color:#EE4656; font-size:20px;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                   <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
+                      <span>{{item.body}}</span><br><br>
+                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
                    </div>
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -739,26 +740,26 @@
          <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
         </div>
-        <div ng-controller="BarCtrlRol" style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
-         <div flex-xl="15" flex-lg="33" flex-md="33">
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
+         <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
-         <div style="background:#FF974C;"flex-xl="70" flex-lg="33" flex-md="33">
+         <div id="contentRolProfile" ng-controller="BarCtrlRol"  flex-xl="70" flex-lg="80" flex-md="100">
            <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
              <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
              <div style="padding-top: 35px;" flex-xl="33" flex-lg="33" flex-md="33">
                 <div layout-xl="row" layout-lg="row" layout-md="row">
                   <div flex-xl="50" flex-lg="50" flex-md="50">
                     <div layout-xl="row" layout-lg="row" layout-md="row">
-                      <div style="margin-left: 40px; -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
+                      <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
                               <a href="pac.bordepolitico.com" target="_blank">
-                                <img style="width:50px; margin-top:20px;" src="../imgs/svg/cali_happy.svg">
+                                <img src="../imgs/svg/cali_happy.svg">
                               </a>
                             </div>
-                            <div style="margin-top: 25px; color: #993300; font-weight: bold; letter-spacing: 1px; font-size: 18px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              25%
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>25%</span>
                             </div>
                           </div>
                         </div>
@@ -766,11 +767,11 @@
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
                               <a href="pac.bordepolitico.com" target="_blank">
-                                <img style="width:50px; margin-top:20px;" src="../imgs/svg/cali_sad.svg">
+                                <img src="../imgs/svg/cali_sad.svg">
                               </a>
                             </div>
-                            <div style="margin-top: 25px; color: #993300; font-weight: bold; letter-spacing: 1px; font-size: 18px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              85%
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>85%</span>
                             </div>
                           </div>
                         </div>
@@ -778,27 +779,27 @@
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
                               <a href="pac.bordepolitico.com" target="_blank">
-                                <img style="width:50px; margin-top:20px;" src="../imgs/svg/cali_bad.svg">
+                                <img src="../imgs/svg/cali_bad.svg">
                               </a>
                             </div>
-                            <div style="margin-top: 25px; color: #993300; font-weight: bold; letter-spacing: 1px; font-size: 18px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              85%
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>85%</span>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div flex-xl="60" flex-lg="60" flex-md="60" style="border-left:1px solid brown;">
-                        <div style="border-bottom:1px solid brown; z-index:1;" layout-xl="column" layout-lg="column" layout-md="column" style="border-bottom:1px solid brown; z-index:1;">
-                          <img id="imageScoreTrabajo" style="margin-top: 30px;margin-bottom:10px;width: 60px;margin-left: 5px;"src="../imgs/svg/scorebrown.svg">
+                      <div flex-xl="60" flex-lg="60" flex-md="60" style="border-left:1px solid #990000;">
+                        <div id="divScoreRol" layout-xl="column" layout-lg="column" layout-md="column">
+                          <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
                         </div>
                         <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                          <span style="margin-top: -54px; font-size: 22px;margin-left: -83px;color: #993300;">100</span>
+                          <span class="valueScoreRol">100</span>
                         </div>
                         <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <span style="  font-size: 20px; color: #993300; text-align: left;">Ranking</span>
+                          <span class="valueRankingRol">Ranking</span>
                         </div>
                         <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <span style="  font-size: 20px; color: #993300; text-align: left;">Score</span>
+                          <span class="scoreRol">Score</span>
                         </div>
                       </div>
                     </div>
@@ -808,35 +809,195 @@
                      </canvas>
                   </div>
                 </div>
-                <div layout-xl="column" layout-lg="column" layout-md="column">
-                  <md-content>
+                <div id="commissionsRolExtra" layout-xl="column" layout-lg="column" layout-md="column">
+                  <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
                     <p>Comisiones Ordinarias</p>
-                      <span>Economia</span>
-                      <span>Proteccion Civil</span><span>Secretaria</span>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
                     <p>Comisiones Especiales</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
                     <p>Comites</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
                     <p>Grupos de amistad</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
                   </md-content>
                 </div>
              </div>
              <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
            </div>
          </div>
-         <div flex-xl="15" flex-lg="33" flex-md="33">
+         <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
         </div>
-        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
-         <div flex-xl="15" flex-lg="33" flex-md="33">
-         </div>
-         <div style="background:#FFC73F;"flex-xl="70" flex-lg="33" flex-md="33">
-           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
-             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-             <div style=""flex-xl="33" flex-lg="33" flex-md="33">aqui</div>
-             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+        <div style="text-align:center;" layout-xl="column" layout-lg="column" layout-md="column" ng-show="isSet(3)">
+          <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
+            <div flex-xl="15" flex-lg="10" flex-md="0">
+            </div>
+             <div ng-controller="BarCtrlRol" style="background:#FFC73F; padding-top:30px;" flex-xl="70" flex-lg="80" flex-md="100">
+               <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33">
+                   <div layout-xl="row" layout-lg="row" layout-md="row">
+                     <div style="border-left:1px solid #990000; color:#990000; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
+                       <div layout-xl="column" layout-lg="column" layout-md="column">
+                         <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
+                       </div>
+                       <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                         <span style="text-align:center; margin-top:-30px;" >100</span>
+                       </div>
+                       <div style="text-align:left; border-top:1px solid #990000; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                         ranking
+                       </div>
+                       <div style="text-align:left; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                         Klout
+                       </div>
+                    </div>
+                    <div style="" flex-xl="50" flex-lg="50" flex-md="33">
+                      <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                      </canvas>
+                    </div>
+                    <div style="border-right:1px solid #FFF; color:#FFF; text-transform:uppercase; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
+                      <div layout-xl="column" layout-lg="column" layout-md="column">
+                        <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
+                      </div>
+                      <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                      </div>
+                      <div style="border-top:1px solid #FFF; text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                        ranking
+                      </div>
+                      <div style="text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                        Noticias Google
+                      </div>
+                    </div>
+                   </div>
+                   <div style="color: #FFF; font-size: 35px; text-align: left; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
+                     Noticias en medios
+                   </div>
+                 </div>
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+               </div>
+             </div>
+             <div flex-xl="15" flex-lg="10" flex-md="0">
+             </div>
            </div>
-         </div>
-         <div flex-xl="15" flex-lg="33" flex-md="33">
-         </div>
+           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
+             <div flex-xl="15" flex-lg="10" flex-md="0">
+             </div>
+              <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xl="70" flex-lg="80" flex-md="100">
+                <div  layout-xl="row" layout-lg="row" layout-md="row">
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33">
+                    <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
+                      <div style="background:transparent;" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
+                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                          <div flex-xl="100" flex-lg="100" flex-md="100">
+                            <div id="divImagesThemesNoticias" style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
+                          <div flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                05
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                01
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                00
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                02
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                08
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                05
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                          <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;"flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Ambiente</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Cultura</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Gobierno</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Seguridad</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Economia</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Desarrollo</span>
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <md-content style="background:transparent; height:550px; margin-top:30px;">
+                          <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
+                          <div id="NoticiasDivContent" flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xl="100" flex-lg="100" flex-md="100">
+                                 <span>{{item.body}}</span><br><br>
+                                  <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </md-content>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                </div>
+              </div>
+              <div flex-xl="15" flex-lg="10" flex-md="0">
+              </div>
+            </div>
         </div>
       </div>
     			<!-- <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">

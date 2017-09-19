@@ -1,4 +1,6 @@
 
+
+
 @media only screen and (max-width: 768px) {
 
     #boton-menu{
@@ -22,4 +24,8 @@
       margin-top: 16px;
       margin-left: 32px;
     }
+
+    #input-project {
+    margin-left: 145px;
+  }
 }
