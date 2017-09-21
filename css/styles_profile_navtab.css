@@ -499,7 +499,7 @@
     text-align: left;
     letter-spacing: 1px;
     font-size: 17px;
-    margin-left: 15px;
+    margin-left: 0px;
   }
 
   #barPuntosMobile h1{
@@ -512,7 +512,7 @@
 
   #bodyIniciativasMobile{
     background: #FFF;
-    padding-top: 5px;
+    padding-top: 20px;
     text-align: center;
   }
 
@@ -533,5 +533,49 @@
     text-align: center;
     background: #FFF;
     font-size: 6px;
+  }
+
+  #iniciativasTextContentMobile{
+    background:#FFF;
+    height:250px;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  /*Puntos*/
+  #bodyPuntosMobile{
+    background: #FFF;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  #imagePuntosThemeMobile img{
+    width: 35px;
+  }
+
+  #valuePuntosThemeMobile{
+    background: #FFF;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #themeIPuntosThemeMobile{
+    color: #343434;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-align: center;
+    background: #FFF;
+    font-size: 6px;
+  }
+
+  #PuntosTextContentMobile{
+    background:#FFF;
+    height:250px;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: justify;
+    padding: 10px;
   }
 }

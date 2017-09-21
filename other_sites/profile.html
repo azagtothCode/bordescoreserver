@@ -1067,70 +1067,82 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
-                <div flex-sm="100" flex-xs="100">
-                  <div layout-sm="row" layout-xs="row" >
-                    <div flex-sm="5" flex-xs="5" >
+                <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div layout-sm="row" layout-xs="row" >
+                      <div flex-sm="5" flex-xs="5" >
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        01
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        00
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        02
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        08
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
                     </div>
-                    <div flex-sm="15" flex-xs="15">
-                      05
+                  </div>
+                </div>
+                <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                  <div  flex-xs="100" flex-sm="100">
+                    <div layout-xs="row" layout-sm="row">
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Ambiente</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Cultura</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Gobierno</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Seguridad</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Economia</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Desarrollo</span>
+                      </div>
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
                     </div>
-                    <div flex-sm="15" flex-xs="15">
-                      01
+                    <md-content id="iniciativasTextContentMobile">
+                      <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
+                      <div id="iniciativasDivContentMobile" flex-xs="100" flex-sm="100" >
+                        <div layout-xs="row" layout-sm="row">
+                          <div flex-xs="5" flex-sm="5" >
+                          </div>
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px;" flex-xs="90" flex-sm="90">
+                             <span>{{item.body}}</span><br><br>
+                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                          </div>
+                          <div flex-xs="5" flex-sm="5">
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div flex-sm="15" flex-xs="15">
-                      00
-                    </div>
-                    <div flex-sm="15" flex-xs="15">
-                      02
-                    </div>
-                    <div flex-sm="15" flex-xs="15">
-                      08
-                    </div>
-                    <div flex-sm="15" flex-xs="15">
-                      05
-                    </div>
-                    <div flex-sm="5" flex-xs="5">
-                    </div>
+                    </md-content>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
-              <div  flex-xs="100" flex-sm="100">
-                <div layout-xs="row" layout-sm="row">
-                  <div flex-xs="5" flex-sm="5">
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Ambiente</span>
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Cultura</span>
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Gobierno</span>
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Seguridad</span>
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Economia</span>
-                  </div>
-                  <div flex-xs="15" flex-sm="15">
-                    <span>Desarrollo</span>
-                  </div>
-                  <div flex-xs="5" flex-sm="5">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
-              <div layout-sm="row" layout-xs="row">
-                <div flex-sm="100" flex-xs="100">
-                </div>
-              </div>
-            </div>
+
+
             <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
               <div layout-sm="row" layout-xs="row">
                 <div flex-sm="100" flex-xs="100">
