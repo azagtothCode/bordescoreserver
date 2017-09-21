@@ -155,7 +155,7 @@
     position: absolute;
     font-size: 28px;
     letter-spacing: 2px;
-    margin-left: -9px;
+    margin-left: -10px;
   }
 
   #text-chamber-card-profile{
@@ -231,7 +231,7 @@
   }
 
   #text-name-card-profile{
-    font-size: 17px;
+    font-size: 13px;
     margin-top: 3px;
     text-align: left;
     letter-spacing: 3px;
