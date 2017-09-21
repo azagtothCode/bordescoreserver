@@ -169,7 +169,7 @@
         </div>
       </div>
   </div>
-    <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
     <div flex-xs="15" flex-sm="15">
     </div>
     <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
@@ -208,45 +208,45 @@
       <div flex-xs="15" flex-sm="15">
       </div>
   </div>
-    <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-      <div flex-xs="50" flex-sm="50">
-        <div id="w">
-            <canvas id="d1" height="400" width="400"></canvas>
+  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+    <div flex-xs="50" flex-sm="50">
+      <div id="w">
+          <canvas id="d1" height="400" width="400"></canvas>
+      </div>
+    </div>
+    <div flex-xs="50" flex-sm="50">
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-trabajo" layout-xs="row" layout-sm="row">
+          <div  flex-xs="20" flex-sm="20">
+            <span class="number">20%</span>
+          </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Trabajo</span>
+          </div>
         </div>
       </div>
-      <div flex-xs="50" flex-sm="50">
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-trabajo" layout-xs="row" layout-sm="row">
-            <div  flex-xs="20" flex-sm="20">
-              <span class="number">20%</span>
-            </div>
-            <div flex-xs="80" flex-sm="80">
-              <span class="letter">Trabajo</span>
-            </div>
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-rol"  layout-xs="row" layout-sm="row">
+          <div flex-xs="20" flex-sm="20">
+            <span class="number">50%</span>
+          </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Rol</span>
           </div>
         </div>
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-rol"  layout-xs="row" layout-sm="row">
-            <div flex-xs="20" flex-sm="20">
-              <span class="number">50%</span>
-            </div>
-            <div flex-xs="80" flex-sm="80">
-              <span class="letter">Rol</span>
-            </div>
+      </div>
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-extra"  layout-xs="row" layout-sm="row">
+          <div flex-xs="20" flex-sm="20">
+            <span class="number">30%</span>
           </div>
-        </div>
-        <div layout-xs="column" layout-sm="column">
-          <div id="style-extra"  layout-xs="row" layout-sm="row">
-            <div flex-xs="20" flex-sm="20">
-              <span class="number">30%</span>
-            </div>
-            <div flex-xs="80" flex-sm="80">
-              <span class="letter">Extra</span>
-            </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Extra</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
     <div  hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
       <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
         <div id="content-cards-profile" flex-gt-md="50" flex-md="50" flex-offset-lg="5" flex-lg="45" flex-xl="50">
@@ -1277,8 +1277,93 @@
     					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
     				</div>
     			</md-toolbar>
-    			<div ng-class="{dataContent:true, activeContent:data.expanded}">
-
+    			<div style="background:#FF974C; padding: 0px;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+              <div id="contentRolProfile" ng-controller="BarCtrlRol" flex-xs="100" flex-sm="100">
+                <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+                  <div style="padding-top: 35px;" flex-xs="100" flex-sm="100">
+                     <div layout-xs="row" layout-sm="row">
+                       <div flex-xs="50" flex-sm="50" >
+                         <div layout-xs="row" layout-sm="row" >
+                           <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
+                             <div layout-xs="column" layout-sm="column" >
+                               <div layout-xs="row" layout-sm="row" >
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_happy.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>25%</span>
+                                 </div>
+                               </div>
+                             </div>
+                             <div layout-xs="column" layout-sm="column" >
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_sad.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>85%</span>
+                                 </div>
+                               </div>
+                             </div>
+                             <div layout-xs="column" layout-sm="column">
+                               <div layout-xs="row" layout-sm="row" >
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_bad.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>85%</span>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div flex-xs="60" flex-sm="60"  style="border-left:1px solid #990000;">
+                             <div id="divScoreRol" layout-xs="column" layout-sm="column" >
+                               <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
+                             </div>
+                             <div layout-xs="column" layout-md="column" style="z-index:2;">
+                               <span class="valueScoreRol">100</span>
+                             </div>
+                             <div  layout-xs="column" layout-sm="column">
+                               <span class="valueRankingRol">Ranking</span>
+                             </div>
+                             <div  layout-xs="column" layout-sm="column">
+                               <span class="scoreRol">Score</span>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div flex-xs="50" flex-sm="50" >
+                         <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                          </canvas>
+                       </div>
+                     </div>
+                     <div id="commissionsRolExtra" layout-xs="column" layout-sm="column">
+                       <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                         <p>Comisiones Ordinarias</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Comisiones Especiales</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Comites</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Grupos de amistad</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                       </md-content>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
     		</div>
     	</md-content>
