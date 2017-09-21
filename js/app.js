@@ -62,34 +62,6 @@ app.controller('TabController', ['$scope', function($scope) {
 }])
 
 
-app.controller('AppCtrl',
-  function($scope) {
-	$scope.accordianData = [
-		{
-			"heading" : "Trabajo Legislativo",
-			"content" : ""
-		},
-		{
-			"heading" : "Rol Politico",
-			"content" : ""
-		},
-		{
-			"heading" : "Extra Legislativo",
-			"content" : ""
-		}
-	];
-
-	$scope.collapseAll = function(data) {
-	   for(var i in $scope.accordianData) {
-		   if($scope.accordianData[i] != data) {
-			   $scope.accordianData[i].expanded = false;
-		   }
-	   }
-	   data.expanded = !data.expanded;
-	};
-
-})
-
 app.config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
     ChartJsProvider.setOptions({

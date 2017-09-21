@@ -78,14 +78,14 @@
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   content: "|";
-  margin-top:-3px;
+  margin-top:-2px;
 }
 .md-accordion .expandCollapse:after {
   opacity:1;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   content: "|";
-  margin-left:-3px;
+  margin-left:-2px;
 }
 .md-accordion .active:before {
   opacity:1;
@@ -109,12 +109,43 @@
   display:block;
 }
 
-.md-accordion md-toolbar{
-  cursor:pointer;
-  border-bottom:1px solid #343434;
-  background:#343434;
+.activeDiv span{
+ color:#343434;
 }
 
+.activeDiv h2{
+ color:#343434;
+}
+
+ #headTrabajo{
+   border-bottom:1px solid #343434;
+   background:#343434;
+ }
+
+ #headRol{
+   border-bottom:1px solid #343434;
+   background:#343434;
+ }
+
+  #headExtra{
+   border-bottom:1px solid #343434;
+   background:#343434;
+  }
+
+  .activeDiv #headTrabajo{
+    border-bottom:1px solid #EE4656;
+    background:#EE4656;
+  }
+
+  .activeDiv #headRol{
+    border-bottom:1px solid #FF974C;
+    background:#FF974C;
+  }
+
+  .activeDiv #headExtra{
+    border-bottom:1px solid #FFC73F;
+    background:#FFC73F;
+  }
 /*Content nav tabs set(1),set(2),set(3)*/
 
 /*Begin Set(1) Trabajo legislativo*/
@@ -444,5 +475,63 @@
 
   #columnRolProfile span {
     margin-left: 2px;
+  }
+}
+
+
+@media only screen and (max-width: 320px){
+  #imageScoreAccordion{
+    width: 40px;
+  }
+
+  #valueScoreAccordion{
+    margin-left: -32px;
+  }
+
+  #titleScoreAccordion{
+    margin-left: 15px;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+
+  #barIniciativaMobile h1{
+    color: #FFF;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-left: 15px;
+  }
+
+  #barPuntosMobile h1{
+    color: #FFF;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-left: 15px;
+  }
+
+  #bodyIniciativasMobile{
+    background: #FFF;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #imageIniciativasThemeMobile img{
+    width: 35px;
+  }
+
+  #valueIniciativasThemeMobile{
+    background: #FFF;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #themeIniciativasThemeMobile{
+    color: #343434;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-align: center;
+    background: #FFF;
+    font-size: 7px;
   }
 }

@@ -103,7 +103,7 @@
      </div>
   </div>
   <div id="slide-head-profile-dip" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-  <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
+    <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
     <div layout-xs="row" layout-sm="row">
       <div flex-xs="20" flex-sm="20">
       </div>
@@ -169,7 +169,7 @@
         </div>
       </div>
   </div>
-  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+    <div hide show-xs show-sm layout-xs="row" layout-sm="row">
     <div flex-xs="15" flex-sm="15">
     </div>
     <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
@@ -182,7 +182,7 @@
                     diputado
                   </div>
                   <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
-                  <span>  Nacido en: </span>
+                  <span>  por: </span>
                     Jalisco
                   </div>
                 </div>
@@ -248,7 +248,7 @@
       </div>
     </div>
     <div  hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
-      <div  layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
         <div id="content-cards-profile" flex-gt-md="50" flex-md="50" flex-offset-lg="5" flex-lg="45" flex-xl="50">
           <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
              <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
@@ -325,7 +325,7 @@
                          diputado
                        </div>
                        <div id="text-state-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                       <span>  Nacido en: </span>
+                       <span>  por: </span>
                          Jalisco
                        </div>
                      </div>
@@ -390,8 +390,8 @@
           </div>
         </div>
       </div>
-     </div>
     </div>
+  </div>
 
     <div hide-xs hide-sm layout-xl="column" layout-lg="column" layout-md="column" ng-controller="TabController">
       	<div style="background:#343434;" layout-xl="row" layout-lg="row" layout-md="row">
@@ -1010,22 +1010,192 @@
          	</div> -->
      </div>
 
-    <div hide-lg hide-md hide-xl  ng-controller="AppCtrl" class="toolbardemoBasicUsage">
-      	<md-content>
-      		<div class="md-accordion" ng-repeat="data in accordianData">
-      			<md-toolbar ng-init="data.expanded = false" ng-click="collapseAll(data)">
-      				<div class="md-toolbar-tools">
-      					<h2>
-      						<span>{{data.heading}}</span>
-      					</h2>
-      					<span flex=""></span>
-      					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
-      				</div>
-      			</md-toolbar>
-      			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
-      		</div>
-      	</md-content>
-      </div>
+    <div hide-lg hide-md hide-xl  ng-controller="acorTrabajo" class="toolbardemoBasicUsage">
+    	<md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = true" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
+              <div layout-sm="row" layout-xs="row">
+                <div flex-sm="100" flex-xs="100">
+                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                  </canvas>
+                  <h1>Iniciativas</h1>
+                </div>
+              </div>
+              <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
+                <div layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div id="imageIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                <div flex-sm="100" flex-xs="100">
+                  <div layout-sm="row" layout-xs="row" >
+                    <div flex-sm="5" flex-xs="5" >
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      05
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      01
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      00
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      02
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      08
+                    </div>
+                    <div flex-sm="15" flex-xs="15">
+                      05
+                    </div>
+                    <div flex-sm="5" flex-xs="5">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+              <div  flex-xs="100" flex-sm="100">
+                <div layout-xs="row" layout-sm="row">
+                  <div flex-xs="5" flex-sm="5">
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Ambiente</span>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Cultura</span>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Gobierno</span>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Seguridad</span>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Economia</span>
+                  </div>
+                  <div flex-xs="15" flex-sm="15">
+                    <span>Desarrollo</span>
+                  </div>
+                  <div flex-xs="5" flex-sm="5">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
+              <div layout-sm="row" layout-xs="row">
+                <div flex-sm="100" flex-xs="100">
+                </div>
+              </div>
+            </div>
+            <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
+              <div layout-sm="row" layout-xs="row">
+                <div flex-sm="100" flex-xs="100">
+                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                  </canvas>
+                  <h1>P. de Acuerdo</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+    		</div>
+    	</md-content>
+    </div>
+
+    <div hide-lg hide-md hide-xl  ng-controller="acorRol" class="toolbardemoBasicUsage">
+      <md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headRol" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+    		</div>
+    	</md-content>
+    </div>
+
+    <div hide-lg hide-md hide-xl  ng-controller="acorExtra" class="toolbardemoBasicUsage">
+      <md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headExtra" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+    		</div>
+    	</md-content>
+    </div>
+
+
+
 
     <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
         <!--panel section head-->
@@ -1107,6 +1277,7 @@
   <script src="../js/methods_nav.js"></script>
   <script src="../js/external_windows.js"></script>
   <script src="../js/methods_panel.js"></script>
+  <script src="../js/accordion.js"></script>
   <!-- <script src="../js/loader.js"></script> -->
   <script src="../js/graphs.js"></script>
   <script src="../js/iniciativas.js"></script>
