@@ -507,7 +507,11 @@
     text-align: left;
     letter-spacing: 1px;
     font-size: 17px;
-    margin-left: 15px;
+    margin-left: 0px;
+  }
+
+  #barPuntosMobile{
+    margin-top: 30px;
   }
 
   #bodyIniciativasMobile{
@@ -561,7 +565,7 @@
     text-align: center;
   }
 
-  #themeIPuntosThemeMobile{
+  #themePuntosThemeMobile{
     color: #343434;
     font-weight: bold;
     padding-bottom: 5px;

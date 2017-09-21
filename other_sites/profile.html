@@ -1141,14 +1141,114 @@
                 </div>
               </div>
             </div>
-
-
             <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
               <div layout-sm="row" layout-xs="row">
                 <div flex-sm="100" flex-xs="100">
                   <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                   </canvas>
                   <h1>P. de Acuerdo</h1>
+                </div>
+              </div>
+              <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
+                <div layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div layout-sm="row" layout-xs="row" >
+                      <div flex-sm="5" flex-xs="5" >
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        01
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        00
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        02
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        08
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                  <div  flex-xs="100" flex-sm="100">
+                    <div layout-xs="row" layout-sm="row">
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Ambiente</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Cultura</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Gobierno</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Seguridad</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Economia</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Desarrollo</span>
+                      </div>
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                    </div>
+                    <md-content id="puntosTextContentMobile">
+                      <div layout-xs="row" layout-sm="row" ng-repeat="item in puntos">
+                      <div id="puntosDivContentMobile" flex-xs="100" flex-sm="100" >
+                        <div layout-xs="row" layout-sm="row">
+                          <div flex-xs="5" flex-sm="5" >
+                          </div>
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px;" flex-xs="90" flex-sm="90">
+                             <span>{{item.body}}</span><br><br>
+                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                          </div>
+                          <div flex-xs="5" flex-sm="5">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </md-content>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1177,7 +1277,9 @@
     					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
     				</div>
     			</md-toolbar>
-    			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+    			<div ng-class="{dataContent:true, activeContent:data.expanded}">
+
+          </div>
     		</div>
     	</md-content>
     </div>
