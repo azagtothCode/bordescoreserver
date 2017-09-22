@@ -665,4 +665,10 @@
   #NoticiasDivContent {
     font-size: 11px;
   }
+
+  #contentNoticias{
+    background:transparent;
+    height:350px;
+    margin-top:30px;
+  }
 }
