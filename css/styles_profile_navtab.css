@@ -535,11 +535,11 @@
 
   #themeIniciativasThemeMobile{
     color: #343434;
-    font-weight: bold;
     padding-bottom: 5px;
     text-align: center;
     background: #FFF;
-    font-size: 6px;
+    font-size: 7px;
+
   }
 
   #iniciativasTextContentMobile{
@@ -549,6 +549,7 @@
     font-size: 11px;
     text-align: justify;
     padding: 10px;
+    letter-spacing: 2px;
   }
 
   /*Puntos*/
@@ -570,11 +571,10 @@
 
   #themePuntosThemeMobile{
     color: #343434;
-    font-weight: bold;
     padding-bottom: 5px;
     text-align: center;
-    background: #FFF;
     font-size: 6px;
+
   }
 
   #PuntosTextContentMobile{
@@ -584,6 +584,7 @@
     font-size: 11px;
     text-align: justify;
     padding: 10px;
+    letter-spacing: 2px;
   }
 
   #divScoreRol {
@@ -605,5 +606,63 @@
 
   .md-accordion .activeContent {
     padding: 10px;
+  }
+
+  #rightScoreExtra{
+    border-right:1px solid #FFF;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+
+  #rightScoreExtra .classRanking{
+    border-top:1px solid #FFF;
+    text-align:right;
+    font-size:14px;
+    color:#FFF;
+
+  }
+
+  #rightScoreExtra .classNews{
+    text-align:right;
+    font-size:14px;
+    color:#FFF;
+  }
+
+  #leftScoreExtra{
+    border-left:1px solid #990000;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+
+  #leftScoreExtra .classRanking{
+    border-top:1px solid #990000;
+    text-align:left;
+    font-size:14px;
+    color:#990000;
+  }
+
+  #leftScoreExtra .classKlout{
+    text-align:left;
+    font-size:14px;
+    color:#990000;
+  }
+
+  #titleNewsAccordion{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  #divImagesThemesNoticias img {
+    width: 35px;
+  }
+
+  #divTextThemesNoticias span {
+    font-size: 7px;
+  }
+
+  #NoticiasDivContent {
+    font-size: 11px;
   }
 }

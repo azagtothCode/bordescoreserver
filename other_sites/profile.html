@@ -1127,7 +1127,7 @@
                         <div layout-xs="row" layout-sm="row">
                           <div flex-xs="5" flex-sm="5" >
                           </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px;" flex-xs="90" flex-sm="90">
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
                              <span>{{item.body}}</span><br><br>
                              <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
                           </div>
@@ -1238,7 +1238,7 @@
                         <div layout-xs="row" layout-sm="row">
                           <div flex-xs="5" flex-sm="5" >
                           </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px;" flex-xs="90" flex-sm="90">
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-bottom:10px;" flex-xs="90" flex-sm="90">
                              <span>{{item.body}}</span><br><br>
                              <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
                           </div>
@@ -1261,7 +1261,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorRol" class="toolbardemoBasicUsage">
       <md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headRol" ng-init="data.expanded = true" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headRol" ng-init="data.expanded = false" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
@@ -1374,7 +1374,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorExtra" class="toolbardemoBasicUsage">
       <md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headExtra" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headExtra" ng-init="data.expanded = true" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
@@ -1390,13 +1390,168 @@
     					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
     				</div>
     			</md-toolbar>
-    			<div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+    			<div style="background:#FFC73F;  padding-top:10px;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div  ng-controller="BarCtrlRol"  layout-xs="column" layout-sm="column" >
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+                <div flex-sm="100" flex-xs="100">
+                  <div ayout-sm="row" layout-xs="row">
+                    <div id="LeftScoreExtra" flex-xs="25" flex-sm="25">
+                      <div layout-xs="column" layout-sm="column">
+                        <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
+                      </div>
+                      <div layout-xs="column" layout-sm="column" style="z-index:2;">
+                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                      </div>
+                      <div class="classRanking"  layout-xs="column" layout-sm="column">
+                        ranking
+                      </div>
+                      <div class="classKlout"  layout-xs="column" layout-sm="column">
+                        Klout
+                      </div>
+                   </div>
+                   <div style="" flex-xs="50" flex-sm="50">
+                     <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                     </canvas>
+                   </div>
+                   <div id="rightScoreExtra" style="" flex-xs="25" flex-sm="25" >
+                     <div layout-xs="column" layout-sm="column">
+                       <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
+                     </div>
+                     <div layout-xs="column" layout-sm="column" style="z-index:2;">
+                       <span style="text-align:center; margin-top:-30px;" >100</span>
+                     </div>
+                     <div style="" layout-xs="column" layout-sm="column">
+                       <span class="classRanking">ranking</span>
+                     </div>
+                     <div style="text-align:right; font-size:17px;"  layout-xs="column" layout-sm="column">
+                       <span  class="classNews">Noticias Google</span>
+                     </div>
+                   </div>
+                  </div>
+                  <div  id="titleNewsAccordion" flex-xs="column" flex-sm="column">
+                    <span style="color: #FFF;">Noticias en medios</span>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+
+                 <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xs="100" flex-sm="100">
+                   <div  layout-xs="row" layout-sm="row">
+                     <div style="" flex-xs="100" flex-sm="100">
+                       <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xs="column" flex-sm="column">
+                         <div style="background:transparent;" ng-controller="IniciativasController" layout-xs="column" layout-sm="column">
+                           <div layout-xs="row" layout-sm="row">
+                             <div flex-xs="100" flex-sm="100">
+                               <div id="divImagesThemesNoticias" style="background:transparent;" layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div style="background:transparent;" layout-xs="row" layout-sm="row" >
+                             <div flex-xs="100" flex-sm="100">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   05
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   01
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   00
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   02
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   08
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   05
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div layout-xs="row" layout-sm="row" >
+                             <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;" flex-xs="100" flex-sm="100">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Ambiente</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Cultura</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Gobierno</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Seguridad</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Economia</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Desarrollo</span>
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5">
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <md-content style="background:transparent; height:550px; margin-top:30px;">
+                             <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
+                               <div flex-xs="5" flex-sm="5">
+                               </div>
+                             <div id="NoticiasDivContent" flex-xs="90" flex-sm="90">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xs="100" flex-sm="100">
+                                    <span>{{item.body}}</span><br><br>
+                                     <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Documento adjunto</a>
+                                 </div>
+                               </div>
+                             </div>
+                             <div flex-xs="5" flex-sm="5">
+                             </div>
+                           </div>
+                           </md-content>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+               </div>
+            </div>
+          </div>
     		</div>
     	</md-content>
     </div>
-
-
-
 
     <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
         <!--panel section head-->
