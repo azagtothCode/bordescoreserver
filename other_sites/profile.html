@@ -746,7 +746,7 @@
          <div id="contentRolProfile" ng-controller="BarCtrlRol"  flex-xl="70" flex-lg="80" flex-md="100">
            <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
              <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-             <div style="padding-top: 35px;" flex-xl="33" flex-lg="33" flex-md="33">
+             <div id="paddingRolProfile" flex-xl="33" flex-lg="33" flex-md="33">
                 <div layout-xl="row" layout-lg="row" layout-md="row">
                   <div flex-xl="50" flex-lg="50" flex-md="50">
                     <div layout-xl="row" layout-lg="row" layout-md="row">
@@ -1013,7 +1013,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorTrabajo" class="toolbardemoBasicUsage">
     	<md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = true" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = false" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
@@ -1261,7 +1261,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorRol" class="toolbardemoBasicUsage">
       <md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headRol" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headRol" ng-init="data.expanded = true" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
@@ -1277,11 +1277,12 @@
     					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
     				</div>
     			</md-toolbar>
-    			<div style="background:#FF974C; padding: 0px;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+    			<div style="background:#FF974C;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div layout-xs="column" layout-sm="column" >
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
               <div id="contentRolProfile" ng-controller="BarCtrlRol" flex-xs="100" flex-sm="100">
                 <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-                  <div style="padding-top: 35px;" flex-xs="100" flex-sm="100">
+                  <div id="paddingRolProfile"  flex-xs="100" flex-sm="100">
                      <div layout-xs="row" layout-sm="row">
                        <div flex-xs="50" flex-sm="50" >
                          <div layout-xs="row" layout-sm="row" >
@@ -1363,6 +1364,7 @@
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
     		</div>

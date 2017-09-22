@@ -323,6 +323,9 @@
   font-size: 15px;
 }
 
+#paddingRolProfile{
+  padding-top: 35px;
+}
 /*Content nav tabs set(1),set(2),set(3) Mobile*/
 
 /*Begin Set(1) Trabajo legislativo*/
@@ -589,9 +592,18 @@
 
   #commissionsRolExtra md-content {
     height: 230px;
+    margin-top: 20px;
   }
 
   .valueScoreRol {
-    margin-left: -17px;
+    margin-left: -10px;
+  }
+
+  #paddingRolProfile{
+    padding-top: 0px;
+  }
+
+  .md-accordion .activeContent {
+    padding: 10px;
   }
 }
