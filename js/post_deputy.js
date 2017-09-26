@@ -1,4 +1,4 @@
-supurl='http://localhost:8000';
+supurl='http://104.239.249.32:8000';
   $.ajax({
     url: supurl+'/diputados/get',
     method: "POST",
