@@ -1032,7 +1032,7 @@
     			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
             <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
               <div layout-sm="row" layout-xs="row">
-                <div flex-sm="100" flex-xs="100">
+                <div id="contentGraphsIniciativas" flex-sm="100" flex-xs="100">
                   <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                   </canvas>
                   <h1>Iniciativas</h1>
@@ -1143,7 +1143,7 @@
             </div>
             <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
               <div layout-sm="row" layout-xs="row">
-                <div flex-sm="100" flex-xs="100">
+                <div id="contentGraphsPoints" flex-sm="100" flex-xs="100">
                   <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                   </canvas>
                   <h1>P. de Acuerdo</h1>

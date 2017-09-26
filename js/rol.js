@@ -10,12 +10,9 @@ $scope.puntos = [
 })
 
 app.controller("BarCtrlRol", function ($scope) {
-  $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas'];
-  $scope.series = ['Rol Político'];
+  $scope.colors = ["rgb(238,68,85)","rgb(255,151,76)","rgb(255,199,63)"];
+          $scope.labels = ["Green", "Orange", "Grey"];
+          $scope.data = [300, 500, 100];
 
-  $scope.data = [
-    [13, 17, 7, 12]
-  ];
 
-  $scope.colors = ['#990000'];
 })

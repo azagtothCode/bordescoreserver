@@ -502,7 +502,7 @@
     text-align: left;
     letter-spacing: 1px;
     font-size: 17px;
-    margin-left: 0px;
+    margin-left: 17px;
   }
 
   #barPuntosMobile h1{
@@ -510,7 +510,7 @@
     text-align: left;
     letter-spacing: 1px;
     font-size: 17px;
-    margin-left: 0px;
+    margin-left: 17px;
   }
 
   #barPuntosMobile{
@@ -573,8 +573,7 @@
     color: #343434;
     padding-bottom: 5px;
     text-align: center;
-    font-size: 6px;
-
+    font-size: 7px;
   }
 
   #PuntosTextContentMobile{
@@ -660,6 +659,7 @@
 
   #divTextThemesNoticias span {
     font-size: 7px;
+    font-weight: 100;
   }
 
   #NoticiasDivContent {
@@ -670,5 +670,13 @@
     background:transparent;
     height:350px;
     margin-top:30px;
+  }
+
+  #contentGraphsPoints{
+    margin-left: -15px;
+  }
+
+  #contentGraphsIniciativas{
+    margin-left: -15px;
   }
 }
