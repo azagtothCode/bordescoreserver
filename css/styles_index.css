@@ -51,7 +51,7 @@ html, body{  text-decoration: none;}
   }
 
   md-content.md-default-theme, md-content {
-    background-color: #000;
+    background-color: #EEE;
   }
 
   md-select-menu.md-default-theme md-option:focus:not([disabled]):not([selected]), md-select-menu md-option:focus:not([disabled]):not([selected]) {
