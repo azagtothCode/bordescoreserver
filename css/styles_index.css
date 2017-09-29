@@ -154,3 +154,425 @@ html, body{  text-decoration: none;}
     transition: all 500ms;
     -webkit-transition:all 500ms;
   }
+
+  @media only screen and (max-width: 2560px) {
+    #icon-logo {
+      margin-left: 518px;
+      margin-top: 3px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 190px;
+      margin-top: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 1920px) {
+    #boton-borde {
+      margin-left: 60px;
+    }
+
+    #icon-logo {
+      margin-left: 382px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 111px;
+      margin-top: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 1680px) {
+    #icon-logo {
+      background-size: 160px;
+      margin-top: 3px;
+      margin-left: 317px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 86px;
+      margin-top: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 1560px){
+    #icon-logo {
+      background-size: 150px;
+      margin-top: 6px;
+      margin-left: 285px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 86px;
+      margin-top: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 1440px) {
+    #icon-logo {
+      background-size: 135px;
+      margin-top: 5.5px;
+      margin-left: 285px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 86px;
+    }
+  }
+
+  @media only screen and (max-width: 1366px) {
+    #icon-logo {
+      background-size: 135px;
+      margin-top: 7.5px;
+      margin-left: 270px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 80px;
+      margin-top: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 1280px){
+    #icon-logo {
+      background-size: 105px;
+      margin-top: 12px;
+      margin-left: 255px;
+    }
+
+    #icon-logo-profile {
+      margin-left: 80px;
+    }
+
+    #tit-federal {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    #tit-puebla {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    #tit-jalisco {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    #tit-cdmx {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    #tit-federal span{
+      font-size: 15px;
+    }
+
+    #tit-puebla span{
+      font-size: 15px;
+    }
+
+    #tit-jalisco span{
+      font-size: 15px;
+    }
+
+    #tit-cdmx span{
+      font-size: 15px;
+    }
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    #icon-logo {
+      background-size: 105px;
+      margin-top: 11px;
+      margin-left: 203px;
+    }
+
+    #icon-logo-profile {
+      background-size: 105px;
+      margin-top: 11px;
+      margin-left: 20px;
+    }
+
+    #tit-federal span{
+      font-size: 12px;
+    }
+
+    #tit-puebla span{
+      font-size: 12px;
+    }
+
+    #tit-jalisco span{
+      font-size: 12px;
+    }
+
+    #tit-cdmx span{
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 959px) {
+
+    #icon-logo-profile {
+      background-size: 95px;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+
+    #input-project {
+      margin-left: 245px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+
+      #boton-menu{
+        margin-top: 4px;
+        margin-left: 20px;
+      }
+
+      #boton-borde{
+        margin-top: 4px;
+        margin-left: 4px;
+      }
+
+      #icon-logo{
+        background-size: 79px;
+        margin-top: 16px;
+        margin-left: 32px;
+      }
+
+      #icon-logo-profile{
+        background-size: 79px;
+        margin-top: 16px;
+        margin-left: 32px;
+      }
+
+      #input-project {
+      margin-left: 145px;
+    }
+  }
+
+  @media only screen and (max-width: 736px) {
+    #input-project{
+      margin-left: 140px;
+    }
+
+    #icon-menu {
+     width: 27px;
+    }
+
+    #boton-borde{
+      margin-left: 2px;
+    }
+
+    #icon-logo {
+      background-size: 71px;
+      margin-top: 19px;
+    }
+
+    #icon-logo-profile {
+      background-size: 71px;
+      margin-top: 18px;
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    #input-project{
+      margin-left: 193px;
+    }
+    #boton-borde{
+      margin-left: 65px;
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+
+    #boton-borde {
+        margin-left: 4px;
+    }
+
+    #boton-menu {
+      margin-left: 3px;
+    }
+
+    #input-project {
+      margin-left: 103px;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+
+    #input-project {
+      margin-left: 167px;
+      width: 280px;
+    }
+
+  }
+
+  @media only screen and (max-width: 568px) {
+    #icon-logo {
+      margin-top: 3px;
+      background-size: 60px;
+      margin-left: 8px;
+    }
+
+    #icon-logo-profile {
+      margin-top: 3px;
+      background-size: 60px;
+      margin-left: 8px;
+    }
+
+    #input-project {
+      margin-left: 47px;
+      width: 233px;
+      margin-top: 0px;
+    }
+
+    #icon-menu {
+      margin-left: 166px;
+      margin-top: 5.4px;
+      width: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    #icon-logo {
+      background-size: 71px;
+    }
+
+    #input-project {
+      width: 225px;
+      margin-left: 1px;
+      margin-top: -5px;
+    }
+
+    #boton-menu {
+      margin-left: 103px;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+
+    #icon-logo {
+      background-size: 71px;
+      margin-top: 4px;
+    }
+
+    #icon-logo-profile {
+      background-size: 71px;
+      margin-top: 4px;
+      margin-left: 7px;
+    }
+
+    #img-site-panel {
+      width: 55px;
+    }
+
+    #text-site-panel-menu {
+      margin-top: 22px;
+      margin-left: 77px;
+    }
+
+    #close-btn {
+      margin-left: 309px;
+    }
+
+    #icon-menu {
+      width: 38px;
+      margin-left: 80px;
+      margin-top: -1.5px;
+    }
+
+    #input-project {
+      margin-left: -2px;
+      margin-top: 2px;
+    }
+
+    #img-site-panel {
+      width: 55px;
+    }
+
+    #text-site-panel-menu {
+      margin-top: 24px;
+      margin-left: 65px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    #close-btn {
+        margin-left: 272px;
+    }
+    #input-project {
+      width: 157px;
+      margin-left: 17px;
+      margin-top: 3px;
+    }
+
+    #img-site-panel {
+      width: 48px;
+      margin-top: 4px;
+    }
+
+    #icon-menu {
+      margin-left: 81px;
+      width: 25px;
+      margin-top: 3.5px;
+    }
+
+    #icon-logo {
+      margin-top: 5px;
+    }
+
+    #icon-logo-profile {
+      margin-top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    #boton-menu {
+      margin-left: 62px;
+    }
+
+    #close-btn {
+      margin-left: 218px;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+    #icon-logo {
+      margin-top: 1px;
+      background-size: 63px;
+    }
+
+    #icon-logo-profile {
+      margin-top: 1px;
+      background-size: 63px;
+    }
+
+    #boton-menu{
+      margin-top: 10px;
+      margin-left: 45px;
+    }
+
+    #input-project{
+      width: 165px;
+      margin-top: -2px;
+      margin-left: 10px;
+    }
+
+    #text-site-panel-menu {
+      margin-top: 23px;
+      margin-left: 50px;
+    }
+
+    #icon-menu {
+      margin-left: 156px;
+      margin-top: 3.4px;
+      width: 25px;
+    }
+  }

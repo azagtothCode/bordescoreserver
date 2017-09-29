@@ -18,6 +18,44 @@ supurl='http://104.239.249.32:8000';
           var pick_legis = val.legislator_image_sil;
           var res_pick = pick_legis.slice(16, -4);
 
+          var facebook = val.legislator_facebook_sil;
+
+            if(facebook == "FACEBOOK"){
+              var class_none_facebook = "none";
+            }else{
+              var class_none_facebook = "block";
+            }
+
+          var twitter = val.legislator_twitter_senate;
+
+            if(twitter == ""){
+              var class_none_twitter = "none";
+            }else{
+              var class_none_twitter = "block";
+            }
+
+          var mail = val.legislator_mail_sil;
+
+            if(mail == ""){
+              var class_none_mail = "none";
+            }else{
+              var class_none_mail = "block";
+            }
+
+            if(val.legislator_gender_senate == "Masculino"){
+                var chamber = "Diputado";
+            }
+
+            if(val.legislator_gender_senate == "Femenino"){
+                var chamber = "Diputada";
+            }
+
+          var state = val.legislator_state_sil;
+
+            if(state == "N/A"){
+              var class_state_none = "none";
+            }
+
           var score = val.legislator_score_sil;
 
             if(score < 100){
@@ -28,7 +66,75 @@ supurl='http://104.239.249.32:8000';
 
           var name = val.legislator_name_sil;
 
-          var partyimg;
+          var representation = val.legislator_election_sil;
+
+            if(representation == "RP"){
+              representation = "Representación Proporcional"
+            }
+
+            if(representation == "MR"){
+              representation = "Mayoria Relativa"
+            }
+
+          var post_commision = val.legislator_commission_sil;
+
+
+
+          var commission_string  = JSON.stringify(post_commision);
+
+          var npres = commission_string.indexOf("Presidente");
+          var nsec = commission_string.indexOf("Secretario");
+          var nint = commission_string.indexOf("Integrante");
+
+          if(npres != -1){
+            var post = "Presidente";
+          }else {
+            var post = "Secretario";
+          }
+
+          var pick_state = state;
+
+          switch (pick_state) {
+              case "Aguascalientes":
+                  var pick_state = "agc";
+                  break;
+              case "N/A":
+                  var pick_state = "party";
+                  break;
+              case "Nuevo Le&#xF3;n":
+                  var pick_state = "nl";
+                  break;
+              case "M&#xE9;xico":
+                  var pick_state = "cdmx";
+                  break;
+              case "Quer&#xE9;taro":
+                  var pick_state = "queretaro";
+                  break;
+              case "Distrito Federal":
+                  var pick_state = "df";
+                  break;
+              case "Quintana Roo":
+                  var pick_state = "qr";
+                  break;
+              case "Michoac&#xE1;n":
+                  var pick_state = "michoacan";
+                  break;
+              case "Yucat&#xE1;n":
+                  var pick_state = "yucatan";
+                  break;
+              case "Baja California":
+                  var pick_state = "bc";
+                  break;
+              case "Baja California Sur":
+                  var pick_state = "bcs";
+                  break;
+              case "San Luis Potos&#xED;":
+                  var pick_state = "slp";
+                  break;
+                  default:
+                  pick_state = state;
+          }
+
           var valor = val.legislator_party_sil;
 
           $("#depscontent").append('\
@@ -74,17 +180,17 @@ supurl='http://104.239.249.32:8000';
                   <div layout-xl="row" layout-lg="row" class="layout-xl-row layout-lg-row">\
                     <div layout-xl="column" layout-lg="column" class="layout-xl-column layout-lg-column">\
                       <div id="facebook-card">\
-                          <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">\
-                            <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
-                          </a>\
+                        <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                          <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
+                        </a>\
                       </div>\
                       <div layout-xl="column" id="twitter-card" class="layout-xl-column">\
-                        <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&amp;text=Nuevo%20Twit%20Para%20@&amp;via=appbordepolitico.com" target="_blank">\
+                        <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
                           <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
                         </a>\
                       </div>\
                       <div layout-xl="column" id="mail-card" class="layout-xl-column">\
-                        <a href="mailto:cristina.diazs09@senado.gob.mx">\
+                        <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
                           <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
                         </a>\
                       </div>\
@@ -99,17 +205,15 @@ supurl='http://104.239.249.32:8000';
                           <div layout-xl="row" layout-lg="row" layout-md="row" layout-gt-md="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row">\
                             <div flex-xl="80" flex-lg="80" flex-gt-lg="80" flex-md="80" flex-gt-md="80" class="flex-xl-80 flex-md-80 flex-lg-80 flex-gt-md-80 flex-gt-lg-80">\
                               <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                                senador\
+                                '+chamber+'\
                               </div>\
                               <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                              <span>  por: </span>\
-                                S/E\
-                                <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
+                                <span>  por: </span>\
+                                '+state+'\
                               </div>\
                             </div>\
                             <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 flex-gt-lg-20">\
-                              <img ng-hide="changeImageState" src="imgs/svg/states/party.svg" id="image-state-card" aria-hidden="false" class="">\
-                              <img ng-show="changeImageState" src="imgs/svg/states/colors/party.svg" id="image-state-card" aria-hidden="true" class="ng-hide">\
+                              <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                             </div>\
                           </div>\
                           </div>\
@@ -117,10 +221,10 @@ supurl='http://104.239.249.32:8000';
                             '+name+'\
                           </div>\
                         <div id="text-election-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                          Representación Proporcional\
+                          '+representation+'\
                         </div>\
-                        <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
-                          Presidenta\
+                        <div  ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
+                          '+post+'\
                         </div>\
                       </div>\
                     </div>\
@@ -156,9 +260,7 @@ supurl='http://104.239.249.32:8000';
                         </div>\
                         <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
                           <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg" role="button" tabindex="0">\
-                            <div class="ng-scope">\
-                              <p ng-click="openPerfilPage(item.id)" class="ng-binding" role="button" tabindex="0">100</p>\
-                            </div>\
+                            '+score_val+'</img>\
                         </div>\
                       </div>\
                   </div>\
@@ -172,26 +274,26 @@ supurl='http://104.239.249.32:8000';
                 <div flex-xs="70" flex-sm="70" class="flex-xs-70 flex-sm-70">\
                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                     <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60" class="ng-scope flex-xs-60 flex-sm-60">\
-                      <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/9217742.png" class="md-avatar" role="button" tabindex="0">\
+                      <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
                     </div>\
                     <div id="image-party-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                        <img src="imgs/svg/partys/pri.svg">\
+                      <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
                     </div>\
                     <div id="content-socials-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
                       <div style="text-align:right;" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                         <div id="facebook-card">\
-                          <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">\
-                            <img src="imgs/svg/facebook_cards.svg">\
+                          <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                            <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
                           </a>\
                         </div>\
                         <div id="twitter-card">\
-                          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&amp;text=Nuevo%20Twit%20Para%20@&amp;via=appbordepolitico.com" target="_blank">\
-                            <img src="imgs/svg/twiter_cards.svg">\
+                          <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                            <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
                           </a>\
                         </div>\
                         <div id="mail-card">\
-                          <a href="mailto:cristina.diazs09@senado.gob.mx">\
-                            <img src="imgs/svg/mail_cards.svg">\
+                          <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                            <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
                           </a>\
                         </div>\
                       </div>\
@@ -205,26 +307,25 @@ supurl='http://104.239.249.32:8000';
                 <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
                   <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                     <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                    senador\
+                    '+chamber+'\
                     </div>\
                     <div id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     <span>  por: </span>\
-                    S/E\
+                    '+state+'\
                     <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
                     </div>\
-                    <div ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
-                      nombre\
+                    <div id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                      '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                    Representación Proporcional\
+                    '+representation+'\
                     </div>\
                     <div ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
-                    Presidenta\
-                    </div>\
+                    '+post+'\
                   </div>\
                 </div>\
                 <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                  <img id="image-state-card" src="imgs/svg/states/party.svg">\
+                  <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                 </div>\
               </div>\
             </md-list>\
@@ -244,24 +345,130 @@ supurl='http://104.239.249.32:8000';
     for (var i = 0; i < subject.length; i++) {
         val=subject[i];
 
-          var pick_party = val.legislator_party_sil;
-          var res_pick_party = pick_party.toLowerCase();
+        var pick_party = val.legislator_party_sil;
+        var res_pick_party = pick_party.toLowerCase();
 
-          var pick_legis = val.legislator_image_sil;
-          var res_pick = pick_legis.slice(16, -4);
+        var pick_legis = val.legislator_image_sil;
+        var res_pick = pick_legis.slice(16, -4);
 
-          var score = val.legislator_score_sil;
+        var facebook = val.legislator_facebook_sil;
 
-            if(score < 100){
-              var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-            }else{
-              var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
-            }
+          if(facebook == "FACEBOOK"){
+            var class_none_facebook = "none";
+          }else{
+            var class_none_facebook = "block";
+          }
 
-          var name = val.legislator_name_sil;
+        var twitter = val.legislator_twitter_senate;
 
-          var partyimg;
-          var valor = val.legislator_party_sil;
+          if(twitter == ""){
+            var class_none_twitter = "none";
+          }else{
+            var class_none_twitter = "block";
+          }
+
+        var mail = val.legislator_mail_sil;
+
+          if(mail == ""){
+            var class_none_mail = "none";
+          }else{
+            var class_none_mail = "block";
+          }
+
+          if(val.legislator_gender_senate == "Masculino"){
+              var chamber = "Diputado";
+          }
+
+          if(val.legislator_gender_senate == "Femenino"){
+              var chamber = "Diputada";
+          }
+
+        var state = val.legislator_state_sil;
+
+          if(state == "N/A"){
+            var class_state_none = "none";
+          }
+
+        var score = val.legislator_score_sil;
+
+          if(score < 100){
+            var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }else{
+            var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
+          }
+
+        var name = val.legislator_name_sil;
+
+        var representation = val.legislator_election_sil;
+
+          if(representation == "RP"){
+            representation = "Representación Proporcional"
+          }
+
+          if(representation == "MR"){
+            representation = "Mayoria Relativa"
+          }
+
+        var post_commision = val.legislator_commission_sil;
+
+
+
+        var commission_string  = JSON.stringify(post_commision);
+
+        var npres = commission_string.indexOf("Presidente");
+        var nsec = commission_string.indexOf("Secretario");
+        var nint = commission_string.indexOf("Integrante");
+
+        if(npres != -1){
+          var post = "Presidente";
+        }else {
+          var post = "Secretario";
+        }
+
+        var pick_state = state;
+
+        switch (pick_state) {
+            case "Aguascalientes":
+                var pick_state = "agc";
+                break;
+            case "N/A":
+                var pick_state = "party";
+                break;
+            case "Nuevo Le&#xF3;n":
+                var pick_state = "nl";
+                break;
+            case "M&#xE9;xico":
+                var pick_state = "cdmx";
+                break;
+            case "Quer&#xE9;taro":
+                var pick_state = "queretaro";
+                break;
+            case "Distrito Federal":
+                var pick_state = "df";
+                break;
+            case "Quintana Roo":
+                var pick_state = "qr";
+                break;
+            case "Michoac&#xE1;n":
+                var pick_state = "michoacan";
+                break;
+            case "Yucat&#xE1;n":
+                var pick_state = "yucatan";
+                break;
+            case "Baja California":
+                var pick_state = "bc";
+                break;
+            case "Baja California Sur":
+                var pick_state = "bcs";
+                break;
+            case "San Luis Potos&#xED;":
+                var pick_state = "slp";
+                break;
+                default:
+                pick_state = state;
+        }
+
+        var valor = val.legislator_party_sil;
 
           $("#senatorscontent").append('\
           <div style="background:#EEE; padding-top:30px;" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
@@ -306,17 +513,17 @@ supurl='http://104.239.249.32:8000';
                   <div layout-xl="row" layout-lg="row" class="layout-xl-row layout-lg-row">\
                     <div layout-xl="column" layout-lg="column" class="layout-xl-column layout-lg-column">\
                       <div id="facebook-card">\
-                          <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">\
-                            <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
-                          </a>\
+                        <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                          <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
+                        </a>\
                       </div>\
                       <div layout-xl="column" id="twitter-card" class="layout-xl-column">\
-                        <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&amp;text=Nuevo%20Twit%20Para%20@&amp;via=appbordepolitico.com" target="_blank">\
+                        <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
                           <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
                         </a>\
                       </div>\
                       <div layout-xl="column" id="mail-card" class="layout-xl-column">\
-                        <a href="mailto:cristina.diazs09@senado.gob.mx">\
+                        <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
                           <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
                         </a>\
                       </div>\
@@ -331,17 +538,15 @@ supurl='http://104.239.249.32:8000';
                           <div layout-xl="row" layout-lg="row" layout-md="row" layout-gt-md="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row">\
                             <div flex-xl="80" flex-lg="80" flex-gt-lg="80" flex-md="80" flex-gt-md="80" class="flex-xl-80 flex-md-80 flex-lg-80 flex-gt-md-80 flex-gt-lg-80">\
                               <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                                senador\
+                                '+chamber+'\
                               </div>\
                               <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
                               <span>  por: </span>\
-                                S/E\
-                                <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
+                                '+state+'\
                               </div>\
                             </div>\
                             <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 flex-gt-lg-20">\
-                              <img ng-hide="changeImageState" src="imgs/svg/states/party.svg" id="image-state-card" aria-hidden="false" class="">\
-                              <img ng-show="changeImageState" src="imgs/svg/states/colors/party.svg" id="image-state-card" aria-hidden="true" class="ng-hide">\
+                              <img id="image-state-card"  onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                             </div>\
                           </div>\
                           </div>\
@@ -349,10 +554,10 @@ supurl='http://104.239.249.32:8000';
                             '+name+'\
                           </div>\
                         <div id="text-election-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                          Representación Proporcional\
+                            '+representation+'\
                         </div>\
                         <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
-                          Presidenta\
+                            '+post+'\
                         </div>\
                       </div>\
                     </div>\
@@ -388,9 +593,7 @@ supurl='http://104.239.249.32:8000';
                         </div>\
                         <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
                           <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg" role="button" tabindex="0">\
-                            <div class="ng-scope">\
-                              <p ng-click="openPerfilPage(item.id)" class="ng-binding" role="button" tabindex="0">100</p>\
-                            </div>\
+                            '+score_val+'</img>\
                         </div>\
                       </div>\
                   </div>\
@@ -412,18 +615,18 @@ supurl='http://104.239.249.32:8000';
                     <div id="content-socials-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
                       <div style="text-align:right;" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                         <div id="facebook-card">\
-                          <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">\
-                            <img src="imgs/svg/facebook_cards.svg">\
+                          <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                            <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
                           </a>\
                         </div>\
                         <div id="twitter-card">\
-                          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&amp;text=Nuevo%20Twit%20Para%20@&amp;via=appbordepolitico.com" target="_blank">\
-                            <img src="imgs/svg/twiter_cards.svg">\
+                          <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                            <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
                           </a>\
                         </div>\
                         <div id="mail-card">\
-                          <a href="mailto:cristina.diazs09@senado.gob.mx">\
-                            <img src="imgs/svg/mail_cards.svg">\
+                          <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                            <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
                           </a>\
                         </div>\
                       </div>\
@@ -437,26 +640,25 @@ supurl='http://104.239.249.32:8000';
                 <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
                   <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                     <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                    senador\
+                    '+chamber+'\
                     </div>\
                     <div id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     <span>  por: </span>\
-                    S/E\
-                    <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
+                    '+state+'\
+                      <img id="image-state-card"  onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                     </div>\
-                    <div ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
-                      nombre\
+                    <div id="text-name-card"ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                      '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                    Representación Proporcional\
+                    '+representation+'\
                     </div>\
                     <div ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
-                    Presidenta\
-                    </div>\
+                    '+post+'\
                   </div>\
                 </div>\
                 <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                  <img id="image-state-card" src="imgs/svg/states/party.svg">\
+                  <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                 </div>\
               </div>\
             </md-list>\
