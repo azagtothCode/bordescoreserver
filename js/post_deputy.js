@@ -607,7 +607,7 @@ supurl='http://104.239.249.32:8000';
                 <div flex-xs="70" flex-sm="70" class="flex-xs-70 flex-sm-70">\
                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                     <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60" class="ng-scope flex-xs-60 flex-sm-60">\
-                      <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/9217742.png" class="md-avatar" role="button" tabindex="0">\
+                      <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
                     </div>\
                     <div id="image-party-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
                         <img src="imgs/svg/partys/pri.svg">\
