@@ -132,7 +132,7 @@ supurl='http://104.239.249.32:8000';
                   var pick_state = "slp";
                   break;
                   default:
-                  pick_state = state;
+                  pick_state = state.toLowerCase();
           }
 
           var valor = val.legislator_party_sil;
@@ -465,7 +465,7 @@ supurl='http://104.239.249.32:8000';
                 var pick_state = "slp";
                 break;
                 default:
-                pick_state = state;
+                pick_state = state.toLowerCase();
         }
 
         var valor = val.legislator_party_sil;
