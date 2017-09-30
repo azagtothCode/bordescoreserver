@@ -9,7 +9,44 @@
   <meta http-equiv="content-language" content="es">
   <title>Borde Score</title>
   <link rel="shortcut icon" href="imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="css/angular-material.css">
+  <!--Sty-->
+  <link rel="stylesheet" href="css/styles_index.css">
+  <link rel="stylesheet" href="css/styles_index_slide.css">
+  <link rel="stylesheet" href="css/styles_hover.css">
+  <link rel="stylesheet" href="css/styles_index_panel.css">
+  <link rel="stylesheet" href="css/slide_head/styles_slide.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/content_score_party/styles_content.css">
+  <link rel="stylesheet" href="css/content_legislators/styles_content_legislators.css">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/methods_nav.js"></script>
+  <script src="js/external_windows.js"></script>
+  <script src="js/methods_panel.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/deputy_content.js"></script>
+  <script src="js/senator_content.js"></script>
+  <script src="js/graphs.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+  <script src="js/post_deputy.js"></script>
 </head>
 <body ng-app="score_federal" ng-cloak onload="myFunction()" >
 
@@ -22,8 +59,8 @@
      <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
         <div hide show-xs show-sm layout-xs="column">
           <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
-              <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
-                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+              <md-select  ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
+                <md-option  ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
               </md-select>
           </div>
         </div>
@@ -221,42 +258,5 @@
   <!-- Angular Material requires Angular.js Libraries -->
 
 </body>
-<!-- Angular Material style sheet -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="css/angular-material.css">
-<!--Sty-->
-<link rel="stylesheet" href="css/styles_index.css">
-<link rel="stylesheet" href="css/styles_index_slide.css">
-<link rel="stylesheet" href="css/styles_hover.css">
-<link rel="stylesheet" href="css/styles_index_panel.css">
-<link rel="stylesheet" href="css/slide_head/styles_slide.css">
-<link rel="stylesheet" href="css/loader.css">
-<link rel="stylesheet" href="css/content_score_party/styles_content.css">
-<link rel="stylesheet" href="css/content_legislators/styles_content_legislators.css">
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<!-- Angular Material Library -->
-<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/methods_nav.js"></script>
-<script src="js/external_windows.js"></script>
-<script src="js/methods_panel.js"></script>
-<script src="js/loader.js"></script>
-<script src="js/deputy_content.js"></script>
-<script src="js/senator_content.js"></script>
-<script src="js/graphs.js"></script>
-<script src="node_modules/angular/angular.min.js"></script>
-<script src="node_modules/chart.js/dist/Chart.min.js"></script>
-<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
-<script src="js/post_deputy.js"></script>
 </html>

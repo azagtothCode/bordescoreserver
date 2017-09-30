@@ -4115,13 +4115,28 @@
 
   #score-card span{
     margin-top: -40px;
-    font-size: 17px;
-    margin-left: 12px;
+    font-size: 20px;
+    margin-left: 16px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 18px;
+    color:#FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 22px;
+    color:#FFF;
   }
 
   #text-chamber-card {
     font-size: 20px;
     margin-right: 50px;
+    margin-top: 5px;
   }
 
   #text-state-card {
@@ -4151,11 +4166,20 @@
     width: 50px;
     height: 55px;
     margin-left: 167px;
+    margin-top: -132px;
+    position: absolute;
+  }
+
+  #image-state-card-sen {
+    width: 50px;
+    height: 55px;
+    margin-left: 167px;
     margin-top: -125px;
+    position: absolute;
   }
 
   #facebook-card img{
-    margin-top: -50px;
+    margin-top: -5px;
     width: 40px;
   }
 
@@ -4163,7 +4187,7 @@
     margin-top: 5px;
     /* margin-top: -50px; */
     width: 40px;
-    margin-top: -10px;
+    margin-top: 1px;
   }
 
   #mail-card img{
@@ -4174,16 +4198,19 @@
   #text-name-card {
     font-size: 13px;
     margin-left: 30px;
+    text-align: left;
   }
 
   #text-election-card{
     font-size: 12px;
     margin-left: 29px;
+    text-align: left;
   }
 
   #text-commission-card{
     font-size: 12px;
     margin-left: 29px;
+    text-align: left;
   }
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {

@@ -12,130 +12,137 @@ supurl='http://104.239.249.32:8000';
     for (var i = 0; i < subject.length; i++) {
         val=subject[i];
 
-          var pick_party = val.legislator_party_sil;
-          var res_pick_party = pick_party.toLowerCase();
+        var pick_party = val.legislator_party_sil;
+        var res_pick_party = pick_party.toLowerCase();
 
-          var pick_legis = val.legislator_image_sil;
-          var res_pick = pick_legis.slice(16, -4);
+        var pick_legis = val.legislator_image_sil;
+        var res_pick = pick_legis.slice(16, -4);
 
-          var facebook = val.legislator_facebook_sil;
+        var facebook = val.legislator_facebook_sil;
 
-            if(facebook == "FACEBOOK"){
-              var class_none_facebook = "none";
-            }else{
-              var class_none_facebook = "block";
-            }
-
-          var twitter = val.legislator_twitter_senate;
-
-            if(twitter == ""){
-              var class_none_twitter = "none";
-            }else{
-              var class_none_twitter = "block";
-            }
-
-          var mail = val.legislator_mail_sil;
-
-            if(mail == ""){
-              var class_none_mail = "none";
-            }else{
-              var class_none_mail = "block";
-            }
-
-            if(val.legislator_gender_senate == "Masculino"){
-                var chamber = "Diputado";
-            }
-
-            if(val.legislator_gender_senate == "Femenino"){
-                var chamber = "Diputada";
-            }
-
-          var state = val.legislator_state_sil;
-
-            if(state == "N/A"){
-              var class_state_none = "none";
-            }
-
-          var score = val.legislator_score_sil;
-
-            if(score < 100){
-              var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-            }else{
-              var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
-            }
-
-          var name = val.legislator_name_sil;
-
-          var representation = val.legislator_election_sil;
-
-            if(representation == "RP"){
-              representation = "Representación Proporcional"
-            }
-
-            if(representation == "MR"){
-              representation = "Mayoria Relativa"
-            }
-
-          var post_commision = val.legislator_commission_sil;
-
-
-
-          var commission_string  = JSON.stringify(post_commision);
-
-          var npres = commission_string.indexOf("Presidente");
-          var nsec = commission_string.indexOf("Secretario");
-          var nint = commission_string.indexOf("Integrante");
-
-          if(npres != -1){
-            var post = "Presidente";
-          }else {
-            var post = "Secretario";
+          if(facebook == "FACEBOOK"){
+            var class_none_facebook = "none";
+          }else{
+            var class_none_facebook = "block";
           }
 
-          var pick_state = state;
+        var twitter = val.legislator_twitter_senate;
 
-          switch (pick_state) {
-              case "Aguascalientes":
-                  var pick_state = "agc";
-                  break;
-              case "N/A":
-                  var pick_state = "party";
-                  break;
-              case "Nuevo Le&#xF3;n":
-                  var pick_state = "nl";
-                  break;
-              case "M&#xE9;xico":
-                  var pick_state = "cdmx";
-                  break;
-              case "Quer&#xE9;taro":
-                  var pick_state = "queretaro";
-                  break;
-              case "Distrito Federal":
-                  var pick_state = "df";
-                  break;
-              case "Quintana Roo":
-                  var pick_state = "qr";
-                  break;
-              case "Michoac&#xE1;n":
-                  var pick_state = "michoacan";
-                  break;
-              case "Yucat&#xE1;n":
-                  var pick_state = "yucatan";
-                  break;
-              case "Baja California":
-                  var pick_state = "bc";
-                  break;
-              case "Baja California Sur":
-                  var pick_state = "bcs";
-                  break;
-              case "San Luis Potos&#xED;":
-                  var pick_state = "slp";
-                  break;
-                  default:
-                  pick_state = state.toLowerCase();
+          if(twitter == ""){
+            var class_none_twitter = "none";
+          }else{
+            var class_none_twitter = "block";
           }
 
-          var valor = val.legislator_party_sil;
+        var mail = val.legislator_mail_sil;
+
+          if(mail == ""){
+            var class_none_mail = "none";
+          }else{
+            var class_none_mail = "block";
+          }
+
+          if(val.legislator_gender_senate == "Masculino"){
+              var chamber = "Diputado";
+          }
+
+          if(val.legislator_gender_senate == "Femenino"){
+              var chamber = "Diputada";
+          }
+
+        var state = val.legislator_state_sil;
+
+
+        var score = val.legislator_score_sil;
+
+          if(score == 100 ){
+            var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
+          }else if(score < 100 && score  > 20){
+            var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }else if(score  < 20 && score  > 10){
+            var score_val = "<span class='menorVeinte' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }else if(score  < 10){
+            var score_val = "<span class='menorDiez' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }
+
+        var name = val.legislator_name_sil;
+
+        var representation = val.legislator_election_sil;
+
+          if(representation == "RP" ){
+            representation = "Representación Proporcional"
+          }
+
+          if(representation == "MR"){
+            representation = "Mayoria Relativa"
+          }
+
+          if(representation == "PM"){
+            representation = "Representación Proporcional"
+          }
+
+        var post_commision = val.legislator_commission_sil;
+
+
+
+        var commission_string  = JSON.stringify(post_commision);
+
+        var npres = commission_string.indexOf("Presidente");
+        var nsec = commission_string.indexOf("Secretario");
+        var nint = commission_string.indexOf("Integrante");
+
+        if(npres != -1){
+          var post = "Presidente";
+        }else {
+          var post = "Secretario";
+        }
+
+        var pick_state = state;
+
+        switch (pick_state) {
+            case "Aguascalientes":
+                var pick_state = "agc";
+                break;
+            case "N/A":
+                var class_state_none = "none";
+                break;
+            case "Nuevo Le&#xF3;n":
+                var pick_state = "nl";
+                break;
+            case "M&#xE9;xico":
+                var pick_state = "cdmx";
+                break;
+            case "Quer&#xE9;taro":
+                var pick_state = "queretaro";
+                break;
+            case "Distrito Federal":
+                var pick_state = "df";
+                break;
+            case "Quintana Roo":
+                var pick_state = "qr";
+                break;
+            case "Michoac&#xE1;n":
+                var pick_state = "michoacan";
+                break;
+            case "Yucat&#xE1;n":
+                var pick_state = "yucatan";
+                break;
+            case "Baja California":
+                var pick_state = "bc";
+                break;
+            case "Baja California Sur":
+                var pick_state = "bcs";
+                break;
+            case "San Luis Potos&#xED;":
+                var pick_state = "slp";
+                break;
+                default:
+                pick_state = state.toLowerCase();
+                class_state_none = "block";
+        }
+
+        var valor = val.legislator_party_sil;
+
 
           $("#depscontent").append('\
           <div style="background:#EEE; padding-top:30px;" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
@@ -385,28 +392,34 @@ supurl='http://104.239.249.32:8000';
 
         var state = val.legislator_state_sil;
 
-          if(state == "N/A"){
-            var class_state_none = "none";
-          }
 
         var score = val.legislator_score_sil;
 
-          if(score < 100){
-            var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-          }else{
+          if(score == 100 ){
             var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
+          }else if(score < 100 && score  > 20){
+            var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }else if(score  < 20 && score  > 10){
+            var score_val = "<span class='menorVeinte' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+          }else if(score  < 10){
+            var score_val = "<span class='menorDiez' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
           }
+
 
         var name = val.legislator_name_sil;
 
         var representation = val.legislator_election_sil;
 
-          if(representation == "RP"){
+          if(representation == "RP" ){
             representation = "Representación Proporcional"
           }
 
           if(representation == "MR"){
             representation = "Mayoria Relativa"
+          }
+
+          if(representation == "PM"){
+            representation = "Representación Proporcional"
           }
 
         var post_commision = val.legislator_commission_sil;
@@ -432,7 +445,7 @@ supurl='http://104.239.249.32:8000';
                 var pick_state = "agc";
                 break;
             case "N/A":
-                var pick_state = "party";
+                var class_state_none = "none";
                 break;
             case "Nuevo Le&#xF3;n":
                 var pick_state = "nl";
@@ -466,6 +479,7 @@ supurl='http://104.239.249.32:8000';
                 break;
                 default:
                 pick_state = state.toLowerCase();
+                class_state_none = "block";
         }
 
         var valor = val.legislator_party_sil;
@@ -642,12 +656,11 @@ supurl='http://104.239.249.32:8000';
                     <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     '+chamber+'\
                     </div>\
-                    <div id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                    <div id="text-state-card" style="display:'+class_state_none+'" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     <span>  por: </span>\
                     '+state+'\
-                      <img id="image-state-card"  onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                     </div>\
-                    <div id="text-name-card"ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                    <div id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
                       '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
@@ -658,7 +671,7 @@ supurl='http://104.239.249.32:8000';
                   </div>\
                 </div>\
                 <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                  <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                <img id="image-state-card-sen" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                 </div>\
               </div>\
             </md-list>\
