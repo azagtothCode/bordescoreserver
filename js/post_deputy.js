@@ -316,12 +316,12 @@ supurl='http://104.239.249.32:8000';
                     <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     '+chamber+'\
                     </div>\
-                    <div id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                    <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     <span>  por: </span>\
                     '+state+'\
                     <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
                     </div>\
-                    <div id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                    <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
                       '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
@@ -383,11 +383,11 @@ supurl='http://104.239.249.32:8000';
           }
 
           if(val.legislator_gender_senate == "Masculino"){
-              var chamber = "Diputado";
+              var chamber = "Senador";
           }
 
           if(val.legislator_gender_senate == "Femenino"){
-              var chamber = "Diputada";
+              var chamber = "Senadora";
           }
 
         var state = val.legislator_state_sil;
@@ -624,7 +624,7 @@ supurl='http://104.239.249.32:8000';
                       <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
                     </div>\
                     <div id="image-party-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                        <img src="imgs/svg/partys/pri.svg">\
+                      <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
                     </div>\
                     <div id="content-socials-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
                       <div style="text-align:right;" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
@@ -656,11 +656,12 @@ supurl='http://104.239.249.32:8000';
                     <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                     '+chamber+'\
                     </div>\
-                    <div id="text-state-card" style="display:'+class_state_none+'" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                    <span>  por: </span>\
-                    '+state+'\
+                    <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                      <span>  por: </span><br>\
+                      '+state+'\
+                      <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
                     </div>\
-                    <div id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                    <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
                       '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
@@ -671,7 +672,7 @@ supurl='http://104.239.249.32:8000';
                   </div>\
                 </div>\
                 <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                <img id="image-state-card-sen" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                  <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                 </div>\
               </div>\
             </md-list>\
