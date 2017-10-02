@@ -5,4 +5,1651 @@ show dbs -- show all databses
 use namedb -- switched database selected
 show collections -- show all colections into database selected
 db.dropDatabase() -- first use namedb and execute command
- 
+
+
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="description" content="Web Site For Present Information about legislators"></meta>
+  <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
+  <meta name="author" content="Michelle Garduño"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <title>Borde Score</title>
+  <link rel="shortcut icon" href="../imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="../css/angular-material.css">
+  <!--Styles Azagtoth-->
+  <link rel="stylesheet" href="../css/styles_index.css">
+  <link rel="stylesheet" href="../css/styles_index_slide.css">
+  <link rel="stylesheet" href="../css/styles_hover.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_2560.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_736.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_667.css">
+  <link rel="stylesheet" href="../css/styles_index_panel_320.css">
+  <link rel="stylesheet" href="../css/styles_index_1920.css">
+  <link rel="stylesheet" href="../css/styles_index_1440.css">
+  <link rel="stylesheet" href="../css/styles_index_1366.css">
+  <link rel="stylesheet" href="../css/styles_index_1280.css">
+  <link rel="stylesheet" href="../css/styles_index_1024.css">
+  <link rel="stylesheet" href="../css/styles_index_768.css">
+  <link rel="stylesheet" href="../css/styles_index_736.css">
+  <link rel="stylesheet" href="../css/styles_index_667.css">
+  <link rel="stylesheet" href="../css/styles_index_568.css">
+  <link rel="stylesheet" href="../css/styles_index_480.css">
+  <link rel="stylesheet" href="../css/styles_index_375.css">
+  <link rel="stylesheet" href="../css/styles_index_320.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1920.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1440.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1280.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_1024.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_768.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_736.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_667.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_568.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_414.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_375.css">
+  <link rel="stylesheet" href="../css/slide_head/styles_slide_320.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <link rel="stylesheet" href="../css/content_score_party/styles_content.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_2560.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1920.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1440.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1366.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1280.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1024.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_960.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_768.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_736.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_667.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_568.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
+  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
+  <link rel="stylesheet" href="../css/styles_profile_navtab.css">
+</head>
+<body ng-app="score_federal">
+  <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo-profile" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="20" flex-md="15" flex-gt-md="15"  flex-lg="15"  flex-xl="15" >
+     </div>
+     <div flex-xs="40" flex-sm="60" flex-md="65" flex-gt-md="65" flex-lg="65" flex-gt-lg="65" flex-xl="65" >
+        <div hide show-xs show-sm layout-xs="column" layout-sm="column">
+          <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
+              <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
+                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+              </md-select>
+          </div>
+        </div>
+        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
+          <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
+            <div layout-md="row" layout-lg="row" layout-gt-md="row">
+              <div ng-controller="OpenFederalController" ng-click="openFederal()" id="tit-federal"  flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
+                <span>FEDERAL</span>
+              </div>
+              <div ng-controller="OpenPueblaController" ng-click="openPuebla()" id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>PUEBLA</span>
+              </div>
+              <div ng-controller="OpenJaliscoController" ng-click="openJalisco()" id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>JALISCO</span>
+              </div>
+              <div ng-controller="OpenCDMXController" ng-click="openCDMX()" id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
+                <span>CDMX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div flex-xs="30" flex-sm="25" flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20" flex-xl="20">
+      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
+        <img id="icon-menu" src="../imgs/svg/logo_b.svg">
+       </md-button>
+       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+         <img id="icon-menu" src="../imgs/svg/menu.svg"  >
+       </md-button>
+       <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+     </div>
+  </div>
+  <div id="slide-head-profile-dip" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
+    <div layout-xs="row" layout-sm="row">
+      <div flex-xs="20" flex-sm="20">
+      </div>
+      <div flex-xs="60" flex-sm="60">
+        <div layout-xs="row" layout-sm="row">
+          <div id="califichas-content-happy-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_happy.svg">
+            </a>
+          </div>
+          <div id="califichas-content-sad-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_sad.svg">
+            </a>
+          </div>
+          <div id="califichas-content-bad-profile"  flex-xs="25" flex-sm="25">
+            <a href="pac.bordepolitico.com" target="_blank">
+              <img src="../imgs/svg/cali_bad.svg">
+            </a>
+          </div>
+          <div ng-controller="OpenPerfilController" id="score-card-profile" style="text-align:center;" flex-xs="25" flex-sm="25">
+            <img ng-click="openPerfilPage(item.id)" src="../imgs/svg/score.svg">
+            <span ng-click="openPerfilPage(item.id)">100</span>
+          </div>
+        </div>
+      </div>
+      <div flex-xs="20" flex-sm="20">
+      </div>
+     </div>
+    <div layout-xs="row" layout-sm="row">
+      <div flex-xs="15" flex-sm="15">
+      </div>
+      <div flex-xs="70" flex-sm="70">
+        <div layout-xs="row" layout-sm="row">
+          <div id="image-card-profile" ng-controller="OpenPerfilController" flex-xs="60" flex-sm="60">
+            <img ng-click="openPerfilPage(item.id)" src="http://sil.gobernacion.gob.mx/Archivos/Fotos/9218979.jpg" class="md-avatar">
+          </div>
+          <div id="image-party-card-profile" flex-xs="20" flex-sm="20">
+              <img src="../imgs/svg/partys/pri.svg">
+          </div>
+          <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
+              <div style="text-align:right;" layout-xs="column" layout-sm="column">
+                <div id="facebook-card-profile">
+                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                      <img src="../imgs/svg/facebook_cards.svg">
+                    </a>
+                </div>
+                <div id="twitter-card-profile">
+                  <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                    <img src="../imgs/svg/twiter_cards.svg">
+                  </a>
+                </div>
+                <div id="mail-card-profile" >
+                  <a href="mailto:{{item.mail}}">
+                    <img src="../imgs/svg/mail_cards.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div flex-xs="15" flex-sm="15">
+        </div>
+      </div>
+  </div>
+  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+    <div flex-xs="15" flex-sm="15">
+    </div>
+    <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
+      <div layout-xs="row" layout-sm="row">
+         <div flex-xs="100" flex-sm="100">
+           <div layout-xs="column" layout-sm="column">
+             <div layout-xs="row" layout-sm="row">
+               <div flex-xs="85" flex-sm="85">
+                  <div id="text-chamber-card-profile" layout-xs="column" layout-sm="column">
+                    diputado
+                  </div>
+                  <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
+                  <span>  por: </span>
+                    Jalisco
+                  </div>
+                </div>
+                <div flex-xs="15" flex-sm="15">
+                  <img id="image-state-card-profile" src="../imgs/svg/states/jalisco.svg">
+                </div>
+              </div>
+            </div>
+            <div layout-xs="column" layout-sm="column">
+              <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                José Luis Orozco Sánchez Aldana
+              </div>
+              <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
+                Representación Proporcional
+              </div>
+              <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+                Secretario
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div flex-xs="15" flex-sm="15">
+      </div>
+  </div>
+  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+    <div flex-xs="50" flex-sm="50">
+      <div id="w">
+          <canvas id="d1" height="400" width="400"></canvas>
+      </div>
+    </div>
+    <div flex-xs="50" flex-sm="50">
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-trabajo" layout-xs="row" layout-sm="row">
+          <div  flex-xs="20" flex-sm="20">
+            <span class="number">20%</span>
+          </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Trabajo</span>
+          </div>
+        </div>
+      </div>
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-rol"  layout-xs="row" layout-sm="row">
+          <div flex-xs="20" flex-sm="20">
+            <span class="number">50%</span>
+          </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Rol</span>
+          </div>
+        </div>
+      </div>
+      <div layout-xs="column" layout-sm="column">
+        <div id="style-extra"  layout-xs="row" layout-sm="row">
+          <div flex-xs="20" flex-sm="20">
+            <span class="number">30%</span>
+          </div>
+          <div flex-xs="80" flex-sm="80">
+            <span class="letter">Extra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div  hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
+      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+        <div id="content-cards-profile" flex-gt-md="50" flex-md="50" flex-offset-lg="5" flex-lg="45" flex-xl="50">
+          <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+             <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+              <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+               <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+                   <div flex-gt-md="80" flex-md="80" flex-lg="80" flex-xl="80">
+                     <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+                       <div id="califichas-content-happy-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
+                         <a href="pac.bordepolitico.com" target="_blank">
+                           <img src="../imgs/svg/cali_happy.svg">
+                         </a>
+                       </div>
+                       <div id="califichas-content-sad-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
+                         <a href="pac.bordepolitico.com" target="_blank">
+                           <img src="../imgs/svg/cali_sad.svg">
+                         </a>
+                       </div>
+                       <div id="califichas-content-bad-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
+                         <a href="pac.bordepolitico.com" target="_blank">
+                           <img src="../imgs/svg/cali_bad.svg">
+                         </a>
+                       </div>
+                       <div ng-controller="OpenPerfilController" id="score-card-profile" style="text-align:center;" flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
+                         <img ng-click="openPerfilPage(item.id)" src="../imgs/svg/score.svg">
+                         <span ng-click="openPerfilPage(item.id)">100</span>
+                       </div>
+                     </div>
+                    </div>
+                   <div flex-gt-md="20" flex-md="20" flex-lg="20"  flex-xl="20">
+                  </div>
+                </div>
+                <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+                  <div flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="35">
+                  </div>
+                  <div flex-gt-md="70" flex-md="70" flex-lg="70" flex-xl="65">
+                    <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+                      <div id="image-card-profile" ng-controller="OpenPerfilController" flex-md="60" flex-lg="60" flex-xl="60">
+                        <img ng-click="openPerfilPage(item.id)" src="http://sil.gobernacion.gob.mx/Archivos/Fotos/9218979.jpg" class="md-avatar">
+                      </div>
+                      <div id="image-party-card-profile" flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
+                          <img src="../imgs/svg/partys/pri.svg">
+                      </div>
+                      <div id="content-socials-card-profile" flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
+                          <div style="text-align:right;" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                            <div id="facebook-card-profile">
+                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                                  <img src="../imgs/svg/facebook_cards.svg">
+                                </a>
+                            </div>
+                            <div id="twitter-card-profile">
+                              <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                                <img src="../imgs/svg/twiter_cards.svg">
+                              </a>
+                            </div>
+                            <div id="mail-card-profile" >
+                              <a href="mailto:{{item.mail}}">
+                                <img src="../imgs/svg/mail_cards.svg">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div flex-gt-md="15" flex-md="15" flex-lg="15" hide-xl>
+                    </div>
+                  </div>
+               </div>
+              </div>
+              <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+                <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                  <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+                    <div flex-gt-md="85" flex-md="85" flex-lg="85" flex-xl="85">
+                       <div id="text-chamber-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                         diputado
+                       </div>
+                       <div id="text-state-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                       <span>  por: </span>
+                         Jalisco
+                       </div>
+                     </div>
+                     <div flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="15">
+                       <img id="image-state-card-profile" src="../imgs/svg/states/jalisco.svg">
+                     </div>
+                   </div>
+                 </div>
+                 <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                   <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     José Luis Orozco Sánchez Aldana
+                   </div>
+                   <div id="text-election-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     Representación Proporcional
+                   </div>
+                   <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     Secretario
+                   </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+        <div id="content-cards-profile-graph" flex-gt-md="50" flex-md="50" lex-offset-lg="10" flex-lg="40" flex-xl="50">
+          <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+              <div id="w">
+                  <canvas id="d2" height="210" width="210"></canvas>
+              </div>
+            </div>
+            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+              <div layout-md="column" layout-lg="column" layout-xl="column">
+                <div id="style-trabajo" layout-lg="row" layout-md="row" layout-xl="row">
+                  <div  flex-lg="20" flex-md="20" flex-xl="20">
+                    <span class="number">20%</span>
+                  </div>
+                  <div flex-md="80" flex-lg="80" flex-xl="80">
+                    <span class="letter">Trabajo</span>
+                  </div>
+                </div>
+              </div>
+              <div layout-md="column" layout-lg="column" layout-xl="column">
+                <div id="style-rol"  layout-md="row" layout-lg="row" layout-xl="row">
+                  <div flex-md="20" flex-lg="20" flex-xl="20">
+                    <span class="number">50%</span>
+                  </div>
+                  <div flex-md="80" flex-lg="80" flex-xl="80">
+                    <span class="letter">Rol</span>
+                  </div>
+                </div>
+              </div>
+              <div layout-md="column" layout-lg="column" layout-xl="column">
+                <div id="style-extra"  layout-md="row" layout-lg="row" layout-xl="row">
+                  <div flex-md="20" flex-lg="20" flex-xl="20">
+                    <span class="number">30%</span>
+                  </div>
+                  <div flex-md="80" flex-lg="80" flex-xl="80">
+                    <span class="letter">Extra</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div hide-xs hide-sm layout-xl="column" layout-lg="column" layout-md="column" ng-controller="TabController">
+      	<div style="background:#343434;" layout-xl="row" layout-lg="row" layout-md="row">
+         <div flex-xl="15" flex-lg="10" flex-md="0" >
+         </div>
+         <div  flex-xl="70" flex-lg="80"  flex-md="100">
+            <div layout-xl="row" layout-lg="row" layout-md="row">
+
+              <div id="divtrabajo" style="color:#FFF;" ng-click="setTab(1)" flex-xl="33" flex-lg="33" flex-md="33" >
+                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(1) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageScoreTrabajo" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px;  font-size: 22px;">100</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiTrabajo" style="margin-top:10px;" src="../imgs/svg/workwhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="text-transform:uppercase; margin-bottom:10px;">trabajo legislativo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="divrol" style="color:#FFF;" ng-click="setTab(2)" flex-xl="33" flex-lg="33" flex-md="33">
+                <div layout-xl="row" layout-lg="row" layout-md="row"  ng-class="{ active: isSet(2) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageScoreRol" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiRol" style="margin-top:10px;" src="../imgs/svg/rolwhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="text-transform:uppercase; margin-bottom:10px;">Rol Politico</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="divextra" style="color:#FFF;" ng-click="setTab(3)" flex-xl="33" flex-lg="33" flex-md="33">
+                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(3) }">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" style="z-index:1;">
+                      <img id="imageScoreExtra" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
+                      <img id="imageGlyphiExtra" style="margin-top:10px;" src="../imgs/svg/extrawhite.svg">
+                    </div>
+                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                      <span style=" text-transform:uppercase; margin-bottom:10px;">extra legislativo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+         </div>
+         <div flex-xl="15" flex-lg="10"  flex-md="0">
+         </div>
+        </div>
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
+         <div flex-xl="15" flex-lg="10" flex-md="0">
+         </div>
+         <div id="contentIniciativasProfile" ng-controller="BarCtrlIniciativas" flex-xl="35" flex-lg="40" flex-md="50">
+           <div layout-xl="column" layout-lg="column" layout-md="column" id="barIniciativa">
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="10" flex-lg="5" flex-md="0">
+               </div>
+               <div flex-xl="80" flex-lg="90" flex-md="100">
+                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                 </canvas>
+                 <h1>Iniciativas</h1>
+               </div>
+               <div flex-xl="10" flex-lg="5" flex-md="0">
+               </div>
+             </div>
+           </div>
+           <div id="bodyIniciativas" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div flex-xl="90" flex-lg="90" flex-md="90">
+                 <div id="imageIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <div id="valueIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     05
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     01
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     00
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     02
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     08
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     05
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div id="themeIniciativasTheme" flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Ambiente</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Cultura</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Gobierno</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Seguridad</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Economia</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Desarrollo</span>
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <md-content id="iniciativasTextContent">
+               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
+                 <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div id="iniciativasDivContent" flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
+                      <span>{{item.body}}</span><br><br>
+                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             </md-content>
+           </div>
+         </div>
+         <div id="contentPuntosProfile" ng-controller="BarCtrlPuntos" flex-xl="35" flex-lg="40" flex-md="50">
+           <div layout-xl="column" layout-lg="column" layout-md="column" id="barPuntos">
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="10" flex-lg="5" flex-md="0">
+               </div>
+               <div flex-xl="80" flex-lg="90" flex-md="100">
+                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                 </canvas>
+                 <h1>P. de Acuerdo</h1>
+               </div>
+               <div flex-xl="10" flex-lg="5" flex-md="0">
+               </div>
+             </div>
+           </div>
+           <div id="bodyPuntos" ng-controller="PuntosController" layout-xl="column" layout-lg="column" layout-md="column">
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div flex-xl="90" flex-lg="90" flex-md="90">
+                 <div id="imagePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <div id="valuePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     05
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     01
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     00
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     02
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     08
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     05
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <div layout-xl="row" layout-lg="row" layout-md="row">
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div id="themePuntosTheme" flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Ambiente</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Cultura</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Gobierno</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Seguridad</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Economia</span>
+                   </div>
+                   <div flex-xl="15" flex-lg="15" flex-md="15">
+                     <span>Desarrollo</span>
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             <md-content id="PuntosTextContent">
+               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in puntos">
+                 <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+               <div id="PuntosDivContent" flex-xl="90" flex-lg="90" flex-md="90">
+                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                   <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
+                      <span>{{item.body}}</span><br><br>
+                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                   </div>
+                   <div flex-xl="5" flex-lg="5" flex-md="5">
+                   </div>
+                 </div>
+               </div>
+               <div flex-xl="5" flex-lg="5" flex-md="5">
+               </div>
+             </div>
+             </md-content>
+           </div>
+         </div>
+         <div flex-xl="15" flex-lg="10" flex-md="0">
+         </div>
+        </div>
+        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
+         <div flex-xl="15" flex-lg="10" flex-md="0">
+         </div>
+         <div id="contentRolProfile" ng-controller="BarCtrlRol"  flex-xl="70" flex-lg="80" flex-md="100">
+           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+             <div id="paddingRolProfile" flex-xl="33" flex-lg="33" flex-md="33">
+                <div layout-xl="row" layout-lg="row" layout-md="row">
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <div layout-xl="row" layout-lg="row" layout-md="row">
+                      <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
+                        <div layout-xl="column" layout-lg="column" layout-md="column">
+                          <div layout-xl="row" layout-lg="row" layout-md="row">
+                            <div flex-xl="50" flex-lg="50" flex-md"50">
+                              <a href="pac.bordepolitico.com" target="_blank">
+                                <img src="../imgs/svg/cali_happy.svg">
+                              </a>
+                            </div>
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>25%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div layout-xl="column" layout-lg="column" layout-md="column">
+                          <div layout-xl="row" layout-lg="row" layout-md="row">
+                            <div flex-xl="50" flex-lg="50" flex-md"50">
+                              <a href="pac.bordepolitico.com" target="_blank">
+                                <img src="../imgs/svg/cali_sad.svg">
+                              </a>
+                            </div>
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>85%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div layout-xl="column" layout-lg="column" layout-md="column">
+                          <div layout-xl="row" layout-lg="row" layout-md="row">
+                            <div flex-xl="50" flex-lg="50" flex-md"50">
+                              <a href="pac.bordepolitico.com" target="_blank">
+                                <img src="../imgs/svg/cali_bad.svg">
+                              </a>
+                            </div>
+                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
+                              <span>85%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div flex-xl="60" flex-lg="60" flex-md="60" style="border-left:1px solid #990000;">
+                        <div id="divScoreRol" layout-xl="column" layout-lg="column" layout-md="column">
+                          <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
+                        </div>
+                        <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                          <span class="valueScoreRol">100</span>
+                        </div>
+                        <div layout-xl="column" layout-lg="column" layout-md="column">
+                          <span class="valueRankingRol">Ranking</span>
+                        </div>
+                        <div layout-xl="column" layout-lg="column" layout-md="column">
+                          <span class="scoreRol">Score</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div flex-xl="50" flex-lg="50" flex-md="50">
+                    <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                     </canvas>
+                  </div>
+                </div>
+                <div id="commissionsRolExtra" layout-xl="column" layout-lg="column" layout-md="column">
+                  <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                    <p>Comisiones Ordinarias</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                    <p>Comisiones Especiales</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                    <p>Comites</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                    <p>Grupos de amistad</p>
+                      <span>Economia</span><br>
+                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                  </md-content>
+                </div>
+             </div>
+             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+           </div>
+         </div>
+         <div flex-xl="15" flex-lg="10" flex-md="0">
+         </div>
+        </div>
+        <div style="text-align:center;" layout-xl="column" layout-lg="column" layout-md="column" ng-show="isSet(3)">
+          <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
+            <div flex-xl="15" flex-lg="10" flex-md="0">
+            </div>
+             <div ng-controller="BarCtrlRol" style="background:#FFC73F; padding-top:30px;" flex-xl="70" flex-lg="80" flex-md="100">
+               <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33">
+                   <div layout-xl="row" layout-lg="row" layout-md="row">
+                     <div style="border-left:1px solid #990000; color:#990000; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
+                       <div layout-xl="column" layout-lg="column" layout-md="column">
+                         <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
+                       </div>
+                       <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                         <span style="text-align:center; margin-top:-30px;" >100</span>
+                       </div>
+                       <div style="text-align:left; border-top:1px solid #990000; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                         ranking
+                       </div>
+                       <div style="text-align:left; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                         Klout
+                       </div>
+                    </div>
+                    <div style="" flex-xl="50" flex-lg="50" flex-md="33">
+                      <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                      </canvas>
+                    </div>
+                    <div style="border-right:1px solid #FFF; color:#FFF; text-transform:uppercase; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
+                      <div layout-xl="column" layout-lg="column" layout-md="column">
+                        <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
+                      </div>
+                      <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
+                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                      </div>
+                      <div style="border-top:1px solid #FFF; text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                        ranking
+                      </div>
+                      <div style="text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
+                        Noticias Google
+                      </div>
+                    </div>
+                   </div>
+                   <div style="color: #FFF; font-size: 35px; text-align: left; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
+                     Noticias en medios
+                   </div>
+                 </div>
+                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+               </div>
+             </div>
+             <div flex-xl="15" flex-lg="10" flex-md="0">
+             </div>
+           </div>
+           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
+             <div flex-xl="15" flex-lg="10" flex-md="0">
+             </div>
+              <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xl="70" flex-lg="80" flex-md="100">
+                <div  layout-xl="row" layout-lg="row" layout-md="row">
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33">
+                    <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
+                      <div style="background:transparent;" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
+                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                          <div flex-xl="100" flex-lg="100" flex-md="100">
+                            <div id="divImagesThemesNoticias" style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
+                          <div flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                05
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                01
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                00
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                02
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                08
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                05
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                          <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;"flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Ambiente</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Cultura</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Gobierno</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Seguridad</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Economia</span>
+                              </div>
+                              <div flex-xl="15" flex-lg="15" flex-md="15">
+                                <span>Desarrollo</span>
+                              </div>
+                              <div flex-xl="5" flex-lg="5" flex-md="5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <md-content style="background:transparent; height:550px; margin-top:30px;">
+                          <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
+                          <div id="NoticiasDivContent" flex-xl="100" flex-lg="100" flex-md="100">
+                            <div layout-xl="row" layout-lg="row" layout-md="row">
+                              <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xl="100" flex-lg="100" flex-md="100">
+                                 <span>{{item.body}}</span><br><br>
+                                  <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </md-content>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
+                </div>
+              </div>
+              <div flex-xl="15" flex-lg="10" flex-md="0">
+              </div>
+            </div>
+        </div>
+      </div>
+    			<!-- <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
+            <h1>Profile page</h1>
+            <p>Profile information</p>
+         	</div>
+          <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
+            <h1>Messages</h1>
+            <p> Some messages </p>
+         	</div> -->
+     </div>
+
+    <div hide-lg hide-md hide-xl  ng-controller="acorTrabajo" class="toolbardemoBasicUsage">
+    	<md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
+              <div layout-sm="row" layout-xs="row">
+                <div id="contentGraphsIniciativas" flex-sm="100" flex-xs="100">
+                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                  </canvas>
+                  <h1>Iniciativas</h1>
+                </div>
+              </div>
+              <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
+                <div layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div id="imageIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div layout-sm="row" layout-xs="row" >
+                      <div flex-sm="5" flex-xs="5" >
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        01
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        00
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        02
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        08
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                  <div  flex-xs="100" flex-sm="100">
+                    <div layout-xs="row" layout-sm="row">
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Ambiente</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Cultura</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Gobierno</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Seguridad</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Economia</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Desarrollo</span>
+                      </div>
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                    </div>
+                    <md-content id="iniciativasTextContentMobile">
+                      <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
+                      <div id="iniciativasDivContentMobile" flex-xs="100" flex-sm="100" >
+                        <div layout-xs="row" layout-sm="row">
+                          <div flex-xs="5" flex-sm="5" >
+                          </div>
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
+                             <span>{{item.body}}</span><br><br>
+                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                          </div>
+                          <div flex-xs="5" flex-sm="5">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </md-content>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
+              <div layout-sm="row" layout-xs="row">
+                <div id="contentGraphsPoints" flex-sm="100" flex-xs="100">
+                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+                  </canvas>
+                  <h1>P. de Acuerdo</h1>
+                </div>
+              </div>
+              <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
+                <div layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                  <div flex-sm="100" flex-xs="100">
+                    <div layout-sm="row" layout-xs="row" >
+                      <div flex-sm="5" flex-xs="5" >
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        01
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        00
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        02
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        08
+                      </div>
+                      <div flex-sm="15" flex-xs="15">
+                        05
+                      </div>
+                      <div flex-sm="5" flex-xs="5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                  <div  flex-xs="100" flex-sm="100">
+                    <div layout-xs="row" layout-sm="row">
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Ambiente</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Cultura</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Gobierno</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Seguridad</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Economia</span>
+                      </div>
+                      <div flex-xs="15" flex-sm="15">
+                        <span>Desarrollo</span>
+                      </div>
+                      <div flex-xs="5" flex-sm="5">
+                      </div>
+                    </div>
+                    <md-content id="puntosTextContentMobile">
+                      <div layout-xs="row" layout-sm="row" ng-repeat="item in puntos">
+                      <div id="puntosDivContentMobile" flex-xs="100" flex-sm="100" >
+                        <div layout-xs="row" layout-sm="row">
+                          <div flex-xs="5" flex-sm="5" >
+                          </div>
+                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-bottom:10px;" flex-xs="90" flex-sm="90">
+                             <span>{{item.body}}</span><br><br>
+                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                          </div>
+                          <div flex-xs="5" flex-sm="5">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </md-content>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+    		</div>
+    	</md-content>
+    </div>
+
+    <div hide-lg hide-md hide-xl  ng-controller="acorRol" class="toolbardemoBasicUsage">
+      <md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headRol" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div style="background:#FF974C;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div layout-xs="column" layout-sm="column" >
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+              <div id="contentRolProfile" ng-controller="BarCtrlRol" flex-xs="100" flex-sm="100">
+                <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+                  <div id="paddingRolProfile"  flex-xs="100" flex-sm="100">
+                     <div layout-xs="row" layout-sm="row">
+                       <div flex-xs="50" flex-sm="50" >
+                         <div layout-xs="row" layout-sm="row" >
+                           <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
+                             <div layout-xs="column" layout-sm="column" >
+                               <div layout-xs="row" layout-sm="row" >
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_happy.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>25%</span>
+                                 </div>
+                               </div>
+                             </div>
+                             <div layout-xs="column" layout-sm="column" >
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_sad.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>85%</span>
+                                 </div>
+                               </div>
+                             </div>
+                             <div layout-xs="column" layout-sm="column">
+                               <div layout-xs="row" layout-sm="row" >
+                                 <div flex-xs="50" flex-sm="50" >
+                                   <a href="pac.bordepolitico.com" target="_blank">
+                                     <img src="../imgs/svg/cali_bad.svg">
+                                   </a>
+                                 </div>
+                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
+                                   <span>85%</span>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div flex-xs="60" flex-sm="60"  style="border-left:1px solid #990000;">
+                             <div id="divScoreRol" layout-xs="column" layout-sm="column" >
+                               <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
+                             </div>
+                             <div layout-xs="column" layout-md="column" style="z-index:2;">
+                               <span class="valueScoreRol">100</span>
+                             </div>
+                             <div  layout-xs="column" layout-sm="column">
+                               <span class="valueRankingRol">Ranking</span>
+                             </div>
+                             <div  layout-xs="column" layout-sm="column">
+                               <span class="scoreRol">Score</span>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div flex-xs="50" flex-sm="50" >
+                         <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                          </canvas>
+                       </div>
+                     </div>
+                     <div id="commissionsRolExtra" layout-xs="column" layout-sm="column">
+                       <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                         <p>Comisiones Ordinarias</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Comisiones Especiales</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Comites</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <p>Grupos de amistad</p>
+                           <span>Economia</span><br>
+                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                       </md-content>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+    		</div>
+    	</md-content>
+    </div>
+
+    <div hide-lg hide-md hide-xl  ng-controller="acorExtra" class="toolbardemoBasicUsage">
+      <md-content>
+    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
+    			<md-toolbar  id="headExtra" ng-init="data.expanded = true" ng-click="collapseAll(data)">
+    				<div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
+                <span id="valueScoreAccordion">{{data.value}}</span>
+    					<h2>
+    						<span id="titleScoreAccordion">{{data.heading}}</span>
+    					</h2>
+    					<span flex=""></span>
+    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+    				</div>
+    			</md-toolbar>
+    			<div style="background:#FFC73F;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+            <div  ng-controller="BarCtrlRol"  layout-xs="column" layout-sm="column" >
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+                <div flex-sm="100" flex-xs="100">
+                  <div ayout-sm="row" layout-xs="row">
+                    <div id="LeftScoreExtra" flex-xs="25" flex-sm="25">
+                      <div layout-xs="column" layout-sm="column">
+                        <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
+                      </div>
+                      <div layout-xs="column" layout-sm="column" style="z-index:2;">
+                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                      </div>
+                      <div class="classRanking"  layout-xs="column" layout-sm="column">
+                        ranking
+                      </div>
+                      <div class="classKlout"  layout-xs="column" layout-sm="column">
+                        Klout
+                      </div>
+                   </div>
+                   <div style="" flex-xs="50" flex-sm="50">
+                     <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+                     </canvas>
+                   </div>
+                   <div id="rightScoreExtra" style="" flex-xs="25" flex-sm="25" >
+                     <div layout-xs="column" layout-sm="column">
+                       <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
+                     </div>
+                     <div layout-xs="column" layout-sm="column" style="z-index:2;">
+                       <span style="text-align:center; margin-top:-30px;" >100</span>
+                     </div>
+                     <div style="" layout-xs="column" layout-sm="column">
+                       <span class="classRanking">ranking</span>
+                     </div>
+                     <div style="text-align:right; font-size:17px;"  layout-xs="column" layout-sm="column">
+                       <span  class="classNews">Noticias Google</span>
+                     </div>
+                   </div>
+                  </div>
+                  <div  id="titleNewsAccordion" flex-xs="column" flex-sm="column">
+                    <span style="color: #FFF;">Noticias en medios</span>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+
+                 <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xs="100" flex-sm="100">
+                   <div  layout-xs="row" layout-sm="row">
+                     <div style="" flex-xs="100" flex-sm="100">
+                       <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xs="column" flex-sm="column">
+                         <div style="background:transparent;" ng-controller="IniciativasController" layout-xs="column" layout-sm="column">
+                           <div layout-xs="row" layout-sm="row">
+                             <div flex-xs="100" flex-sm="100">
+                               <div id="divImagesThemesNoticias" style="background:transparent;" layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div style="background:transparent;" layout-xs="row" layout-sm="row" >
+                             <div flex-xs="100" flex-sm="100">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   05
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   01
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   00
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15" >
+                                   02
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   08
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   05
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5" >
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div layout-xs="row" layout-sm="row" >
+                             <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;" flex-xs="100" flex-sm="100">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div flex-xs="5" flex-sm="5">
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Ambiente</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Cultura</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Gobierno</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Seguridad</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Economia</span>
+                                 </div>
+                                 <div flex-xs="15" flex-sm="15">
+                                   <span>Desarrollo</span>
+                                 </div>
+                                 <div flex-xs="5" flex-sm="5">
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <md-content id="contentNoticias" >
+                             <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
+                               <div flex-xs="5" flex-sm="5">
+                               </div>
+                             <div id="NoticiasDivContent" flex-xs="90" flex-sm="90">
+                               <div layout-xs="row" layout-sm="row">
+                                 <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xs="100" flex-sm="100">
+                                    <span>{{item.body}}</span><br><br>
+                                     <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Documento adjunto</a>
+                                 </div>
+                               </div>
+                             </div>
+                             <div flex-xs="5" flex-sm="5">
+                             </div>
+                           </div>
+                           </md-content>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+               </div>
+            </div>
+          </div>
+    		</div>
+    	</md-content>
+    </div>
+
+    <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
+        <!--panel section head-->
+        <md-toolbar flex="row"  id="nav-menu-index" >
+          <div>
+            <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
+            <span flex id="text-site-panel-menu">Menú Principal</span>
+              <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+                <img id="icon-close" src="../imgs/svg/close.svg">
+              </md-button>
+          </div>
+        </md-toolbar>
+        <!--panel section content-->
+        <md-content ng-controller="RightCtrl" layout-padding="">
+          <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+          <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+            <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+              <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+              <div class="md-list-item-text" layout="column">
+                <span class="links-panel">{{ item.who }}</span>
+              </div>
+            </md-list-item>
+          </md-list>
+          <md-divider ></md-divider>
+          <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
+          <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+            <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
+              <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+              <div class="md-list-item-text" layout="column">
+                <span class="links-panel">{{ item.who }}</span>
+              </div>
+            </md-list-item>
+          </md-list>
+          <md-divider></md-divider>
+          <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
+          <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
+            <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
+              <img id="icon-panel" ng-src="../{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
+              <div class="md-list-item-text" layout="column">
+                <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
+              </div>
+            </md-list-item>
+          </md-list>
+          <!-- class="fabSpeedDialdemoBasicUsage" -->
+          <div style="text-align:center;" ng-cloak=""  >
+            <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+              <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+              <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
+            </md-button>
+            <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+              <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+              <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
+            </md-button>
+            <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+              <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
+              <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+                <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
+              </a>
+            </md-button>
+          </div>
+        </md-content>
+    </md-sidenav>
+
+
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" charset="utf-8"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/methods_nav.js"></script>
+  <script src="../js/external_windows.js"></script>
+  <script src="../js/methods_panel.js"></script>
+  <script src="../js/accordion.js"></script>
+  <!-- <script src="../js/loader.js"></script> -->
+  <script src="../js/graphs.js"></script>
+  <script src="../js/iniciativas.js"></script>
+  <script src="../js/puntos.js"></script>
+  <script src="../js/rol.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+</body>
+</html>

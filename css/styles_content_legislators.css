@@ -3295,13 +3295,13 @@
   #califichas-content-happy img{
     width: 30px;
     margin-top: -10px;
-    margin-left: 68px;
+    margin-left: 88px;
   }
 
   #califichas-content-sad img{
     width: 30px;
     margin-top: -10px;
-    margin-left: 35px;
+    margin-left: 45px;
   }
 
   #califichas-content-bad img{
@@ -3388,7 +3388,6 @@
     height: 55px;
     margin-left: 281px;
     margin-top: -132px;
-    position: absolute;
   }
 
   #facebook-card img{
@@ -3877,11 +3876,11 @@
 
   #content-socials-card{
     margin-left: 0px;
-    margin-top: -7px;
+    margin-top: 14px;
   }
 
   #score-card {
-    margin-left: -23px;
+    margin-left: -35px;
   }
 
   #score-card span {
@@ -3894,8 +3893,40 @@
   }
 
   #image-card img{
-    margin-top: -45px;
+    margin-top: -27px;
     margin-left: 51px;
+  }
+
+  #image-party-card img {
+    width: 55px;
+    margin-left: -3px;
+    margin-top: 79px;
+  }
+
+  #score-card p {
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 51px;
+  }
+
+  #score-card span{
+    margin-top: -41px;
+    font-size: 20px;
+    margin-left: 14.5px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 18px;
+    color:#FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 22px;
+    color:#FFF;
   }
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
@@ -4165,7 +4196,7 @@
 
   #text-state-card {
     font-size: 16px;
-    margin-right: 50px;
+    margin-right: 0px;
   }
 
   #text-state-card span{
@@ -4189,17 +4220,15 @@
   #image-state-card {
     width: 50px;
     height: 55px;
-    margin-left: 167px;
-    margin-top: -132px;
-    position: absolute;
+    margin-left: 5px;
+    margin-top: -25px;
   }
 
   #image-state-card-sen {
     width: 50px;
     height: 55px;
-    margin-left: 167px;
-    margin-top: -125px;
-    position: absolute;
+    margin-left: 0px;
+    margin-top: -7px;
   }
 
   #facebook-card img{
@@ -4221,19 +4250,19 @@
 
   #text-name-card {
     font-size: 13px;
-    margin-left: 30px;
+    margin-left: 0px;
     text-align: left;
   }
 
   #text-election-card{
     font-size: 11px;
-    margin-left: 29px;
+    margin-left: 0px;
     text-align: left;
   }
 
   #text-commission-card{
     font-size: 11px;
-    margin-left: 29px;
+    margin-left: 0px;
     text-align: left;
   }
 

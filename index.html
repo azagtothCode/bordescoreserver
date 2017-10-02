@@ -161,6 +161,10 @@
    <script>
    supurl='http://104.239.249.32:8000';
 
+   function openPerfilPage (url){
+     window.open(url)
+   }
+
      $.ajax({
        url: supurl+'/diputados/basic/dip/get',
        method: "POST",
@@ -217,7 +221,7 @@
            var score = val.legislator_score_sil;
 
              if(score == 100 ){
-               var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
+               var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
              }else if(score < 100 && score  > 20){
                var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
              }else if(score  < 20 && score  > 10){
@@ -243,8 +247,6 @@
              }
 
            var post_commision = val.legislator_commission_sil;
-
-
 
            var commission_string  = JSON.stringify(post_commision);
 
@@ -471,29 +473,35 @@
                    <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
                    </div>\
                  </div>\
-                 <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                   <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
+                 <div style="border:1px solid brown;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                   <div style="border:1px solid purple;" ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
                      <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
-                       <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       '+chamber+'\
-                       </div>\
-                       <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       <span>  por: </span>\
-                       '+state+'\
-                       <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
-                       </div>\
-                       <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
-                         '+name+'\
-                       </div>\
-                       <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       '+representation+'\
-                       </div>\
+                         <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+chamber+'\
+                         </div>\
+                         <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                           <div style="border:1px solid brown;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                              <div style="border:1px solid orange;" flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
+                               <span>  por: </span>\
+                               '+state+'\
+                              </div>\
+                              <div style="border:1px solid green;" flex-xs="15" flex-sm="15" class="ng-scope flex-xs-15 flex-sm-15">\
+                               <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                              </div>\
+                            </div>\
+                         </div>\
+                         <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+name+'\
+                         </div>\
+                         <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+representation+'\
+                         </div>\
                        <div ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
                        '+post+'\
+                       </div>\
                      </div>\
                    </div>\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                     <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                   <div style="border:1px solid red;" flex-xs="15" flex-sm="15" class="ng-scope flex-xs-15 flex-sm-15">\
                    </div>\
                  </div>\
                </md-list>\
