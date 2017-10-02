@@ -3311,8 +3311,8 @@
 
   #content-socials-card{
     text-align: center;
-    margin-left: -35px;
-    margin-top: 0px;
+    margin-left: -60px;
+    margin-top: 15px;
   }
 
   #score-card {
@@ -3327,22 +3327,42 @@
     margin-left: 5px;
   }
 
+  #score-card p {
+    font-size: 23px;
+    margin-top: -54px;
+    margin-left: 27px;
+  }
+
   #score-card span{
-    margin-top: -57px;
-    position: absolute;
-    font-size: 25px;
-    letter-spacing: 2px;
-    margin-left: -15px;
-    font-weight: bold;
+    margin-top: -53px;
+    font-size: 23px;
+    margin-left: -7.5px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -55px;
+    font-size: 23px;
+    margin-left: -5px;
+    color: #FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -55px;
+    font-size: 23px;
+    margin-left: 0px;
+    color: #FFF;
   }
 
   #text-chamber-card{
     font-size: 25px;
+    /* text-align: center; */
     margin-top: 0px;
+    margin-right: 123px;
   }
 
   #text-state-card{
     font-size: 17px;
+    margin-right: 120px;
   }
 
   #text-state-card span{
@@ -3353,20 +3373,22 @@
   #image-card img{
     width: 150px;
     height: 160px;
-    margin-top: -39px;
+    margin-top: -25px;
     margin-left: 118px;
   }
 
   #image-party-card img{
-    width: 50px;
-    margin-left: 5px;
-    margin-top: 75px;
+    width: 55px;
+    margin-left: -15px;
+    margin-top: 79px;
   }
 
   #image-state-card {
-    width: 46px;
-    margin-left: 3px;
-    margin-top: 10px;
+    width: 50px;
+    height: 55px;
+    margin-left: 281px;
+    margin-top: -132px;
+    position: absolute;
   }
 
   #facebook-card img{
@@ -3387,21 +3409,23 @@
   #text-name-card{
     font-size: 17px;
     margin-top: 3px;
+    text-align: left;
+    margin-left: 65px;
   }
 
   #text-election-card{
     font-size: 13px;
     margin-top: 3px;
-    margin-left: 6px;
-    text-align: right;
+    margin-left: 65px;
+    text-align: left;
   }
 
   #text-commission-card{
     font-size: 13px;
     margin-top: 3px;
-    margin-left: 6px;
+    margin-left: 65px;
     padding-bottom: 5px;
-    text-align: right;
+    text-align: left;
   }
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
@@ -4116,7 +4140,7 @@
   #score-card span{
     margin-top: -41px;
     font-size: 20px;
-    margin-left: 15.5px;
+    margin-left: 14.5px;
   }
 
   #score-card span.menorVeinte{
