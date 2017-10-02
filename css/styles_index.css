@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'generic';
-  src: url('../fonts/montserrat.otf');
-}
+
 *:focus { font-family: 'generic'; outline: none; }
 html, body{  text-decoration: none;}
 
