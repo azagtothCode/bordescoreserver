@@ -661,7 +661,7 @@ supurl='http://104.239.249.32:8000';
                       '+state+'\
                       <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
                     </div>\
-                    <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                    <div id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
                       '+name+'\
                     </div>\
                     <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
