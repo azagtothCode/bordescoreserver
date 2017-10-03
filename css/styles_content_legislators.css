@@ -279,7 +279,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 300px;
     height: 300px;
     margin-top: -40px;
@@ -287,7 +287,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 105px;
     margin-left: -85px;
     margin-top: 158px;
@@ -594,7 +594,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 200px;
     height: 200px;
     margin-top: -29px;
@@ -602,7 +602,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 80px;
     margin-left: -60px;
     margin-top: 97px;
@@ -841,7 +841,7 @@
     margin-left: 0px;
   }
 
-  #image-card-profile img {
+  .image-card-profile img {
     width: 210px;
     height: 210px;
     margin-top: -35px;
@@ -987,7 +987,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: -39px;
@@ -995,7 +995,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 70px;
     margin-left: -61px;
     margin-top: 75px;
@@ -1336,7 +1336,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: -39px;
@@ -1344,7 +1344,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -30px;
     margin-top: 88px;
@@ -1676,7 +1676,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: -38px;
@@ -1684,7 +1684,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -30px;
     margin-top: 85px;
@@ -2172,7 +2172,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: -38px;
@@ -2180,7 +2180,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -30px;
     margin-top: 85px;
@@ -2315,7 +2315,7 @@
     margin-left: -60px;
   }
 
-  #image-card-profile img {
+  .image-card-profile img {
     margin-top: 72px;
     margin-left: 220px;
   }
@@ -2552,7 +2552,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: 30px;
@@ -2560,7 +2560,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -27px;
     margin-top: 153px;
@@ -2866,7 +2866,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 170px;
     height: 180px;
     margin-top: 30px;
@@ -2874,7 +2874,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -27px;
     margin-top: 153px;
@@ -3181,7 +3181,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 140px;
     height: 150px;
     margin-top: 10px;
@@ -3189,7 +3189,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -27px;
     margin-top: 100px;
@@ -3516,7 +3516,7 @@
     letter-spacing: 3px;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 180px;
     height: 180px;
     margin-top: -5px;
@@ -3524,7 +3524,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -9px;
     margin-top: 115px;
@@ -3758,7 +3758,7 @@
       letter-spacing: 3px;
     }
 
-    #image-card-profile img{
+    .image-card-profile img{
       width: 160px;
       height: 170px;
       margin-top: -5px;
@@ -3766,7 +3766,7 @@
       border-radius: 50%;
     }
 
-    #image-party-card-profile img{
+    .image-party-card-profile img{
       width: 60px;
       margin-left: -17px;
       margin-top: 107px;
@@ -4020,7 +4020,7 @@
     cursor: pointer;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 150px;
     height: 150px;
     margin-top: -20px;
@@ -4028,7 +4028,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 60px;
     margin-left: -15px;
     margin-top: 72px;
@@ -4358,7 +4358,7 @@
     cursor: pointer;
   }
 
-  #image-card-profile img{
+  .image-card-profile img{
     width: 140px;
     height: 140px;
     margin-top: -18px;
@@ -4366,7 +4366,7 @@
     border-radius: 50%;
   }
 
-  #image-party-card-profile img{
+  .image-party-card-profile img{
     width: 50px;
     margin-left: 0px;
     margin-top: 72px;

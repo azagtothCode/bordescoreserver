@@ -31,7 +31,7 @@
   <script src="js/angular-material.min.js"></script>
   <script src="js/svg-assets-cache.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/1.0.2/Chart.min.js"></script>
+  <script src="js/Chart.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/methods_nav.js"></script>
   <script src="js/external_windows.js"></script>
@@ -223,11 +223,11 @@
              if(score == 100 ){
                var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
              }else if(score < 100 && score  > 20){
-               var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+               var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
              }else if(score  < 20 && score  > 10){
-               var score_val = "<span class='menorVeinte' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+               var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
              }else if(score  < 10){
-               var score_val = "<span class='menorDiez' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
+               var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
              }
 
            var name = val.legislator_name_sil;
@@ -509,6 +509,7 @@
          }
      });
 
+
      $.ajax({
        url: supurl+'/diputados/basic/sen/get',
        method: "POST",
@@ -564,16 +565,15 @@
 
            var score = val.legislator_score_sil;
 
-             if(score == 100 ){
-               var score_val = "<p ng-click='openPerfilPage(item.id)'>"+score+"</p>";
-             }else if(score < 100 && score  > 20){
-               var score_val = "<span ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-             }else if(score  < 20 && score  > 10){
-               var score_val = "<span class='menorVeinte' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-             }else if(score  < 10){
-               var score_val = "<span class='menorDiez' ng-click='openPerfilPage(item.id)'>"+score+"</span>";
-             }
-
+           if(score == 100 ){
+             var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
+           }else if(score < 100 && score  > 20){
+             var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
+           }else if(score  < 20 && score  > 10){
+             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
+           }else if(score  < 10){
+             var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"')>"+score+"</span>";
+           }
 
            var name = val.legislator_name_sil;
 
