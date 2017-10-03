@@ -114,7 +114,7 @@
 }
 
 #slide-head-profile-dip{
-  background-image: url(../imgs/png/slide_head_dip.png);
+  background-image: url(../imgs/png/slide_head_dip.jpg);
   min-height: 650px;
   background-size: 100% 950px;
   background-attachment: fixed;
@@ -125,7 +125,7 @@
 }
 
 #slide-head-profile-sen{
-  background-image: url(../imgs/png/slide_head_dip.png);
+  background-image: url(../imgs/png/slide_head_sen.jpg);
   min-height: 250px;
   background-size: 100% 250px;
   background-attachment: fixed;
