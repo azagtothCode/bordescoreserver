@@ -93,27 +93,30 @@ function getQueryVariable(variable) {
           var pick_legis = val.legislator_image_sil;
           var res_pick = pick_legis.slice(16, -4);
 
+          if(val.legislator_chamber_sil == "diputado"){
+            document.getElementById("slide-head-profile-dip").style.backgroundSize = "100% 1000px";
+            document.getElementById("slide-head-profile-dip").style.background = "url(../imgs/png/slide_head_dip.jpg)";
+          }
 
+          if( val.legislator_chamber_sil == "senador"){
+              document.getElementById("slide-head-profile-dip").style.backgroundSize = "100%  1000px";
+              document.getElementById("slide-head-profile-dip").style.background = "url(../imgs/png/slide_head_sen.jpg)";
+          }
 
-          if(val.legislator_chamber_senate == "diputado"){
-              if(val.legislator_gender_senate == "Masculino"){
-                var chamber = "Diputado";
-              }
-              if(val.legislator_gender_senate == "Masculino"){
-                var chamber = "Diputado";
-              }
+          if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil == "diputado"){
+            var chamber = "Diputado";
 
           }
 
-          if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_senate == "diputado"){
+          if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_sil == "diputado"){
               var chamber = "Diputada";
           }
 
-          if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_senate == "senador"){
+          if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil == "senador"){
               var chamber = "Senador";
           }
 
-          if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_senate == "senador"){
+          if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_sil == "senador"){
               var chamber = "Senadora";
           }
 
