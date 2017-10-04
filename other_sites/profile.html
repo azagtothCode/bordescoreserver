@@ -51,10 +51,44 @@
     var URl = window.location.href;
     var res = URl.substr(-7);
 
+// variable = URl;
+//   getQueryVariable(variable);
+//     function getQueryVariable(variable)
+//       {
+//          var query = window.location.search.substring(1);
+//
+//          var vars = query.split("&");
+//          alert(vars)
+//          for (var i=0;i<vars.length;i++) {
+//                  var pair = vars[i].split("=");
+//                  if(pair[0] == variable){return pair[1];}
+//          }
+//          return(false);
+//       }
+
+function getQueryVariable(variable) {
+       // Estoy asumiendo que query es window.location.search.substring(1);
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+      //  alert(vars);
+       for (var i=0; i < vars.length; i++) {
+           var pair = vars[i].split("=");
+           if (pair[0] == variable) {
+               return pair[1];
+           }
+       }
+       return false;
+   }
+
+  (getQueryVariable('id'));
+  (getQueryVariable('rol'));
+  (getQueryVariable('extra'));
+  (getQueryVariable('trabajo'));
+
     $.ajax({
       url: supurl+'/diputados/profile/dip/get',
       method: "POST",
-      data: {id_legislator_sil:res},
+      data: {id_legislator_sil:(getQueryVariable('id'))},
       dataType: "json"
     }).done(function(data) {
       subject=data.dip;
@@ -62,8 +96,12 @@
       for (var i = 0; i < subject.length; i++) {
           val=subject[i];
 
+          // alert(val.legislator_extra_score_sil+val.legislator_rol_score_sil+val.legislator_news_score_sil)
           var pick_party = val.legislator_party_sil;
-          var res_pick_party = pick_party.toLowerCase();
+
+          if(pick_party){
+            var res_pick_party = pick_party.toLowerCase();
+          }
 
           var pick_legis = val.legislator_image_sil;
           var res_pick = pick_legis.slice(16, -4);
@@ -174,11 +212,25 @@
           $(".commissionWho").append(post);
           $(".pickStateWho").append('<img id="image-state-card-profile" src="../imgs/svg/states/'+pick_state+'.svg">');
           $(".image-card-profile").append('<img src="../imgs/png/legisladores/'+res_pick+'.png">');
-          $(".image-party-card-profile").append('<img src="../imgs/svg/partys/'+res_pick_party+'.svg">');
+          $(".valueTrabajo").append(val.legislator_extra_score_sil);
+          $(".valueRol").append(val.legislator_rol_score_sil);
+          $(".valueExtra").append(val.legislator_news_score_sil);
+
+          $(".numberTrabajo").append(val.legislator_extra_score_sil);
+          $(".numberRol").append(val.legislator_rol_score_sil);
+          $(".numberExtra").append(val.legislator_news_score_sil);
+
 
       }
 
      });
+
+     app.controller("BarCtrlRol", function ($scope) {
+       $scope.colors = ["rgb(238,68,85)","rgb(255,151,76)","rgb(255,199,63)",];
+               $scope.labels = ["Trabajo Legislativo", "Rol Politico", "Extra Legislativo"];
+               $scope.data = [(getQueryVariable('trabajo')), (getQueryVariable('rol')), (getQueryVariable('extra'))];
+     })
+
   </script>
 </head>
 <body ng-app="score_federal">
@@ -469,16 +521,15 @@
         </div>
         <div id="content-cards-profile-graph" flex-gt-md="50" flex-md="50" lex-offset-lg="10" flex-lg="40" flex-xl="50">
           <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-              <div id="w">
-                  <canvas id="d2" height="210" width="210"></canvas>
-              </div>
+            <div ng-controller="BarCtrlRol" flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+              <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+               </canvas>
             </div>
             <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
               <div layout-md="column" layout-lg="column" layout-xl="column">
                 <div id="style-trabajo" layout-lg="row" layout-md="row" layout-xl="row">
                   <div  flex-lg="20" flex-md="20" flex-xl="20">
-                    <span class="number">20%</span>
+                    %<span class="numberTrabajo"></span>
                   </div>
                   <div flex-md="80" flex-lg="80" flex-xl="80">
                     <span class="letter">Trabajo</span>
@@ -486,9 +537,9 @@
                 </div>
               </div>
               <div layout-md="column" layout-lg="column" layout-xl="column">
-                <div id="style-rol"  layout-md="row" layout-lg="row" layout-xl="row">
+                <div id="style-extra"  layout-md="row" layout-lg="row" layout-xl="row">
                   <div flex-md="20" flex-lg="20" flex-xl="20">
-                    <span class="number">50%</span>
+                    %<span class="numberRol"></span>
                   </div>
                   <div flex-md="80" flex-lg="80" flex-xl="80">
                     <span class="letter">Rol</span>
@@ -496,9 +547,9 @@
                 </div>
               </div>
               <div layout-md="column" layout-lg="column" layout-xl="column">
-                <div id="style-extra"  layout-md="row" layout-lg="row" layout-xl="row">
+                <div id="style-rol"  layout-md="row" layout-lg="row" layout-xl="row">
                   <div flex-md="20" flex-lg="20" flex-xl="20">
-                    <span class="number">30%</span>
+                    %<span class="numberExtra"></span>
                   </div>
                   <div flex-md="80" flex-lg="80" flex-xl="80">
                     <span class="letter">Extra</span>
@@ -526,7 +577,7 @@
                       <img id="imageScoreTrabajo" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
                     </div>
                     <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px;  font-size: 22px;">100</span>
+                      <span class="valueTrabajo" style="margin-top: -60px;  font-size: 22px;"></span>
                     </div>
                   </div>
                   <div flex-xl="50" flex-lg="50" flex-md="50">
@@ -547,7 +598,7 @@
                       <img id="imageScoreRol" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
                     </div>
                     <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                      <span class="valueRol"  style="margin-top: -60px; font-size: 22px;"></span>
                     </div>
                   </div>
                   <div flex-xl="50" flex-lg="50" flex-md="50">
@@ -568,7 +619,7 @@
                       <img id="imageScoreExtra" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
                     </div>
                     <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px; font-size: 22px;">90</span>
+                      <span class="valueExtra" style="margin-top: -60px; font-size: 22px;"></span>
                     </div>
                   </div>
                   <div flex-xl="50" flex-lg="50" flex-md="50">

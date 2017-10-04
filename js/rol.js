@@ -8,11 +8,3 @@ $scope.puntos = [
   {body:'Con Proyecto de Presupuesto de Egresos de la Federación para el Ejercicio Fiscal 2018.',theme:'Desarrollo', src:"http://sil.gobernacion.gob.mx/Archivos/Documentos/2017/04/asun_3534545_20170427_1490832918.pdf"},
   ];
 })
-
-app.controller("BarCtrlRol", function ($scope) {
-  $scope.colors = ["rgb(238,68,85)","rgb(255,151,76)","rgb(255,199,63)"];
-          $scope.labels = ["Green", "Orange", "Grey"];
-          $scope.data = [300, 500, 100];
-
-
-})
