@@ -7,1649 +7,4083 @@ show collections -- show all colections into database selected
 db.dropDatabase() -- first use namedb and execute command
 
 
-<html>
-<head>
-  <meta charset="UTF-8"></meta>
-  <meta name="description" content="Web Site For Present Information about legislators"></meta>
-  <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
-  <meta name="author" content="Michelle Garduño"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <title>Borde Score</title>
-  <link rel="shortcut icon" href="../imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="../css/angular-material.css">
-  <!--Styles Azagtoth-->
-  <link rel="stylesheet" href="../css/styles_index.css">
-  <link rel="stylesheet" href="../css/styles_index_slide.css">
-  <link rel="stylesheet" href="../css/styles_hover.css">
-  <link rel="stylesheet" href="../css/styles_index_panel_2560.css">
-  <link rel="stylesheet" href="../css/styles_index_panel_736.css">
-  <link rel="stylesheet" href="../css/styles_index_panel_667.css">
-  <link rel="stylesheet" href="../css/styles_index_panel_320.css">
-  <link rel="stylesheet" href="../css/styles_index_1920.css">
-  <link rel="stylesheet" href="../css/styles_index_1440.css">
-  <link rel="stylesheet" href="../css/styles_index_1366.css">
-  <link rel="stylesheet" href="../css/styles_index_1280.css">
-  <link rel="stylesheet" href="../css/styles_index_1024.css">
-  <link rel="stylesheet" href="../css/styles_index_768.css">
-  <link rel="stylesheet" href="../css/styles_index_736.css">
-  <link rel="stylesheet" href="../css/styles_index_667.css">
-  <link rel="stylesheet" href="../css/styles_index_568.css">
-  <link rel="stylesheet" href="../css/styles_index_480.css">
-  <link rel="stylesheet" href="../css/styles_index_375.css">
-  <link rel="stylesheet" href="../css/styles_index_320.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_1920.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_1440.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_1280.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_1024.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_768.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_736.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_667.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_568.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_414.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_375.css">
-  <link rel="stylesheet" href="../css/slide_head/styles_slide_320.css">
-  <link rel="stylesheet" href="../css/loader.css">
-  <link rel="stylesheet" href="../css/content_score_party/styles_content.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_2560.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1920.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1440.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1366.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1280.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_1024.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_960.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_768.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_736.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_667.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_568.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_375.css">
-  <link rel="stylesheet" href="../css/content_legislators/styles_content_legislators_320.css">
-  <link rel="stylesheet" href="../css/styles_profile_navtab.css">
-</head>
-<body ng-app="score_federal">
-  <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-     <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo-profile" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="20" flex-md="15" flex-gt-md="15"  flex-lg="15"  flex-xl="15" >
-     </div>
-     <div flex-xs="40" flex-sm="60" flex-md="65" flex-gt-md="65" flex-lg="65" flex-gt-lg="65" flex-xl="65" >
-        <div hide show-xs show-sm layout-xs="column" layout-sm="column">
-          <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
-              <md-select ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
-                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
-              </md-select>
-          </div>
-        </div>
-        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
-          <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
-            <div layout-md="row" layout-lg="row" layout-gt-md="row">
-              <div ng-controller="OpenFederalController" ng-click="openFederal()" id="tit-federal"  flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
-                <span>FEDERAL</span>
-              </div>
-              <div ng-controller="OpenPueblaController" ng-click="openPuebla()" id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>PUEBLA</span>
-              </div>
-              <div ng-controller="OpenJaliscoController" ng-click="openJalisco()" id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>JALISCO</span>
-              </div>
-              <div ng-controller="OpenCDMXController" ng-click="openCDMX()" id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>CDMX</span>
-              </div>
-            </div>
-          </div>
-        </div>
-     </div>
-     <div flex-xs="30" flex-sm="25" flex-md="20" flex-gt-md="20" flex-lg="20" flex-gt-lg="20" flex-xl="20">
-      <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
-        <img id="icon-menu" src="../imgs/svg/logo_b.svg">
-       </md-button>
-       <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
-         <img id="icon-menu" src="../imgs/svg/menu.svg"  >
-       </md-button>
-       <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
-     </div>
-  </div>
-  <div id="slide-head-profile-dip" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-    <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
-    <div layout-xs="row" layout-sm="row">
-      <div flex-xs="20" flex-sm="20">
-      </div>
-      <div flex-xs="60" flex-sm="60">
-        <div layout-xs="row" layout-sm="row">
-          <div id="califichas-content-happy-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
-              <img src="../imgs/svg/cali_happy.svg">
-            </a>
-          </div>
-          <div id="califichas-content-sad-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
-              <img src="../imgs/svg/cali_sad.svg">
-            </a>
-          </div>
-          <div id="califichas-content-bad-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
-              <img src="../imgs/svg/cali_bad.svg">
-            </a>
-          </div>
-          <div ng-controller="OpenPerfilController" id="score-card-profile" style="text-align:center;" flex-xs="25" flex-sm="25">
-            <img ng-click="openPerfilPage(item.id)" src="../imgs/svg/score.svg">
-            <span ng-click="openPerfilPage(item.id)">100</span>
-          </div>
-        </div>
-      </div>
-      <div flex-xs="20" flex-sm="20">
-      </div>
-     </div>
-    <div layout-xs="row" layout-sm="row">
-      <div flex-xs="15" flex-sm="15">
-      </div>
-      <div flex-xs="70" flex-sm="70">
-        <div layout-xs="row" layout-sm="row">
-          <div id="image-card-profile" ng-controller="OpenPerfilController" flex-xs="60" flex-sm="60">
-            <img ng-click="openPerfilPage(item.id)" src="http://sil.gobernacion.gob.mx/Archivos/Fotos/9218979.jpg" class="md-avatar">
-          </div>
-          <div id="image-party-card-profile" flex-xs="20" flex-sm="20">
-              <img src="../imgs/svg/partys/pri.svg">
-          </div>
-          <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
-              <div style="text-align:right;" layout-xs="column" layout-sm="column">
-                <div id="facebook-card-profile">
-                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                      <img src="../imgs/svg/facebook_cards.svg">
-                    </a>
-                </div>
-                <div id="twitter-card-profile">
-                  <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                    <img src="../imgs/svg/twiter_cards.svg">
-                  </a>
-                </div>
-                <div id="mail-card-profile" >
-                  <a href="mailto:{{item.mail}}">
-                    <img src="../imgs/svg/mail_cards.svg">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div flex-xs="15" flex-sm="15">
-        </div>
-      </div>
-  </div>
-  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-    <div flex-xs="15" flex-sm="15">
-    </div>
-    <div ng-controller="OpenPanelScoreController" flex-xs="70" flex-sm="70">
-      <div layout-xs="row" layout-sm="row">
-         <div flex-xs="100" flex-sm="100">
-           <div layout-xs="column" layout-sm="column">
-             <div layout-xs="row" layout-sm="row">
-               <div flex-xs="85" flex-sm="85">
-                  <div id="text-chamber-card-profile" layout-xs="column" layout-sm="column">
-                    diputado
-                  </div>
-                  <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
-                  <span>  por: </span>
-                    Jalisco
-                  </div>
-                </div>
-                <div flex-xs="15" flex-sm="15">
-                  <img id="image-state-card-profile" src="../imgs/svg/states/jalisco.svg">
-                </div>
-              </div>
-            </div>
-            <div layout-xs="column" layout-sm="column">
-              <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
-                José Luis Orozco Sánchez Aldana
-              </div>
-              <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
-                Representación Proporcional
-              </div>
-              <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
-                Secretario
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div flex-xs="15" flex-sm="15">
-      </div>
-  </div>
-  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-    <div flex-xs="50" flex-sm="50">
-      <div id="w">
-          <canvas id="d1" height="400" width="400"></canvas>
-      </div>
-    </div>
-    <div flex-xs="50" flex-sm="50">
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-trabajo" layout-xs="row" layout-sm="row">
-          <div  flex-xs="20" flex-sm="20">
-            <span class="number">20%</span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Trabajo</span>
-          </div>
-        </div>
-      </div>
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-rol"  layout-xs="row" layout-sm="row">
-          <div flex-xs="20" flex-sm="20">
-            <span class="number">50%</span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Rol</span>
-          </div>
-        </div>
-      </div>
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-extra"  layout-xs="row" layout-sm="row">
-          <div flex-xs="20" flex-sm="20">
-            <span class="number">30%</span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Extra</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div  hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
-      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-        <div id="content-cards-profile" flex-gt-md="50" flex-md="50" flex-offset-lg="5" flex-lg="45" flex-xl="50">
-          <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-              <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-               <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-                   <div flex-gt-md="80" flex-md="80" flex-lg="80" flex-xl="80">
-                     <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-                       <div id="califichas-content-happy-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_happy.svg">
-                         </a>
-                       </div>
-                       <div id="califichas-content-sad-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_sad.svg">
-                         </a>
-                       </div>
-                       <div id="califichas-content-bad-profile"  flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_bad.svg">
-                         </a>
-                       </div>
-                       <div ng-controller="OpenPerfilController" id="score-card-profile" style="text-align:center;" flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
-                         <img ng-click="openPerfilPage(item.id)" src="../imgs/svg/score.svg">
-                         <span ng-click="openPerfilPage(item.id)">100</span>
-                       </div>
-                     </div>
-                    </div>
-                   <div flex-gt-md="20" flex-md="20" flex-lg="20"  flex-xl="20">
-                  </div>
-                </div>
-                <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-                  <div flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="35">
-                  </div>
-                  <div flex-gt-md="70" flex-md="70" flex-lg="70" flex-xl="65">
-                    <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-                      <div id="image-card-profile" ng-controller="OpenPerfilController" flex-md="60" flex-lg="60" flex-xl="60">
-                        <img ng-click="openPerfilPage(item.id)" src="http://sil.gobernacion.gob.mx/Archivos/Fotos/9218979.jpg" class="md-avatar">
-                      </div>
-                      <div id="image-party-card-profile" flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                          <img src="../imgs/svg/partys/pri.svg">
-                      </div>
-                      <div id="content-socials-card-profile" flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                          <div style="text-align:right;" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                            <div id="facebook-card-profile">
-                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                                  <img src="../imgs/svg/facebook_cards.svg">
-                                </a>
-                            </div>
-                            <div id="twitter-card-profile">
-                              <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                                <img src="../imgs/svg/twiter_cards.svg">
-                              </a>
-                            </div>
-                            <div id="mail-card-profile" >
-                              <a href="mailto:{{item.mail}}">
-                                <img src="../imgs/svg/mail_cards.svg">
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div flex-gt-md="15" flex-md="15" flex-lg="15" hide-xl>
-                    </div>
-                  </div>
-               </div>
-              </div>
-              <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-                <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                  <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-                    <div flex-gt-md="85" flex-md="85" flex-lg="85" flex-xl="85">
-                       <div id="text-chamber-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                         diputado
-                       </div>
-                       <div id="text-state-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                       <span>  por: </span>
-                         Jalisco
-                       </div>
-                     </div>
-                     <div flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="15">
-                       <img id="image-state-card-profile" src="../imgs/svg/states/jalisco.svg">
-                     </div>
-                   </div>
-                 </div>
-                 <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                   <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                     José Luis Orozco Sánchez Aldana
-                   </div>
-                   <div id="text-election-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                     Representación Proporcional
-                   </div>
-                   <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                     Secretario
-                   </div>
-                 </div>
-              </div>
-            </div>
-        </div>
-        <div id="content-cards-profile-graph" flex-gt-md="50" flex-md="50" lex-offset-lg="10" flex-lg="40" flex-xl="50">
-          <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-              <div id="w">
-                  <canvas id="d2" height="210" width="210"></canvas>
-              </div>
-            </div>
-            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-              <div layout-md="column" layout-lg="column" layout-xl="column">
-                <div id="style-trabajo" layout-lg="row" layout-md="row" layout-xl="row">
-                  <div  flex-lg="20" flex-md="20" flex-xl="20">
-                    <span class="number">20%</span>
-                  </div>
-                  <div flex-md="80" flex-lg="80" flex-xl="80">
-                    <span class="letter">Trabajo</span>
-                  </div>
-                </div>
-              </div>
-              <div layout-md="column" layout-lg="column" layout-xl="column">
-                <div id="style-rol"  layout-md="row" layout-lg="row" layout-xl="row">
-                  <div flex-md="20" flex-lg="20" flex-xl="20">
-                    <span class="number">50%</span>
-                  </div>
-                  <div flex-md="80" flex-lg="80" flex-xl="80">
-                    <span class="letter">Rol</span>
-                  </div>
-                </div>
-              </div>
-              <div layout-md="column" layout-lg="column" layout-xl="column">
-                <div id="style-extra"  layout-md="row" layout-lg="row" layout-xl="row">
-                  <div flex-md="20" flex-lg="20" flex-xl="20">
-                    <span class="number">30%</span>
-                  </div>
-                  <div flex-md="80" flex-lg="80" flex-xl="80">
-                    <span class="letter">Extra</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+@media only screen and (max-width: 2300px) {
+  #content-socials-card-profile {
+      text-align: center;
+      margin-left: -40px;
+      margin-top: 35px;
+    }
+}
 
-    <div hide-xs hide-sm layout-xl="column" layout-lg="column" layout-md="column" ng-controller="TabController">
-      	<div style="background:#343434;" layout-xl="row" layout-lg="row" layout-md="row">
-         <div flex-xl="15" flex-lg="10" flex-md="0" >
-         </div>
-         <div  flex-xl="70" flex-lg="80"  flex-md="100">
-            <div layout-xl="row" layout-lg="row" layout-md="row">
+@media only screen and (max-width: 1920px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
 
-              <div id="divtrabajo" style="color:#FFF;" ng-click="setTab(1)" flex-xl="33" flex-lg="33" flex-md="33" >
-                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(1) }">
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                      <img id="imageScoreTrabajo" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px;  font-size: 22px;">100</span>
-                    </div>
-                  </div>
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                      <img id="imageGlyphiTrabajo" style="margin-top:10px;" src="../imgs/svg/workwhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="text-transform:uppercase; margin-bottom:10px;">trabajo legislativo</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  #content-cards {
+    height: 210px;
+  }
 
-              <div id="divrol" style="color:#FFF;" ng-click="setTab(2)" flex-xl="33" flex-lg="33" flex-md="33">
-                <div layout-xl="row" layout-lg="row" layout-md="row"  ng-class="{ active: isSet(2) }">
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                      <img id="imageScoreRol" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px; font-size: 22px;">90</span>
-                    </div>
-                  </div>
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                      <img id="imageGlyphiRol" style="margin-top:10px;" src="../imgs/svg/rolwhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="text-transform:uppercase; margin-bottom:10px;">Rol Politico</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  #content-socials-card {
+    margin-left: 5px;
+    margin-top: 55px;
+  }
 
-              <div id="divextra" style="color:#FFF;" ng-click="setTab(3)" flex-xl="33" flex-lg="33" flex-md="33">
-                <div layout-xl="row" layout-lg="row" layout-md="row" ng-class="{ active: isSet(3) }">
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" style="z-index:1;">
-                      <img id="imageScoreExtra" style="margin-top:10px; margin-bottom:10px;" src="../imgs/svg/scorewhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style="margin-top: -60px; font-size: 22px;">90</span>
-                    </div>
-                  </div>
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:1;">
-                      <img id="imageGlyphiExtra" style="margin-top:10px;" src="../imgs/svg/extrawhite.svg">
-                    </div>
-                    <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                      <span style=" text-transform:uppercase; margin-bottom:10px;">extra legislativo</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  #score-card {
+    margin-top: 3px;
+    margin-left: -45px;
+  }
 
-            </div>
-         </div>
-         <div flex-xl="15" flex-lg="10"  flex-md="0">
-         </div>
-        </div>
-        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
-         <div flex-xl="15" flex-lg="10" flex-md="0">
-         </div>
-         <div id="contentIniciativasProfile" ng-controller="BarCtrlIniciativas" flex-xl="35" flex-lg="40" flex-md="50">
-           <div layout-xl="column" layout-lg="column" layout-md="column" id="barIniciativa">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="10" flex-lg="5" flex-md="0">
-               </div>
-               <div flex-xl="80" flex-lg="90" flex-md="100">
-                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-                 </canvas>
-                 <h1>Iniciativas</h1>
-               </div>
-               <div flex-xl="10" flex-lg="5" flex-md="0">
-               </div>
-             </div>
-           </div>
-           <div id="bodyIniciativas" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div id="imageIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <div id="valueIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     05
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     01
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     00
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     02
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     08
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     05
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div id="themeIniciativasTheme" flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Ambiente</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Cultura</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Gobierno</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Seguridad</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Economia</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Desarrollo</span>
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <md-content id="iniciativasTextContent">
-               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
-                 <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div id="iniciativasDivContent" flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span>{{item.body}}</span><br><br>
-                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             </md-content>
-           </div>
-         </div>
-         <div id="contentPuntosProfile" ng-controller="BarCtrlPuntos" flex-xl="35" flex-lg="40" flex-md="50">
-           <div layout-xl="column" layout-lg="column" layout-md="column" id="barPuntos">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="10" flex-lg="5" flex-md="0">
-               </div>
-               <div flex-xl="80" flex-lg="90" flex-md="100">
-                 <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-                 </canvas>
-                 <h1>P. de Acuerdo</h1>
-               </div>
-               <div flex-xl="10" flex-lg="5" flex-md="0">
-               </div>
-             </div>
-           </div>
-           <div id="bodyPuntos" ng-controller="PuntosController" layout-xl="column" layout-lg="column" layout-md="column">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div id="imagePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <div id="valuePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     05
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     01
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     00
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     02
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     08
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     05
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <div layout-xl="row" layout-lg="row" layout-md="row">
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div id="themePuntosTheme" flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Ambiente</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Cultura</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Gobierno</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Seguridad</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Economia</span>
-                   </div>
-                   <div flex-xl="15" flex-lg="15" flex-md="15">
-                     <span>Desarrollo</span>
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             <md-content id="PuntosTextContent">
-               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in puntos">
-                 <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-               <div id="PuntosDivContent" flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                   <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span>{{item.body}}</span><br><br>
-                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
-                   </div>
-                   <div flex-xl="5" flex-lg="5" flex-md="5">
-                   </div>
-                 </div>
-               </div>
-               <div flex-xl="5" flex-lg="5" flex-md="5">
-               </div>
-             </div>
-             </md-content>
-           </div>
-         </div>
-         <div flex-xl="15" flex-lg="10" flex-md="0">
-         </div>
-        </div>
-        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
-         <div flex-xl="15" flex-lg="10" flex-md="0">
-         </div>
-         <div id="contentRolProfile" ng-controller="BarCtrlRol"  flex-xl="70" flex-lg="80" flex-md="100">
-           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
-             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-             <div id="paddingRolProfile" flex-xl="33" flex-lg="33" flex-md="33">
-                <div layout-xl="row" layout-lg="row" layout-md="row">
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <div layout-xl="row" layout-lg="row" layout-md="row">
-                      <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
-                        <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <div layout-xl="row" layout-lg="row" layout-md="row">
-                            <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
-                                <img src="../imgs/svg/cali_happy.svg">
-                              </a>
-                            </div>
-                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              <span>25%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <div layout-xl="row" layout-lg="row" layout-md="row">
-                            <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
-                                <img src="../imgs/svg/cali_sad.svg">
-                              </a>
-                            </div>
-                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              <span>85%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <div layout-xl="row" layout-lg="row" layout-md="row">
-                            <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
-                                <img src="../imgs/svg/cali_bad.svg">
-                              </a>
-                            </div>
-                            <div style="margin-top: 35px;" flex-xl="50" flex-lg="50" flex-md"50">
-                              <span>85%</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div flex-xl="60" flex-lg="60" flex-md="60" style="border-left:1px solid #990000;">
-                        <div id="divScoreRol" layout-xl="column" layout-lg="column" layout-md="column">
-                          <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
-                        </div>
-                        <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                          <span class="valueScoreRol">100</span>
-                        </div>
-                        <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <span class="valueRankingRol">Ranking</span>
-                        </div>
-                        <div layout-xl="column" layout-lg="column" layout-md="column">
-                          <span class="scoreRol">Score</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div flex-xl="50" flex-lg="50" flex-md="50">
-                    <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
-                     </canvas>
-                  </div>
-                </div>
-                <div id="commissionsRolExtra" layout-xl="column" layout-lg="column" layout-md="column">
-                  <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
-                    <p>Comisiones Ordinarias</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Comisiones Especiales</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Comites</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Grupos de amistad</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                  </md-content>
-                </div>
-             </div>
-             <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-           </div>
-         </div>
-         <div flex-xl="15" flex-lg="10" flex-md="0">
-         </div>
-        </div>
-        <div style="text-align:center;" layout-xl="column" layout-lg="column" layout-md="column" ng-show="isSet(3)">
-          <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
-            <div flex-xl="15" flex-lg="10" flex-md="0">
-            </div>
-             <div ng-controller="BarCtrlRol" style="background:#FFC73F; padding-top:30px;" flex-xl="70" flex-lg="80" flex-md="100">
-               <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
-                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-                 <div style="" flex-xl="33" flex-lg="33" flex-md="33">
-                   <div layout-xl="row" layout-lg="row" layout-md="row">
-                     <div style="border-left:1px solid #990000; color:#990000; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
-                       <div layout-xl="column" layout-lg="column" layout-md="column">
-                         <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
-                       </div>
-                       <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                         <span style="text-align:center; margin-top:-30px;" >100</span>
-                       </div>
-                       <div style="text-align:left; border-top:1px solid #990000; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
-                         ranking
-                       </div>
-                       <div style="text-align:left; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
-                         Klout
-                       </div>
-                    </div>
-                    <div style="" flex-xl="50" flex-lg="50" flex-md="33">
-                      <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
-                      </canvas>
-                    </div>
-                    <div style="border-right:1px solid #FFF; color:#FFF; text-transform:uppercase; text-transform:uppercase; font-height:bold;" flex-xl="25" flex-lg="25" flex-md="33">
-                      <div layout-xl="column" layout-lg="column" layout-md="column">
-                        <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
-                      </div>
-                      <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                        <span style="text-align:center; margin-top:-30px;" >100</span>
-                      </div>
-                      <div style="border-top:1px solid #FFF; text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
-                        ranking
-                      </div>
-                      <div style="text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
-                        Noticias Google
-                      </div>
-                    </div>
-                   </div>
-                   <div style="color: #FFF; font-size: 35px; text-align: left; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
-                     Noticias en medios
-                   </div>
-                 </div>
-                 <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-               </div>
-             </div>
-             <div flex-xl="15" flex-lg="10" flex-md="0">
-             </div>
-           </div>
-           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
-             <div flex-xl="15" flex-lg="10" flex-md="0">
-             </div>
-              <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xl="70" flex-lg="80" flex-md="100">
-                <div  layout-xl="row" layout-lg="row" layout-md="row">
-                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-                  <div style="" flex-xl="33" flex-lg="33" flex-md="33">
-                    <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
-                      <div style="background:transparent;" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
-                        <div layout-xl="row" layout-lg="row" layout-md="row">
-                          <div flex-xl="100" flex-lg="100" flex-md="100">
-                            <div id="divImagesThemesNoticias" style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                              </div>
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
-                          <div flex-xl="100" flex-lg="100" flex-md="100">
-                            <div layout-xl="row" layout-lg="row" layout-md="row">
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                05
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                01
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                00
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                02
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                08
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                05
-                              </div>
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div layout-xl="row" layout-lg="row" layout-md="row">
-                          <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;"flex-xl="100" flex-lg="100" flex-md="100">
-                            <div layout-xl="row" layout-lg="row" layout-md="row">
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Ambiente</span>
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Cultura</span>
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Gobierno</span>
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Seguridad</span>
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Economia</span>
-                              </div>
-                              <div flex-xl="15" flex-lg="15" flex-md="15">
-                                <span>Desarrollo</span>
-                              </div>
-                              <div flex-xl="5" flex-lg="5" flex-md="5">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <md-content style="background:transparent; height:550px; margin-top:30px;">
-                          <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
-                          <div id="NoticiasDivContent" flex-xl="100" flex-lg="100" flex-md="100">
-                            <div layout-xl="row" layout-lg="row" layout-md="row">
-                              <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xl="100" flex-lg="100" flex-md="100">
-                                 <span>{{item.body}}</span><br><br>
-                                  <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        </md-content>
-                      </div>
-                    </div>
-                  </div>
-                  <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
-                </div>
-              </div>
-              <div flex-xl="15" flex-lg="10" flex-md="0">
-              </div>
-            </div>
-        </div>
-      </div>
-    			<!-- <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)">
-            <h1>Profile page</h1>
-            <p>Profile information</p>
-         	</div>
-          <div layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(3)">
-            <h1>Messages</h1>
-            <p> Some messages </p>
-         	</div> -->
-     </div>
+  #score-card img{
+    margin-top: -3px;
+    width: 70px;
+    margin-left: 35px;
+  }
 
-    <div hide-lg hide-md hide-xl  ng-controller="acorTrabajo" class="toolbardemoBasicUsage">
-    	<md-content>
-    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = false" ng-click="collapseAll(data)">
-    				<div class="md-toolbar-tools">
-              <div ng-if="data.expanded == true">
-                <img id="imageScoreAccordion" src="{{data.srcno}}">
-              </div>
-              <div ng-if="data.expanded == false">
-                <img id="imageScoreAccordion" src="{{data.src}}">
-              </div>
-                <span id="valueScoreAccordion">{{data.value}}</span>
-    					<h2>
-    						<span id="titleScoreAccordion">{{data.heading}}</span>
-    					</h2>
-    					<span flex=""></span>
-    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
-    				</div>
-    			</md-toolbar>
-    			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
-              <div layout-sm="row" layout-xs="row">
-                <div id="contentGraphsIniciativas" flex-sm="100" flex-xs="100">
-                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-                  </canvas>
-                  <h1>Iniciativas</h1>
-                </div>
-              </div>
-              <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
-                <div layout-sm="row" layout-xs="row">
-                  <div flex-sm="100" flex-xs="100">
-                    <div id="imageIniciativasThemeMobile" layout-sm="row" layout-xs="row">
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                      </div>
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
-                  <div flex-sm="100" flex-xs="100">
-                    <div layout-sm="row" layout-xs="row" >
-                      <div flex-sm="5" flex-xs="5" >
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        05
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        01
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        00
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        02
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        08
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        05
-                      </div>
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
-                  <div  flex-xs="100" flex-sm="100">
-                    <div layout-xs="row" layout-sm="row">
-                      <div flex-xs="5" flex-sm="5">
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Ambiente</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Cultura</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Gobierno</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Seguridad</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Economia</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Desarrollo</span>
-                      </div>
-                      <div flex-xs="5" flex-sm="5">
-                      </div>
-                    </div>
-                    <md-content id="iniciativasTextContentMobile">
-                      <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
-                      <div id="iniciativasDivContentMobile" flex-xs="100" flex-sm="100" >
-                        <div layout-xs="row" layout-sm="row">
-                          <div flex-xs="5" flex-sm="5" >
-                          </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
-                             <span>{{item.body}}</span><br><br>
-                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
-                          </div>
-                          <div flex-xs="5" flex-sm="5">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </md-content>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barPuntosMobile">
-              <div layout-sm="row" layout-xs="row">
-                <div id="contentGraphsPoints" flex-sm="100" flex-xs="100">
-                  <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-                  </canvas>
-                  <h1>P. de Acuerdo</h1>
-                </div>
-              </div>
-              <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
-                <div layout-sm="row" layout-xs="row">
-                  <div flex-sm="100" flex-xs="100">
-                    <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/ambientecolor.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/culturacolor.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/gobiernocolor.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/seguridadcolor.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/economiacolor.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        <img onmouseover="this.src='../imgs/svg/desarrollocolor.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                      </div>
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
-                  <div flex-sm="100" flex-xs="100">
-                    <div layout-sm="row" layout-xs="row" >
-                      <div flex-sm="5" flex-xs="5" >
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        05
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        01
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        00
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        02
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        08
-                      </div>
-                      <div flex-sm="15" flex-xs="15">
-                        05
-                      </div>
-                      <div flex-sm="5" flex-xs="5">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
-                  <div  flex-xs="100" flex-sm="100">
-                    <div layout-xs="row" layout-sm="row">
-                      <div flex-xs="5" flex-sm="5">
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Ambiente</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Cultura</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Gobierno</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Seguridad</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Economia</span>
-                      </div>
-                      <div flex-xs="15" flex-sm="15">
-                        <span>Desarrollo</span>
-                      </div>
-                      <div flex-xs="5" flex-sm="5">
-                      </div>
-                    </div>
-                    <md-content id="puntosTextContentMobile">
-                      <div layout-xs="row" layout-sm="row" ng-repeat="item in puntos">
-                      <div id="puntosDivContentMobile" flex-xs="100" flex-sm="100" >
-                        <div layout-xs="row" layout-sm="row">
-                          <div flex-xs="5" flex-sm="5" >
-                          </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-bottom:10px;" flex-xs="90" flex-sm="90">
-                             <span>{{item.body}}</span><br><br>
-                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
-                          </div>
-                          <div flex-xs="5" flex-sm="5">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </md-content>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-    		</div>
-    	</md-content>
-    </div>
+  #score-card span{
+    margin-top: -45px;
+    font-size: 20px;
+    margin-left: 34.5px;
+  }
 
-    <div hide-lg hide-md hide-xl  ng-controller="acorRol" class="toolbardemoBasicUsage">
-      <md-content>
-    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headRol" ng-init="data.expanded = false" ng-click="collapseAll(data)">
-    				<div class="md-toolbar-tools">
-              <div ng-if="data.expanded == true">
-                <img id="imageScoreAccordion" src="{{data.srcno}}">
-              </div>
-              <div ng-if="data.expanded == false">
-                <img id="imageScoreAccordion" src="{{data.src}}">
-              </div>
-                <span id="valueScoreAccordion">{{data.value}}</span>
-    					<h2>
-    						<span id="titleScoreAccordion">{{data.heading}}</span>
-    					</h2>
-    					<span flex=""></span>
-    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
-    				</div>
-    			</md-toolbar>
-    			<div style="background:#FF974C;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div layout-xs="column" layout-sm="column" >
-              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-              <div id="contentRolProfile" ng-controller="BarCtrlRol" flex-xs="100" flex-sm="100">
-                <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-                  <div id="paddingRolProfile"  flex-xs="100" flex-sm="100">
-                     <div layout-xs="row" layout-sm="row">
-                       <div flex-xs="50" flex-sm="50" >
-                         <div layout-xs="row" layout-sm="row" >
-                           <div id="columnRolProfile" style="-webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));" flex-xl="40" flex-lg="40" flex-md="40">
-                             <div layout-xs="column" layout-sm="column" >
-                               <div layout-xs="row" layout-sm="row" >
-                                 <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
-                                     <img src="../imgs/svg/cali_happy.svg">
-                                   </a>
-                                 </div>
-                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
-                                   <span>25%</span>
-                                 </div>
-                               </div>
-                             </div>
-                             <div layout-xs="column" layout-sm="column" >
-                               <div layout-xs="row" layout-sm="row">
-                                 <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
-                                     <img src="../imgs/svg/cali_sad.svg">
-                                   </a>
-                                 </div>
-                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
-                                   <span>85%</span>
-                                 </div>
-                               </div>
-                             </div>
-                             <div layout-xs="column" layout-sm="column">
-                               <div layout-xs="row" layout-sm="row" >
-                                 <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
-                                     <img src="../imgs/svg/cali_bad.svg">
-                                   </a>
-                                 </div>
-                                 <div style="margin-top: 35px;" flex-xs="50" flex-sm="50">
-                                   <span>85%</span>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                           <div flex-xs="60" flex-sm="60"  style="border-left:1px solid #990000;">
-                             <div id="divScoreRol" layout-xs="column" layout-sm="column" >
-                               <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
-                             </div>
-                             <div layout-xs="column" layout-md="column" style="z-index:2;">
-                               <span class="valueScoreRol">100</span>
-                             </div>
-                             <div  layout-xs="column" layout-sm="column">
-                               <span class="valueRankingRol">Ranking</span>
-                             </div>
-                             <div  layout-xs="column" layout-sm="column">
-                               <span class="scoreRol">Score</span>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                       <div flex-xs="50" flex-sm="50" >
-                         <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
-                          </canvas>
-                       </div>
-                     </div>
-                     <div id="commissionsRolExtra" layout-xs="column" layout-sm="column">
-                       <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
-                         <p>Comisiones Ordinarias</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Comisiones Especiales</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Comites</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Grupos de amistad</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                       </md-content>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-    		</div>
-    	</md-content>
-    </div>
+  #score-card p{
+    margin-top: -45px;
+    font-size: 20px;
+    margin-left: 50px;
+  }
 
-    <div hide-lg hide-md hide-xl  ng-controller="acorExtra" class="toolbardemoBasicUsage">
-      <md-content>
-    		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headExtra" ng-init="data.expanded = true" ng-click="collapseAll(data)">
-    				<div class="md-toolbar-tools">
-              <div ng-if="data.expanded == true">
-                <img id="imageScoreAccordion" src="{{data.srcno}}">
-              </div>
-              <div ng-if="data.expanded == false">
-                <img id="imageScoreAccordion" src="{{data.src}}">
-              </div>
-                <span id="valueScoreAccordion">{{data.value}}</span>
-    					<h2>
-    						<span id="titleScoreAccordion">{{data.heading}}</span>
-    					</h2>
-    					<span flex=""></span>
-    					<span ng-class="{expandCollapse:true, active:data.expanded}"></span>
-    				</div>
-    			</md-toolbar>
-    			<div style="background:#FFC73F;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div  ng-controller="BarCtrlRol"  layout-xs="column" layout-sm="column" >
-              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-                <div flex-sm="100" flex-xs="100">
-                  <div ayout-sm="row" layout-xs="row">
-                    <div id="LeftScoreExtra" flex-xs="25" flex-sm="25">
-                      <div layout-xs="column" layout-sm="column">
-                        <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
-                      </div>
-                      <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                        <span style="text-align:center; margin-top:-30px;" >100</span>
-                      </div>
-                      <div class="classRanking"  layout-xs="column" layout-sm="column">
-                        ranking
-                      </div>
-                      <div class="classKlout"  layout-xs="column" layout-sm="column">
-                        Klout
-                      </div>
-                   </div>
-                   <div style="" flex-xs="50" flex-sm="50">
-                     <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
-                     </canvas>
-                   </div>
-                   <div id="rightScoreExtra" style="" flex-xs="25" flex-sm="25" >
-                     <div layout-xs="column" layout-sm="column">
-                       <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
-                     </div>
-                     <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                       <span style="text-align:center; margin-top:-30px;" >100</span>
-                     </div>
-                     <div style="" layout-xs="column" layout-sm="column">
-                       <span class="classRanking">ranking</span>
-                     </div>
-                     <div style="text-align:right; font-size:17px;"  layout-xs="column" layout-sm="column">
-                       <span  class="classNews">Noticias Google</span>
-                     </div>
-                   </div>
-                  </div>
-                  <div  id="titleNewsAccordion" flex-xs="column" flex-sm="column">
-                    <span style="color: #FFF;">Noticias en medios</span>
-                  </div>
-                </div>
-              </div>
-              <div style="text-align:center;" layout-xs="row" layout-sm="row" >
+  #text-chamber-card{
+    font-size: 25px;
+    margin-right: 50px;
+  }
 
-                 <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xs="100" flex-sm="100">
-                   <div  layout-xs="row" layout-sm="row">
-                     <div style="" flex-xs="100" flex-sm="100">
-                       <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xs="column" flex-sm="column">
-                         <div style="background:transparent;" ng-controller="IniciativasController" layout-xs="column" layout-sm="column">
-                           <div layout-xs="row" layout-sm="row">
-                             <div flex-xs="100" flex-sm="100">
-                               <div id="divImagesThemesNoticias" style="background:transparent;" layout-xs="row" layout-sm="row">
-                                 <div flex-xs="5" flex-sm="5" >
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/ambientecoloryellow.svg'" onmouseout="this.src='../imgs/svg/ambiente.svg'" src="../imgs/svg/ambiente.svg">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/culturacoloryellow.svg'" onmouseout="this.src='../imgs/svg/cultura.svg'" src="../imgs/svg/cultura.svg">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/gobiernocoloryellow.svg'" onmouseout="this.src='../imgs/svg/gobierno.svg'" src="../imgs/svg/gobierno.svg">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/seguridadcoloryellow.svg'" onmouseout="this.src='../imgs/svg/seguridad.svg'" src="../imgs/svg/seguridad.svg">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/economiacoloryellow.svg'" onmouseout="this.src='../imgs/svg/economia.svg'" src="../imgs/svg/economia.svg">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   <img onmouseover="this.src='../imgs/svg/desarrollocoloryellow.svg'" onmouseout="this.src='../imgs/svg/desarrollo.svg'" src="../imgs/svg/desarrollo.svg">
-                                 </div>
-                                 <div flex-xs="5" flex-sm="5" >
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                           <div style="background:transparent;" layout-xs="row" layout-sm="row" >
-                             <div flex-xs="100" flex-sm="100">
-                               <div layout-xs="row" layout-sm="row">
-                                 <div flex-xs="5" flex-sm="5" >
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   05
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   01
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   00
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15" >
-                                   02
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   08
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   05
-                                 </div>
-                                 <div flex-xs="5" flex-sm="5" >
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                           <div layout-xs="row" layout-sm="row" >
-                             <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;" flex-xs="100" flex-sm="100">
-                               <div layout-xs="row" layout-sm="row">
-                                 <div flex-xs="5" flex-sm="5">
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Ambiente</span>
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Cultura</span>
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Gobierno</span>
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Seguridad</span>
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Economia</span>
-                                 </div>
-                                 <div flex-xs="15" flex-sm="15">
-                                   <span>Desarrollo</span>
-                                 </div>
-                                 <div flex-xs="5" flex-sm="5">
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                           <md-content id="contentNoticias" >
-                             <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
-                               <div flex-xs="5" flex-sm="5">
-                               </div>
-                             <div id="NoticiasDivContent" flex-xs="90" flex-sm="90">
-                               <div layout-xs="row" layout-sm="row">
-                                 <div id="NoticiasDivContent" style=" border-bottom: 3px solid #FFC37F;" flex-xs="100" flex-sm="100">
-                                    <span>{{item.body}}</span><br><br>
-                                     <a style="color:#FFC37F;" href="{{item.src}}" target="_blank">Documento adjunto</a>
-                                 </div>
-                               </div>
-                             </div>
-                             <div flex-xs="5" flex-sm="5">
-                             </div>
-                           </div>
-                           </md-content>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
+  #text-state-card{
+    font-size: 16px;
+    margin-right: 50px;
+  }
 
-               </div>
-            </div>
-          </div>
-    		</div>
-    	</md-content>
-    </div>
+  #text-state-card span{
+    font-size: 13px;
+  }
 
-    <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
-        <!--panel section head-->
-        <md-toolbar flex="row"  id="nav-menu-index" >
-          <div>
-            <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
-            <span flex id="text-site-panel-menu">Menú Principal</span>
-              <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
-                <img id="icon-close" src="../imgs/svg/close.svg">
-              </md-button>
-          </div>
-        </md-toolbar>
-        <!--panel section content-->
-        <md-content ng-controller="RightCtrl" layout-padding="">
-          <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
-          <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-            <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
-              <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-              <div class="md-list-item-text" layout="column">
-                <span class="links-panel">{{ item.who }}</span>
-              </div>
-            </md-list-item>
-          </md-list>
-          <md-divider ></md-divider>
-          <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
-          <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-            <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
-              <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-              <div class="md-list-item-text" layout="column">
-                <span class="links-panel">{{ item.who }}</span>
-              </div>
-            </md-list-item>
-          </md-list>
-          <md-divider></md-divider>
-          <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
-          <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
-            <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
-              <img id="icon-panel" ng-src="../{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
-              <div class="md-list-item-text" layout="column">
-                <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
-              </div>
-            </md-list-item>
-          </md-list>
-          <!-- class="fabSpeedDialdemoBasicUsage" -->
-          <div style="text-align:center;" ng-cloak=""  >
-            <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-              <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
-              <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
-            </md-button>
-            <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-              <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
-              <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
-            </md-button>
-            <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-              <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
-              <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
-                <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
-              </a>
-            </md-button>
-          </div>
-        </md-content>
-    </md-sidenav>
+  #image-card img{
+    width: 150px;
+    height: 150px;
+    margin-top: -30px;
+    margin-left: 1px;
+  }
+
+  #image-party-card img{
+    width: 50px;
+    margin-left: 0px;
+    margin-top: 70px;
+  }
+
+  #image-state-card {
+    width: 50px;
+    height: 60px;
+    margin-left: -35px;
+    margin-top: 11px;
+  }
+
+  #facebook-card img{
+    width: 40px;
+  }
+
+  #twitter-card img{
+    width: 40px;
+  }
+
+  #mail-card img{
+    width: 40px;
+  }
+
+  #text-name-card{
+    font-size: 16px;
+    margin-left: -15px;
+  }
+
+  #text-election-card{
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+  #text-commission-card{
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 45px;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-left: 90px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 45px;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 45px;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -40px;
+    margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: 33px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 100px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -67px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -31px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 25px;
+    margin-top: 94px;
+    margin-right: 26px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 15px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 200px;
+    height: 200px;
+    margin-top: -29px;
+    margin-left: -25px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 80px;
+    margin-left: -60px;
+    margin-top: 97px;
+  }
+
+  #image-state-card-profile {
+    width: 90px;
+    height: 90px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 45px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 15px;
+    width: 45px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 15px;
+    width: 45px;
+  }
+
+  #text-name-card-profile{
+    font-size: 21px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 16px;
+    margin-top: 3px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 100px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: -100px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: -100px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: -100px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:-35px;
+  }
+
+  #style-rol .letter{
+    margin-left:-35px;
+  }
+
+  #style-extra .letter{
+    margin-left:-35px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 110px;
+  }
+
+}
+
+@media only screen and (max-width: 1919px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #score-card {
+    margin-top: 20px;
+    margin-left: -68px;
+  }
+
+  #score-card img{
+    margin-top: -3px;
+    width: 80px;
+    margin-left: 20px;
+  }
+
+  #score-card span{
+    margin-top: -55px;
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+  #score-card p{
+    margin-top: -56px;
+    font-size: 30px;
+    margin-left: 32px;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    margin-right: 30px;
+  }
+
+  #text-state-card{
+    font-size: 16px;
+    margin-right: 30px;
+  }
+
+  #text-state-card span{
+    font-size: 13px;
+  }
+
+  #image-card img{
+    width: 145px;
+    height: 145px;
+    margin-top: -60px;
+    margin-left: 21px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -30px;
+    margin-top: 30px;
+  }
+
+  #image-state-card {
+    width: 40px;
+    margin-left: -10px;
+    margin-top: 5px;
+  }
+
+  #facebook-card img{
+    width: 30px;
+  }
+
+  #twitter-card img{
+    width: 30px;
+  }
+
+  #mail-card img{
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 15px;
+    margin-left: -15px;
+  }
+
+  #text-election-card{
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+  #text-commission-card{
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+  #content-socials-card {
+    text-align: center;
+    margin-left: -35px;
+    margin-top: 75px;
+  }
 
 
+  /**
+      PROFILES
+  */
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -30px;
+    z-index: 2;
+  }
+
+  #style-trabajo .letter{
+    margin-left:5px;
+  }
+
+  #style-rol .letter{
+    margin-left:5px;
+  }
+
+  #style-extra .letter{
+    margin-left:5px;
+  }
+
+  #style-trabajo{
+    margin-left: 0px;
+  }
+
+  #style-rol{
+    margin-left: 0px;
+  }
+
+  #style-extra{
+    margin-left: 0px;
+  }
+
+  .image-card-profile img {
+    width: 210px;
+    height: 210px;
+    margin-top: -35px;
+    margin-left: -25px;
+    border-radius: 50%;
+  }
+
+  #califichas-content-happy-profile img{
+    margin-left: 0px;
+  }
+
+  #califichas-content-sad-profile img{
+    margin-left: 0px;
+  }
+
+  #califichas-content-bad-profile img{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  #content-cards {
+    height: 246px;
+  }
+
+  #image-card img {
+    margin-left: 7px;
+  }
+
+  #score-card {
+    margin-top: 35px;
+    margin-left: -85px;
+    z-index: 2;
+  }
+
+  #image-party-card img {
+    width: 50px;
+    margin-left: -32px;
+    margin-top: 60px;
+  }
+
+  #content-socials-card {
+    text-align: center;
+    margin-left: -70px;
+    margin-top: 100px;
+  }
+
+  #text-name-card {
+    font-size: 15px;
+    margin-left: -5px;
+  }
+
+  #text-election-card{
+    margin-left: -5px;
+  }
+
+  #text-commission-card{
+    margin-left: -5px;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+      margin-left: 11px;
+      margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -27px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 80px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -60px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -32px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 75px;
+    margin-right: 26px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: -39px;
+    margin-left: -20px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 70px;
+    margin-left: -61px;
+    margin-top: 75px;
+  }
+
+  #image-state-card-profile {
+    width: 60px;
+    height: 60px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 40px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card-profile{
+    font-size: 21px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 14px;
+    margin-top: 3px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 55px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:15px;
+  }
+
+  #style-rol .letter{
+    margin-left:15px;
+  }
+
+  #style-extra .letter{
+    margin-left:15px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 110px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #content-cards{
+    padding: 5px;
+    height: 210px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -35px;
+    margin-top: 70px;
+  }
+
+  #score-card {
+    margin-top: 25px;
+    width: 55px;
+    margin-left: -50px;
+    z-index: 2;
+  }
+
+  #score-card img{
+    margin-top: -19px;
+    width: 70px;
+    margin-left: 35px;
+  }
+
+  #score-card span{
+    margin-top: -47px;
+    position: absolute;
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-left: 22px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 22px;
+    margin-top: 7px;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card{
+    font-size: 14px;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card span{
+    font-size: 11px;
+    /*margin-top: 2px;*/
+    text-align: right;
+    color: #BBB;
+  }
+
+  #image-card img{
+    /* width: 110px; */
+    /* height: 110px; */
+    margin-top: -35px;
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+
+  #image-party-card img{
+    width: 50px;
+    margin-left: -15px;
+    margin-top: 65px;
+  }
+
+  #image-state-card {
+    width: 45px;
+    height: 50px;
+    margin-left: -8px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #text-name-card{
+    font-size: 15px;
+    margin-top: 3px;
+    color: #EE4656;
+    margin-left: 6px;
+    text-align: left;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    color: #BBB;
+    text-align: left;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 170px;
+    color:#FFF;
+  }
+
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color:#FFF;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+      margin-left: 11px;
+      margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -4px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 80px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -60px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -27px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 75px;
+    margin-right: 26px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: -39px;
+    margin-left: -20px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -30px;
+    margin-top: 88px;
+  }
+
+  #image-state-card-profile {
+    width: 60px;
+    height: 60px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 40px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card-profile{
+    font-size: 21px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 14px;
+    margin-top: 3px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 55px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:25px;
+  }
+
+  #style-rol .letter{
+    margin-left:25px;
+  }
+
+  #style-extra .letter{
+    margin-left:25px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 110px;
+  }
 
 
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-  <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" charset="utf-8"></script>
-  <script src="../js/app.js"></script>
-  <script src="../js/methods_nav.js"></script>
-  <script src="../js/external_windows.js"></script>
-  <script src="../js/methods_panel.js"></script>
-  <script src="../js/accordion.js"></script>
-  <!-- <script src="../js/loader.js"></script> -->
-  <script src="../js/graphs.js"></script>
-  <script src="../js/iniciativas.js"></script>
-  <script src="../js/puntos.js"></script>
-  <script src="../js/rol.js"></script>
-  <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-  <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
-</body>
-</html>
+}
+
+@media only screen and (max-width: 1366px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #content-cards{
+    padding:5px;
+    height: 210px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -30px;
+    margin-top: 65px;
+  }
+
+  #score-card {
+    margin-top: 25px;
+    width: 50px;
+    margin-left: -55px;
+    z-index: 2;
+  }
+
+  #score-card img{
+    margin-top: -3px;
+    width: 52px;
+    margin-left: 35px;
+  }
+
+  #score-card span{
+    margin-top: -36px;
+    position: absolute;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 22px;
+    margin-top: 7px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card span{
+    font-size: 11px;
+    /*margin-top: 2px;*/
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #image-card img{
+    /* width: 110px; */
+    /* height: 110px; */
+    margin-top: -34px;
+    margin-left: 3px;
+    border-radius: 50%;
+  }
+
+  #image-party-card img{
+    width: 45px;
+    margin-left: -5px;
+    margin-top: 65px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 35px;
+  }
+
+  #text-name-card{
+    font-size: 13px;
+    margin-top: 3px;
+    text-align: left;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    text-align: left;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+      margin-left: 11px;
+      margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -4px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 80px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -60px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -20px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 75px;
+    margin-right: 26px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: -38px;
+    margin-left: -37px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -30px;
+    margin-top: 85px;
+  }
+
+  #image-state-card-profile {
+    width: 60px;
+    height: 60px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 40px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card-profile{
+    font-size: 21px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 14px;
+    margin-top: 3px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 55px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:15px;
+  }
+
+  #style-rol .letter{
+    margin-left:15px;
+  }
+
+  #style-extra .letter{
+    margin-left:15px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 110px;
+  }
+
+}
+
+@media only screen and (max-width: 1280px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #content-cards{
+    padding:5px;
+    height: 200px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #score-card {
+    margin-top: 30px;
+    width: 50px;
+    margin-left: -50px;
+    z-index: 2;
+  }
+
+  #score-card img{
+    margin-top: -3px;
+    width: 52px;
+    margin-left: 35px;
+  }
+
+  #score-card span{
+    margin-top: -36px;
+    position: absolute;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-left: 22px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 22px;
+    margin-top: 7px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    /*margin-top: 2px;*/
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #image-card img{
+    width: 135px;
+    height: 135px;
+    margin-top: -35px;
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+
+  #image-party-card img{
+    width: 45px;
+    margin-left: -5px;
+    margin-top: 65px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: -12px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #content-cards{
+    padding: 5px;
+    height: 220px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: 28px;
+    margin-top: -5px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+    z-index: 2;
+  }
+
+  #score-card img{
+    margin-top: -3px;
+    width: 52px;
+    margin-left: 35px;
+  }
+
+  #score-card span{
+    margin-top: -36px;
+    position: absolute;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 22px;
+    margin-top: 7px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    /*margin-top: 2px;*/
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #image-card img{
+    width: 120px;
+    height: 120px;
+    margin-top: -20px;
+    margin-left: -3px;
+    border-radius: 50%;
+  }
+
+  #image-party-card img{
+    width: 45px;
+    margin-left: 7px;
+    margin-top: 72px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 15px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: right;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    color: #BBB;
+    text-align: right;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: right;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 170px;
+    color:#FFF;
+  }
+
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color:#FFF;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+      margin-left: 11px;
+      margin-top: 35px;
+  }
+
+  #score-card-profile {
+    margin-top: -12px;
+    margin-left: -4px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 50px;
+    width: 80px;
+    margin-left: -5px;
+  }
+
+  #score-card-profile span{
+    margin-top: -60px;
+    position: absolute;
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: -20px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 75px;
+    margin-right: 85px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 36px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: -38px;
+    margin-left: -37px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -30px;
+    margin-top: 85px;
+  }
+
+  #image-state-card-profile {
+    width: 60px;
+    height: 60px;
+    margin-left: -31px;
+    margin-top: 75px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 40px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 40px;
+  }
+
+  #text-name-card-profile{
+    font-size: 17px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-election-card-profile{
+    font-size: 13px;
+    margin-top: 3px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 13px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 55px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:35px;
+  }
+
+  #style-rol .letter{
+    margin-left:35px;
+  }
+
+  #style-extra .letter{
+    margin-left:35px;
+  }
+
+  #content-cards-profile{
+    margin-top:60px;
+    height:275px;
+    padding:20px;
+  }
+
+  #content-cards-profile-graph{
+    padding-top:125px;
+    padding-left: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 959px) {
+
+  #slide-head-profile-dip {
+    min-height: 500px;
+    background-size: 100% 575px;
+  }
+
+  #califichas-content-happy-profile img {
+    width: 50px;
+    margin-top: 90px;
+    margin-left: 60px;
+  }
+
+  #califichas-content-sad-profile img {
+    width: 50px;
+    margin-top: 90px;
+  }
+
+  #califichas-content-bad-profile img {
+    width: 50px;
+    margin-top: 90px;
+    margin-left: -60px;
+  }
+
+  .image-card-profile img {
+    margin-top: 72px;
+    margin-left: 220px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #tabs-responsive {
+    min-height: 734px;
+  }
+
+  #content-cards{
+    padding:5px;
+  }
+
+  #califichas-content-happy img{
+    width: 35px;
+    margin-top: -10px;
+    margin-left: 108px;
+  }
+
+  #califichas-content-sad img{
+    width: 35px;
+    margin-top: -10px;
+    margin-left: 55px;
+  }
+
+  #califichas-content-bad img{
+    width: 35px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -90px;
+    margin-top: 5px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+  }
+
+  #score-card img{
+    margin-top: -25px;
+    width: 85px;
+    margin-left: -35px;
+
+  }
+
+  #score-card span{
+    margin-top: 2px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: -65px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card{
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+  }
+
+  #image-card img{
+    width: 185px;
+    height: 200px;
+    margin-top: -38px;
+    margin-left: 155px;
+    border-radius: 50%;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -5px;
+    margin-top: 100px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 17px;
+    margin-top: 3px;
+    color: #EE4656;
+    text-align: right;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    color: #BBB;
+    text-align: right;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    color: #BBB;
+    text-align: right;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 170px;
+    color:#FFF;
+  }
+
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color:#FFF;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: 53px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: -15px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: -83px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -135px;
+    margin-top: 105px;
+  }
+
+  #score-card-profile {
+    margin-top: 50px;
+    margin-left: -90px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 85px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: 50px;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: -75px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 100px;
+    margin-right: 85px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 84px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 160px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -27px;
+    margin-top: 153px;
+  }
+
+  #image-state-card-profile {
+    width: 50px;
+    height: 50px;
+    margin-left: -80px;
+    margin-top: 100px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 19px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-election-card-profile{
+    font-size: 15px;
+    margin-top: 3px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 76px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 76px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 7PX;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:-20px;
+  }
+
+  #style-rol .letter{
+    margin-left:-20px;
+  }
+
+  #style-extra .letter{
+    margin-left:-20px;
+  }
+  /******/
+
+}
+
+@media only screen and (max-width: 736px) {
+  #tabs-responsive {
+    min-height: 615px;
+  }
+
+  #content-cards{
+    padding:5px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 108px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 55px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -90px;
+    margin-top: 5px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+  }
+
+  #score-card img{
+    margin-top: -25px;
+    width: 85px;
+    margin-left: -35px;
+  }
+
+  #score-card span{
+    margin-top: 2px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: -62px;
+    font-weight: bold;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  #text-state-card{
+    font-size: 17px;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #image-card img{
+    width: 185px;
+    height: 200px;
+    margin-top: -45px;
+    margin-left: 155px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -5px;
+    margin-top: 100px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 17px;
+    margin-top: 3px;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    text-align: right;
+  }
+
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    text-align: right;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 170px;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: 53px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: -15px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: -83px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -135px;
+    margin-top: 105px;
+  }
+
+  #score-card-profile {
+    margin-top: 50px;
+    margin-left: -90px;
+    z-index: 2;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 85px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: 50px;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: -75px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 100px;
+    margin-right: 85px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 84px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 170px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 160px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -27px;
+    margin-top: 153px;
+  }
+
+  #image-state-card-profile {
+    width: 50px;
+    height: 50px;
+    margin-left: -80px;
+    margin-top: 100px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 16px;
+    margin-top: 3px;
+    text-align: center;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-election-card-profile{
+    font-size: 12px;
+    margin-top: 3px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 88px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 88px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:-15px;
+  }
+
+  #style-rol .letter{
+    margin-left:-15px;
+  }
+
+  #style-extra .letter{
+    margin-left:-15px;
+  }
+  /******/
+
+}
+
+@media only screen and (max-width: 667px) {
+
+  #tabs-responsive {
+    min-height: 615px;
+  }
+
+  #content-cards{
+    padding:5px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 108px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 55px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -70px;
+    margin-top: 5px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+  }
+
+  #score-card img{
+    margin-top: -25px;
+    width: 85px;
+    margin-left: 5px;
+  }
+
+  #score-card span{
+    margin-top: 2px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: -62px;
+    font-weight: bold;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  #text-state-card{
+    font-size: 17px;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #image-card img{
+    width: 185px;
+    height: 200px;
+    margin-top: -50px;
+    margin-left: 135px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -5px;
+    margin-top: 100px;
+  }
+
+  #image-state-card {
+    width: 46px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 17px;
+    margin-top: 3px;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    text-align: right;
+  }
+
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    padding-bottom: 5px;
+    text-align: right;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 145px;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: 35px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 65px;
+    margin-left: -36px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -110px;
+    margin-top: 87px;
+  }
+
+  #score-card-profile {
+    margin-top: 37px;
+    margin-left: -73px;
+    z-index: 1;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 85px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: 50px;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: -75px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 78px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 84px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 140px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 145px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -27px;
+    margin-top: 100px;
+  }
+
+  #image-state-card-profile {
+    width: 50px;
+    height: 50px;
+    margin-left: -80px;
+    margin-top: 53px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 16px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-election-card-profile{
+    font-size: 12px;
+    margin-top: 3px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 78px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color:#EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:0px;
+  }
+
+  #style-rol .letter{
+    margin-left:0px;
+  }
+
+  #style-extra .letter{
+    margin-left:0px;
+  }
+  /******/
+}
+
+@media only screen and (max-width: 568px) {
+  #tabs-responsive {
+    min-height: 517px;
+  }
+
+  #content-cards{
+    padding:5px;
+  }
+
+  #califichas-content-happy img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 88px;
+  }
+
+  #califichas-content-sad img{
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 45px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    text-align: center;
+    margin-left: -60px;
+    margin-top: 15px;
+  }
+
+  #score-card {
+    margin-top: 15px;
+    width: 50px;
+    margin-left: -35px;
+  }
+
+  #score-card img{
+    margin-top: -25px;
+    width: 85px;
+    margin-left: 5px;
+  }
+
+  #score-card p {
+    font-size: 23px;
+    margin-top: -54px;
+    margin-left: 27px;
+  }
+
+  #score-card span{
+    margin-top: -53px;
+    font-size: 23px;
+    margin-left: -7.5px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -55px;
+    font-size: 23px;
+    margin-left: -5px;
+    color: #FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -55px;
+    font-size: 23px;
+    margin-left: 0px;
+    color: #FFF;
+  }
+
+  #text-chamber-card{
+    font-size: 25px;
+    /* text-align: center; */
+    margin-top: 0px;
+    margin-right: 123px;
+  }
+
+  #text-state-card{
+    font-size: 17px;
+    margin-right: 120px;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #image-card img{
+    width: 150px;
+    height: 160px;
+    margin-top: -25px;
+    margin-left: 118px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: -15px;
+    margin-top: 79px;
+  }
+
+  #image-state-card {
+    width: 50px;
+    height: 55px;
+    margin-left: 281px;
+    margin-top: -132px;
+  }
+
+  #facebook-card img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #twitter-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #mail-card img{
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  #text-name-card{
+    font-size: 17px;
+    margin-top: 3px;
+    text-align: left;
+    margin-left: 65px;
+  }
+
+  #text-election-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 65px;
+    text-align: left;
+  }
+
+  #text-commission-card{
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 65px;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 107px;
+  }
+
+  /* ************** */
+
+  /* Styles Profile */
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top: 40px;
+    margin-left: 25px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 40px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+
+  #califichas-content-bad-profile{
+    z-index: 2;
+  }
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 40px;
+    margin-left: -27px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -65px;
+    margin-top: 72px;
+  }
+
+  #score-card-profile {
+    margin-top: 7px;
+    margin-left: -42px;
+    z-index: 1;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 85px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: -65px;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: -27px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 45px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    letter-spacing: 9px;
+  }
+
+  #text-state-card-profile {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 53px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+  }
+
+  .image-card-profile img{
+    width: 180px;
+    height: 180px;
+    margin-top: -5px;
+    margin-left: 100px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -9px;
+    margin-top: 115px;
+  }
+
+  #image-state-card-profile {
+    width: 50px;
+    height: 50px;
+    margin-left: -43px;
+    margin-top: 53px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 17px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 38px;
+  }
+
+  #text-election-card-profile{
+    font-size: 12px;
+    margin-top: 3px;
+    color: #BBB;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 38px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #BBB;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 38px;
+  }
+
+  #style-trabajo{
+    color:#EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  #style-trabajo .letter{
+    margin-left:0px;
+  }
+
+  #style-rol .letter{
+    margin-left:0px;
+  }
+
+  #style-extra .letter{
+    margin-left:0px;
+  }
+  /******/
+}
+
+@media only screen and (max-width: 414px) {
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      margin-left: 55px;
+  }
+
+  #score-card img {
+    margin-top: -25px;
+    width: 80px;
+    margin-left: 30px;
+  }
+
+  #score-card span {
+    margin-top: -57px;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 18px;
+    font-weight: bold;
+  }
+
+  #image-card img {
+    width: 150px;
+    height: 160px;
+    margin-top: -39px;
+    margin-left: 65px;
+  }
+
+  #content-socials-card {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  #califichas-content-happy img {
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 34px;
+  }
+
+  #califichas-content-sad img {
+    width: 30px;
+    margin-top: -10px;
+    margin-left: 18px;
+  }
+
+  #icon-menu {
+    width: 38px;
+    margin-left: 80px;
+    margin-top: -1.5px;
+  }
+
+
+    /* ************** */
+
+    /* Styles Profile */
+    #califichas-content-happy-profile img{
+      width: 35px;
+      margin-top: 40px;
+      margin-left: 25px;
+    }
+
+    #califichas-content-sad-profile img{
+      width: 35px;
+      margin-top: 40px;
+      margin-left: 3px;
+      cursor: pointer;
+    }
+
+    #califichas-content-bad-profile{
+      z-index: 2;
+    }
+
+    #califichas-content-bad-profile img{
+      width: 35px;
+      margin-top: 40px;
+      margin-left: -20px;
+    }
+
+    #content-socials-card-profile{
+      text-align: center;
+      margin-left: -35px;
+      margin-top: 65px;
+    }
+
+    #score-card-profile {
+      margin-top: 7px;
+      margin-left: -42px;
+      z-index: 1;
+    }
+
+    #score-card-profile img{
+      margin-top: 30px;
+      width: 85px;
+      margin-left: 2px;
+    }
+
+    #score-card-profile span{
+      margin-top: -65px;
+      position: absolute;
+      font-size: 35px;
+      letter-spacing: 2px;
+      margin-left: -18px;
+      font-weight: bold;
+      color: #FFF;
+    }
+
+    #text-chamber-card-profile{
+      font-size: 20px;
+      margin-top: 50px;
+      margin-right: 15px;
+      text-transform: uppercase;
+      text-align: right;
+      color: #BBB;
+      font-weight: bold;
+      letter-spacing: 9px;
+    }
+
+    #text-state-card-profile {
+      font-size: 15px;
+      text-transform: uppercase;
+      text-align: right;
+      margin-right: 35px;
+      color: #BBB;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    #text-state-card-profile span{
+      font-size: 10px;
+      /* margin-top: 2px; */
+      margin-right: 0px;
+      text-transform: uppercase;
+      text-align: right;
+      color: #BBB;
+      letter-spacing: 3px;
+    }
+
+    .image-card-profile img{
+      width: 160px;
+      height: 170px;
+      margin-top: -5px;
+      margin-left: 50px;
+      border-radius: 50%;
+    }
+
+    .image-party-card-profile img{
+      width: 60px;
+      margin-left: -17px;
+      margin-top: 107px;
+    }
+
+    #image-state-card-profile {
+      width: 50px;
+      height: 50px;
+      margin-left: -33px;
+      margin-top: 53px;
+    }
+
+    #facebook-card-profile img{
+      margin-top: -30px;
+      width: 30px;
+      margin-left: 2px;
+    }
+
+    #twitter-card-profile img{
+      margin-top: 5px;
+      width: 30px;
+    }
+
+    #mail-card-profile img{
+      margin-top: 5px;
+      width: 30px;
+    }
+
+    #text-name-card-profile{
+      font-size: 17px;
+      margin-top: 3px;
+      text-align: left;
+      letter-spacing: 3px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 38px;
+    }
+
+    #text-election-card-profile{
+      font-size: 12px;
+      margin-top: 3px;
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 38px;
+    }
+
+    #text-commission-card-profile{
+      font-size: 12px;
+      padding-bottom: 5px;
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 38px;
+    }
+
+    #style-trabajo{
+      color:#EE4455;
+      font-weight: bold;
+      margin-top: 15px;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    #style-rol{
+      color:#FFC73F;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    #style-extra{
+      color:#FF974C;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    #style-trabajo .letter{
+      margin-left:0px;
+    }
+
+    #style-rol .letter{
+      margin-left:0px;
+    }
+
+    #style-extra .letter{
+      margin-left:0px;
+    }
+    /******/
+}
+
+@media only screen and (max-width: 375px) {
+
+  #califichas-content-happy img{
+    margin-left: 25px;
+  }
+
+  #califichas-content-sad img{
+    margin-left: 13px;
+  }
+
+  #califichas-content-bad img{
+    width: 30px;
+    margin-top: -10px;
+  }
+
+  #content-socials-card{
+    margin-left: 0px;
+    margin-top: 14px;
+  }
+
+  #score-card {
+    margin-left: -35px;
+  }
+
+  #score-card span {
+    margin-left: 20px;
+  }
+
+  #text-state-card span{
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  #image-card img{
+    margin-top: -27px;
+    margin-left: 51px;
+  }
+
+  #image-party-card img {
+    width: 55px;
+    margin-left: -3px;
+    margin-top: 79px;
+  }
+
+  #score-card p {
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 51px;
+  }
+
+  #score-card span{
+    margin-top: -41px;
+    font-size: 20px;
+    margin-left: 14.5px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 18px;
+    color:#FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 22px;
+    color:#FFF;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 44px;
+  }
+
+  /*STYLES PROFILES*/
+  #califichas-content-happy-profile img{
+    width: 35px;
+    margin-top:35px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+
+
+  #califichas-content-bad-profile img{
+    width: 35px;
+    margin-top: 35px;
+    margin-left: -2px;
+    cursor: pointer;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: -15px;
+    margin-top: 50px;
+  }
+
+  #score-card-profile {
+    margin-top: 7px;
+    margin-left: -20px;
+    z-index: 1;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 75px;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  #score-card-profile span{
+    margin-top: -56px;
+    position: absolute;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-left: -15px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  #text-state-card-profile{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 15px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #text-state-card-profile span{
+    font-size: 10px;
+    /* margin-top: 2px; */
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  .image-card-profile img{
+    width: 150px;
+    height: 150px;
+    margin-top: -20px;
+    margin-left: 35px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 60px;
+    margin-left: -15px;
+    margin-top: 72px;
+  }
+
+  #image-state-card-profile {
+    width: 45px;
+    height: 45px;
+    margin-left: -10px;
+    margin-top: 22px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 12px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+
+  #text-election-card-profile{
+    font-size: 11px;
+    margin-top: 3px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 11px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 0px;
+  }
+
+  #style-trabajo{
+    color:#EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #text-graphics-profile{
+    margin-left: 4px;
+    color:#FFC73F;
+    font-weight: bold;
+    font-size: 10px
+  }
+
+  #style-trabajo .letter{
+    margin-left: 6px;
+  }
+
+  #style-rol .letter{
+    margin-left: 6px;
+  }
+
+  #style-extra .letter{
+    margin-left: 6px;
+  }
+  /**/
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  /*Styles Home*/
+  #tabs-responsive{
+    min-height:405px;
+  }
+
+  #califichas-content-happy img{
+    margin-left: 15px;
+  }
+
+  #califichas-content-sad img{
+    margin-left: 8px;
+  }
+
+  #califichas-content-bad img{
+    margin-left: 1px;
+  }
+
+  #content-socials-card{
+    margin-left: 14px;
+  }
+
+  #score-card {
+    margin-top: 12px;
+    width: 50px;
+    margin-left: -25px;
+  }
+
+  #score-card img{
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  #score-card p {
+    font-size: 20px;
+    margin-top: -41px;
+    margin-left: 31px;
+  }
+
+  #score-card span{
+    margin-top: -41px;
+    font-size: 20px;
+    margin-left: 14.5px;
+  }
+
+  #score-card span.menorVeinte{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 18px;
+    color:#FFF;
+  }
+
+  #score-card span.menorDiez{
+    margin-top: -40px;
+    font-size: 20px;
+    margin-left: 22px;
+    color:#FFF;
+  }
+
+  #text-chamber-card {
+    font-size: 20px;
+    margin-right: 50px;
+    margin-top: 5px;
+  }
+
+  #text-state-card {
+    font-size: 16px;
+    margin-right: 0px;
+  }
+
+  #text-state-card span{
+    font-size: 9px;
+    margin-top: 3px;
+  }
+
+  #image-card img{
+    width: 150px;
+    height: 150px;
+    margin-top: -25px;
+    margin-left: 30px;
+  }
+
+  #image-party-card img{
+    width: 55px;
+    margin-left: 3px;
+    margin-top: 70px;
+  }
+
+  #image-state-card {
+    width: 50px;
+    height: 55px;
+    margin-left: 5px;
+    margin-top: -25px;
+  }
+
+  #image-state-card-sen {
+    width: 50px;
+    height: 55px;
+    margin-left: 0px;
+    margin-top: -7px;
+  }
+
+  #facebook-card img{
+    margin-top: -5px;
+    width: 40px;
+  }
+
+  #twitter-card img{
+    margin-top: 5px;
+    /* margin-top: -50px; */
+    width: 40px;
+    margin-top: 1px;
+  }
+
+  #mail-card img{
+    margin-top: 0px;
+    width: 40px;
+  }
+
+  #text-name-card {
+    font-size: 13px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  #text-election-card{
+    font-size: 11px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  #text-commission-card{
+    font-size: 11px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      margin-left:25px;
+  }
+
+  #icon-menu {
+    margin-left: 70px;
+    width: 25px;
+    margin-top: 1px;
+  }
+  /******/
+
+  /*Styles Home - Profile*/
+
+  #califichas-content-happy-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  #califichas-content-sad-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 9px;
+  }
+
+
+  #califichas-content-bad-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: -3px;
+  }
+
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+
+  #score-card-profile {
+    margin-top: 7px;
+    margin-left: -10px;
+    z-index: 1;
+  }
+
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 75px;
+    margin-left: 2px;
+  }
+
+  #score-card-profile span{
+    margin-top: -54px;
+    position: absolute;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-left: -10px;
+  }
+
+  #text-chamber-card-profile{
+    font-size: 15px;
+    margin-top: 13px;
+    margin-right: 28px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  #text-state-card-profile{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 28px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #text-state-card-profile span{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: -1px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .image-card-profile img{
+    width: 140px;
+    height: 140px;
+    margin-top: -18px;
+    margin-left: 32px;
+    border-radius: 50%;
+  }
+
+  .image-party-card-profile img{
+    width: 50px;
+    margin-left: 0px;
+    margin-top: 72px;
+  }
+
+  #image-state-card-profile {
+    width: 45px;
+    height: 45px;
+    margin-left: -18px;
+    margin-top: 15px;
+  }
+
+  #facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 2px;
+  }
+
+  #twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
+
+  #text-name-card-profile{
+    font-size: 15px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+
+  #text-election-card-profile{
+    font-size: 11px;
+    margin-top: 3px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+
+  #text-commission-card-profile{
+    font-size: 11px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 10px;
+  }
+
+  #style-trabajo{
+    color:#EE4455;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  #text-graphics-profile{
+    margin-left: 4px;
+    color:#FFC73F;
+    font-weight: bold;
+    font-size: 10px
+  }
+
+  #style-trabajo .letter{
+    margin-left: 6px;
+  }
+
+  #style-rol .letter{
+    margin-left: 6px;
+  }
+
+  #style-extra .letter{
+    margin-left: 6px;
+  }
+
+  .icon-dwn {
+    margin-top: -1px;
+  }
+
+  .icon-question {
+    margin-top: -1px;
+  }
+
+  .icon-party {
+    margin-top: 0px;
+  }
+
+  .icon-search {
+    margin-top: 0px;
+    margin-left: 2px;
+  }
+  /******/
+}

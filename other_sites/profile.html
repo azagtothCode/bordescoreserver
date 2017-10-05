@@ -51,9 +51,7 @@
     var URl = window.location.href;
     var res = URl.substr(-7);
 
-
-
-function getQueryVariable(variable) {
+    function getQueryVariable(variable) {
        // Estoy asumiendo que query es window.location.search.substring(1);
        var query = window.location.search.substring(1);
        var vars = query.split("&");
@@ -65,12 +63,18 @@ function getQueryVariable(variable) {
            }
        }
        return false;
-   }
+    }
 
   (getQueryVariable('id'));
   (getQueryVariable('rol'));
-  (getQueryVariable('extra'));
-  (getQueryVariable('trabajo'));
+  (getQueryVariable('ext'));
+  (getQueryVariable('work'));
+
+  (getQueryVariable('iap'));
+  (getQueryVariable('ipr'));
+  (getQueryVariable('ire'));
+  (getQueryVariable('ide'));
+  (getQueryVariable('ipe'));
 
     $.ajax({
       url: supurl+'/diputados/profile/dip/get',
@@ -239,7 +243,16 @@ function getQueryVariable(variable) {
      app.controller("BarCtrlRol", function ($scope) {
        $scope.colors = ["rgb(238,68,85)","rgb(255,151,76)","rgb(255,199,63)",];
                $scope.labels = ["Trabajo Legislativo", "Rol Politico", "Extra Legislativo"];
-               $scope.data = [(getQueryVariable('trabajo')), (getQueryVariable('rol')), (getQueryVariable('extra'))];
+               $scope.data = [(getQueryVariable('work')), (getQueryVariable('rol')), (getQueryVariable('ext'))];
+     })
+
+     app.controller("BarCtrlIniciativas", function ($scope) {
+       $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
+       $scope.series = ['Iniciativas'];
+
+       $scope.data = [
+         [(getQueryVariable('iap')), (getQueryVariable('ipr')), (getQueryVariable('ire')), (getQueryVariable('ide')), (getQueryVariable('ipe'))]
+       ];
      })
 
   </script>

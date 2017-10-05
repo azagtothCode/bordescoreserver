@@ -228,10 +228,6 @@
     margin-left: 60px;
   }
 
-  .btn-text-one {
-    font-size: 12px;
-  }
-
   #content-dip {
     font-size: 32px;
   }
@@ -244,10 +240,6 @@
 @media only screen and (max-width: 1540px) {
   #logo_score {
     margin-left: 40px;
-  }
-
-  .btn-text-one {
-    font-size: 11px;
   }
 
   #content-dip {
@@ -313,7 +305,7 @@
  }
 
  .btn-text-one {
-   font-size: 11px;
+   font-size: 13px;
    margin-left: 33px;
    margin-top: 16px;
  }
@@ -337,9 +329,9 @@
  }
 
  .icon-search{
-   width: 23px;
+   width: 25px;
    margin-left: 3.5px;
-   margin-top: 7px;
+   margin-top: 9px;
  }
 
   #boton-borde {
@@ -504,12 +496,53 @@
 @media only screen and (max-width: 1279px) {
   #content-senado {
     font-size: 24px;
-    margin-top: 43px;
+    margin-top: 66px;
   }
 
   #content-dip{
     font-size: 24px;
-    margin-top: 43px;
+    margin-top: 66px;
+  }
+
+  .color-btn {
+    min-height: 35px;
+    margin-bottom: 5px;
+  }
+
+  #slide-head {
+    min-height: 435px;
+    background-size: 1300px 455px;
+    width: 1280px;
+  }
+
+  .btn-text-one {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 35px;
+  }
+
+  .icon-dwn {
+    width: 30px;
+    margin-top: 2px;
+    margin-left: 3px;
+  }
+
+  .icon-question {
+    width: 30px;
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+
+  .icon-party {
+    width: 30px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
+
+  .icon-search {
+    width: 30px;
+    margin-left: 1.5px;
+    margin-top: 2px;
   }
 }
 
