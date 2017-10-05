@@ -329,9 +329,9 @@
  }
 
  .icon-search{
-   width: 25px;
+   width: 23px;
    margin-left: 3.5px;
-   margin-top: 9px;
+   margin-top: 7px;
  }
 
   #boton-borde {
@@ -604,13 +604,14 @@
 
   .icon-search{
     width: 25px;
-    margin-left: 1px;
+    margin-left: 5px;
     margin-top: 3px;
   }
 
   #content-senado {
     font-size: 14px;
     margin-top: 46px;
+    margin-left: 0px;
   }
 
   #content-dip {
@@ -708,6 +709,14 @@
    max-width: 90px;
    margin-left: 230px;
    margin-top: 0px;
+  }
+
+  #boton-borde {
+    margin-left: 0px;
+  }
+
+  #logo_score {
+    background-size: 135px;
   }
 }
 
@@ -970,22 +979,6 @@
     Styles Home - Profile
 */
 @media only screen and (max-width: 320px) {
- #slide-head{
-   min-height: 160px;
-   background-size: 320px 160px;
-   width: 320px;
- }
-
- #div-circle-score{
-   width: 320px;
-   height: 69px;
-   margin-top: 39px;
- }
-
- #div-buttons-score{
-   width: 320px;
-   margin-top: 6px;
- }
 
  #logo_score{
    background-size: 64px;
@@ -1028,9 +1021,7 @@
 
  }
 
- #w {
-    height: 96px;
-  }
+
 
  /*****/
 }
