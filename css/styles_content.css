@@ -13,6 +13,7 @@
 .title-score-party{
   font-size:16;
 }
+
 #content-row-party-score{
   margin-bottom: 5px;
 }
@@ -230,6 +231,62 @@
   from {  max-width: 10%;
 }
   to { max-width: 100%;}
+}
+
+
+/*States Page*/
+#toolbar-score-state{
+  background:#EE4556;
+}
+
+.title-score-state{
+  font-size:16;
+}
+
+#content-row-state-score{
+  margin-bottom: 5px;
+}
+
+#content-score-state{
+  background:#000;
+}
+
+#content-bars-state-score{
+  text-align: center;
+  max-width: 100%;
+}
+
+#content-res-state-score{
+  color: #FFF;
+  padding: 0px;
+  margin-top: 9px;
+}
+
+#content-imgs-state-score img{
+  max-width: 45px;
+  height:40px;
+  margin-top: 4px;
+}
+
+.content-state-name{
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+  text-align: left;
+}
+
+.content-state{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+  text-align: left;
 }
 
 @media only screen and (max-width: 320px) {

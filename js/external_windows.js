@@ -123,10 +123,10 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
     });
   };
 
-  $scope.openGraphsProfile = function(ev) {
+  $scope.openSatatesProfile = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'graphs.score.html',
+      templateUrl: 'other_sites/states.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
