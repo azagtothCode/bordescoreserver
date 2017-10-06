@@ -1,3 +1,19 @@
+#content-row-menu .party{
+  color:#FFF;
+}
+
+#content-row-menu .dep{
+  color:#EE4556;
+}
+
+#content-row-menu .sen{
+  color:#FFF;
+}
+
+#content-row-menu .score{
+  color:#FFF;
+}
+
 #toolbar-score-party{
   background:#EE4556;
 }
