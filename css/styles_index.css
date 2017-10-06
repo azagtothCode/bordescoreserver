@@ -320,6 +320,12 @@ html, body{  text-decoration: none;}
     #input-project {
       margin-left: 245px;
     }
+
+    #icon-logo {
+      background-size: 95px;
+      margin-top: 11px;
+      margin-left: 25px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -372,15 +378,6 @@ html, body{  text-decoration: none;}
     #icon-logo-profile {
       background-size: 71px;
       margin-top: 18px;
-    }
-  }
-
-  @media only screen and (max-width: 667px) {
-    #input-project{
-      margin-left: 193px;
-    }
-    #boton-borde{
-      margin-left: 65px;
     }
   }
 
@@ -497,6 +494,8 @@ html, body{  text-decoration: none;}
       margin-top: 24px;
       margin-left: 65px;
     }
+
+
   }
 
   @media only screen and (max-width: 375px) {

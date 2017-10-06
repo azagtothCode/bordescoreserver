@@ -330,11 +330,11 @@
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_happy.svg\'' + '" src="imgs/svg/cali_happy.svg"> </a>\
                              </div>\
-                             <div id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div id="califichas-content-sad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_sad.svg\'' + '" src="imgs/svg/cali_sad.svg"> </a>\
                              </div>\
-                             <div  id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div  id="califichas-content-bad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
                              </div>\
@@ -422,83 +422,78 @@
                <md-list role="list">\
                  <div id="content-cards" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                    <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                     <div flex-xs="35" flex-sm="30" class="flex-xs-35 flex-sm-30">\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
                      </div>\
-                     <div flex-xs="30" flex-sm="40" class="flex-xs30 flex-sm-40">\
-                         <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                           <div id="califichas-content-happy" flex-xs="10" flex-sm="10" class="flex-xs-10 flex-sm-10">\
+                     <div flex-xs="30" flex-sm="20" class="flex-xs-30 flex-sm-20">\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div id="califichas-content-happy" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_happy.svg">\
-                             </a>\
-                           </div>\
-                           <div id="califichas-content-sad" flex-xs="10" flex-sm="10" class="flex-xs-10 flex-sm-10">\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_happy.svg\'' + '" src="imgs/svg/cali_happy.svg"> </a>\
+                         </div>\
+                         <div id="califichas-content-sad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_sad.svg">\
-                             </a>\
-                           </div>\
-                           <div id="califichas-content-bad" flex-xs="10" flex-sm="10" class="flex-xs-10 flex-sm-10">\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_sad.svg\'' + '" src="imgs/svg/cali_sad.svg"> </a>\
+                         </div>\
+                         <div  id="califichas-content-bad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_bad.svg">\
-                             </a>\
-                           </div>\
-                           <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="70" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70">\
-                             <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg" role="button" tabindex="0">\
-                               '+score_val+'</img>\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
+                         </div>\
+                         <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                           <img ng-click="openPerfilPage(item.id)" onmouseover="this.src=' + '\'imgs/svg/score_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/score.svg\'' + '" src="imgs/svg/score.svg">\
+                             '+score_val+'\
+                           </img>\
+                         </div>\
+                       </div>\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div ng-controller="OpenPerfilController" id="image-card" flex-sm="50" flex-xs="50" class="ng-scope flex-xs-50 flex-sm-50">\
+                           <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
+                         </div>\
+                         <div id="image-party-card" flex-sm="25" flex-xs="25"  class="flex-sm-25 flex-xs-25">\
+                           <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
+                         </div>\
+                         <div style="text-align:right;" id="content-socials-card" flex-sm="25" flex-xs="25" class="flex-sm-25 flex-xs-25">\
+                           <div layout-xs="row" layout-sm="row" class=" layout-xs-row layout-sm-row">\
+                             <div layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                               <div id="facebook-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                                   <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="twitter-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                                   <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="mail-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                                   <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
+                                 </a>\
+                               </div>\
+                             </div>\
                            </div>\
                          </div>\
-                     </div>\
-                     <div flex-xs="35" flex-sm="30" class="flex-xs-35 flex-sm-30">\
+                       </div>\
+                      </div>\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
                     </div>\
                    </div>\
                  </div>\
-                 <div style="margin-top:-160px;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                   </div>\
-                   <div flex-xs="70" flex-sm="70" class="flex-xs-70 flex-sm-70">\
-                     <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                       <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60" class="ng-scope flex-xs-60 flex-sm-60">\
-                         <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
-                       </div>\
-                       <div id="image-party-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                         <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
-                       </div>\
-                       <div id="content-socials-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                         <div style="text-align:right;" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
-                           <div id="facebook-card">\
-                             <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
-                               <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
-                             </a>\
-                           </div>\
-                           <div id="twitter-card">\
-                             <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
-                               <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
-                             </a>\
-                           </div>\
-                           <div id="mail-card">\
-                             <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
-                               <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
-                             </a>\
-                           </div>\
-                         </div>\
-                       </div>\
+                 <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
                      </div>\
-                   </div>\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                   </div>\
-                 </div>\
-                 <div style="border:1px solid brown;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                   <div style="border:1px solid purple;" ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
-                     <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                     <div flex-xs="40" flex-sm="20" class="flex-xs-40 flex-sm-20">\
+                      <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                          <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                          '+chamber+'\
                          </div>\
                          <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                           <div style="border:1px solid brown;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                              <div style="border:1px solid orange;" flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
+                           <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                              <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
                                <span>  por: </span>\
                                '+state+'\
                               </div>\
-                              <div style="border:1px solid green;" flex-xs="15" flex-sm="15" class="ng-scope flex-xs-15 flex-sm-15">\
+                              <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
                                <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
                               </div>\
                             </div>\
@@ -506,15 +501,19 @@
                          <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
                            '+name+'\
                          </div>\
+                         <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+last_name+'\
+                         </div>\
                          <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                          '+representation+'\
                          </div>\
                        <div  ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
                        '+post+'\
                        </div>\
+                      </div>\
                      </div>\
-                   </div>\
-                   <div style="border:1px solid red;" flex-xs="15" flex-sm="15" class="ng-scope flex-xs-15 flex-sm-15">\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
+                     </div>\
                    </div>\
                  </div>\
                </md-list>\
@@ -688,11 +687,11 @@
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_happy.svg\'' + '" src="imgs/svg/cali_happy.svg"> </a>\
                              </div>\
-                             <div style="text-align:center;" id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div style="text-align:center;" id="califichas-content-sad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_sad.svg\'' + '" src="imgs/svg/cali_sad.svg"> </a>\
                              </div>\
-                             <div style="text-align:center;" id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div style="text-align:center;" id="califichas-content-bad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="pac.bordepolitico.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
                              </div>\
@@ -780,93 +779,98 @@
                <md-list role="list">\
                  <div id="content-cards" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
                    <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                     <div flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
                      </div>\
-                     <div flex-xs="60" flex-sm="60" class="flex-xs-60 flex-sm-60">\
-                         <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                           <div style="text-align:center;" id="califichas-content-happy" flex-xs="25" flex-sm="25" class="flex-xs-25 flex-sm-25">\
+                     <div flex-xs="30" flex-sm="20" class="flex-xs-30 flex-sm-20">\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div id="califichas-content-happy" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_happy.svg">\
-                             </a>\
-                           </div>\
-                           <div style="text-align:center;" id="califichas-content-sad" flex-xs="25" flex-sm="25" class="flex-xs-25 flex-sm-25">\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_happy.svg\'' + '" src="imgs/svg/cali_happy.svg"> </a>\
+                         </div>\
+                         <div id="califichas-content-sad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_sad.svg">\
-                             </a>\
-                           </div>\
-                           <div style="text-align:center;" id="califichas-content-bad" flex-xs="25" flex-sm="25" class="flex-xs-25 flex-sm-25">\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_sad.svg\'' + '" src="imgs/svg/cali_sad.svg"> </a>\
+                         </div>\
+                         <div  id="califichas-content-bad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                              <a href="pac.bordepolitico.com" target="_blank">\
-                               <img src="imgs/svg/cali_bad.svg">\
-                             </a>\
-                           </div>\
-                           <div ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
-                             <img ng-click="openPerfilPage(item.id)" src="imgs/svg/score.svg" role="button" tabindex="0">\
-                               '+score_val+'</img>\
+                               <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
+                         </div>\
+                         <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                           <img ng-click="openPerfilPage(item.id)" onmouseover="this.src=' + '\'imgs/svg/score_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/score.svg\'' + '" src="imgs/svg/score.svg">\
+                             '+score_val+'\
+                           </img>\
+                         </div>\
+                       </div>\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div ng-controller="OpenPerfilController" id="image-card" flex-sm="50" flex-xs="50" class="ng-scope flex-xs-50 flex-sm-50">\
+                           <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
+                         </div>\
+                         <div id="image-party-card" flex-sm="25" flex-xs="25"  class="flex-sm-25 flex-xs-25">\
+                           <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
+                         </div>\
+                         <div style="text-align:right;" id="content-socials-card" flex-sm="25" flex-xs="25" class="flex-sm-25 flex-xs-25">\
+                           <div layout-xs="row" layout-sm="row" class=" layout-xs-row layout-sm-row">\
+                             <div layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                               <div id="facebook-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                                   <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="twitter-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                                   <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="mail-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                                   <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
+                                 </a>\
+                               </div>\
+                             </div>\
                            </div>\
                          </div>\
-                     </div>\
-                     <div flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
+                       </div>\
+                      </div>\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
                     </div>\
                    </div>\
                  </div>\
-                 <div style="margin-top:-160px;" layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                   </div>\
-                   <div flex-xs="70" flex-sm="70" class="flex-xs-70 flex-sm-70">\
-                     <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                       <div ng-controller="OpenPerfilController" id="image-card" flex-xs="60" flex-sm="60" class="ng-scope flex-xs-60 flex-sm-60">\
-                         <img ng-click="openPerfilPage(item.id)" src="imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
-                       </div>\
-                       <div id="image-party-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                         <img onmouseover="this.src=' + '\'imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
-                       </div>\
-                       <div id="content-socials-card" flex-xs="20" flex-sm="20" class="flex-xs-20 flex-sm-20">\
-                         <div style="text-align:right;" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
-                           <div id="facebook-card">\
-                             <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
-                               <img onmouseover="this.src=\'imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/facebook_cards.svg\'" src="imgs/svg/facebook_cards.svg">\
-                             </a>\
-                           </div>\
-                           <div id="twitter-card">\
-                             <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
-                               <img onmouseover="this.src=\'imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/twiter_cards.svg\'" src="imgs/svg/twiter_cards.svg">\
-                             </a>\
-                           </div>\
-                           <div id="mail-card">\
-                             <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
-                               <img onmouseover="this.src=\'imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'imgs/svg/mail_cards.svg\'" src="imgs/svg/mail_cards.svg">\
-                             </a>\
-                           </div>\
+                 <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
+                     </div>\
+                     <div flex-xs="40" flex-sm="20" class="flex-xs-40 flex-sm-20">\
+                      <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                         <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+chamber+'\
                          </div>\
-                       </div>\
-                     </div>\
-                   </div>\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                   </div>\
-                 </div>\
-                 <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
-                   <div ng-controller="OpenPanelScoreController" flex-offset-xs="15" flex-xs="70" flex-offset-sm="15" flex-sm="70" class="ng-scope flex-xs-70 flex-sm-70 flex-offset-xs-15 flex-offset-sm-15">\
-                     <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
-                       <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       '+chamber+'\
-                       </div>\
-                       <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       <span>  por: </span>\
-                       '+state+'\
-                       <!-- <img id="image-state-card" src="{{item.img_state}}"> -->\
-                       </div>\
-                       <div style="display:'+class_state_none+'" id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
-                         '+name+'\
-                       </div>\
-                       <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
-                       '+representation+'\
-                       </div>\
-                       <div ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
+                         <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                           <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                              <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
+                               <span>  por: </span>\
+                               '+state+'\
+                              </div>\
+                              <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
+                               <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                              </div>\
+                            </div>\
+                         </div>\
+                         <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+name+'\
+                         </div>\
+                         <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+last_name+'\
+                         </div>\
+                         <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+representation+'\
+                         </div>\
+                       <div  ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
                        '+post+'\
+                       </div>\
+                      </div>\
                      </div>\
-                   </div>\
-                   <div flex-xs="15" flex-sm="15" class="flex-xs-15 flex-sm-15">\
-                     <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
+                     </div>\
                    </div>\
                  </div>\
                </md-list>\

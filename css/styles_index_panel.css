@@ -103,6 +103,19 @@
 
 }
 
+@media only screen and (max-width:414px) {
+
+    #input-project {
+      margin-left: -4px;
+    }
+
+    #image-card img {
+      margin-left: -15px;
+    }
+
+
+}
+
 @media only screen and (max-width: 320px) {
   #img-site-panel {
     margin-top: 5.5px;
