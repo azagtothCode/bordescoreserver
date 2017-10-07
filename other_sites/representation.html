@@ -145,17 +145,17 @@
    (getQueryVariable('id'));
 
      $.ajax({
-       url: supurl+'/diputados/party/get',
+       url: supurl+'/diputados/profile/dip/get',
        method: "POST",
-       data: {legislator_party_sil:(getQueryVariable('id'))},
+       data: {legislator_election_sil:(getQueryVariable('id'))},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
        console.log(subject);
        nuevoarray = [];
+
        for (var i = 0; i < subject.length; i++) {
            val=subject[i];
-
            var pick_party = val.legislator_party_sil;
            var res_pick_party = pick_party.toLowerCase();
            var pick_party_label = "<img onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='../imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
