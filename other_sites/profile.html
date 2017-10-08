@@ -314,10 +314,31 @@
        $scope.series = ['P. de Acuerdo'];
 
        $scope.data = [
-         [(getQueryVariable('iap')), (getQueryVariable('ipr')), (getQueryVariable('ire')), (getQueryVariable('ide')), (getQueryVariable('ipe'))]
+         [(getQueryVariable('pap')), (getQueryVariable('ppr')), (getQueryVariable('pre')), (getQueryVariable('pde')), (getQueryVariable('ppe'))]
        ];
      })
 
+     $.ajax({
+       url: supurl+'/diputados/ini/dip/get',
+       method: "POST",
+       data: {author_id: ((getQueryVariable('id'))) },
+       dataType: "json"
+     }).done(function(data) {
+       subject=data.dip;
+       for (var i = 0; i < subject.length; i++) {
+         val=subject[i];
+         if(val.work_description != ""){
+           var body_ini = val.work_description
+         }
+         $(".iniciativaBody").append('\
+         <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" >\
+            <span>"'+body_ini+'"</span><br><br>\
+            <!-- <  span style="color:#EE4656;"><a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span > -->\
+         </div>');
+
+
+       }
+     });
   </script>
 </head>
 <body ng-app="score_federal">
@@ -840,16 +861,15 @@
                </div>
              </div>
              <md-content id="iniciativasTextContent">
-               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in iniciativas">
+               <div layout-xl="row" layout-lg="row" layout-md="row" >
                  <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div id="iniciativasDivContent" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
-                   <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span>{{item.body}}</span><br><br>
-                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                   <div class="iniciativaBody" flex-xl="90" flex-lg="90" flex-md="90" >
+
                    </div>
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>

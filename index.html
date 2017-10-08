@@ -184,7 +184,20 @@
 
            var pick_legis = val.legislator_image_sil;
            var res_pick = pick_legis.slice(16, -4);
-           var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') src='imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >"
+           var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') src='imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >"
 
 
 
@@ -229,21 +242,99 @@
            var score = val.legislator_score_sil;
 
            if(score == 100 ){
-              var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') >"+score+"</p>";
+              var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+              val.legislator_extra_score_sil+
+              "&rol="+val.legislator_rol_score_sil+
+              "&ext="+val.legislator_news_score_sil+
+              "&iap="+val.legislator_ini_ap_sil+
+              "&ide="+val.legislator_ini_de_sil+
+              "&ipe="+val.legislator_ini_pe_sil+
+              "&ipr="+val.legislator_ini_pr_sil+
+              "&ire="+val.legislator_ini_re_sil+
+              "&pap="+val.legislator_pda_ap_sil+
+              "&pde="+val.legislator_pda_de_sil+
+              "&ppe="+val.legislator_pda_pe_sil+
+              "&ppr="+val.legislator_pda_pr_sil+
+              "&pre="+val.legislator_pda_re_sil+"') >"+score+"</p>";
             //  var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
            }else if(score < 100 && score  > 20){
-             var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }else if(score  < 20 && score  > 10){
-             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }else if(score  < 10){
-             var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }
 
            var name = val.legislator_first_name_sil;
-           var label_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+name+"</span>";
+           var label_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+name+"</span>";
 
            var last_name = val.legislator_last_name_sil;
-           var label_last_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+last_name+"</span>";
+           var label_last_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+last_name+"</span>";
 
            var representation = val.legislator_election_sil;
 
@@ -277,7 +368,20 @@
              var post = "Secretario";
            }
 
-           var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+post+"</span>";
+           var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+post+"</span>";
 
 
            var pick_state = state;
@@ -331,8 +435,34 @@
                    class_state_none = "block";
            }
 
-           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+state+"</span>"
-           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
+           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+state+"</span>"
+           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
 
 
            var valor = val.legislator_party_sil;
@@ -562,7 +692,20 @@
 
            var pick_legis = val.legislator_image_sil;
            var res_pick = pick_legis.slice(16, -4);
-           var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') src='imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >"
+           var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') src='imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >"
 
 
 
@@ -607,21 +750,100 @@
            var score = val.legislator_score_sil;
 
            if(score == 100 ){
-              var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') >"+score+"</p>";
+              var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+              val.legislator_extra_score_sil+
+              "&rol="+val.legislator_rol_score_sil+
+              "&ext="+val.legislator_news_score_sil+
+              "&iap="+val.legislator_ini_ap_sil+
+              "&ide="+val.legislator_ini_de_sil+
+              "&ipe="+val.legislator_ini_pe_sil+
+              "&ipr="+val.legislator_ini_pr_sil+
+              "&ire="+val.legislator_ini_re_sil+
+              "&pap="+val.legislator_pda_ap_sil+
+              "&pde="+val.legislator_pda_de_sil+
+              "&ppe="+val.legislator_pda_pe_sil+
+              "&ppr="+val.legislator_pda_pr_sil+
+              "&pre="+val.legislator_pda_re_sil+"') >"+score+"</p>";
             //  var score_val = "<p onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
            }else if(score < 100 && score  > 20){
-             var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }else if(score  < 20 && score  > 10){
-             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }else if(score  < 10){
-             var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+score+"</span>";
+             var score_val = "<span class='menorDiez' onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
            }
 
+
            var name = val.legislator_first_name_sil;
-           var label_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+name+"</span>";
+           var label_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+name+"</span>";
 
            var last_name = val.legislator_last_name_sil;
-           var label_last_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+last_name+"</span>";
+           var label_last_name = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+last_name+"</span>";
 
            var representation = val.legislator_election_sil;
 
@@ -655,7 +877,20 @@
              var post = "Secretario";
            }
 
-           var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+post+"</span>";
+           var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+post+"</span>";
 
 
            var pick_state = state;
@@ -709,8 +944,35 @@
                    class_state_none = "block";
            }
 
-           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+state+"</span>"
-           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
+           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+state+"</span>"
+
+           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
 
 
 
