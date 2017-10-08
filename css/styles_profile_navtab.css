@@ -480,7 +480,8 @@
     margin-left: 2px;
   }
 }
-@media only screen and (max-width: 736px){
+
+@media only screen and (max-width: 959px){
   #imageScoreAccordion{
     width: 40px;
   }
@@ -686,8 +687,13 @@
   }
 }
 
-@media only screen and (max-width: 667px){
+@media only screen and (max-width: 736px){
+  .valueScoreRol {
+    margin-left: -134px;
+  }
+}
 
+@media only screen and (max-width: 667px){
 
   .valueScoreRol {
     margin-left: -114px;
