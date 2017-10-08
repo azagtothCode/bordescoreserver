@@ -420,12 +420,13 @@
       </div>
   </div>
   <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-    <div flex-xs="50" flex-sm="50">
-      <div id="w">
-          <canvas id="d1" height="400" width="400"></canvas>
-      </div>
+    <div flex-xs="25" flex-sm="35">
     </div>
-    <div flex-xs="50" flex-sm="50">
+    <div ng-controller="BarCtrlRol" flex-xs="25" flex-sm="15">
+      <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
+       </canvas>
+    </div>
+    <div flex-xs="25" flex-sm="15">
       <div layout-xs="column" layout-sm="column">
         <div id="style-trabajo" layout-xs="row" layout-sm="row">
           <div  flex-xs="20" flex-sm="20">
@@ -456,6 +457,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div flex-xs="25" flex-sm="35">
     </div>
   </div>
   <div hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
