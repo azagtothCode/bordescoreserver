@@ -260,6 +260,15 @@
        ];
      })
 
+     app.controller("BarCtrlPuntos", function ($scope) {
+       $scope.labels = ['Aprobados', 'Presentados', 'Retirados', 'Desechados', 'Pendientes'];
+       $scope.series = ['P. de Acuerdo'];
+
+       $scope.data = [
+         [(getQueryVariable('iap')), (getQueryVariable('ipr')), (getQueryVariable('ire')), (getQueryVariable('ide')), (getQueryVariable('ipe'))]
+       ];
+     })
+
   </script>
 </head>
 <body ng-app="score_federal">
@@ -1226,12 +1235,12 @@
     				</div>
     			</md-toolbar>
     			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
+            <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
               <div layout-sm="row" layout-xs="row">
                 <div id="contentGraphsIniciativas" flex-sm="100" flex-xs="100">
                   <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                   </canvas>
-                  <h1>Iniciativas</h1>
+                  <h1>P. de Acuerdo</h1>
                 </div>
               </div>
               <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
