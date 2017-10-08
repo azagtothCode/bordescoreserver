@@ -4,7 +4,7 @@ app.controller('acorTrabajo',
     		{
           "src" : "../imgs/svg/scorewhite.svg",
           "srcno" : "../imgs/svg/scoreblack.svg",
-          "value" : "78",
+          "value" : (getQueryVariable('work')),
     			"heading" : "Trabajo Legislativo"
     		}
     	];
@@ -26,7 +26,7 @@ app.controller('acorTrabajo',
         {
           "src" : "../imgs/svg/scorewhite.svg",
           "srcno" : "../imgs/svg/scoreblack.svg",
-          "value" : "78",
+          "value" : (getQueryVariable('rol')),
     			"heading" : "Rol Politico"
         }
       ];
@@ -48,7 +48,7 @@ app.controller('acorTrabajo',
         {
           "src" : "../imgs/svg/scorewhite.svg",
           "srcno" : "../imgs/svg/scoreblack.svg",
-          "value" : "35",
+          "value" : (getQueryVariable('ext')),
     			"heading" : "Extra Legislativo"
         }
       ];
