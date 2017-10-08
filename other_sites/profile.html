@@ -318,6 +318,7 @@
        ];
      })
 
+
      $.ajax({
        url: supurl+'/diputados/ini/dip/get',
        method: "POST",
@@ -335,10 +336,31 @@
             <span>"'+body_ini+'"</span><br><br>\
             <!-- <  span style="color:#EE4656;"><a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span > -->\
          </div>');
-
-
        }
      });
+
+     $.ajax({
+       url: supurl+'/diputados/pda/dip/get',
+       method: "POST",
+       data: {author_id: ((getQueryVariable('id'))) },
+       dataType: "json"
+     }).done(function(data) {
+       subject=data.dip;
+       for (var i = 0; i < subject.length; i++) {
+         val=subject[i];
+         if(val.work_description != ""){
+           var body_ini = val.work_description
+         }
+         $(".pointBody").append('\
+         <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" >\
+            <span>"'+body_ini+'"</span><br><br>\
+            <!-- <  span style="color:#EE4656;"><a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span > -->\
+         </div>');
+       }
+     });
+
+
+
   </script>
 </head>
 <body ng-app="score_federal">
@@ -764,7 +786,7 @@
              </div>
            </div>
            <div id="bodyIniciativas" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
+             <div hide layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
@@ -796,7 +818,7 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <div id="valueIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
+             <div hide id="valueIniciativasTheme" layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
@@ -831,7 +853,7 @@
              <div layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div id="themeIniciativasTheme" flex-xl="90" flex-lg="90" flex-md="90">
+               <div hide id="themeIniciativasTheme" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -896,7 +918,7 @@
              </div>
            </div>
            <div id="bodyPuntos" ng-controller="PuntosController" layout-xl="column" layout-lg="column" layout-md="column">
-             <div layout-xl="row" layout-lg="row" layout-md="row">
+             <div hide layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
@@ -928,11 +950,11 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <div id="valuePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
+             <div hide id="valuePuntosTheme" layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
-                 <div layout-xl="row" layout-lg="row" layout-md="row">
+                 <div hide layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
                    <div flex-xl="15" flex-lg="15" flex-md="15">
@@ -960,10 +982,10 @@
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
              </div>
-             <div layout-xl="row" layout-lg="row" layout-md="row">
+             <div  layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
-               <div id="themePuntosTheme" flex-xl="90" flex-lg="90" flex-md="90">
+               <div  hide id="themePuntosTheme" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -993,16 +1015,14 @@
                </div>
              </div>
              <md-content id="PuntosTextContent">
-               <div layout-xl="row" layout-lg="row" layout-md="row" ng-repeat="item in puntos">
+               <div layout-xl="row" layout-lg="row" layout-md="row">
                  <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div id="PuntosDivContent" flex-xl="90" flex-lg="90" flex-md="90">
                  <div layout-xl="row" layout-lg="row" layout-md="row">
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
-                   <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" flex-xl="90" flex-lg="90" flex-md="90">
-                      <span>{{item.body}}</span><br><br>
-                      <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                   <div class="pointBody" flex-xl="90" flex-lg="90" flex-md="90">
                    </div>
                    <div flex-xl="5" flex-lg="5" flex-md="5">
                    </div>
@@ -1170,7 +1190,7 @@
                   <div style="" flex-xl="33" flex-lg="33" flex-md="33">
                     <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xl="column" flex-lg="column" flex-md="column">
                       <div style="background:transparent;" ng-controller="IniciativasController" layout-xl="column" layout-lg="column" layout-md="column">
-                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                        <div hide layout-xl="row" layout-lg="row" layout-md="row">
                           <div flex-xl="100" flex-lg="100" flex-md="100">
                             <div id="divImagesThemesNoticias" style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
                               <div flex-xl="5" flex-lg="5" flex-md="5">
@@ -1198,7 +1218,7 @@
                             </div>
                           </div>
                         </div>
-                        <div style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
+                        <div hide style="background:transparent;" layout-xl="row" layout-lg="row" layout-md="row">
                           <div flex-xl="100" flex-lg="100" flex-md="100">
                             <div layout-xl="row" layout-lg="row" layout-md="row">
                               <div flex-xl="5" flex-lg="5" flex-md="5">
@@ -1226,7 +1246,7 @@
                             </div>
                           </div>
                         </div>
-                        <div layout-xl="row" layout-lg="row" layout-md="row">
+                        <div hide layout-xl="row" layout-lg="row" layout-md="row">
                           <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;"flex-xl="100" flex-lg="100" flex-md="100">
                             <div layout-xl="row" layout-lg="row" layout-md="row">
                               <div flex-xl="5" flex-lg="5" flex-md="5">
@@ -1316,7 +1336,7 @@
                 </div>
               </div>
               <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
-                <div layout-sm="row" layout-xs="row">
+                <div hide layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div id="imageIniciativasThemeMobile" layout-sm="row" layout-xs="row">
                       <div flex-sm="5" flex-xs="5">
@@ -1344,7 +1364,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                <div hide id="valueIniciativasThemeMobile" layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div layout-sm="row" layout-xs="row" >
                       <div flex-sm="5" flex-xs="5" >
@@ -1372,9 +1392,9 @@
                     </div>
                   </div>
                 </div>
-                <div id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
+                <div  id="themeIniciativasThemeMobile" layout-sm="row" layout-xs="row">
                   <div  flex-xs="100" flex-sm="100">
-                    <div layout-xs="row" layout-sm="row">
+                    <div hide layout-xs="row" layout-sm="row">
                       <div flex-xs="5" flex-sm="5">
                       </div>
                       <div flex-xs="15" flex-sm="15">
@@ -1427,7 +1447,7 @@
                 </div>
               </div>
               <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
-                <div layout-sm="row" layout-xs="row">
+                <div hide layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
                       <div flex-sm="5" flex-xs="5">
@@ -1455,7 +1475,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                <div hide id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div layout-sm="row" layout-xs="row" >
                       <div flex-sm="5" flex-xs="5" >
@@ -1483,7 +1503,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                <div hide id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
                   <div  flex-xs="100" flex-sm="100">
                     <div layout-xs="row" layout-sm="row">
                       <div flex-xs="5" flex-sm="5">
