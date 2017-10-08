@@ -595,7 +595,7 @@
   }
 
   .valueScoreRol {
-    margin-left: -134px;
+    margin-left: -201px;
   }
 
   #paddingRolProfile{
@@ -685,6 +685,12 @@
   #contentGraphsIniciativas{
     margin-left: -15px;
   }
+}
+
+@media only screen and (max-width: 768px){
+  .valueScoreRol {
+      margin-left: -145px;
+    }
 }
 
 @media only screen and (max-width: 736px){
