@@ -287,12 +287,12 @@
                    var pick_state = "agc";
                    break;
                case "N/A":
-                   var class_state_none = "none";
+                   var class_state_none = "";
                    var state = " ";
                    var pick_state = "nada";
                    break;
                case "S/E":
-                   var class_state_none = "none";
+                   var class_state_none = "";
                    var state = " ";
                    var pick_state = "nada";
                    break;
@@ -331,7 +331,8 @@
                    class_state_none = "block";
            }
 
-          //  var pick_state_label = "<img onClick=openPerfilPage('other_sites/states.html?id="+state+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
+           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+state+"</span>"
+           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
 
 
            var valor = val.legislator_party_sil;
@@ -409,11 +410,11 @@
                                  </div>\
                                  <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
                                    <span>  por: </span>\
-                                   '+state+'\
+                                   '+state_label+'\
                                  </div>\
                                </div>\
                                <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
-                               <img id="image-state-card" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                               '+pick_state_label+'\
                                </div>\
                              </div>\
                              </div>\
@@ -511,10 +512,10 @@
                            <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                               <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
                                <span>  por: </span>\
-                               '+state+'\
+                               '+state_label+'\
                               </div>\
                               <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
-                              <img id="image-state-card" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                              '+pick_state_label+'\
                               </div>\
                             </div>\
                          </div>\
@@ -590,12 +591,12 @@
              }
 
              if(val.legislator_gender_senate == "Masculino"){
-                 var chamber = "Diputado";
+                 var chamber = "Senador";
 
              }
 
              if(val.legislator_gender_senate == "Femenino"){
-                 var chamber = "Diputada";
+                 var chamber = "Senadora";
              }
 
              var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?id="+val.legislator_chamber_sil+"&sex="+val.legislator_gender_senate+"')>"+chamber+"</span>";
@@ -664,12 +665,12 @@
                    var pick_state = "agc";
                    break;
                case "N/A":
-                   var class_state_none = "none";
+                   var class_state_none = "";
                    var state = " ";
                    var pick_state = "nada";
                    break;
                case "S/E":
-                   var class_state_none = "none";
+                   var class_state_none = "";
                    var state = " ";
                    var pick_state = "nada";
                    break;
@@ -708,7 +709,9 @@
                    class_state_none = "block";
            }
 
-          //  var pick_state_label = "<img onClick=openPerfilPage('other_sites/states.html?id="+state+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
+           var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"')>"+state+"</span>"
+           var pick_state_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+val.legislator_extra_score_sil+"&rol="+val.legislator_rol_score_sil+"&ext="+val.legislator_news_score_sil+"&iap="+val.legislator_ini_ap_sil+"&ide="+val.legislator_ini_de_sil+"&ipe="+val.legislator_ini_pe_sil+"&ipr="+val.legislator_ini_pr_sil+"&ire="+val.legislator_ini_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'imgs/svg/states/"+pick_state+".svg\' src='imgs/svg/states/"+pick_state+".svg'>"
+
 
 
            var valor = val.legislator_party_sil;
@@ -785,11 +788,11 @@
                                  </div>\
                                  <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
                                    <span>  por: </span>\
-                                   '+state+'\
+                                   '+state_label+'\
                                  </div>\
                                </div>\
                                <div flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
-                                 <img id="image-state-card" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                               '+pick_state_label+'\
                                </div>\
                              </div>\
                              </div>\
@@ -887,10 +890,10 @@
                            <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                               <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
                                <span>  por: </span>\
-                               '+state+'\
+                               '+state_label+'\
                               </div>\
                               <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
-                                <img id="image-state-card" onmouseover="this.src=\'imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'imgs/svg/states/'+pick_state+'.svg\'" src="imgs/svg/states/'+pick_state+'.svg">\
+                              '+pick_state_label+'\
                               </div>\
                             </div>\
                          </div>\

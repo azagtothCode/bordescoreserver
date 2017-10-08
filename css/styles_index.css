@@ -318,7 +318,7 @@ html, body{  text-decoration: none;}
     }
 
     #input-project {
-      margin-left: 245px;
+      margin-left: 125px;
     }
 
     #icon-logo {
@@ -327,6 +327,8 @@ html, body{  text-decoration: none;}
       margin-left: 25px;
     }
   }
+
+
 
   @media only screen and (max-width: 768px) {
 
@@ -353,7 +355,11 @@ html, body{  text-decoration: none;}
       }
 
       #input-project {
-      margin-left: 145px;
+        margin-left: 145px;
+      }
+
+      #input-project {
+        margin-left: 85px;
     }
   }
 
@@ -379,6 +385,16 @@ html, body{  text-decoration: none;}
       background-size: 71px;
       margin-top: 18px;
     }
+
+    #input-project {
+      margin-left: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 685px) {
+    #input-project {
+      margin-left: 55px;
+    }
   }
 
   @media only screen and (max-width: 667px) {
@@ -392,7 +408,7 @@ html, body{  text-decoration: none;}
     }
 
     #input-project {
-      margin-left: 103px;
+      margin-left: 55px;
     }
   }
 

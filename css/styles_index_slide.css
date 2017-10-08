@@ -135,13 +135,6 @@
   -webkit-transition: all 500ms;
 }
 
-@media only screen and (max-width: 2560px) {
-  #slide-head-profile-dip{
-    min-height: 650px;
-    background-size: 100% 950px;
-  }
-}
-
 @media only screen and (max-width: 2420px) {
   .btn-text-one {
     font-size: 17px;
@@ -233,35 +226,31 @@
 
 @media only screen and (max-width: 1680px) {
   #slide-head-profile-dip{
-    min-height: 410px;
     background-size: 100% 540px;
   }
+
 }
 
 @media only screen and (max-width: 1440px) {
   #slide-head-profile-dip{
-    min-height: 375px;
     background-size: 100% 375px;
   }
 }
 
 @media only screen and (max-width: 1366px) {
   #slide-head-profile-dip{
-    min-height: 400px;
     background-size: 100% 450px;
   }
 }
 
 @media only screen and (max-width: 1280px) {
   #slide-head-profile-dip {
-    min-height: 400px;
     background-size: 100% 550px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   #slide-head-profile-dip{
-    min-height: 375px;
     background-size: 100% 375px;
   }
 }
