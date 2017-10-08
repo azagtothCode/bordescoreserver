@@ -477,6 +477,7 @@
 
     #style-trabajo {
       margin-left: 0px;
+      margin-top: 55px;
     }
 
     #style-rol .letter {
@@ -806,6 +807,19 @@
 
     #mail-card-profile img {
       width: 35px;
+    }
+
+    #style-trabajo {
+      margin-top: 22px;
+      font-size: 18px;
+    }
+
+    #style-rol {
+      font-size: 18px;
+    }
+
+    #style-extra {
+      font-size: 18px;
     }
   }
 
@@ -1167,6 +1181,12 @@
       margin-top: 47px;
       margin-left: 50px;
     }
+
+    .image-party-card-profile img {
+      width: 55px;
+      margin-top: 165px;
+      margin-left: -2px;
+    }
   }
 
   @media only screen and (max-width: 900px) {
@@ -1258,12 +1278,16 @@
     }
 
     #content-socials-card-profile {
-      margin-left: 70px;
+      margin-left: 40px;
       margin-top: 135px;
     }
 
     #califichas-content-sad-profile img {
       margin-left: 20px;
+    }
+
+    #score-card-profile p {
+      margin-left: 0px;
     }
   }
 
@@ -1286,20 +1310,35 @@
       margin-right: 56px;
     }
 
+    #califichas-content-happy-profile img {
+        width: 35px;
+        margin-left: 0px;
+    }
+
     #califichas-content-sad-profile img {
-      margin-left: 16px;
+      width: 35px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-bad-profile img {
+      width: 35px;
+      margin-left: 0px;
     }
 
     #score-card-profile p {
-      margin-left: 4px;
+      margin-left: -20px;
+      margin-top: 0px;
+      font-size: 20px;
     }
 
     #content-socials-card-profile {
-      margin-left: 90px;
+      margin-left: -10px;
     }
 
     #image-state-card-profile {
-      margin-left: 10px;
+      margin-left: 6px;
+      width: 30px;
+      height: 30px;
     }
 
     #text-chamber-card-profile {
@@ -1308,6 +1347,16 @@
 
     #text-state-card-profile span {
       margin-right: -35px;
+    }
+
+    .image-card-profile img {
+      margin-left: 45px;
+    }
+
+    #score-card-profile img {
+      margin-top: 90px;
+      width: 90px;
+      margin-left: -30px;
     }
   }
 
@@ -1366,9 +1415,23 @@
     }
 
     .image-card-profile img {
-      margin-left: -10px;
-      width: 120px;
-      height: 120px;
+      margin-left: 5px;
+      width: 155px;
+      margin-top: 65px;
+      height: 155px;
+    }
+
+    #score-card-profile p {
+      margin-left: -16px;
+    }
+
+    .image-party-card-profile img {
+      margin-left: -25px;
+      margin-top: 165px;
+    }
+
+    #content-socials-card-profile {
+      margin-left: 0px;
     }
    }
 
@@ -1409,6 +1472,13 @@
       margin-top: 40px;
       margin-right: 27px;
       font-size: 17px;
+    }
+
+    .image-card-profile img {
+      margin-left: -5px;
+      width: 145px;
+      margin-top: 65px;
+      height: 145px;
     }
   }
 
@@ -1467,26 +1537,31 @@
     #califichas-content-happy-profile img{
       width: 30px;
       margin-top: 40px;
-      margin-left: 20px;
+      margin-left: 0px;
     }
 
     #califichas-content-sad-profile img{
       width: 30px;
       margin-top: 40px;
-      margin-left: 9px;
+      margin-left: 0px;
     }
 
 
     #califichas-content-bad-profile img{
       width: 30px;
       margin-top: 40px;
-      margin-left: -3px;
+      margin-left: 0px;
+    }
+
+    #score-card-profile p {
+      margin-left: 10px;
+      margin-top: 5px;
     }
 
     #content-socials-card-profile{
       text-align: center;
       margin-left: 10px;
-      margin-top: 50px;
+      margin-top: 80px;
     }
 
     #score-card-profile {
@@ -1511,7 +1586,7 @@
 
     #text-chamber-card-profile{
       font-size: 15px;
-      margin-top: 13px;
+      margin-top: 70px;
       margin-right: 28px;
       text-transform: uppercase;
       text-align: right;
@@ -1544,24 +1619,24 @@
     }
 
     .image-card-profile img{
-      width: 140px;
-      height: 140px;
-      margin-top: -18px;
-      margin-left: 32px;
+      width: 130px;
+      height: 130px;
+      margin-top: 10px;
+      margin-left: 0px;
       border-radius: 50%;
     }
 
-    .image-party-card-profile img{
+    .image-party-card-profile img {
       width: 50px;
-      margin-left: 0px;
-      margin-top: 72px;
+      margin-left: -15px;
+      margin-top: 90px;
     }
 
     #image-state-card-profile {
       width: 45px;
       height: 45px;
       margin-left: -18px;
-      margin-top: 15px;
+      margin-top: 75px;
     }
 
     #facebook-card-profile img{
@@ -1591,7 +1666,7 @@
     }
 
     #text-election-card-profile{
-      font-size: 11px;
+      font-size: 13px;
       margin-top: 3px;
       text-align: left;
       font-weight: bold;
@@ -1599,7 +1674,7 @@
     }
 
     #text-commission-card-profile{
-      font-size: 11px;
+      font-size: 13px;
       padding-bottom: 5px;
       text-align: left;
       font-weight: bold;
