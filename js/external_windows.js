@@ -126,7 +126,44 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.openSatatesProfile = function(ev) {
     $mdDialog.show({
       controller: DialogController,
+      templateUrl: '../other_sites/states.profile.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openSatates = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
       templateUrl: 'other_sites/states.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+
+  $scope.openPartys = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: '../other_sites/partys.profile.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,

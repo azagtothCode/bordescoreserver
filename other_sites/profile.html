@@ -222,7 +222,44 @@
                   class_state_none = "block";
           }
 
+
+          var facebook = val.legislator_facebook_sil;
+
+            if(facebook == "FACEBOOK"){
+              var class_none_facebook = "none";
+            }else{
+              var class_none_facebook = "block";
+            }
+
+          var twitter = val.legislator_twitter_senate;
+
+            if(twitter == ""){
+              var class_none_twitter = "none";
+            }else{
+              var class_none_twitter = "block";
+            }
+
+          var mail = val.legislator_mail_sil;
+
+            if(mail == ""){
+              var class_none_mail = "none";
+            }else{
+              var class_none_mail = "block";
+            }
+
           var valor = val.legislator_party_sil;
+
+          $(".facebook-card-profile").append('<a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+            <img onmouseover="this.src=\'../imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/facebook_cards.svg\'" src="../imgs/svg/facebook_cards.svg">\
+          </a>');
+
+          $(".twitter-card-profile").append('<a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+            <img onmouseover="this.src=\'../imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/twiter_cards.svg\'" src="../imgs/svg/twiter_cards.svg">\
+          </a>');
+
+          $(".mail-card-profile").append('<a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+            <img onmouseover="this.src=\'../imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/mail_cards.svg\'" src="../imgs/svg/mail_cards.svg">\
+          </a>');
 
           $(".scoreWho").append(score_val);
           $(".chamberWho").append(chamber);
@@ -231,7 +268,7 @@
           $(".last_nameWho").append(last_name);
           $(".representationWho").append(representation);
           $(".commissionWho").append(post);
-          $(".pickStateWho").append('<img id="image-state-card-profile" src="../imgs/svg/states/'+pick_state+'.svg">');
+          $(".pickStateWho").append('<img onmouseover=this.src="../imgs/svg/states/colors/'+pick_state+'.svg" onmouseout=this.src="../imgs/svg/states/'+pick_state+'.svg" id="image-state-card-profile" src="../imgs/svg/states/'+pick_state+'.svg">');
           $(".image-party-card-profile").append('<img onmouseover=this.src="../imgs/svg/partys/colors/'+res_pick_party+'.svg" onmouseout=this.src="../imgs/svg/partys/'+res_pick_party+'.svg" src="../imgs/svg/partys/'+res_pick_party+'.svg" >');
           $(".image-card-profile").append('<img src="../imgs/png/legisladores/'+res_pick+'.png">');
           $(".valueTrabajo").append(val.legislator_extra_score_sil);
@@ -241,6 +278,7 @@
           $(".numberTrabajo").append(val.legislator_extra_score_sil);
           $(".numberRol").append(val.legislator_rol_score_sil);
           $(".numberExtra").append(val.legislator_news_score_sil);
+
       }
 
      });
@@ -320,17 +358,17 @@
       <div flex-xs="50" flex-sm="30">
         <div layout-xs="row" layout-sm="row">
           <div id="califichas-content-happy-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
+            <a href="http://bordepolitico/pac.com" target="_blank">
               <img src="../imgs/svg/cali_happy.svg">
             </a>
           </div>
           <div id="califichas-content-sad-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
+            <a href="http://bordepolitico/pac.com" target="_blank">
               <img src="../imgs/svg/cali_sad.svg">
             </a>
           </div>
           <div id="califichas-content-bad-profile"  flex-xs="25" flex-sm="25">
-            <a href="pac.bordepolitico.com" target="_blank">
+            <a href="http://bordepolitico/pac.com" target="_blank">
               <img src="../imgs/svg/cali_bad.svg">
             </a>
           </div>
@@ -350,25 +388,25 @@
         <div layout-xs="row" layout-sm="row">
           <div class="image-card-profile" flex-xs="60" flex-sm="60">
           </div>
-          <div class="image-party-card-profile" flex-xs="20" flex-sm="20">
+          <div class="image-party-card-profile" ng-controller="OpenPanelScoreController" ng-click="openPartys($event)"  flex-xs="20" flex-sm="20">
 
           </div>
           <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
               <div style="text-align:right;" layout-xs="column" layout-sm="column">
-                <div id="facebook-card-profile">
-                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                <div class="facebook-card-profile">
+                    <!-- <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                       <img src="../imgs/svg/facebook_cards.svg">
-                    </a>
+                    </a> -->
                 </div>
-                <div id="twitter-card-profile">
-                  <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                <div class="twitter-card-profile">
+                  <!-- <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
                     <img src="../imgs/svg/twiter_cards.svg">
-                  </a>
+                  </a> -->
                 </div>
-                <div id="mail-card-profile" >
-                  <a href="mailto:{{item.mail}}">
+                <div class="mail-card-profile" >
+                  <!-- <a href="mailto:{{item.mail}}">
                     <img src="../imgs/svg/mail_cards.svg">
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>
@@ -395,21 +433,21 @@
                   <span class="stateWho"></span>
                   </div>
                 </div>
-                <div class="pickStateWho" flex-xs="15" flex-sm="15">
+                <div class="pickStateWho" ng-controller="OpenPanelScoreController" ng-click="openSatatesProfile($event)" flex-xs="15" flex-sm="15">
                 </div>
               </div>
             </div>
             <div layout-xs="column" layout-sm="column">
-              <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+              <div id="text-name-card-profile" layout-xs="column" layout-sm="column">
                 <span class="nameWho"></span>
               </div>
-              <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+              <div id="text-name-card-profile"  layout-xs="column" layout-sm="column">
                 <span class="last_nameWho"></span>
               </div>
               <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
                 <span class="representationWho"></span>
               </div>
-              <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-xs="column" layout-sm="column">
+              <div id="text-commission-card-profile" layout-xs="column" layout-sm="column">
                 <span class="commissionWho"></span>
               </div>
             </div>
@@ -430,7 +468,7 @@
       <div layout-xs="column" layout-sm="column">
         <div id="style-trabajo" layout-xs="row" layout-sm="row">
           <div  flex-xs="20" flex-sm="20">
-            <span class="number">20</span>
+            <span class="numberTrabajo"></span>
           </div>
           <div flex-xs="80" flex-sm="80">
             <span class="letter">Trabajo</span>
@@ -440,7 +478,7 @@
       <div layout-xs="column" layout-sm="column">
         <div id="style-rol"  layout-xs="row" layout-sm="row">
           <div flex-xs="20" flex-sm="20">
-            <span class="number">50</span>
+            <span class="numberRol"></span>
           </div>
           <div flex-xs="80" flex-sm="80">
             <span class="letter">Rol</span>
@@ -450,7 +488,7 @@
       <div layout-xs="column" layout-sm="column">
         <div id="style-extra"  layout-xs="row" layout-sm="row">
           <div flex-xs="20" flex-sm="20">
-            <span class="number">30</span>
+            <span class="numberExtra"></span>
           </div>
           <div flex-xs="80" flex-sm="80">
             <span class="letter">Extra</span>
@@ -471,18 +509,18 @@
                    <div flex-gt-md="100" flex-md="100" flex-lg="100" flex-xl="100">
                      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
                        <div id="califichas-content-happy-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_happy.svg">
+                         <a href="http://bordepolitico/pac.com" target="_blank">
+                           <img onmouseover=this.src="../imgs/svg/cali_happy_color.svg" onmouseout=this.src="../imgs/svg/cali_happy.svg" src="../imgs/svg/cali_happy.svg">
                          </a>
                        </div>
                        <div id="califichas-content-sad-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_sad.svg">
+                         <a href="http://bordepolitico/pac.com" target="_blank">
+                           <img onmouseover=this.src="../imgs/svg/cali_sad_color.svg" onmouseout=this.src="../imgs/svg/cali_sad.svg" src="../imgs/svg/cali_sad.svg">
                          </a>
                        </div>
                        <div id="califichas-content-bad-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="pac.bordepolitico.com" target="_blank">
-                           <img src="../imgs/svg/cali_bad.svg">
+                         <a href="http://bordepolitico/pac.com" target="_blank">
+                           <img onmouseover=this.src="../imgs/svg/cali_bad_color.svg" onmouseout=this.src="../imgs/svg/cali_bad.svg" src="../imgs/svg/cali_bad.svg">
                          </a>
                        </div>
                        <div id="score-card-profile" style="text-align:center;" flex-gt-md="40" flex-md="40" flex-lg="40" flex-xl="40">
@@ -497,24 +535,24 @@
                       <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
                         <div class="image-card-profile" flex-md="50" flex-lg="50" flex-xl="50">
                         </div>
-                        <div class="image-party-card-profile" flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
+                        <div class="image-party-card-profile" ng-controller="OpenPanelScoreController" ng-click="openPartys($event)" flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
                         </div>
                         <div id="content-socials-card-profile" flex-gt-md="25" flex-md="25" flex-lg="25" flex-xl="25">
                             <div style="text-align:right;" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                              <div id="facebook-card-profile">
-                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                              <div class="facebook-card-profile">
+                                <!-- <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
                                   <img src="../imgs/svg/facebook_cards.svg">
-                                </a>
+                                </a> -->
                               </div>
-                              <div id="twitter-card-profile">
-                                <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
+                              <div class="twitter-card-profile">
+                                <!-- <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
                                   <img src="../imgs/svg/twiter_cards.svg">
-                                </a>
+                                </a> -->
                               </div>
-                              <div id="mail-card-profile" >
-                                <a href="mailto:{{item.mail}}">
+                              <div class="mail-card-profile" >
+                                <!-- <a href="mailto:{{item.mail}}">
                                   <img src="../imgs/svg/mail_cards.svg">
-                                </a>
+                                </a> -->
                               </div>
                             </div>
                         </div>
@@ -534,10 +572,10 @@
                        </div>
                        <div id="text-state-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                        <span>  por: </span>
-                         <span class="stateWho"></span>
+                         <span class="stateWho" ></span>
                        </div>
                      </div>
-                     <div class="pickStateWho" flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="15">
+                     <div class="pickStateWho" ng-controller="OpenPanelScoreController" ng-click="openSatatesProfile($event)" flex-gt-md="15" flex-md="15" flex-lg="15" flex-xl="15">
                      </div>
                    </div>
                  </div>
@@ -962,7 +1000,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
+                              <a href="http://bordepolitico/pac.com" target="_blank">
                                 <img src="../imgs/svg/cali_happy.svg">
                               </a>
                             </div>
@@ -974,7 +1012,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
+                              <a href="http://bordepolitico/pac.com" target="_blank">
                                 <img src="../imgs/svg/cali_sad.svg">
                               </a>
                             </div>
@@ -986,7 +1024,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="pac.bordepolitico.com" target="_blank">
+                              <a href="http://bordepolitico/pac.com" target="_blank">
                                 <img src="../imgs/svg/cali_bad.svg">
                               </a>
                             </div>
@@ -1498,7 +1536,7 @@
                              <div layout-xs="column" layout-sm="column" >
                                <div layout-xs="row" layout-sm="row" >
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
+                                   <a href="http://bordepolitico/pac.com" target="_blank">
                                      <img src="../imgs/svg/cali_happy.svg">
                                    </a>
                                  </div>
@@ -1510,7 +1548,7 @@
                              <div layout-xs="column" layout-sm="column" >
                                <div layout-xs="row" layout-sm="row">
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
+                                   <a href="http://bordepolitico/pac.com" target="_blank">
                                      <img src="../imgs/svg/cali_sad.svg">
                                    </a>
                                  </div>
@@ -1522,7 +1560,7 @@
                              <div layout-xs="column" layout-sm="column">
                                <div layout-xs="row" layout-sm="row" >
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="pac.bordepolitico.com" target="_blank">
+                                   <a href="http://bordepolitico/pac.com" target="_blank">
                                      <img src="../imgs/svg/cali_bad.svg">
                                    </a>
                                  </div>

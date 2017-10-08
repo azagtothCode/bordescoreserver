@@ -221,7 +221,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 75px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 45px;
     margin-left: 2px;
@@ -614,7 +614,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 75px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 40px;
     margin-left: 2px;
@@ -963,7 +963,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 75px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 40px;
     margin-left: 2px;
@@ -1303,7 +1303,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 75px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 40px;
     margin-left: 2px;
@@ -1799,7 +1799,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 75px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 40px;
     margin-left: 2px;
@@ -2179,7 +2179,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 100px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     margin-left: 2px;
@@ -2493,7 +2493,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 100px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     margin-left: 2px;
@@ -2808,7 +2808,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 53px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     margin-left: 2px;
@@ -3143,7 +3143,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 53px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     margin-left: 2px;
@@ -3385,7 +3385,7 @@ db.dropDatabase() -- first use namedb and execute command
       margin-top: 53px;
     }
 
-    #facebook-card-profile img{
+    .facebook-card-profile img{
       margin-top: -30px;
       width: 30px;
       margin-left: 2px;
@@ -3647,7 +3647,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 22px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     cursor: pointer;
@@ -3985,7 +3985,7 @@ db.dropDatabase() -- first use namedb and execute command
     margin-top: 15px;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 30px;
     cursor: pointer;

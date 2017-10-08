@@ -329,6 +329,7 @@
     width: 95px;
     margin-left: -12px;
     margin-top: 95px;
+    cursor: pointer;
   }
 
   #image-state-card-profile {
@@ -336,20 +337,21 @@
     height: 76px;
     margin-left: -20px;
     margin-top: 105px;
+    cursor: pointer;
   }
 
-  #facebook-card-profile img{
+  .facebook-card-profile img{
     margin-top: -30px;
     width: 55px;
     margin-left: 2px;
   }
 
-  #twitter-card-profile img{
+  .twitter-card-profile img{
     margin-top: 15px;
     width: 55px;
   }
 
-  #mail-card-profile img{
+  .mail-card-profile img{
     margin-top: 15px;
     width: 55px;
   }
@@ -361,7 +363,6 @@
     text-transform: capitalize;
     text-align: left;
     letter-spacing: 3px;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 100px;
   }
@@ -372,7 +373,6 @@
     color: #BBB;
     text-transform: capitalize;
     text-align: left;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 100px;
   }
@@ -383,7 +383,6 @@
     text-transform: capitalize;
     color: #BBB;
     text-align: left;
-    cursor: pointer;
     font-weight: bold;
     margin-left: 100px;
     margin-bottom: 10px;
@@ -522,15 +521,15 @@
       width: 45px;
     }
 
-    #facebook-card-profile img {
+    .facebook-card-profile img {
       width: 45px;
     }
 
-    #twitter-card-profile img {
+    .twitter-card-profile img {
       width: 45px;
     }
 
-    #mail-card-profile img {
+    .mail-card-profile img {
       width: 45px;
     }
   }
@@ -601,15 +600,15 @@
           width: 40px;
       }
 
-      #facebook-card-profile img {
+      .facebook-card-profile img {
         width: 40px;
       }
 
-      #twitter-card-profile img {
+      .twitter-card-profile img {
           width: 40px;
       }
 
-      #mail-card-profile img {
+      .mail-card-profile img {
           width: 40px;
       }
 
@@ -773,11 +772,11 @@
       margin-top: 85px;
     }
 
-    #twitter-card-profile img {
+    .twitter-card-profile img {
       margin-top: 10px;
     }
 
-    #mail-card-profile img {
+    .mail-card-profile img {
       margin-top: 10px;
     }
 
@@ -797,15 +796,15 @@
         width: 35px;
     }
 
-    #facebook-card-profile img {
+    .facebook-card-profile img {
       width: 35px;
     }
 
-    #twitter-card-profile img {
+    .twitter-card-profile img {
       width: 35px;
     }
 
-    #mail-card-profile img {
+    .mail-card-profile img {
       width: 35px;
     }
 
@@ -1053,15 +1052,15 @@
       margin-top: 43px;
     }
 
-    #facebook-card-profile img {
+    .facebook-card-profile img {
       width: 25px;
     }
 
-    #twitter-card-profile img {
+    .twitter-card-profile img {
         width: 25px;
     }
 
-    #mail-card-profile img {
+    .mail-card-profile img {
         width: 25px;
     }
 
@@ -1676,19 +1675,19 @@
       margin-top: 75px;
     }
 
-    #facebook-card-profile img{
+    .facebook-card-profile img{
       margin-top: -30px;
       width: 30px;
       cursor: pointer;
       margin-left: 2px;
     }
 
-    #twitter-card-profile img{
+    .twitter-card-profile img{
       margin-top: 5px;
       width: 30px;
     }
 
-    #mail-card-profile img{
+    .mail-card-profile img{
       margin-top: 5px;
       width: 30px;
     }
