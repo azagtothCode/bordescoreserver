@@ -1355,7 +1355,7 @@
       margin-top: -5px;
       font-size: 25px;*/
 
-      margin-left: -53px;
+      margin-left: -55px;
       margin-top: 175px;
       font-size: 25px;
     }
@@ -1458,6 +1458,7 @@
 
     #score-card-profile p {
       margin-left: -20px;
+      margin-top: -5px;
     }
 
     .image-party-card-profile img {
