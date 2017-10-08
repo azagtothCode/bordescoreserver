@@ -1351,7 +1351,8 @@
     }
 
     #score-card-profile p {
-      margin-left: -20px;
+      /*margin-left: -20px;*/
+      margin-left: -100px;
       margin-top: -5px;
       font-size: 25px;
     }
