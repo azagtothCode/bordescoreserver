@@ -289,6 +289,18 @@
                $scope.data = [(getQueryVariable('work')), (getQueryVariable('rol')), (getQueryVariable('ext'))];
      })
 
+     app.controller("BarCtrlPolitico", function ($scope) {
+       $scope.colors = ["rgb(102,51,0)","rgb(255,255,255)","rgb(165,165,165)","rgb(79,78,77)",];
+               $scope.labels = ["Ordinarias", "Especiales", "Comites" , "Gpo. de Amistad"];
+               $scope.data = [(getQueryVariable('work')), (getQueryVariable('rol')), (getQueryVariable('ext')), (getQueryVariable('ext'))];
+     })
+
+     app.controller("BarCtrlLegislativo", function ($scope) {
+       $scope.colors = ["rgb(102,51,0)","rgb(255,255,255)","rgb(238,68,85)",];
+               $scope.labels = ["Klout Score", "Google Score", "Tres de Tres"];
+               $scope.data = [(getQueryVariable('work')), (getQueryVariable('rol')), (getQueryVariable('ext'))];
+     })
+
      app.controller("BarCtrlIniciativas", function ($scope) {
        $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
        $scope.series = ['Iniciativas'];
@@ -1276,12 +1288,12 @@
     				</div>
     			</md-toolbar>
     			<div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div ng-controller="BarCtrlPuntos" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
+            <div ng-controller="BarCtrlIniciativas" layout-sm="column" layout-xs="column" id="barIniciativaMobile">
               <div layout-sm="row" layout-xs="row">
                 <div id="contentGraphsIniciativas" flex-sm="100" flex-xs="100">
                   <canvas  class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
                   </canvas>
-                  <h1>P. de Acuerdo</h1>
+                  <h1>Iniciativas</h1>
                 </div>
               </div>
               <div id="bodyIniciativasMobile" ng-controller="IniciativasController" layout-sm="column" layout-xs="column">
@@ -1526,7 +1538,7 @@
     			<div style="background:#FF974C;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
             <div layout-xs="column" layout-sm="column" >
               <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-              <div id="contentRolProfile" ng-controller="BarCtrlRol" flex-xs="100" flex-sm="100">
+              <div id="contentRolProfile" ng-controller="BarCtrlPolitico" flex-xs="100" flex-sm="100">
                 <div style="text-align:center;" layout-xs="row" layout-sm="row" >
                   <div id="paddingRolProfile"  flex-xs="100" flex-sm="100">
                      <div layout-xs="row" layout-sm="row">
@@ -1574,14 +1586,14 @@
                              <div id="divScoreRol" layout-xs="column" layout-sm="column" >
                                <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
                              </div>
-                             <div layout-xs="column" layout-md="column" style="z-index:2;">
-                               <span class="valueScoreRol">100</span>
+                             <div layout-xs="column" layout-sm="column" style="z-index:2;">
+                               <span class="valueScoreRol" style="color:#990000;">100</span>
                              </div>
                              <div  layout-xs="column" layout-sm="column">
-                               <span class="valueRankingRol">Ranking</span>
+                               <span class="valueRankingRol" style="color:#990000;">Ranking</span>
                              </div>
                              <div  layout-xs="column" layout-sm="column">
-                               <span class="scoreRol">Score</span>
+                               <span class="scoreRol" style="color:#990000;">Score</span>
                              </div>
                            </div>
                          </div>
@@ -1637,7 +1649,7 @@
     				</div>
     			</md-toolbar>
     			<div style="background:#FFC73F;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
-            <div  ng-controller="BarCtrlRol"  layout-xs="column" layout-sm="column" >
+            <div  ng-controller="BarCtrlLegislativo"  layout-xs="column" layout-sm="column" >
               <div style="text-align:center;" layout-xs="row" layout-sm="row" >
                 <div flex-sm="100" flex-xs="100">
                   <div ayout-sm="row" layout-xs="row">
@@ -1646,7 +1658,7 @@
                         <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
                       </div>
                       <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                        <span style="text-align:center; margin-top:-30px; color:#990000;" >100</span>
                       </div>
                       <div class="classRanking"  layout-xs="column" layout-sm="column">
                         ranking
@@ -1664,7 +1676,7 @@
                        <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
                      </div>
                      <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                       <span style="text-align:center; margin-top:-30px;" >100</span>
+                       <span style="text-align:center; margin-top:-30px; color:#FFF;" >100</span>
                      </div>
                      <div style="" layout-xs="column" layout-sm="column">
                        <span class="classRanking">ranking</span>
@@ -1686,7 +1698,7 @@
                      <div style="" flex-xs="100" flex-sm="100">
                        <div style="color: #343434; font-size: 25px; text-align: center; margin-top: 20px; margin-bottom: 20px;" flex-xs="column" flex-sm="column">
                          <div style="background:transparent;" ng-controller="IniciativasController" layout-xs="column" layout-sm="column">
-                           <div layout-xs="row" layout-sm="row">
+                           <!-- <div layout-xs="row" layout-sm="row">
                              <div flex-xs="100" flex-sm="100">
                                <div id="divImagesThemesNoticias" style="background:transparent;" layout-xs="row" layout-sm="row">
                                  <div flex-xs="5" flex-sm="5" >
@@ -1713,8 +1725,8 @@
                                  </div>
                                </div>
                              </div>
-                           </div>
-                           <div style="background:transparent;" layout-xs="row" layout-sm="row" >
+                           </div> -->
+                           <!-- <div style="background:transparent;" layout-xs="row" layout-sm="row" >
                              <div flex-xs="100" flex-sm="100">
                                <div layout-xs="row" layout-sm="row">
                                  <div flex-xs="5" flex-sm="5" >
@@ -1741,8 +1753,8 @@
                                  </div>
                                </div>
                              </div>
-                           </div>
-                           <div layout-xs="row" layout-sm="row" >
+                           </div> -->
+                           <!-- <div layout-xs="row" layout-sm="row" >
                              <div id="divTextThemesNoticias" style="background:transparent; text-align:center; font-size:16px;" flex-xs="100" flex-sm="100">
                                <div layout-xs="row" layout-sm="row">
                                  <div flex-xs="5" flex-sm="5">
@@ -1769,7 +1781,7 @@
                                  </div>
                                </div>
                              </div>
-                           </div>
+                           </div> -->
                            <md-content id="contentNoticias" >
                              <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
                                <div flex-xs="5" flex-sm="5">
@@ -1791,7 +1803,6 @@
                      </div>
                    </div>
                  </div>
-
                </div>
             </div>
           </div>

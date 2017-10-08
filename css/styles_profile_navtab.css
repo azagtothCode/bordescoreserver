@@ -480,9 +480,7 @@
     margin-left: 2px;
   }
 }
-
-
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 736px){
   #imageScoreAccordion{
     width: 40px;
   }
@@ -596,7 +594,7 @@
   }
 
   .valueScoreRol {
-    margin-left: -10px;
+    margin-left: -134px;
   }
 
   #paddingRolProfile{
@@ -616,15 +614,18 @@
   #rightScoreExtra .classRanking{
     border-top:1px solid #FFF;
     text-align:right;
-    font-size:14px;
+    font-size:13px;
     color:#FFF;
-
+    padding: 5px;
+    margin-top: 10px;
   }
 
   #rightScoreExtra .classNews{
     text-align:right;
-    font-size:14px;
+    font-size:13px;
     color:#FFF;
+    padding: 5px;
+
   }
 
   #leftScoreExtra{
@@ -636,14 +637,18 @@
   #leftScoreExtra .classRanking{
     border-top:1px solid #990000;
     text-align:left;
-    font-size:14px;
+    font-size:13px;
     color:#990000;
+    padding: 5px;
+    margin-top: 10px;
   }
 
   #leftScoreExtra .classKlout{
     text-align:left;
-    font-size:14px;
+    font-size:13px;
     color:#990000;
+    padding: 5px;
+
   }
 
   #titleNewsAccordion{
@@ -669,7 +674,7 @@
   #contentNoticias{
     background:transparent;
     height:350px;
-    margin-top:30px;
+    margin-top:0px;
   }
 
   #contentGraphsPoints{
@@ -678,5 +683,238 @@
 
   #contentGraphsIniciativas{
     margin-left: -15px;
+  }
+}
+
+@media only screen and (max-width: 667px){
+
+
+  .valueScoreRol {
+    margin-left: -114px;
+  }
+}
+
+@media only screen and (max-width: 568px){
+  #imageScoreAccordion{
+    width: 40px;
+  }
+
+  #valueScoreAccordion{
+    margin-left: -32px;
+  }
+
+  #titleScoreAccordion{
+    margin-left: 15px;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+
+  #barIniciativaMobile h1{
+    color: #FFF;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-left: 17px;
+  }
+
+  #barPuntosMobile h1{
+    color: #FFF;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-left: 17px;
+  }
+
+  #barPuntosMobile{
+    margin-top: 30px;
+  }
+
+  #bodyIniciativasMobile{
+    background: #FFF;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  #imageIniciativasThemeMobile img{
+    width: 35px;
+  }
+
+  #valueIniciativasThemeMobile{
+    background: #FFF;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #themeIniciativasThemeMobile{
+    color: #343434;
+    padding-bottom: 5px;
+    text-align: center;
+    background: #FFF;
+    font-size: 7px;
+
+  }
+
+  #iniciativasTextContentMobile{
+    background:#FFF;
+    height:250px;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: justify;
+    padding: 10px;
+    letter-spacing: 2px;
+  }
+
+  /*Puntos*/
+  #bodyPuntosMobile{
+    background: #FFF;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  #imagePuntosThemeMobile img{
+    width: 35px;
+  }
+
+  #valuePuntosThemeMobile{
+    background: #FFF;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #themePuntosThemeMobile{
+    color: #343434;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 7px;
+  }
+
+  #PuntosTextContentMobile{
+    background:#FFF;
+    height:250px;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: justify;
+    padding: 10px;
+    letter-spacing: 2px;
+  }
+
+  #divScoreRol {
+    width: 97px;
+  }
+
+  #commissionsRolExtra md-content {
+    height: 230px;
+    margin-top: 20px;
+  }
+
+  .valueScoreRol {
+    margin-left: -82px;
+  }
+
+  #paddingRolProfile{
+    padding-top: 0px;
+  }
+
+  .md-accordion .activeContent {
+    padding: 10px;
+  }
+
+  #rightScoreExtra{
+    border-right:1px solid #FFF;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+
+  #rightScoreExtra .classRanking{
+    border-top:1px solid #FFF;
+    text-align:right;
+    font-size:13px;
+    color:#FFF;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  #rightScoreExtra .classNews{
+    text-align:right;
+    font-size:13px;
+    color:#FFF;
+    padding: 5px;
+
+  }
+
+  #leftScoreExtra{
+    border-left:1px solid #990000;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+
+  #leftScoreExtra .classRanking{
+    border-top:1px solid #990000;
+    text-align:left;
+    font-size:13px;
+    color:#990000;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  #leftScoreExtra .classKlout{
+    text-align:left;
+    font-size:13px;
+    color:#990000;
+    padding: 5px;
+
+  }
+
+  #titleNewsAccordion{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  #divImagesThemesNoticias img {
+    width: 35px;
+  }
+
+  #divTextThemesNoticias span {
+    font-size: 7px;
+    font-weight: 100;
+  }
+
+  #NoticiasDivContent {
+    font-size: 11px;
+  }
+
+  #contentNoticias{
+    background:transparent;
+    height:350px;
+    margin-top:0px;
+  }
+
+  #contentGraphsPoints{
+    margin-left: -15px;
+  }
+
+  #contentGraphsIniciativas{
+    margin-left: -15px;
+  }
+}
+
+@media only screen and (max-width: 414px){
+  .valueScoreRol {
+      margin-left: -21px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .valueScoreRol {
+      margin-left: -16px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+
+  .valueScoreRol {
+    margin-left: -10px;
   }
 }
