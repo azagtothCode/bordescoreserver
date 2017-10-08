@@ -1351,10 +1351,9 @@
     }
 
     #score-card-profile p {
-      margin-left: -24px;
+      margin-left: -15px;
       margin-top: -5px;
       font-size: 25px;
-      z-index: 2;
     }
 
     #content-socials-card-profile {
@@ -1382,11 +1381,17 @@
     #score-card-profile img {
       margin-top: 90px;
       width: 90px;
-      margin-left: -30px;
+      margin-left: -22px;
     }
   }
 
   @media only screen and (max-width: 414px) {
+
+    #score-card-profile img {
+      margin-top: 90px;
+      width: 90px;
+      margin-left: -30px;
+    }
 
     #califichas-content-happy img {
       width: 30px;
