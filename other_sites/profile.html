@@ -1270,7 +1270,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorTrabajo" class="toolbardemoBasicUsage">
     	<md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = false" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headTrabajo" ng-init="data.expanded = true" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
@@ -1631,7 +1631,7 @@
     <div hide-lg hide-md hide-xl  ng-controller="acorExtra" class="toolbardemoBasicUsage">
       <md-content>
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
-    			<md-toolbar  id="headExtra" ng-init="data.expanded = true" ng-click="collapseAll(data)">
+    			<md-toolbar  id="headExtra" ng-init="data.expanded = false" ng-click="collapseAll(data)">
     				<div class="md-toolbar-tools">
               <div ng-if="data.expanded == true">
                 <img id="imageScoreAccordion" src="{{data.srcno}}">
