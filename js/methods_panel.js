@@ -88,12 +88,12 @@ app.controller('PanelCtrl', function ($scope, $timeout, $mdSidenav, $log) {
       {
         face : imagePathLegis,
         who: 'Senadores Perfiles',
-        address: 'profiles/index.html'
+        address: '#'
       },
       {
         face : imagePathSen,
         who: 'Diputados Perfiles',
-        address: 'profiles/index.html'
+        address: '#'
 
       }
     ];

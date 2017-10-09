@@ -75,6 +75,7 @@
   (getQueryVariable('ire'));
   (getQueryVariable('ide'));
   (getQueryVariable('ipe'));
+  (getQueryVariable('cms'));
 
     $.ajax({
       url: supurl+'/diputados/profile/dip/get',
@@ -273,11 +274,13 @@
           $(".image-card-profile").append('<img src="../imgs/png/legisladores/'+res_pick+'.png">');
           $(".valueTrabajo").append(val.legislator_extra_score_sil);
           $(".valueRol").append(val.legislator_rol_score_sil);
+          $(".valueScoreRol").append(val.legislator_com_res_sil);
           $(".valueExtra").append(val.legislator_news_score_sil);
           $(".numberTrabajo").append(val.legislator_extra_score_sil);
           $(".numberRol").append(val.legislator_rol_score_sil);
           $(".numberExtra").append(val.legislator_news_score_sil);
-
+          $(".numberKlout").append(val.legislator_klout_res_sil);
+          $(".numberGoogle").append(val.legislator_google_res_sil);
       }
 
      });
@@ -296,8 +299,8 @@
 
      app.controller("BarCtrlLegislativo", function ($scope) {
        $scope.colors = ["rgb(102,51,0)","rgb(255,255,255)","rgb(238,68,85)",];
-               $scope.labels = ["Klout Score", "Google Score", "Tres de Tres"];
-               $scope.data = [(getQueryVariable('work')), (getQueryVariable('rol')), (getQueryVariable('ext'))];
+               $scope.labels = ["Score", "Ranking", ""];
+               $scope.data = [(getQueryVariable('cms'))];
      })
 
      app.controller("BarCtrlIniciativas", function ($scope) {
@@ -634,17 +637,17 @@
                    </div>
                  </div>
                  <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                   <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                   <div id="text-name-card-profile"  layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                       <span class="nameWho"></span>
                    </div>
-                   <div id="text-name-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                   <div id="text-name-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                       <span class="last_nameWho"></span>
                    </div>
                    <div id="text-election-card-profile" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                      <span class="representationWho"></span>
                    </div>
-                   <div id="text-commission-card-profile" ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
-                     <span class="commissionWho"></span>
+                   <div id="text-commission-card-profile"layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     <!-- <span class="commissionWho"></span> -->
                    </div>
                  </div>
               </div>
@@ -1040,7 +1043,7 @@
         <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(2)" >
          <div flex-xl="15" flex-lg="10" flex-md="0">
          </div>
-         <div id="contentRolProfile" ng-controller="BarCtrlRol"  flex-xl="70" flex-lg="80" flex-md="100">
+         <div id="contentRolProfile" ng-controller="BarCtrlLegislativo"  flex-xl="70" flex-lg="80" flex-md="100">
            <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row">
              <div style="" flex-xl="33" flex-lg="33" flex-md="33"></div>
              <div id="paddingRolProfile" flex-xl="33" flex-lg="33" flex-md="33">
@@ -1090,7 +1093,7 @@
                           <img id="imageScoreRol" src="../imgs/svg/scorebrown.svg">
                         </div>
                         <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                          <span class="valueScoreRol">100</span>
+                          <span class="valueScoreRol"></span>
                         </div>
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <span class="valueRankingRol">Ranking</span>
@@ -1107,19 +1110,9 @@
                   </div>
                 </div>
                 <div id="commissionsRolExtra" layout-xl="column" layout-lg="column" layout-md="column">
-                  <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                  <md-content hide style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
                     <p>Comisiones Ordinarias</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Comisiones Especiales</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Comites</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                    <p>Grupos de amistad</p>
-                      <span>Economia</span><br>
-                      <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                      <span class="commissionWho"></span>
                   </md-content>
                 </div>
              </div>
@@ -1143,7 +1136,7 @@
                          <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
                        </div>
                        <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                         <span style="text-align:center; margin-top:-30px;" >100</span>
+                         <span class="numberKlout" style="text-align:center; margin-top:-30px; color:#990000;" ></span>
                        </div>
                        <div style="text-align:left; border-top:1px solid #990000; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
                          ranking
@@ -1161,7 +1154,7 @@
                         <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
                       </div>
                       <div layout-xl="column" layout-lg="column" layout-md="column" style="z-index:2;">
-                        <span style="text-align:center; margin-top:-30px;" >100</span>
+                        <span class="numberGoogle" style="text-align:center; margin-top:-30px; color:#FFF;" ></span>
                       </div>
                       <div style="border-top:1px solid #FFF; text-align:right; font-size:17px;"  layout-xl="column" layout-lg="column" layout-md="column">
                         ranking
@@ -1181,7 +1174,7 @@
              <div flex-xl="15" flex-lg="10" flex-md="0">
              </div>
            </div>
-           <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
+           <div hide style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" >
              <div flex-xl="15" flex-lg="10" flex-md="0">
              </div>
               <div ng-controller="BarCtrlRol" style="background:#FFF;" flex-xl="70" flex-lg="80" flex-md="100">
@@ -1447,7 +1440,7 @@
                 </div>
               </div>
               <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
-                <div hide layout-sm="row" layout-xs="row">
+                <div hidelayout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
                       <div flex-sm="5" flex-xs="5">
@@ -1475,7 +1468,7 @@
                     </div>
                   </div>
                 </div>
-                <div hide id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div layout-sm="row" layout-xs="row" >
                       <div flex-sm="5" flex-xs="5" >
@@ -1503,7 +1496,7 @@
                     </div>
                   </div>
                 </div>
-                <div hide id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
+                <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
                   <div  flex-xs="100" flex-sm="100">
                     <div layout-xs="row" layout-sm="row">
                       <div flex-xs="5" flex-sm="5">
@@ -1577,7 +1570,7 @@
     			<div style="background:#FF974C;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
             <div layout-xs="column" layout-sm="column" >
               <div style="text-align:center;" layout-xs="row" layout-sm="row" >
-              <div id="contentRolProfile" ng-controller="BarCtrlPolitico" flex-xs="100" flex-sm="100">
+              <div id="contentRolProfile" ng-controller="BarCtrlLegislativo" flex-xs="100" flex-sm="100">
                 <div style="text-align:center;" layout-xs="row" layout-sm="row" >
                   <div id="paddingRolProfile"  flex-xs="100" flex-sm="100">
                      <div layout-xs="row" layout-sm="row">
@@ -1643,7 +1636,7 @@
                        </div>
                      </div>
                      <div id="commissionsRolExtra" layout-xs="column" layout-sm="column">
-                       <md-content style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                       <md-content hide style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
                          <p>Comisiones Ordinarias</p>
                            <span>Economia</span><br>
                            <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
@@ -1697,7 +1690,7 @@
                         <img style="text-align:left;" src="../imgs/svg/scorebrown.svg">
                       </div>
                       <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                        <span style="text-align:center; margin-top:-30px; color:#990000;" >100</span>
+                        <span class="numberKlout" style="text-align:center; margin-top:-30px; color:#990000;" ></span>
                       </div>
                       <div class="classRanking"  layout-xs="column" layout-sm="column">
                         ranking
@@ -1715,7 +1708,7 @@
                        <img style="text-align:left;" src="../imgs/svg/scorewhitenew.svg">
                      </div>
                      <div layout-xs="column" layout-sm="column" style="z-index:2;">
-                       <span style="text-align:center; margin-top:-30px; color:#FFF;" >100</span>
+                       <span class="numberGoogle" style="text-align:center; margin-top:-30px; color:#FFF;" ></span>
                      </div>
                      <div style="" layout-xs="column" layout-sm="column">
                        <span class="classRanking">ranking</span>
