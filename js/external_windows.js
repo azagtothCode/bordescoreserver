@@ -55,7 +55,7 @@ app.controller('OpenCDMXController', function($scope) {
 
 app.controller('OpenCSVController', function($scope) {
    $scope.openCSV = function() {
-   window.open("docs/BordeScore_09_10_17.xlsx",'_blank');
+   window.open("docs/score.xlsx",'_blank');
    };
 })
 
