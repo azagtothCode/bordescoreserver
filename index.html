@@ -458,6 +458,10 @@
                    class_state_none = "block";
            }
 
+           if(state == "Distrito Federal"){
+             state = "CDMX";
+           }
+           
            var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
@@ -568,7 +572,6 @@
                                  '+chamber_label+'\
                                  </div>\
                                  <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                                   <span>  por: </span>\
                                    '+state_label+'\
                                  </div>\
                                </div>\
@@ -669,7 +672,6 @@
                          <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                            <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                               <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
-                               <span>  por: </span>\
                                '+state_label+'\
                               </div>\
                               <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
@@ -772,10 +774,9 @@
                  var chamber = "Senadora";
              }
 
-             var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?id="+val.legislator_chamber_sil+"&sex="+val.legislator_gender_senate+"')>"+chamber+"</span>";
+           var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?id="+val.legislator_chamber_sil+"&sex="+val.legislator_gender_senate+"')>"+chamber+"</span>";
+
            var state = val.legislator_state_sil;
-
-
 
            var score = val.legislator_score_sil;
 
@@ -995,6 +996,10 @@
                    class_state_none = "block";
            }
 
+           if(state == "Distrito Federal"){
+             state = "CDMX";
+           }
+
            var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
@@ -1106,7 +1111,6 @@
                                  '+chamber_label+'\
                                  </div>\
                                  <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                                   <span>  por: </span>\
                                    '+state_label+'\
                                  </div>\
                                </div>\
@@ -1207,7 +1211,6 @@
                          <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
                            <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
                               <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
-                               <span>  por: </span>\
                                '+state_label+'\
                               </div>\
                               <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\

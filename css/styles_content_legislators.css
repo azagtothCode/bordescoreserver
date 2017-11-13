@@ -43,7 +43,7 @@
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -63px;
+    margin-left: -62px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -65,7 +65,7 @@
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -55px;
+    margin-left: -52px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -76,7 +76,7 @@
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: 13px;
+    margin-left: 15px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
@@ -556,69 +556,68 @@
     }
 
     #text-state-card span{
-      font-size: 18px;
+      font-size: 15px;
     }
 
     #text-name-card{
-      font-size: 17px;
+      font-size: 15px;
     }
 
     #text-election-card{
-      font-size: 17px;
+      font-size: 15px;
     }
 
     #text-commission-card{
       font-size: 17px;
     }
 
+    #score-card-profile p {
+      margin-left: 5px;
+      font-size: 45px;
+      margin-top: -48px;
+    }
 
-      #score-card-profile p {
-        margin-left: 5px;
-        font-size: 45px;
-        margin-top: -48px;
-      }
+    .image-card-profile img {
+      width: 200px;
+      height: 200px;
+    }
 
-      .image-card-profile img {
-        width: 200px;
-        height: 200px;
-      }
+    .image-party-card-profile img {
+      margin-left: 43px;
+      width: 70px;
+    }
 
-      .image-party-card-profile img {
-        margin-left: 43px;
-        width: 70px;
-      }
+    #califichas-content-happy-profile img {
+      width: 40px;
+    }
 
-      #califichas-content-happy-profile img {
+    #califichas-content-sad-profile img {
         width: 40px;
-      }
+    }
 
-      #califichas-content-sad-profile img {
-          width: 40px;
-      }
-
-      #califichas-content-bad-profile img {
-          width: 40px;
-      }
-
-      .facebook-card-profile img {
+    #califichas-content-bad-profile img {
         width: 40px;
-      }
+    }
 
-      .twitter-card-profile img {
-          width: 40px;
-      }
+    .facebook-card-profile img {
+      width: 40px;
+    }
 
-      .mail-card-profile img {
-          width: 40px;
-      }
+    .twitter-card-profile img {
+        width: 40px;
+    }
 
-      #text-name-card-profile {
-        font-size: 20px;
-      }
+    .mail-card-profile img {
+        width: 40px;
+    }
 
-      #text-chamber-card-profile {
-        font-size: 25px;
-      }
+    #text-name-card-profile {
+      font-size: 20px;
+    }
+
+    #text-chamber-card-profile {
+      font-size: 25px;
+    }
   }
 
   @media only screen and (max-width: 1520px) {
@@ -1003,8 +1002,12 @@
   @media only screen and (max-width: 960px) {
 
     #slide-head {
-      background-size: auto 405px;
+      background-size: 960px 400px;
       width: auto;
+    }
+
+    #icon-logo {
+    background-size: 95px;
     }
 
     #div-buttons-score {
@@ -1274,6 +1277,11 @@
     #score-card-profile p {
       margin-left: -2px;
     }
+
+    #slide-head {
+      background-size: 768px 400px;
+      width: auto;
+    }
   }
 
   @media only screen and (max-width: 736px) {
@@ -1285,7 +1293,23 @@
     #logo_score {
       background-size: 130px;
     }
+
+    #slide-head {
+      background-size: 736px 400px;
+      width: auto;
+    }
+
+    #icon-logo {
+      background-size: 68px;
+    }
   }
+
+  @media only screen and (max-width: 732px) {
+      #slide-head {
+        background-size: 732px 400px;
+        width: auto;
+      }
+    }
 
   @media only screen and (max-width: 667px) {
 
@@ -1313,9 +1337,34 @@
     #score-card-profile p {
       margin-left: 0px;
     }
+
+    #slide-head {
+      background-size: 667px 400px;
+      width: auto;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    #slide-head {
+      background-size: 640px 400px;
+      width: auto;
+    }
+
+    #logo_score {
+      background-size: 125px;
+    }
   }
 
   @media only screen and (max-width: 568px) {
+
+    #slide-head {
+      background-size: 568px 400px;
+      width: auto;
+    }
+
+    #icon-logo {
+      background-size: 50px;
+    }
 
     #logo_score {
       background-size: 113px;
@@ -1390,6 +1439,11 @@
 
   @media only screen and (max-width: 414px) {
 
+    #slide-head {
+      background-size: 414px 250px;
+      width: auto;
+    }
+
     #score-card-profile img {
       margin-top: 90px;
       width: 90px;
@@ -1440,8 +1494,12 @@
       margin-left: -10px;
     }
 
+    #icon-logo {
+      background-size: 75px;
+    }
+
     #logo_score {
-      background-size: 66px;
+      background-size: 80px;
     }
 
     #image-card img {
@@ -1515,9 +1573,43 @@
       margin-top: 65px;
       height: 145px;
     }
+
+    #icon-logo {
+      background-size: 55px;
+    }
+
+    #logo_score {
+      background-size: 75px;
+    }
+
+    #slide-head {
+      background-size: 375px 250px;
+      width: auto;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+
+    #slide-head {
+      background-size: 360px 250px;
+      width: auto;
+    }
+
+    #logo_score {
+      background-size: 70px;
+    }
   }
 
   @media only screen and (max-width: 320px) {
+
+    #slide-head {
+      background-size: 320px 250px;
+      width: auto;
+    }
+
+    #logo_score {
+      background-size: 60px;
+    }
 
     #califichas-content-happy img {
       width: 28px;
