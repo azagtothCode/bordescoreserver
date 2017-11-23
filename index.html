@@ -4,7 +4,7 @@
   <meta charset="UTF-8"></meta>
   <meta name="description" content="Web Site For Present Information about legislators"></meta>
   <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
-  <meta name="author" content="Michelle Garduño"></meta>
+  <meta name="author" content="BORDEPOLITICO cón la colaboración de OMEGA RED"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <title>Borde Score</title>
   <link rel="shortcut icon" href="imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
@@ -52,28 +52,9 @@
      <div ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" flex-offset-xs="5" flex-xs="25" flex-offset-sm="5" flex-sm="10" flex-offset-md="20" flex-md="10"  flex-gt-lg="10" flex-offset-gt-lg="20" flex-lg="10" flex-offset-lg="20" flex-offset-xl="20" flex-xl="10" >
      </div>
      <div flex-xs="40" flex-sm="60" flex-md="35" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
-        <!-- <div hide show-xs show-sm layout-xs="column">
-          <div ng-controller="SelectAsyncController" layout-xs="column" layout-sm="column" ng-cloak>
-              <md-select  ng-cloak id="input-project" placeholder="PROYECTO" ng-model="selectedUser" md-on-open="loadUsers()" >
-                <md-option  ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
-              </md-select>
-          </div>
-        </div> -->
         <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
           <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
             <div layout-md="row" layout-lg="row" layout-gt-md="row">
-              <!-- <div ng-controller="OpenFederalController" ng-click="openFederal()" id="tit-federal"  cflex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25" >
-                <span>FEDERAL</span>
-              </div>
-               <div ng-controller="OpenPueblaController" ng-click="openPuebla()" id="tit-puebla" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>PUEBLA</span>
-              </div>
-              <div ng-controller="OpenJaliscoController" ng-click="openJalisco()" id="tit-jalisco" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>JALISCO</span>
-              </div>
-              <div ng-controller="OpenCDMXController" ng-click="openCDMX()" id="tit-cdmx" flex-md="25" flex-gt-md="25" flex-lg="25" flex-gt-lg="25">
-                <span>CDMX</span>
-              </div> -->
             </div>
           </div>
         </div>
@@ -88,7 +69,6 @@
        <img hide show-xs id="icon-menu" src="imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
      </div>
   </div>
-
   <!--slide content-->
   <div id="slide-head" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
     <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" id="div-circle-score">
@@ -461,7 +441,7 @@
            if(state == "Distrito Federal"){
              state = "CDMX";
            }
-           
+
            var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+

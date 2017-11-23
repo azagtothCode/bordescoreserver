@@ -12,10 +12,13 @@ html, body{  text-decoration: none;}
 
   #icon-logo{
     background: url(../imgs/svg/logo.svg);
-    background-size: 158px;
+    /*background-size: 100%;*/
     margin-top: 5px;
     background-repeat: no-repeat;
     cursor: pointer;
+    background-size: contain;
+    width: 100%;
+    height: auto;
   }
 
   #icon-logo-profile{
