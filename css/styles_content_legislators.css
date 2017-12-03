@@ -1001,15 +1001,6 @@
 
   @media only screen and (max-width: 960px) {
 
-    #slide-head {
-      background-size: 960px 400px;
-      width: auto;
-    }
-
-    #icon-logo {
-    background-size: 95px;
-    }
-
     #div-buttons-score {
       width: auto;
     }
@@ -1017,14 +1008,6 @@
     #image-party-card img {
       margin-left: -15px;
       margin-top: 45px;
-    }
-
-    #div-circle-score {
-      width: auto;
-    }
-
-    #logo_score {
-      background-size: 190px;
     }
 
     #content-socials-card {
@@ -1233,10 +1216,6 @@
       margin-left: 140px;
     }
 
-    #logo_score {
-      background-size: 135px;
-    }
-
     #image-card img {
       margin-top: -20px;
       width: 115px;
@@ -1278,10 +1257,6 @@
       margin-left: -2px;
     }
 
-    #slide-head {
-      background-size: 768px 400px;
-      width: auto;
-    }
   }
 
   @media only screen and (max-width: 736px) {
@@ -1289,36 +1264,12 @@
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
       margin-left: 125px;
     }
-
-    #logo_score {
-      background-size: 130px;
-    }
-
-    #slide-head {
-      background-size: 736px 400px;
-      width: auto;
-    }
-
-    #icon-logo {
-      background-size: 68px;
-    }
   }
-
-  @media only screen and (max-width: 732px) {
-      #slide-head {
-        background-size: 732px 400px;
-        width: auto;
-      }
-    }
 
   @media only screen and (max-width: 667px) {
 
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
       margin-left: 105px;
-    }
-
-    #logo_score {
-      background-size: 130px;
     }
 
     #image-card img {
@@ -1338,37 +1289,9 @@
       margin-left: 0px;
     }
 
-    #slide-head {
-      background-size: 667px 400px;
-      width: auto;
-    }
-  }
-
-  @media only screen and (max-width: 640px) {
-    #slide-head {
-      background-size: 640px 400px;
-      width: auto;
-    }
-
-    #logo_score {
-      background-size: 125px;
-    }
   }
 
   @media only screen and (max-width: 568px) {
-
-    #slide-head {
-      background-size: 568px 400px;
-      width: auto;
-    }
-
-    #icon-logo {
-      background-size: 50px;
-    }
-
-    #logo_score {
-      background-size: 113px;
-    }
 
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
       margin-left: 65px;
@@ -1439,11 +1362,6 @@
 
   @media only screen and (max-width: 414px) {
 
-    #slide-head {
-      background-size: 414px 250px;
-      width: auto;
-    }
-
     #score-card-profile img {
       margin-top: 90px;
       width: 90px;
@@ -1492,14 +1410,6 @@
 
     #image-card img {
       margin-left: -10px;
-    }
-
-    #icon-logo {
-      background-size: 75px;
-    }
-
-    #logo_score {
-      background-size: 80px;
     }
 
     #image-card img {
@@ -1574,42 +1484,10 @@
       height: 145px;
     }
 
-    #icon-logo {
-      background-size: 55px;
-    }
-
-    #logo_score {
-      background-size: 75px;
-    }
-
-    #slide-head {
-      background-size: 375px 250px;
-      width: auto;
-    }
   }
 
-  @media only screen and (max-width: 360px) {
-
-    #slide-head {
-      background-size: 360px 250px;
-      width: auto;
-    }
-
-    #logo_score {
-      background-size: 70px;
-    }
-  }
 
   @media only screen and (max-width: 320px) {
-
-    #slide-head {
-      background-size: 320px 250px;
-      width: auto;
-    }
-
-    #logo_score {
-      background-size: 60px;
-    }
 
     #califichas-content-happy img {
       width: 28px;
@@ -1639,12 +1517,6 @@
       margin-top: 52px;
   }
 
-  #icon-menu {
-    margin-left: 70px;
-    width: 25px;
-    margin-top: 1px;
-  }
-
   #text-chamber-card {
     font-size: 15px;
     margin-right: 19px;
@@ -1657,215 +1529,200 @@
   #content-socials-card {
     margin-left: 35px;
   }
-    /******/
+  /******/
 
-    /*Styles Home - Profile*/
+  /*Styles Home - Profile*/
 
-    #califichas-content-happy-profile img{
-      width: 30px;
-      margin-top: 40px;
-      margin-left: 0px;
-    }
+  #califichas-content-happy-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
 
-    #califichas-content-sad-profile img{
-      width: 30px;
-      margin-top: 40px;
-      margin-left: 0px;
-    }
+  #califichas-content-sad-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
 
 
-    #califichas-content-bad-profile img{
-      width: 30px;
-      margin-top: 40px;
-      margin-left: 0px;
-    }
+  #califichas-content-bad-profile img{
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
 
-    #score-card-profile p {
-      margin-left: 10px;
-      margin-top: 5px;
-      font-size: 20px;
-    }
+  #score-card-profile p {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+  }
 
-    #content-socials-card-profile{
-      text-align: center;
-      margin-left: 10px;
-      margin-top: 80px;
-    }
+  #content-socials-card-profile{
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 80px;
+  }
 
-    #score-card-profile {
-      margin-top: 7px;
-      margin-left: -10px;
-      z-index: 1;
-    }
+  #score-card-profile {
+    margin-top: 7px;
+    margin-left: -10px;
+    z-index: 1;
+  }
 
-    #score-card-profile img{
-      margin-top: 30px;
-      width: 75px;
-      margin-left: 2px;
-    }
+  #score-card-profile img{
+    margin-top: 30px;
+    width: 75px;
+    margin-left: 2px;
+  }
 
-    #score-card-profile span{
-      margin-top: -54px;
-      position: absolute;
-      font-size: 28px;
-      letter-spacing: 2px;
-      margin-left: -10px;
-    }
+  #score-card-profile span{
+    margin-top: -54px;
+    position: absolute;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-left: -10px;
+  }
 
-    #text-chamber-card-profile{
-      font-size: 15px;
-      margin-top: 70px;
-      margin-right: 28px;
-      text-transform: uppercase;
-      text-align: right;
-      color: #BBB;
-      font-weight: bold;
-      cursor: pointer;
-      letter-spacing: 2px;
-    }
+  #text-chamber-card-profile{
+    font-size: 15px;
+    margin-top: 70px;
+    margin-right: 28px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #BBB;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
 
-    #text-state-card-profile{
-      font-size: 15px;
-      text-transform: uppercase;
-      text-align: right;
-      margin-right: 28px;
-      color: #BBB;
-      letter-spacing: 2px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  #text-state-card-profile{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 28px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-    #text-state-card-profile span{
-      font-size: 15px;
-      text-transform: uppercase;
-      text-align: right;
-      margin-right: -1px;
-      color: #BBB;
-      letter-spacing: 2px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  #text-state-card-profile span{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: -1px;
+    color: #BBB;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-    .image-card-profile img{
-      width: 130px;
-      height: 130px;
-      margin-top: 10px;
-      margin-left: 0px;
-      border-radius: 50%;
-    }
+  .image-card-profile img{
+    width: 130px;
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 50%;
+  }
 
-    .image-party-card-profile img {
-      width: 50px;
-      margin-left: -15px;
-      margin-top: 90px;
-    }
+  .image-party-card-profile img {
+    width: 50px;
+    margin-left: -15px;
+    margin-top: 90px;
+  }
 
-    #image-state-card-profile {
-      width: 45px;
-      height: 45px;
-      margin-left: -18px;
-      margin-top: 75px;
-    }
+  #image-state-card-profile {
+    width: 45px;
+    height: 45px;
+    margin-left: -18px;
+    margin-top: 75px;
+  }
 
-    .facebook-card-profile img{
-      margin-top: -30px;
-      width: 30px;
-      cursor: pointer;
-      margin-left: 2px;
-    }
+  .facebook-card-profile img{
+    margin-top: -30px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 2px;
+  }
 
-    .twitter-card-profile img{
-      margin-top: 5px;
-      width: 30px;
-    }
+  .twitter-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
 
-    .mail-card-profile img{
-      margin-top: 5px;
-      width: 30px;
-    }
+  .mail-card-profile img{
+    margin-top: 5px;
+    width: 30px;
+  }
 
-    #text-name-card-profile{
-      font-size: 15px;
-      margin-top: 3px;
-      text-align: left;
-      letter-spacing: 3px;
-      font-weight: bold;
-      margin-left: 4px;
-    }
+  #text-name-card-profile{
+    font-size: 15px;
+    margin-top: 3px;
+    text-align: left;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
 
-    #text-election-card-profile{
-      font-size: 13px;
-      margin-top: 3px;
-      text-align: left;
-      font-weight: bold;
-      margin-left: 4px;
-    }
+  #text-election-card-profile{
+    font-size: 13px;
+    margin-top: 3px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+  }
 
-    #text-commission-card-profile{
-      font-size: 13px;
-      padding-bottom: 5px;
-      text-align: left;
-      font-weight: bold;
-      margin-left: 4px;
-      margin-bottom: 10px;
-    }
+  #text-commission-card-profile{
+    font-size: 13px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 10px;
+  }
 
-    #style-trabajo {
-      color: #EE4455;
-      font-weight: bold;
-      margin-top: 0px;
-      letter-spacing: 1px;
-      font-size: 13px;
-    }
+  #style-trabajo {
+    color: #EE4455;
+    font-weight: bold;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
 
-    #style-rol{
-      color:#FFC73F;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 13px;
-    }
+  #style-rol{
+    color:#FFC73F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
 
-    #style-extra{
-      color:#FF974C;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 13px;
-    }
+  #style-extra{
+    color:#FF974C;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
 
-    #text-graphics-profile{
-      margin-left: 4px;
-      color:#FFC73F;
-      font-weight: bold;
-      font-size: 10px
-    }
+  #text-graphics-profile{
+    margin-left: 4px;
+    color:#FFC73F;
+    font-weight: bold;
+    font-size: 10px
+  }
 
-    #style-trabajo .letter{
-      margin-left: 20px;
-    }
+  #style-trabajo .letter{
+    margin-left: 20px;
+  }
 
-    #style-rol .letter{
-      margin-left: 20px;
-    }
+  #style-rol .letter{
+    margin-left: 20px;
+  }
 
-    #style-extra .letter{
-      margin-left: 20px;
-    }
+  #style-extra .letter{
+    margin-left: 20px;
+  }
 
-    .icon-dwn {
-      margin-top: -1px;
-    }
 
-    .icon-question {
-      margin-top: -1px;
-    }
-
-    .icon-party {
-      margin-top: 0px;
-    }
-
-    .icon-search {
-      margin-top: 0px;
-      margin-left: 2px;
-    }
-    /******/
+  /******/
  }

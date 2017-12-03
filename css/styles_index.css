@@ -74,7 +74,6 @@ html, body{  text-decoration: none;}
 
   #boton-menu{
     background: #EE4353;
-    margin-top: 10px;
     margin-left: 5px;
   }
 
@@ -168,7 +167,7 @@ html, body{  text-decoration: none;}
     #boton-borde {
       margin-left: 60px;
     }
-    
+
 
     #icon-logo-profile {
       margin-left: 111px;
@@ -177,12 +176,6 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 1680px) {
-    #icon-logo {
-      background-size: 160px;
-      margin-top: 3px;
-      margin-left: 317px;
-    }
-
     #icon-logo-profile {
       margin-left: 86px;
       margin-top: 2px;
@@ -190,12 +183,6 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 1560px){
-    #icon-logo {
-      background-size: 150px;
-      margin-top: 6px;
-      margin-left: 285px;
-    }
-
     #icon-logo-profile {
       margin-left: 86px;
       margin-top: 2px;
@@ -203,11 +190,6 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 1440px) {
-    #icon-logo {
-      background-size: 135px;
-      margin-top: 5.5px;
-      margin-left: 285px;
-    }
 
     #icon-logo-profile {
       margin-left: 86px;
@@ -215,24 +197,18 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 1366px) {
-    #icon-logo {
-      background-size: 135px;
-      margin-top: 7.5px;
-      margin-left: 270px;
-    }
 
     #icon-logo-profile {
       margin-left: 80px;
       margin-top: 2px;
     }
+
+    #icon-logo {
+      margin-top:8px;
+    }
   }
 
   @media only screen and (max-width: 1280px){
-    #icon-logo {
-      background-size: 105px;
-      margin-top: 12px;
-      margin-left: 255px;
-    }
 
     #icon-logo-profile {
       margin-left: 80px;
@@ -276,33 +252,10 @@ html, body{  text-decoration: none;}
 
   }
 
+
   @media only screen and (max-width: 1024px) {
-    #icon-logo {
-      background-size: 105px;
-      margin-top: 11px;
-      margin-left: 203px;
-    }
-
-    #icon-logo-profile {
-      background-size: 105px;
-      margin-top: 11px;
-      margin-left: 20px;
-    }
-
-    #tit-federal span{
-      font-size: 12px;
-    }
-
-    #tit-puebla span{
-      font-size: 12px;
-    }
-
-    #tit-jalisco span{
-      font-size: 12px;
-    }
-
-    #tit-cdmx span{
-      font-size: 12px;
+    #icon-menu {
+      width: 20px;
     }
   }
 
@@ -317,15 +270,7 @@ html, body{  text-decoration: none;}
     #input-project {
       margin-left: 125px;
     }
-
-    #icon-logo {
-      background-size: 95px;
-      margin-top: 11px;
-      margin-left: 25px;
-    }
   }
-
-
 
   @media only screen and (max-width: 768px) {
 
@@ -340,9 +285,7 @@ html, body{  text-decoration: none;}
       }
 
       #icon-logo{
-        background-size: 79px;
-        margin-top: 16px;
-        margin-left: 32px;
+        margin-top: 2px;
       }
 
       #icon-logo-profile{
@@ -366,17 +309,13 @@ html, body{  text-decoration: none;}
     }
 
     #icon-menu {
-     width: 27px;
+     width: 20px;
     }
 
     #boton-borde{
       margin-left: 2px;
     }
 
-    #icon-logo {
-      background-size: 71px;
-      margin-top: 19px;
-    }
 
     #icon-logo-profile {
       background-size: 71px;
@@ -407,6 +346,31 @@ html, body{  text-decoration: none;}
     #input-project {
       margin-left: 55px;
     }
+
+    #icon-logo {
+      margin-top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #icon-logo {
+      margin-top: 7px;
+    }
+  }
+
+  @media only screen and (max-width: 599px) {
+    #icon-menu {
+      width: 25px;
+      padding: 5px;
+    }
+
+    #icon-logo {
+      margin-left: 13px;
+    }
+
+    #icon-logo {
+      margin-top: 1px;
+    }
   }
 
   @media only screen and (max-width: 580px) {
@@ -419,12 +383,6 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 568px) {
-    #icon-logo {
-      margin-top: 3px;
-      background-size: 60px;
-      margin-left: 8px;
-    }
-
     #icon-logo-profile {
       margin-top: 3px;
       background-size: 60px;
@@ -435,12 +393,6 @@ html, body{  text-decoration: none;}
       margin-left: 47px;
       width: 233px;
       margin-top: 0px;
-    }
-
-    #icon-menu {
-      margin-left: 166px;
-      margin-top: 5.4px;
-      width: 20px;
     }
   }
 
@@ -460,15 +412,22 @@ html, body{  text-decoration: none;}
       margin-left: 103px;
       margin-top: 10px;
     }
-  }
 
-  @media only screen and (max-width: 414px) {
-
-    #icon-logo {
-      background-size: 71px;
-      margin-top: 4px;
+    #icon-menu {
+      width: 25px;
+      margin-left: 0px;
+      margin-top: 0px;
     }
 
+    #icon-logo {
+       background-size:60px;
+       margin-top: 5px;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 414px) {
     #icon-logo-profile {
       background-size: 71px;
       margin-top: 4px;
@@ -486,12 +445,6 @@ html, body{  text-decoration: none;}
 
     #close-btn {
       margin-left: 309px;
-    }
-
-    #icon-menu {
-      width: 38px;
-      margin-left: 80px;
-      margin-top: -1.5px;
     }
 
     #input-project {
@@ -526,13 +479,8 @@ html, body{  text-decoration: none;}
       margin-top: 4px;
     }
 
-    #icon-menu {
-      margin-left: 81px;
-      width: 25px;
-      margin-top: 3.5px;
-    }
-
     #icon-logo {
+      background-size: 55px;
       margin-top: 5px;
     }
 
@@ -554,8 +502,9 @@ html, body{  text-decoration: none;}
 
   @media only screen and (max-width: 320px) {
     #icon-logo {
-      margin-top: 1px;
-      background-size: 63px;
+      margin-top: 6px;
+      background-size: contain;
+      margin-left: 5px;
     }
 
     #icon-logo-profile {
@@ -580,8 +529,8 @@ html, body{  text-decoration: none;}
     }
 
     #icon-menu {
-      margin-left: 156px;
-      margin-top: 3.4px;
-      width: 25px;
+      margin-left: 0px;
+      width: 20px;
+      margin-top: 1px;
     }
   }

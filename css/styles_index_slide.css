@@ -1,8 +1,8 @@
 /*SLIDE STYLES*/
 #slide-head{
   background-image: url(../imgs/png/slide_head.jpg);
-  min-height: 715px;
-  background-size: 100% 715px;
+  /*min-height: 550px;*/
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: auto;
@@ -13,8 +13,8 @@
 #div-circle-score{
   width: auto;
   /* background: purple; */
-  margin-top: 205px;
-  height: 365px;
+  margin-top: 100px;
+  height: 300px;
 }
 
 #div-buttons-score{
@@ -26,17 +26,18 @@
 
 #logo_score{
   background: url(../imgs/svg/logo_circle.svg);
-  background-size: 255px;
-  margin-top: 4px;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: all 500ms;
   -webkit-transition: all 500ms;
+  background-position: center;
 }
 
 .color-btn{
   background: #000;
   opacity: 1.0;
-  min-height: 80px;
+  margin-top: 30px;
+  min-height: 50px;
   cursor: pointer;
   transition: all 500ms;
   -webkit-transition: all 500ms;
@@ -45,7 +46,7 @@
 
 .btn-text-one{
   color: #FFF;
-  margin-top: 33px;
+  margin-top: 20px;
   position: absolute;
   margin-left: 55px;
   letter-spacing: 2px;
@@ -57,34 +58,34 @@
 .icon-dwn{
   width: 40px;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   position: absolute;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
 
 .icon-question{
-  width: 32px;
+  width: 36px;
   margin-left: 12px;
-  margin-top: 22px;
+  margin-top: 7px;
   position: absolute;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
 
 .icon-party{
-  width: 30px;
+  width: 32px;
   margin-left: 14px;
-  margin-top: 25px;
+  margin-top: 10px;
   position: absolute;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
 
 .icon-search{
-  width: 37px;
+  width: 40px;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   position: absolute;
   transition: all 500ms;
   -webkit-transition: all 500ms;
@@ -147,10 +148,6 @@
   #content-dip {
     font-size: 47px;
   }
-
-  #logo_score {
-    margin-left: -10px;
-  }
 }
 
 @media only screen and (max-width: 2250px) {
@@ -190,10 +187,6 @@
 
   #content-dip {
     font-size: 40px;
-  }
-
-  #logo_score {
-    margin-left: -25px;
   }
 }
 
@@ -249,9 +242,22 @@
   }
 }
 
+@media only screen and (max-width: 1279px){
+  #slide-head {
+    background-size: cover;
+     background-position: center;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   #slide-head-profile-dip{
     background-size: 100% 375px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  #slide-head {
+    min-height: 400px;
   }
 }
 
@@ -260,17 +266,21 @@
     min-height: auto;
     background-size: 100% 595px;
   }
-}
 
-@media only screen and (max-width: 667px) {
-  #slide-head-profile-dip{
-    background-size: 100% 525px;
+  #slide-head {
+    min-height: 300px;
   }
 }
 
 @media only screen and (max-width: 568px) {
-  #slide-head-profile-dip{
-    background-size: 100% 520px;
+  #slide-head {
+    min-height: 220px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #slide-head {
+    min-height: 200px;
   }
 }
 
