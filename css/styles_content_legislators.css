@@ -1205,12 +1205,6 @@
     }
   }
 
-  @media only screen and (max-width: 845px) {
-    md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-        margin-left: 150px;
-    }
-  }
-
   @media only screen and (max-width: 768px) {
     #image-party-card img {
       margin-left: -15px;
@@ -1370,6 +1364,13 @@
       margin-left: -45px;
     }
   }
+
+  @media only screen and (max-width: 480px) {
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    margin-left: 40px;
+  }
+}
 
   @media only screen and (max-width: 414px) {
 
