@@ -1211,8 +1211,8 @@
       margin-top: 45px;
     }
 
-      md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-      margin-left: 140px;
+    md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+      margin-left: 137px;
     }
 
     #image-card img {
@@ -1267,7 +1267,7 @@
 
   @media only screen and (max-width: 732px){
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-        margin-left: 100px;
+        margin-left: 122px;
       }
   }
 
@@ -1403,7 +1403,7 @@
     }
 
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-      margin-left: 20px;
+      margin-left: 15px;
     }
 
     #text-chamber-card {
