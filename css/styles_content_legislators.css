@@ -1205,7 +1205,7 @@
     }
   }
 
-  @media only screen and (max-width: 840px) {
+  @media only screen and (max-width: 845px) {
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
         margin-left: 150px;
     }
