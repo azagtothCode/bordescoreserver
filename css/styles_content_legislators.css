@@ -7,21 +7,24 @@
   }
 
   #califichas-content-happy img{
-    width: 35px;
-    margin-top: 20px;
+    width: 40px;
     cursor: pointer;
   }
 
   #califichas-content-sad img{
-    width: 35px;
-    margin-top: 20px;
+    width: 40px;
     cursor: pointer;
   }
 
   #califichas-content-bad img{
-    width: 35px;
-    margin-top: 20px;
+    width: 40px;
     cursor: pointer;
+  }
+
+  #califichas-content-happy,
+  #califichas-content-sad,
+  #califichas-content-bad{
+     text-align: center;
   }
 
   #content-socials-card{
@@ -32,54 +35,59 @@
   }
 
   #score-card img{
-    /* margin-top: -3px; */
-    width: 85px;
-    /* margin-left: 35px; */
+    width: 100%;
+    /*margin-left: 35px;*/
     cursor: pointer;
   }
 
   #score-card span{
-    margin-top: 24px;
+    margin-top: 38px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -62px;
+    margin-left: -77px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    -webkit-margin-start: 38px;
+    -webkit-margin-before: -75px;
   }
 
   #score-card span.menorVeinte{
-    margin-top: 24px;
+    margin-top: 38px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -58px;
+    margin-left: -72px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    -webkit-margin-start: 40px;
+    -webkit-margin-before: -75px;
   }
 
-  #score-card span.menorDiez{
-    margin-top: 24px;
+  #score-card span.menorDiez {
+    margin-top: 40px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -52px;
+    margin-left: -66px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    -webkit-margin-start: 48px;
+    -webkit-margin-before: -75px;
   }
 
   #score-card p{
-    margin-top: -61px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: 15px;
+    margin-left: 28px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    margin-top: -75px;
   }
 
   #text-chamber-card{
@@ -113,18 +121,17 @@
   }
 
   #image-card img{
-    width: 170px;
-    height: 170px;
-    margin-top: -25px;
-    margin-left: 15px;
+    width: 200px;
+    height: 200px;
+    margin-top: -65px;
     border-radius: 50%;
     cursor: pointer;
   }
 
   #image-party-card img{
-    width: 65px;
-    margin-left: -15px;
-    margin-top: 81px;
+    width: 75px;
+    margin-left: -30px;
+    margin-top: 65px;
     cursor: pointer;
   }
 
@@ -137,19 +144,19 @@
 
   #facebook-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
     cursor: pointer;
   }
 
   #twitter-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
     cursor: pointer;
   }
 
   #mail-card img{
     margin-top: 5px;
-    width: 35px;
+    width: 40px;
     cursor: pointer;
   }
 
@@ -436,12 +443,6 @@
     padding-left: 110px;
   }
 
-  @media only screen and (max-width: 2560px) {
-    #image-card img {
-      margin-left: 50px;
-    }
-  }
-
 
   @media only screen and (max-width: 2455px) {
     #content-socials-card-profile {
@@ -454,22 +455,15 @@
   }
 
   @media only screen and (max-width: 2299px) {
-    #image-card img {
-      margin-left: 20px;
-    }
 
     #score-card-profile p {
       margin-left: -18px;
     }
    }
 
-  @media only screen and (max-width: 1950px) {
-    #image-card img {
-      margin-left: 0px;
-    }
-  }
-
   @media only screen and (max-width: 1920px) {
+
+
     #style-trabajo .letter {
         margin-left: -30px;
     }
@@ -503,6 +497,32 @@
       margin-left: 30px;
     }
 
+    #score-card p {
+      margin-left: 17px;
+      margin-top: -63px;
+    }
+
+    #score-card span {
+      margin-top: 29px;
+      margin-left: -67px;
+      -webkit-margin-start: 27px;
+      -webkit-margin-before: -64px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 27px;
+      margin-left: -63px;
+      -webkit-margin-start: 29px;
+      -webkit-margin-before: -65px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 29px;
+      margin-left: -57px;
+      -webkit-margin-start: 36px;
+      -webkit-margin-before: -65px;
+    }
+
     #score-card-profile p {
       margin-left: -2px;
       font-size: 45px;
@@ -532,19 +552,49 @@
     .mail-card-profile img {
       width: 45px;
     }
+
+    #image-card img {
+      width: 180px;
+      height: 180px;
+      margin-top: -40px;
+    }
   }
 
   @media only screen and (max-width: 1919px) {
     #image-card img {
-      margin-left: 30px;
+      width: 200px;
+      height: 200px;
+      margin-top: -65px;
+    }
+
+    #score-card p {
+      margin-left: 28px;
+      margin-top: -75px;
+    }
+
+    #score-card span {
+      margin-top: 40px;
+      margin-left: -75px;
+      -webkit-margin-start: 38px;
+      -webkit-margin-before: -75px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 38px;
+      margin-left: -74px;
+      -webkit-margin-start: 40px;
+      -webkit-margin-before: -75px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 38px;
+      margin-left: -67px;
+      -webkit-margin-start: 36px;
+      -webkit-margin-before: -65px;
     }
   }
 
   @media only screen and (max-width: 1680px) {
-    #image-card img {
-      margin-left: 10px;
-    }
-
     #text-chamber-card{
       font-size: 25px;
       margin-right: 10px;
@@ -571,10 +621,42 @@
       font-size: 17px;
     }
 
+    #image-card img {
+      width: 180px;
+      height: 180px;
+      margin-top: -40px;
+    }
+
+    #score-card p {
+      margin-left: 22px;
+      margin-top: -67px;
+    }
+
     #score-card-profile p {
       margin-left: 5px;
       font-size: 45px;
       margin-top: -48px;
+    }
+
+    #score-card span {
+      margin-top: 33px;
+      margin-left: -70px;
+      -webkit-margin-start: 32px;
+      -webkit-margin-before: -68px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 35px;
+      margin-left: -67px;
+      -webkit-margin-start: 35px;
+      -webkit-margin-before: -68px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 35px;
+      margin-left: -60px;
+      -webkit-margin-start: 41px;
+      -webkit-margin-before: -65px;
     }
 
     .image-card-profile img {
@@ -620,6 +702,29 @@
     }
   }
 
+  @media only screen and (max-width: 1600px) {
+    #score-card span {
+      margin-top: 30px;
+      margin-left: -68px;
+      -webkit-margin-start: 30px;
+      -webkit-margin-before: -65px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 33px;
+      margin-left: -64px;
+      -webkit-margin-start: 32px;
+      -webkit-margin-before: -65px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 30px;
+      margin-left: -56px;
+      -webkit-margin-start: 38px;
+      -webkit-margin-before: -65px;
+    }
+  }
+
   @media only screen and (max-width: 1520px) {
     #text-chamber-card-profile {
       font-size: 20px;
@@ -636,28 +741,77 @@
     #style-rol .letter {
       margin-left: -5px;
     }
-  }
 
-  @media only screen and (max-width: 1486px) {
+    #score-card p {
+      margin-left: 16px;
+      margin-top: -64px;
+    }
+
     #score-card span {
-      margin-top: -60px;
-      margin-left: 23px;
+      margin-top: 27px;
+      margin-left: -65px;
+      -webkit-margin-start: 27px;
+      -webkit-margin-before: -64px;
     }
 
     #score-card span.menorVeinte {
-        margin-top: -60px;
-        margin-left: 25px;
+      margin-top: 30px;
+      margin-left: -58px;
+      -webkit-margin-start: 32px;
+      -webkit-margin-before: -65px;
+    }
+  }
+
+  @media only screen and (max-width: 1486px) {
+
+    #score-card span.menorVeinte {
+      margin-top: 27px;
+      margin-left: -61px;
+      -webkit-margin-start: 30px;
+      -webkit-margin-before: -63px;
     }
 
     #score-card span.menorDiez {
-      margin-top: -60px;
-      margin-left: 31px;
+      margin-top: 30px;
+      margin-left: -56px;
+      -webkit-margin-start: 34px;
+      -webkit-margin-before: -62px;
     }
-
   }
+
   @media only screen and (max-width: 1440px) {
     #image-card img {
-      margin-left: 0px;
+      width: 165px;
+      height: 165px;
+      margin-top: -40px;
+    }
+
+    #image-party-card img {
+      width: 65px;
+    }
+
+    #califichas-content-happy img {
+      width: 35px;
+    }
+
+    #califichas-content-sad img {
+      width: 35px;
+    }
+
+    #califichas-content-bad img {
+      width: 35px;
+    }
+
+    #facebook-card img {
+      width: 35px;
+    }
+
+    #twitter-card img {
+      width: 35px;
+    }
+
+    #mail-card img {
+      width: 35px;
     }
 
     #image-state-card {
@@ -685,6 +839,25 @@
       width: 50px;
       height: 50px;
     }
+
+    #score-card p {
+      margin-left: 15px;
+      margin-top: -60px;
+    }
+
+    #score-card span {
+      margin-top: 27px;
+      margin-left: -65px;
+      -webkit-margin-start: 25px;
+      -webkit-margin-before: -60px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 26px;
+      margin-left: -53px;
+      -webkit-margin-start: 34px;
+      -webkit-margin-before: -62px;
+    }
   }
 
   @media only screen and (max-width: 1366px) {
@@ -705,9 +878,39 @@
       height: 160px;
     }
 
+    #image-party-card img {
+      width: 60px;
+    }
+
     #text-chamber-card {
       font-size: 22px;
       margin-right: 10px;
+    }
+
+    #score-card p {
+      margin-left: 11px;
+      margin-top: -58px;
+    }
+
+    #score-card span {
+      margin-top: 23px;
+      margin-left: -61px;
+      -webkit-margin-start: 21px;
+      -webkit-margin-before: -60px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 23px;
+      margin-left: -58px;
+      -webkit-margin-start: 25px;
+      -webkit-margin-before: -60px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 23px;
+      margin-left: -51px;
+      -webkit-margin-start: 30px;
+      -webkit-margin-before: -60px;
     }
 
     #score-card-profile img {
@@ -732,8 +935,34 @@
 
   @media only screen and (max-width: 1280px) {
 
+    #image-card img {
+      width: 150px;
+      height: 150px;
+    }
+
     #califichas-content-bad-profile img {
       margin-left: 19px;
+    }
+
+    #score-card span {
+      margin-top: 20px;
+      margin-left: -59px;
+      -webkit-margin-start: 18px;
+      -webkit-margin-before: -57px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: 20px;
+      margin-left: -55px;
+      -webkit-margin-start: 27px;
+      -webkit-margin-before: -56px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: 19px;
+      margin-left: -47px;
+      -webkit-margin-start: 30px;
+      -webkit-margin-before: -60px;
     }
 
     #score-card-profile img {
@@ -821,60 +1050,11 @@
     }
   }
 
-  @media only screen and (max-width: 1279px) {
-    #image-card img {
-      width: 120px;
-      height: 120px;
-    }
-
-    #image-party-card img {
-      width: 45px;
-      margin-left: -15px;
-      margin-top: 53px;
-    }
-
-    #facebook-card img {
-      width: 30px;
-    }
-
-    #twitter-card img {
-      width: 30px;
-    }
-
-    #mail-card img {
-      width: 30px;
-    }
-
-    #califichas-content-happy img {
-      width: 30px;
-    }
-
-    #califichas-content-sad img {
-      width: 30px;
-    }
-
-    #califichas-content-bad img {
-      width: 30px;
-    }
-  }
-
-  @media only screen and (max-width: 1175px) {
-    #score-card-profile img {
-        margin-top: 90px;
-        width: 85px;
-    }
-
-    #score-card-profile p {
-      font-size: 24px;
-      margin-top: -2px;
-      margin-left: 2px;
-    }
-  }
 
   @media only screen and (max-width: 1024px) {
 
     #score-card img {
-      margin-top: 25px;
+      /*margin-top: 25px;*/
       width: 70px;
       /* margin-left: 35px; */
       cursor: pointer;
@@ -1015,7 +1195,9 @@
     }
 
     #image-card img{
-      margin-top: -15px;
+      margin-top: -30px;
+      width: 105px;
+      height: 105px;
     }
 
     #image-state-card {
@@ -1024,18 +1206,15 @@
     }
 
     #califichas-content-happy img {
-      width: 25px;
-      margin-top: 43px;
+      width: 20px;
     }
 
     #califichas-content-sad img {
-      width: 25px;
-      margin-top: 43px;
+      width: 20px;
     }
 
     #califichas-content-bad img {
-      width: 25px;
-      margin-top: 43px;
+      width: 20px;
     }
 
     .facebook-card-profile img {
@@ -1073,6 +1252,45 @@
       font-size: 18px;
     }
 
+    #score-card img {
+      width: 60px;
+    }
+
+    #score-card p {
+      margin-top: -42px;
+      font-size: 20px;
+    }
+
+    #text-chamber-card {
+      margin-top: 0px;
+    }
+
+    #text-state-card span {
+      font-size: 14px;
+    }
+
+    #image-state-card {
+      margin-top: 5px;
+    }
+
+    #score-card span {
+      margin-top: -44px;
+      margin-left: 14px;
+    }
+
+    #score-card span.menorVeinte {
+      margin-top: -44px;
+      margin-left: 17px;
+      -webkit-margin-start: 17px;
+      -webkit-margin-before: -46px;
+    }
+
+    #score-card span.menorDiez {
+      margin-top: -46px;
+      margin-left: 22px;
+      -webkit-margin-start: 23px;
+      -webkit-margin-before: -45px;
+    }
 
   }
 
@@ -1394,19 +1612,16 @@
 
     #califichas-content-happy img {
       width: 30px;
-      margin-top: 40px;
       margin-left: -30px;
     }
 
     #califichas-content-sad img {
       width: 30px;
-      margin-top: 40px;
       margin-left: -20px;
     }
 
     #califichas-content-bad img {
       width: 30px;
-      margin-top: 40px;
       margin-left: -10px;
     }
 
@@ -1466,19 +1681,16 @@
 
      #califichas-content-happy img {
        width: 30px;
-       margin-top: 40px;
        margin-left: -30px;
      }
 
      #califichas-content-sad img {
        width: 30px;
-       margin-top: 40px;
        margin-left: -20px;
      }
 
      #califichas-content-bad img {
        width: 30px;
-       margin-top: 40px;
        margin-left: -10px;
      }
 
@@ -1521,19 +1733,16 @@
 
     #califichas-content-happy img {
       width: 28px;
-      margin-top: 40px;
       margin-left: -30px;
     }
 
     #califichas-content-sad img {
       width: 28px;
-      margin-top: 40px;
       margin-left: -21px;
     }
 
     #califichas-content-bad img {
       width: 28px;
-      margin-top: 40px;
       margin-left: -10px;
     }
 

@@ -130,7 +130,6 @@
  }
 
  #div-buttons-score{
-   width: 1440px;
    opacity: 0.5;
    margin-top: 15px;
    height: 19px;
@@ -195,10 +194,6 @@
 
 @media only screen and (max-width: 1366px) {
 
-  #div-buttons-score{
-    width: 1366px;
-  }
-
   .btn-text-one {
     font-size: 11px;
     margin-left: 38px;
@@ -245,7 +240,6 @@
 
 @media only screen and (max-width: 1280px) {
  #div-buttons-score{
-   width: 1280px;
    opacity: 0.5;
    margin-top: 15px;
    height: 19px;
@@ -349,8 +343,19 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
+  #content-senado {
+    font-size: 14px;
+    margin-top: 46px;
+    margin-left: 0px;
+  }
+
+  #content-dip {
+    font-size: 14px;
+    margin-top: 46px;
+  }
+
   #div-buttons-score{
-    width: 1024px;
     opacity: 0.5;
     margin-top: 20px;
     height: 19px;
@@ -389,17 +394,6 @@
     margin-top: 3px;
   }
 
-  #content-senado {
-    font-size: 14px;
-    margin-top: 46px;
-    margin-left: 0px;
-  }
-
-  #content-dip {
-    font-size: 14px;
-    margin-top: 46px;
-  }
-
   #d1 {
     max-width: 100px;
   }
@@ -424,7 +418,6 @@
  }
 
  #div-buttons-score{
-   width: 768px;
    margin-top: 16px;
  }
 
@@ -494,9 +487,6 @@
 }
 
 @media only screen and (max-width: 736px) {
-   #div-buttons-score{
-     width: 736px;
-   }
 
    .icon-question {
       width: 22px;
@@ -512,9 +502,6 @@
 }
 
 @media only screen and (max-width: 667px) {
- #div-buttons-score{
-   width: 667px;
- }
 
  #d1{
    max-width: 105px;
@@ -531,7 +518,6 @@
   }
 
  #div-buttons-score{
-   width: 568px;
    margin-top: -3px;
  }
  /*Styles Home - Profile*/
@@ -562,7 +548,6 @@
  }
 
  #div-buttons-score{
-  width: 414px;
   margin-top: -9px
  }
 
@@ -615,7 +600,6 @@
  }
 
  #div-buttons-score{
-   width: 375px;
    margin-top: -27px;
    height: 0px;
  }

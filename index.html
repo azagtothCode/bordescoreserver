@@ -141,8 +141,8 @@
     </div>
    </div>
    <script>
-   // supurl='http://104.239.249.32:8000'
-   supurl='http://localhost:8000'
+   supurl='http://104.239.248.102:8000'
+   // supurl='http://localhost:8000'
 
    function openPerfilPage (url){
      window.open(url)
@@ -151,7 +151,7 @@
      $.ajax({
        url: supurl+'/diputados/dip/get',
        method: "POST",
-       data: {legislator_chamber_sil:"diputado"},
+       data: {legislator_chamber_sil:"diputado", legislator_status_sil:"ACTIVO"},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
@@ -165,9 +165,9 @@
            var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
 
-           var pick_legis = val.legislator_image_sil;
-           var res_pick = pick_legis.slice(16, -4);
-           var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           var pick_legis = val.id_legislator_sil;
+           var res_pick = pick_legis;
+           var pick_legis_label = "<img  onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
            "&ext="+val.legislator_news_score_sil+
@@ -361,15 +361,6 @@
             var commission_string  = JSON.stringify(post_commision);
 
 
-           var npres = commission_string.indexOf("Presidente");
-           var nsec = commission_string.indexOf("Secretario");
-           var nint = commission_string.indexOf("Integrante");
-
-           if(npres != -1){
-             var post = "Presidente";
-           }else {
-             var post = "Secretario";
-           }
 
            var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
@@ -387,10 +378,9 @@
            "&pde="+val.legislator_pda_de_sil+
            "&ppe="+val.legislator_pda_pe_sil+
            "&ppr="+val.legislator_pda_pr_sil+
-           "&pre="+val.legislator_pda_re_sil+"')>"+post+"</span>";
+           "&pre="+val.legislator_pda_re_sil+"')></span>";
 
-
-           var pick_state = state;
+           var pick_state = state.trim();
 
            switch (pick_state) {
                case "Aguascalientes":
@@ -406,13 +396,13 @@
                    var state = " ";
                    var pick_state = "nada";
                    break;
-               case "Nuevo Le&#xF3;n":
+               case "Nuevo León":
                    var pick_state = "nl";
                    break;
-               case "M&#xE9;xico":
+               case "México":
                var pick_state = "cdmx";
                    break;
-               case "Quer&#xE9;taro":
+               case "Querétaro":
                    var pick_state = "queretaro";
                    break;
                case "Distrito Federal":
@@ -421,10 +411,10 @@
                case "Quintana Roo":
                    var pick_state = "qr";
                    break;
-               case "Michoac&#xE1;n":
+               case "Michoacán":
                    var pick_state = "michoacan";
                    break;
-               case "Yucat&#xE1;n":
+               case "Yucatán":
                    var pick_state = "yucatan";
                    break;
                case "Baja California":
@@ -433,18 +423,17 @@
                case "Baja California Sur":
                    var pick_state = "bcs";
                    break;
-               case "San Luis Potos&#xED;":
+               case "San Luis Potosí":
                    var pick_state = "slp";
                    break;
                    default:
-                   pick_state = state.toLowerCase();
+                   pick_state = state.toLowerCase().trim();
                    class_state_none = "block";
            }
 
            if(state == "Distrito Federal"){
              state = "CDMX";
            }
-
            var state_label = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
@@ -684,11 +673,10 @@
          }
      });
 
-
      $.ajax({
        url: supurl+'/diputados/sen/get',
        method: "POST",
-       data: {legislator_chamber_sil:"senador"},
+       data: {legislator_chamber_sil:"senador", legislator_status_sil:"ACTIVO"},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
@@ -702,8 +690,8 @@
            var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
 
-           var pick_legis = val.legislator_image_sil;
-           var res_pick = pick_legis.slice(16, -4);
+           var pick_legis = val.id_legislator_sil;
+           var res_pick = pick_legis;
            var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
@@ -899,16 +887,6 @@
             var commission_string  = JSON.stringify(post_commision);
 
 
-           var npres = commission_string.indexOf("Presidente");
-           var nsec = commission_string.indexOf("Secretario");
-           var nint = commission_string.indexOf("Integrante");
-
-           if(npres != -1){
-             var post = "Presidente";
-           }else {
-             var post = "Secretario";
-           }
-
            var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
            "&rol="+val.legislator_rol_score_sil+
@@ -925,10 +903,9 @@
            "&pde="+val.legislator_pda_de_sil+
            "&ppe="+val.legislator_pda_pe_sil+
            "&ppr="+val.legislator_pda_pr_sil+
-           "&pre="+val.legislator_pda_re_sil+"')>"+post+"</span>";
+           "&pre="+val.legislator_pda_re_sil+"')></span>";
 
-
-           var pick_state = state;
+           var pick_state = state.trim();
 
            switch (pick_state) {
                case "Aguascalientes":
@@ -944,13 +921,13 @@
                    var state = " ";
                    var pick_state = "nada";
                    break;
-               case "Nuevo Le&#xF3;n":
+               case "Nuevo León":
                    var pick_state = "nl";
                    break;
-               case "M&#xE9;xico":
+               case "México":
                var pick_state = "cdmx";
                    break;
-               case "Quer&#xE9;taro":
+               case "Querétaro":
                    var pick_state = "queretaro";
                    break;
                case "Distrito Federal":
@@ -959,10 +936,10 @@
                case "Quintana Roo":
                    var pick_state = "qr";
                    break;
-               case "Michoac&#xE1;n":
+               case "Michoacán":
                    var pick_state = "michoacan";
                    break;
-               case "Yucat&#xE1;n":
+               case "Yucatán":
                    var pick_state = "yucatan";
                    break;
                case "Baja California":
@@ -971,11 +948,11 @@
                case "Baja California Sur":
                    var pick_state = "bcs";
                    break;
-               case "San Luis Potos&#xED;":
+               case "San Luis Potosí":
                    var pick_state = "slp";
                    break;
                    default:
-                   pick_state = state.toLowerCase();
+                   pick_state = state.toLowerCase().trim();
                    class_state_none = "block";
            }
 
@@ -1238,12 +1215,12 @@
       </md-content>
     </div>
     <div show-md show-gt-lg  show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
-      <div style="background:#EEE;" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20"  ></div>
-      <md-content id="depscontent"  flex-md="30" flex-gt-md="30" flex-lg="30" flex-xl="30" >
+      <div style="background:#EEE;" flex-md="20" flex-lg="20" flex-xl="20"  ></div>
+      <md-content id="depscontent"  flex-md="30" flex-lg="30" flex-xl="30" >
       </md-content>
-      <md-content id="senatorscontent" flex-md="30" flex-gt-md="30" flex-lg="30" flex-xl="30" >
+      <md-content id="senatorscontent" flex-md="30" flex-lg="30" flex-xl="30" >
       </md-content>
-      <div style="background:#EEE;" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20"  ></div>
+      <div style="background:#EEE;" flex-md="20" flex-lg="20" flex-xl="20"  ></div>
       </div>
     </div>
   </div>
