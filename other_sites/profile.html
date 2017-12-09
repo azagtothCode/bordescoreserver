@@ -113,19 +113,26 @@
 
           if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil == "diputado"){
             var chamber = "Diputado";
-
+          }else{
+            var chamber = val.legislator_chamber_sil;
           }
 
           if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_sil == "diputado"){
               var chamber = "Diputada";
+          }else{
+            var chamber = val.legislator_chamber_sil;
           }
 
           if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil == "senador"){
               var chamber = "Senador";
+          }else{
+            var chamber = val.legislator_chamber_sil;
           }
 
           if(val.legislator_gender_senate == "Femenino" && val.legislator_chamber_sil == "senador"){
               var chamber = "Senadora";
+          }else{
+            var chamber = val.legislator_chamber_sil;
           }
 
           var state = val.legislator_state_sil;
@@ -184,12 +191,12 @@
                   break;
               case "N/A":
                   var class_state_none = "";
-                  var state = " ";
+                  var state = "méxico";
                   var pick_state = "nada";
                   break;
               case "S/E":
                   var class_state_none = "";
-                  var state = " ";
+                  var state = "méxico";
                   var pick_state = "nada";
                   break;
               case "Nuevo León":
@@ -421,7 +428,7 @@
           </div>
           <div id="score-card-profile" style="text-align:center;" flex-xs="25" flex-sm="25">
             <img  src="../imgs/svg/score.svg">
-            <span class="scoreWho"></span>
+            <div class="scoreWho"></div>
           </div>
         </div>
       </div>
@@ -548,10 +555,10 @@
   </div>
   <div hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
       <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-        <div  flex-offset-xl="10" flex-offset-lg="10" flex-offset-md="10" flex-md="40" flex-lg="40" flex-xl="40">
+        <div flex-offset-xl="15" flex-offset-lg="10" flex-offset-md="10" flex-md="40" flex-lg="40" flex-xl="35">
           <div id="content-cards-profile" layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div flex-md="30" flex-gt-md="30" flex-lg="30"  flex-xl="30">
-              <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
+              <div flex-md="30" flex-gt-md="30" flex-lg="30"  flex-xl="35">
+               <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
                    <div flex-gt-md="100" flex-md="100" flex-lg="100" flex-xl="100">
                      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -572,7 +579,7 @@
                        </div>
                        <div id="score-card-profile" style="text-align:center;" flex-gt-md="40" flex-md="40" flex-lg="40" flex-xl="40">
                          <img src="../imgs/svg/score.svg">
-                         <span class="scoreWho"></span>
+                         <div class="scoreWho"></div>
                        </div>
                       </div>
                     </div>
@@ -610,7 +617,7 @@
                   </div>
                </div>
               </div>
-              <div flex-md="70" flex-gt-md="70" flex-gt-lg="70" flex-lg="70" flex-xl="70">
+              <div flex-md="70" flex-gt-md="70" flex-gt-lg="70" flex-lg="70" flex-xl="50">
                 <div layout-gt-md="column" layout-md="column" layout-lg="column" layout-xl="column">
                   <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
                     <div flex-gt-md="85" flex-md="85" flex-lg="85" flex-xl="85">
@@ -641,15 +648,17 @@
                    </div>
                  </div>
               </div>
+              <div flex-md="30" flex-gt-md="30" flex-lg="30"  flex-xl="15">
+              </div>
             </div>
         </div>
-        <div id="content-cards-profile-graph" flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
-          <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div ng-controller="BarCtrlRol" flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+        <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+          <div id="content-cards-profile-graph" layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
+            <div ng-controller="BarCtrlRol" flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="35">
               <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
                </canvas>
             </div>
-            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="50">
+            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="30">
               <div layout-md="column" layout-lg="column" layout-xl="column">
                 <div id="style-trabajo" layout-lg="row" layout-md="row" layout-xl="row">
                   <div  flex-lg="20" flex-md="20" flex-xl="20">
@@ -680,6 +689,9 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="35">
+
             </div>
           </div>
         </div>
