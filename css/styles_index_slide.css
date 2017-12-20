@@ -192,8 +192,7 @@
 
 @media only screen and (max-width: 1920px) {
   #slide-head-profile-dip{
-    min-height: 480px;
-    background-size: 100% 555px;
+    min-height: 550px;
   }
 }
 
