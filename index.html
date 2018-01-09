@@ -165,7 +165,11 @@
            var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
 
-           var pick_legis = val.id_legislator_sil;
+           if(val.id_photo_sil){
+             var pick_legis = val.id_photo_sil;
+           }else{
+             var pick_legis = val.id_legislator_sil;
+           }
            var res_pick = pick_legis;
            var pick_legis_label = "<img  onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
@@ -688,8 +692,12 @@
            var res_pick_party = pick_party.toLowerCase();
            var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
+           if(val.id_photo_sil){
+             var pick_legis = val.id_photo_sil;
+           }else{
+             var pick_legis = val.id_legislator_sil;
+           }
 
-           var pick_legis = val.id_legislator_sil;
            var res_pick = pick_legis;
            var pick_legis_label = "<img onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
            val.legislator_extra_score_sil+
