@@ -84,10 +84,12 @@
 @media only screen and (max-width: 1640px) {
   #content-dip {
     font-size: 32px;
+    margin-top: 60px;
   }
 
   #content-senado {
     font-size: 32px;
+    margin-top: 60px;
   }
 }
 
@@ -112,15 +114,29 @@
   }
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1520px) {
+  .color-btn {
+    margin-top: 20px;
+  }
+
   #content-senado {
-      font-size: 22px;
+    font-size: 28px;
+    margin-top: 50px;
   }
 
   #content-dip {
-    font-size: 22px;
+    font-size: 28px;
+    margin-top: 50px;
   }
 }
+
+@media only screen and (max-width: 1500px) {
+  #div-circle-score {
+    height: 270px;
+  }
+}
+
+
 
 @media only screen and (max-width: 1440px) {
 
@@ -176,19 +192,31 @@
     margin-left: 10px;
   }
 
-  #content-senado {
-    font-size: 24px;
-    margin-top: 43px;
+  #content-dip {
+    margin-top: 35px;
+    font-size: 25px;
   }
 
-  #content-dip {
-    font-size: 24px;
-    margin-top: 43px;
+  #content-senado {
+    font-size: 25px;
+    margin-top: 35px;
   }
 
   #d2 {
     margin-left: 0px;
     margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #content-senado {
+      font-size: 23px;
+      margin-top: 35px;
+  }
+
+  #content-dip {
+    font-size: 23px;
+    margin-top: 35px;
   }
 }
 
@@ -229,13 +257,6 @@
     opacity: 1.0;
     min-height: 50px;
   }
-
-  #content-senado {
-    font-size: 24px;
-    margin-left: -16px;
-    margin-top: 43px;
-  }
-
 }
 
 @media only screen and (max-width: 1280px) {
@@ -276,12 +297,12 @@
 
   #content-senado{
     font-size: 19px;
-    margin-top: 35px;
+    margin-top: 20px;
   }
 
   #content-dip{
     font-size: 19px;
-    margin-top: 35px;
+    margin-top: 20px;
   }
 
   #boton-menu {
@@ -296,14 +317,14 @@
 
 @media only screen and (max-width: 1279px) {
   #content-senado {
-    font-size: 24px;
-    margin-top: 66px;
+    font-size: 20px;
+    margin-top: 60px;
     margin-left: 0px;
   }
 
   #content-dip{
-    font-size: 24px;
-    margin-top: 66px;
+    font-size: 20px;
+    margin-top: 60px;
   }
 
   .color-btn {
@@ -398,6 +419,33 @@
     max-width: 100px;
   }
 
+  #content-dip {
+    /* font-size: 14px; */
+    margin-top: 46px;
+    font-size: 21px;
+    letter-spacing: 15px;
+  }
+
+  #content-senado {
+    /* font-size: 14px; */
+    margin-top: 46px;
+    font-size: 21px;
+    letter-spacing: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+  #content-dip {
+    font-size: 18px;
+    letter-spacing: 15px;
+  }
+
+  #content-senado {
+    font-size: 18px;
+    letter-spacing: 15px;
+  }
 }
 
 @media only screen and (max-width: 959px) {
