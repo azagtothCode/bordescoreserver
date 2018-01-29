@@ -14246,3 +14246,9 @@ md-tooltip {
     width: 20px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  md-tabs-canvas {
+      margin-top: 10px;
+  }
+}

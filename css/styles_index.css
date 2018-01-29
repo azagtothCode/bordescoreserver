@@ -261,6 +261,10 @@ html, body{  text-decoration: none;}
 
   @media only screen and (max-width: 959px) {
 
+    #icon-logo {
+      margin-top: 0px;
+    }
+
     #icon-logo-profile {
       background-size: 95px;
       margin-top: 15px;
@@ -334,6 +338,10 @@ html, body{  text-decoration: none;}
   }
 
   @media only screen and (max-width: 667px) {
+
+    #icon-logo {
+      margin-top: 5px;
+    }
 
     #boton-borde {
         margin-left: 4px;

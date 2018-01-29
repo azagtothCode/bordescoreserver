@@ -293,4 +293,9 @@
   #slide-head-profile-dip {
       background-size: 100% 465px;
   }
+
+  #slide-head {
+    background-size: 400px 200px;
+    background-position:top;
+  }
 }
