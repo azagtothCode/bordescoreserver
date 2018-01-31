@@ -1748,7 +1748,7 @@
 
     #image-party-card img {
       margin-left: -5px;
-      margin-top: 52px;
+      margin-top: 75px;
     }
 
     #text-state-card span {
@@ -1918,17 +1918,17 @@
 
     #califichas-content-happy img {
       width: 30px;
-      margin-left: -30px;
+      margin-left: 0px;
     }
 
     #califichas-content-sad img {
       width: 30px;
-      margin-left: -20px;
+      margin-left:0px;
     }
 
     #califichas-content-bad img {
       width: 30px;
-      margin-left: -10px;
+      margin-left: 0px;
     }
 
      #input-project {
@@ -1941,31 +1941,51 @@
 
     #text-chamber-card {
       margin-top: 40px;
-      margin-right: 43px;
-      font-size: 17px;
+      font-size: 20px;
+      text-align: left;
+      margin-right: 0px;
     }
 
     #text-name-card {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     #content-socials-card {
-      margin-left: 20px;
+      margin-left: 0px;
+    }
+
+    #facebook-card img {
+      width: 30px;
+    }
+
+    #twitter-card img {
+      width: 30px;
+    }
+
+    #mail-card img {
+      width: 30px;
     }
 
     #image-card img {
-      margin-left: -10px;
+      margin-left: 0px;
+      width: 140px;
+      height:140px;
     }
 
-    #image-card img {
-      margin-left: -18px;
+    #text-state-card {
+      text-align: left;
+    }
+
+    #text-state-card span {
+      font-size: 15px;
+      margin-right: 0px;
     }
 
     .image-card-profile img {
-      margin-left: 5px;
-      width: 155px;
-      margin-top: 65px;
-      height: 155px;
+      margin-left: 0px;
+      width: 130px;
+      height: 130px;
+      margin-top: -25px;
     }
 
     #score-card-profile p {
@@ -1987,17 +2007,17 @@
 
      #califichas-content-happy img {
        width: 30px;
-       margin-left: -30px;
+       margin-left: 0px;
      }
 
      #califichas-content-sad img {
        width: 30px;
-       margin-left: -20px;
+       margin-left: 0px;
      }
 
      #califichas-content-bad img {
        width: 30px;
-       margin-left: -10px;
+       margin-left: 0px;
      }
 
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
@@ -2006,18 +2026,34 @@
     }
 
     #content-socials-card {
-      margin-left: 25px;
+      margin-left: 0px;
+    }
+
+    #facebook-card img {
+      width: 30px;
+    }
+
+    #twitter-card img {
+      width: 30px;
+    }
+
+    #mail-card img {
+      width: 30px;
     }
 
     #text-state-card {
       font-size: 15px;
-      margin-right: -15px;
+      text-align: left;
     }
 
-    #text-chamber-card {
-      margin-top: 40px;
-      margin-right: 27px;
-      font-size: 17px;
+    #text-state-card span {
+      margin-right: 0px;
+    }
+
+    #image-card img {
+      margin-left: 0px;
+      width: 125px;
+      height: 125px;
     }
 
     .image-card-profile img {
@@ -2027,6 +2063,20 @@
       height: 145px;
     }
 
+    #image-party-card img {
+      margin-top: 62px;
+    }
+
+    #text-chamber-card {
+      margin-top: 15px;
+      font-size: 20px;
+      text-align: left;
+      margin-right: 0px;
+    }
+
+    #text-name-card {
+      font-size: 13px;
+    }
   }
 
   @media only screen and (max-width: 360px) {

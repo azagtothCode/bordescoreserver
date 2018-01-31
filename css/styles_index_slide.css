@@ -36,21 +36,19 @@
 .color-btn{
   background: #000;
   opacity: 1.0;
+  border: 1px solid #FFF;
   margin-top: 30px;
   min-height: 50px;
   cursor: pointer;
+  text-align: center;
+  padding-top: 13px;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
 
-
 .btn-text-one{
   color: #FFF;
-  margin-top: 20px;
-  position: absolute;
-  margin-left: 55px;
-  letter-spacing: 2px;
-  font-size: 19px;
+  font-size: 20px;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
@@ -98,7 +96,8 @@
   text-transform: uppercase;
   margin-top: 70px;
   font-family: 'Montserrat';
-  margin-left: 30px;
+  border-left: 1px solid #FFF;
+  padding-bottom: 10px;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
@@ -109,7 +108,9 @@
   letter-spacing: 30px;
   font-family: 'Montserrat';
   text-transform: uppercase;
+  border-right: 1px solid #FFF;
   margin-top: 70px;
+  padding-bottom: 10px;
   transition: all 500ms;
   -webkit-transition:all 500ms;
 }
@@ -137,9 +138,6 @@
 }
 
 @media only screen and (max-width: 2420px) {
-  .btn-text-one {
-    font-size: 17px;
-  }
 
   #content-senado{
     font-size: 47px;
@@ -151,10 +149,6 @@
 }
 
 @media only screen and (max-width: 2250px) {
-  .btn-text-one {
-    font-size: 15px;
-  }
-
   #content-senado{
     font-size: 45px;
     letter-spacing: 27px;
@@ -178,9 +172,6 @@
 }
 
 @media only screen and (max-width: 2060px) {
-  .btn-text-one {
-    font-size: 13px;
-  }
   #content-senado{
     font-size: 40px;
   }
@@ -267,13 +258,16 @@
   }
 
   #slide-head {
-    min-height: 300px;
+    min-height: 200px;
+    background-size: 414px 200px;
+    background-position: top;
   }
 }
 
 @media only screen and (max-width: 568px) {
   #slide-head {
     min-height: 220px;
+    background-size: 568px 220px;
   }
 }
 
@@ -287,6 +281,10 @@
   #slide-head-profile-dip {
     background-size: 100% 460px;
   }
+
+  #slide-head {
+    background-size: 375px 200px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -296,6 +294,5 @@
 
   #slide-head {
     background-size: 400px 200px;
-    background-position:top;
   }
 }
