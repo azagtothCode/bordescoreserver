@@ -25,7 +25,7 @@
 }
 
 #logo_score{
-  background: url(../imgs/svg/logo_circle.svg);
+  background: url(../imgs/svg/logo_circle.png);
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 500ms;
