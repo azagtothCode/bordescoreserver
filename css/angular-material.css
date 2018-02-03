@@ -13745,7 +13745,7 @@ md-tab-content {
     opacity: 0; }
     md-tab-content.md-left:not(.md-active) * {
       transition: visibility 0s linear;
-      transition-delay: 0.5s;
+      /* transition-delay: 0.5s; */
       visibility: hidden; }
   md-tab-content.md-right:not(.md-active) {
     -webkit-transform: translateX(100%);

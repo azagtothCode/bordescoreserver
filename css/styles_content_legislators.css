@@ -3,7 +3,7 @@
   }
 
   #content-cards{
-    height: 235px;
+    height: 275px;
   }
 
   #califichas-content-happy img{
@@ -81,17 +81,17 @@
 
   #score-card p{
     position: absolute;
-    font-size: 32px;
+    font-size: 40px;
     letter-spacing: 2px;
-    margin-left: 28px;
+    margin-left: 25px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
-    margin-top: -75px;
+    margin-top: -83px;
   }
 
   #text-chamber-card{
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 7px;
     margin-right: 20px;
     text-transform: uppercase;
@@ -129,7 +129,7 @@
   }
 
   #image-party-card img{
-    width: 75px;
+    width: 80px;
     margin-left: -30px;
     margin-top: 65px;
     cursor: pointer;
@@ -138,7 +138,7 @@
   #image-state-card {
     width: 50px;
     height: 50px;
-    margin-top: 15px;
+    margin-top: 0px;
     cursor: pointer;
   }
 
@@ -161,7 +161,7 @@
   }
 
   #text-name-card{
-    font-size: 19px;
+    font-size: 22px;
     margin-top: 3px;
     color: #EE4656;
     text-transform: capitalize;
@@ -171,7 +171,7 @@
   }
 
   #text-election-card{
-    font-size: 19px;
+    font-size: 22px;
     margin-top: 3px;
     margin-left: 0px;
     color: #BBB;
@@ -1486,11 +1486,6 @@
   }
 
   @media only screen and (max-width: 960px) {
-
-    #div-buttons-score {
-      width: auto;
-    }
-
     #image-party-card img {
       margin-left: -15px;
       margin-top: 45px;
@@ -2163,7 +2158,7 @@
     width: 29px;
     height: 40px;
     margin-top: -25px;
-    margin-left: 0px;
+    margin-left: 10px;
   }
 
   #text-state-card span {
