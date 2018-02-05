@@ -273,56 +273,54 @@
 }
 
 @media only screen and (max-width: 959px) {
-  #slide-head {
-    min-height: 400px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
   #slide-head-profile-dip{
     min-height: auto;
     background-size: 100% 595px;
   }
 
   #slide-head {
-    min-height: 200px;
-    background-size: 414px 200px;
+    min-height: 250px;
+    background-size: 100% 300px;
     background-position: top;
   }
 
-  #color-btn{
-    min-height: 22px;
+  #color-btn {
+    min-height: 30px;
+    padding-top: 4px;
+    max-height: 0px;
   }
 }
 
-@media only screen and (max-width: 568px) {
+/* @media only screen and (max-width: 736px) {
   #slide-head {
-    min-height: 220px;
-    background-size: 568px 220px;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  #slide-head {
-    min-height: 200px;
+    min-height: 250px;
+    background-size: 100% 300px;
+    background-position: top;
   }
 
   #color-btn {
-   min-height: 25px;
+    min-height: 30px;
+    padding-top: 4px;
+    max-height: 0px;
+  }
+} */
+
+@media only screen and (max-width: 599px) {
+  #slide-head {
+    min-height: 220px;
+    background-size: 100% 220px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #color-btn{
+    padding-top: 5px;
   }
 }
 
 @media only screen and (max-width: 375px) {
   #slide-head-profile-dip {
     background-size: 100% 460px;
-  }
-
-  #slide-head {
-    background-size: 375px 200px;
-  }
-
-  #color-btn {
-    min-height: 20px;
   }
 }
 
@@ -331,12 +329,7 @@
       background-size: 100% 465px;
   }
 
-  #slide-head {
-    background-size: 400px 200px;
-  }
-
   #color-btn{
-    padding-top: 3px;
-    max-height: 0px;
+    padding-top: 7px;
   }
 }

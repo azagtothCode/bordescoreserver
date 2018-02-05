@@ -14247,8 +14247,20 @@ md-tooltip {
   }
 }
 
+@media only screen and (max-width: 959px) {
+  md-tabs-canvas {
+    padding-top: 10px;
+  }
+  md-list {
+    padding: 8px 0px 40px 0px;
+  }
+}
 @media only screen and (max-width: 600px) {
   md-tabs-canvas {
       margin-top: 10px;
+      padding-top: 0px;
+  }
+  md-list {
+    padding: 8px 0px 25px 0px;
   }
 }
