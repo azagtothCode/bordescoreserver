@@ -1,8 +1,8 @@
 /*SLIDE STYLES*/
 #slide-head{
   background-image: url(../imgs/png/slide_head.jpg);
-  /*min-height: 550px;*/
-  background-size: 100%;
+  min-height: 620px;
+  background-size: 100%, 620px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: auto;
@@ -14,15 +14,16 @@
   width: auto;
   /* background: purple; */
   margin-top: 100px;
-  margin-top: 73px;
-  height: 300px;
+  margin-top: 200px;
+  height: 60px;
 }
 
 #div-buttons-score{
   width: auto;
   opacity: 0.5;
-  margin-top: -13px;
-  height: 19px;
+  margin-top: 90px;
+  height: auto;
+  /* background: red; */
 }
 
 #logo_score{
@@ -42,43 +43,7 @@
   min-height: 50px;
   cursor: pointer;
   text-align: center;
-  padding-top: 13px;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
-.icon-dwn{
-  width: 40px;
-  margin-left: 10px;
-  margin-top: 5px;
-  position: absolute;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
-.icon-question{
-  width: 36px;
-  margin-left: 12px;
-  margin-top: 7px;
-  position: absolute;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
-.icon-party{
-  width: 32px;
-  margin-left: 14px;
-  margin-top: 10px;
-  position: absolute;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
-.icon-search{
-  width: 40px;
-  margin-left: 10px;
-  margin-top: 5px;
-  position: absolute;
+  padding-top: 8px;
   transition: all 500ms;
   -webkit-transition: all 500ms;
 }
@@ -86,27 +51,31 @@
 #content-senado{
   color: #FFF;
   font-size: 50px;
-  letter-spacing: 30px;
+  letter-spacing: 10px;
   text-transform: uppercase;
-  margin-top: 70px;
+  margin-top: 90px;
   font-family: 'Montserrat';
-  border-left: 1px solid #FFF;
-  padding-bottom: 10px;
+  border-left: 5px solid #FFF;
+  padding-bottom: 0px;
   transition: all 500ms;
   -webkit-transition: all 500ms;
+  /* background: red; */
+  height: auto;
 }
 
 #content-dip{
   color: #FFF;
   font-size: 50px;
-  letter-spacing: 30px;
+  letter-spacing: 10px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  border-right: 1px solid #FFF;
-  margin-top: 70px;
-  padding-bottom: 10px;
+  border-right: 5px solid #FFF;
+  margin-top: 90px;
+  padding-bottom: 0px;
   transition: all 500ms;
-  -webkit-transition:all 500ms;
+  -webkit-transition: all 500ms;
+  /* background: red; */
+  height: auto;
 }
 
 #slide-head-profile-dip{
@@ -131,73 +100,23 @@
   -webkit-transition: all 500ms;
 }
 
-@media only screen and (max-width: 2420px) {
-
-  #content-senado{
-    font-size: 47px;
-  }
-
-  #content-dip {
-    font-size: 47px;
-  }
-}
-
-@media only screen and (max-width: 2250px) {
-  #content-senado{
-    font-size: 45px;
-    letter-spacing: 27px;
-  }
-
-  #content-dip {
-    font-size: 45px;
-    letter-spacing: 27px;
-  }
-}
-
-@media only screen and (max-width: 2126px) {
-
-  #content-senado{
-    letter-spacing: 25px;
-  }
-
-  #content-dip {
-    letter-spacing: 25px;
-  }
-}
-
-@media only screen and (max-width: 2060px) {
-  #content-senado{
-    font-size: 40px;
-  }
-
-  #content-dip {
-    font-size: 40px;
-  }
-}
-
 @media only screen and (max-width: 1920px) {
   #slide-head-profile-dip{
     min-height: 550px;
   }
 }
 
-@media only screen and (max-width: 1885px) {
-  #content-senado{
-    letter-spacing: 23px;
+@media only screen and (max-width: 1919px) {
+  #slide-head {
+    min-height: 500px;
   }
 
-  #content-dip {
-    letter-spacing: 23px;
-  }
-}
-
-@media only screen and (max-width: 1840px) {
-  #content-senado{
-    letter-spacing: 21px;
+  #div-circle-score {
+    margin-top: 150px;
   }
 
-  #content-dip {
-    letter-spacing: 21px;
+  #color-btn {
+    padding-top: 12px;
   }
 }
 
@@ -212,6 +131,8 @@
   #color-btn {
     margin-top: 20px;
   }
+
+
 }
 
 @media only screen and (max-width: 1440px) {
@@ -224,6 +145,10 @@
     opacity: 1.0;
     min-height: 45px;
     margin-top: 0px;
+  }
+
+  #color-btn {
+    padding-top: 12px;
   }
 }
 
@@ -251,8 +176,8 @@
 
 @media only screen and (max-width: 1279px){
   #slide-head {
-    min-height: 250px;
-    background-size: 100% 375px;
+    min-height: 350px;
+    background-size: 100% 500px;
     background-position: top;
   }
 
@@ -260,16 +185,19 @@
     min-height: 30px;
     padding-top: 2px;
     max-height: 0px;
+    margin-bottom: 10px;
+  }
+
+  #div-circle-score {
+    margin-top: 100px;
   }
 }
+
+
 
 @media only screen and (max-width: 1024px) {
   #slide-head-profile-dip{
     background-size: 100% 375px;
-  }
-
-  #slide-head {
-    background-size: 100% 300px;
   }
 
   #color-btn {
@@ -281,6 +209,22 @@
   #slide-head-profile-dip{
     min-height: auto;
     background-size: 100% 595px;
+  }
+
+  #slide-head {
+    min-height: 300px;
+  }
+
+  #content-dip {
+    margin-top: 90px;
+  }
+
+  #content-sen {
+    margin-top: 90px;
+  }
+
+  #color-btn {
+    padding-top: 4px;
   }
 }
 

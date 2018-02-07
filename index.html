@@ -75,11 +75,11 @@
   <!--slide content-->
   <div id="slide-head" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
     <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" id="div-circle-score">
-       <div flex-xs="5" flex-sm="10" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
+       <div flex-xs="15" flex-sm="25" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
        </div>
-       <div flex-xs="90" flex-sm="80" flex-md="60" flex-gt-md="20" flex-lg="60" flex-gt-lg="60" flex-xl="60" id="logo_score">
+       <div flex-xs="70" flex-sm="50" flex-md="60" flex-gt-md="20" flex-lg="60" flex-gt-lg="60" flex-xl="60" id="logo_score">
        </div>
-       <div flex-xs="5" flex-sm="10" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
+       <div flex-xs="15" flex-sm="25" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
        </div>
     </div>
     <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" id="div-buttons-score">
@@ -115,7 +115,7 @@
     <div hide show-md show-lg show-xl layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" layout-xl="row">
       <div id="content-dip" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
         <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-          <div flex-offset-md="40" flex-md="60" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="40" flex-xl="60">
+          <div flex-offset-md="40" flex-md="60" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="40" flex-lg="60" flex-offset-xl="35" flex-xl="65">
             <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
               <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50">
                 <span>diputados</span>
@@ -128,7 +128,7 @@
       </div>
       <div id="content-senado" flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="50" >
          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-           <div flex-offset-md="10" flex-md="90" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="15" flex-lg="85"  flex-offset-gt-lg="15" flex-gt-lg="85" flex-offset-xl="15" flex-xl="85">
+           <div flex-offset-md="10" flex-md="90" flex-offset-gt-md="45" flex-gt-md="25" flex-offset-lg="15" flex-lg="85"  flex-offset-gt-lg="15" flex-gt-lg="85" flex-offset-xl="35" flex-xl="65">
              <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
                <div flex-md="50" flex-gt-md="50" flex-lg="50" flex-gt-lg="50" flex-xl="100">
                  <span>senadores</span>
@@ -152,6 +152,7 @@
      $.ajax({
        url: supurl+'/diputados/dip/get',
        method: "POST",
+       cache:false,
        data: {legislator_chamber_sil:"diputado", legislator_status_sil:"ACTIVO"},
        dataType: "json"
      }).done(function(data) {
@@ -546,7 +547,7 @@
                        </div>\
                      </div>\
                    </div>\
-                   <div flex-md="90" flex-gt-md="80" flex-gt-lg="50" flex-lg="50" flex-offset-xl="5" flex-xl="45" class="flex-offset-xl-5 flex-xl-45 flex-md-90 flex-lg-50 flex-gt-md-80 flex-gt-lg-50">\
+                   <div flex-md="90" flex-gt-md="80" flex-gt-lg="50" flex-offset-lg="5" flex-lg="45" flex-offset-xl="5" flex-xl="45" class="flex-offset-lg-5 flex-lg-45 flex-offset-xl-5 flex-xl-45 flex-md-90 flex-lg-50 flex-gt-md-80 flex-gt-lg-50">\
                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
                        <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100">\
                          <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
@@ -723,6 +724,7 @@
      $.ajax({
        url: supurl+'/diputados/sen/get',
        method: "POST",
+       cache:false,
        data: {legislator_chamber_sil:"senador", legislator_status_sil:"ACTIVO"},
        dataType: "json"
      }).done(function(data) {
@@ -1055,36 +1057,36 @@
              <div style="background:#EEE; padding-top:10px;" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
                <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100" >\
                  <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
-                   <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50"  flex-xl="30" class="flex-xl-40 flex-md-40 flex-lg-50 flex-gt-md-30 flex-gt-lg-50">\
+                   <div  flex-md="40" flex-gt-md="30" flex-gt-lg="50" flex-lg="50"  flex-xl="40" class="flex-xl-40 flex-md-40 flex-lg-50 flex-gt-md-30 flex-gt-lg-50">\
                      <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
                        <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
                          <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100">\
                            <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
-                             <div style="text-align:center;" id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="http://bordepolitico/pac.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_happy.svg\'' + '" src="imgs/svg/cali_happy.svg"> </a>\
                              </div>\
-                             <div style="text-align:center;" id="califichas-content-sad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div id="califichas-content-sad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="http://bordepolitico/pac.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_sad.svg\'' + '" src="imgs/svg/cali_sad.svg"> </a>\
                              </div>\
-                             <div style="text-align:center;" id="califichas-content-bad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                             <div  id="califichas-content-bad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
                                  <a href="http://bordepolitico/pac.com" target="_blank">\
                                    <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
                              </div>\
                              <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" class="ng-scope flex-xl-40 flex-md-40 flex-lg-40 flex-gt-md-40 flex-gt-lg-40">\
-                               <img ng-click="openPerfilPage(item.id)" onmouseover="this.src=' + '\'imgs/svg/score.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/score_color.svg\'' + '" src="imgs/svg/score_color.svg">\
+                               <img  onmouseover="this.src=' + '\'imgs/svg/score.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/score_color.svg\'' + '" src="imgs/svg/score_color.svg">\
                                  '+score_val+'\
                                </img>\
                              </div>\
                            </div>\
                            <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
                              <div ng-controller="OpenPerfilController" id="image-card" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" class="ng-scope flex-xl-60 flex-md-60 flex-lg-60 flex-gt-md-60 flex-gt-lg-60">\
-                             '+pick_legis_label+'\
-                             </div>\
+                              '+pick_legis_label+'\
+                              </div>\
                              <div id="image-party-card" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25"  class="flex-xl-25 flex-md-25 flex-lg-25 flex-gt-md-25 flex-gt-lg-25">\
-                             '+pick_party_label+'\
-                             </div>\
+                              '+pick_party_label+'\
+                            </div>\
                              <div style="text-align:right;" id="content-socials-card" hide show-xl  show-lg show-md  flex-xl="25" flex-lg="25" flex-md="25" class="hide show-lg show-xl show-md flex-xl-25 flex-lg-25 flex-md-25">\
                                <div layout-xl="row" layout-lg="row" layout-md="row" class="layout-xl-row layout-lg-row layout-md-row">\
                                  <div layout-xl="column" layout-lg="column" layout-lg="column" class="layout-xl-column layout-lg-column layout-md-column">\
@@ -1111,7 +1113,7 @@
                        </div>\
                      </div>\
                    </div>\
-                   <div flex-md="60" flex-gt-md="70" flex-gt-lg="50" flex-lg="50" flex-xl="70" class="flex-xl-70 flex-md-60 flex-lg-50 flex-gt-md-70 flex-gt-lg-50">\
+                   <div flex-md="90" flex-gt-md="80" flex-gt-lg="50" flex-lg="50" flex-offset-xl="5" flex-xl="45" class="flex-offset-xl-5 flex-xl-45 flex-md-90 flex-lg-50 flex-gt-md-80 flex-gt-lg-50">\
                      <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
                        <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100">\
                          <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
@@ -1131,19 +1133,21 @@
                              </div>\
                              </div>\
                              <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
-                             '+label_name+'\
+                               '+label_name+'\
                              </div>\
                              <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
-                             '+label_last_name+'\
+                               '+label_last_name+'\
                              </div>\
                            <div id="text-election-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
-                           '+label_representation+'\
+                             '+label_representation+'\
                            </div>\
                            <div  ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
                            </div>\
                          </div>\
                        </div>\
                      </div>\
+                   </div>\
+                   <div  flex-md="10" flex-gt-md="20" flex-gt-lg="50" flex-lg="50"  flex-xl="10" class="flex-xl-10 flex-md-10 flex-lg-50 flex-gt-md-20 flex-gt-lg-50">\
                    </div>\
                  </div>\
                </div>\
