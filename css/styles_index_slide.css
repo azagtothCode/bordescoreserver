@@ -168,10 +168,6 @@
   #slide-head-profile-dip {
     background-size: 100% 550px;
   }
-
-  #color-btn{
-    min-height: 35px;
-  }
 }
 
 @media only screen and (max-width: 1279px){
