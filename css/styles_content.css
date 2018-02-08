@@ -279,8 +279,39 @@
   text-align: left;
 }
 
-.content-state{
+.content-state-a{
   background: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+  text-align: left;
+}
+
+.content-state-b{
+  background: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+  text-align: left;
+}
+
+.content-a{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  animation-name: animation-mc;
+  animation-duration: 4s;
+  text-align: left;
+}
+
+.content-b{
+  background: #FFF;
   color: #FFF;
   padding-top: 5px;
   height: 30px;
