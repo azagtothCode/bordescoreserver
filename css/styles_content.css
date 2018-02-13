@@ -340,4 +340,22 @@
     #content-res-party-score {
       padding: 0px;
     }
+
+    .content-state-name {
+      padding-top: 0px;
+      height: 15px;
+      font-size: 11px;
+    }
+
+    #content-imgs-state-score img {
+      height: 30px;
+    }
+
+    #content-row-menu .sen {
+      font-size: 13px;
+    }
+
+    #content-row-menu .dep {
+      font-size: 13px;
+    }
   }

@@ -153,7 +153,7 @@
        url: supurl+'/diputados/dip/get',
        method: "POST",
        cache:false,
-       data: {legislator_chamber_sil:"diputado", legislator_status_sil:"ACTIVO"},
+       data: {legislator_chamber_sil:"diputado"},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
@@ -608,7 +608,7 @@
                              <a href="http://bordepolitico/pac.com" target="_blank">\
                                <img onmouseover="this.src=' + '\'imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/cali_bad.svg\'' + '" src="imgs/svg/cali_bad.svg"> </a>\
                          </div>\
-                         <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-sm="20" flex-xs="40" class="flex-xs-40 flex-sm-20">\
+                         <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
                            <img ng-click="openPerfilPage(item.id)" onmouseover="this.src=' + '\'imgs/svg/score.svg\'' + '" onmouseout="this.src=' + '\'imgs/svg/score_color.svg\'' + '" src="imgs/svg/score_color.svg">\
                              '+score_val+'\
                            </img>\
@@ -725,7 +725,7 @@
        url: supurl+'/diputados/sen/get',
        method: "POST",
        cache:false,
-       data: {legislator_chamber_sil:"senador", legislator_status_sil:"ACTIVO"},
+       data: {legislator_chamber_sil:"senador"},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;

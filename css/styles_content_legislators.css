@@ -41,42 +41,42 @@
   }
 
   #score-card span{
-    margin-top: 38px;
+    margin-top: 43px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -77px;
+    margin-left: -81px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
-    -webkit-margin-start: 38px;
-    -webkit-margin-before: -75px;
+    -webkit-margin-start: 42px;
+    -webkit-margin-before: -78px;
   }
 
   #score-card span.menorVeinte{
-    margin-top: 38px;
+    margin-top: 43px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -72px;
+    margin-left: -76px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
-    -webkit-margin-start: 40px;
-    -webkit-margin-before: -75px;
+    -webkit-margin-start: 46px;
+    -webkit-margin-before: -78px;
   }
 
   #score-card span.menorDiez {
-    margin-top: 40px;
+    margin-top: 43px;
     position: absolute;
     font-size: 32px;
     letter-spacing: 2px;
-    margin-left: -66px;
+    margin-left: -70px;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
-    -webkit-margin-start: 48px;
-    -webkit-margin-before: -75px;
+    -webkit-margin-start: 47px;
+    -webkit-margin-before: -78px;
   }
 
   #score-card p{
@@ -87,7 +87,7 @@
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
-    margin-top: -77px;
+    margin-top: -78px;
   }
 
   #text-chamber-card{
@@ -525,15 +525,15 @@
     }
 
     #score-card p {
-      margin-left: 21px;
-      margin-top: -67px;
+      margin-left: 16px;
+      margin-top: -62px;
     }
 
     #score-card span {
       margin-top: 30px;
       margin-left: -67px;
-      -webkit-margin-start: 30px;
-      -webkit-margin-before: -67px;
+      -webkit-margin-start: 25px;
+      -webkit-margin-before: -65px;
     }
 
     #score-card span.menorVeinte {
@@ -632,8 +632,8 @@
     }
 
     #score-card span.menorDiez {
-      margin-top: 40px;
-      margin-left: -66px;
+      margin-top: 30px;
+      margin-left: -56px;
       -webkit-margin-start: 36px;
       -webkit-margin-before: -64px;
     }
@@ -1218,24 +1218,24 @@
     }
 
     #score-card p {
-      margin-top: -50px;
+      margin-top: -49px;
       font-size: 25px;
     }
 
     #score-card span {
-      margin-top: -48px;
+      margin-top: -49px;
       font-size: 25px;
       margin-left: 19px;
     }
 
     #score-card span.menorVeinte {
-      margin-top: -48px;
+      margin-top: -49px;
       margin-left: 22px;
       font-size: 25px;
     }
 
     #score-card span.menorDiez {
-      margin-top: -47px;
+      margin-top: -49px;
       margin-left: 27px;
       font-size: 25px;
     }
@@ -1308,27 +1308,10 @@
       height: 155px;
     }
 
-    /* #score-card span {
-      margin-top: -48px;
-      font-size: 25px;
-      margin-left: 19px;
-    } */
 
     #text-state-card {
       font-size: 16px;
     }
-
-    /* #score-card span.menorVeinte {
-      margin-top: -48px;
-      margin-left: 22px;
-      font-size: 25px;
-    } */
-
-    /* #score-card span.menorDiez {
-      margin-top: -47px;
-      margin-left: 27px;
-      font-size: 25px;
-    } */
 
     .image-card-profile img {
       width: 150px;
@@ -1551,31 +1534,6 @@
       }
   }
 
-  /* @media only screen and (max-width: 667px) {
-
-    md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
-      margin-left: 105px;
-    }
-
-    #image-card img {
-      margin-left: -10px;
-    }
-
-    #content-socials-card-profile {
-      margin-left: 40px;
-      margin-top: 135px;
-    }
-
-    #califichas-content-sad-profile img {
-      margin-left: 20px;
-    }
-
-    #score-card-profile p {
-      margin-left: 0px;
-    }
-
-  } */
-
   @media only screen and (max-width: 667px) {
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
       margin-left: 105px;
@@ -1700,22 +1658,18 @@
   }
 
   #score-card span {
-    margin-top: -50px;
+    margin-top: -49px;
     margin-left: 19px;
   }
 
   #score-card span.menorVeinte {
-    margin-top: -44px;
-    margin-left: 17px;
-    -webkit-margin-start: 23px;
-    -webkit-margin-before: -47px;
+    margin-top: -49px;
+    margin-left: 22px;
   }
 
   #score-card span.menorDiez {
-    margin-top: -46px;
-    margin-left: 22px;
-    -webkit-margin-start: 29px;
-    -webkit-margin-before: -49px;
+    margin-top: -49px;
+    margin-left: 26px;
   }
 
   #text-state-card {
@@ -2010,7 +1964,7 @@
     margin-top: -42px;
     font-size: 20px;
     margin-left: 8px;
-  } 
+  }
 
   #score-card-profile span.menorDiez {
     font-size: 20px;
