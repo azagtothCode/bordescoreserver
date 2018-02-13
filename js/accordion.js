@@ -1,3 +1,22 @@
+app.controller('acorGrap',
+  function($scope) {
+  $scope.accordianData = [
+    {
+      "heading" : "Grafica"
+    }
+  ];
+
+  $scope.collapseAll = function(data) {
+     for(var i in $scope.accordianData) {
+       if($scope.accordianData[i] != data) {
+         $scope.accordianData[i].expanded = false;
+       }
+     }
+     data.expanded = !data.expanded;
+  };
+
+})
+
 app.controller('acorTrabajo',
       function($scope) {
     	$scope.accordianData = [

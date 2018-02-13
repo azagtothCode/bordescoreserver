@@ -1952,9 +1952,10 @@
   }
 
   #score-card-profile p {
-    margin-left: 10px;
-    margin-top: 5px;
+    margin-left: 31px;
+    margin-top: -40px;
     font-size: 20px;
+    letter-spacing: 2px;
   }
 
   #score-card span {
@@ -1982,7 +1983,7 @@
   #content-socials-card-profile{
     text-align: center;
     margin-left: 10px;
-    margin-top: 80px;
+    margin-top: 70px;
   }
 
   #score-card-profile {
@@ -1993,24 +1994,36 @@
 
   #score-card-profile img{
     margin-top: 30px;
-    width: 75px;
-    margin-left: 2px;
+    width: 60px;
+    margin-left: 20px;
   }
 
   #score-card-profile span{
-    margin-top: -54px;
+    margin-top: -42px;
     position: absolute;
-    font-size: 28px;
+    font-size: 20px;
     letter-spacing: 2px;
-    margin-left: -10px;
+    margin-left: 5px;
+  }
+
+  #score-card-profile span.menorVeinte {
+    margin-top: -42px;
+    font-size: 20px;
+    margin-left: 8px;
+  } 
+
+  #score-card-profile span.menorDiez {
+    font-size: 20px;
+    margin-top: -42px;
+    margin-left: 12px;
   }
 
   #text-chamber-card-profile{
-    font-size: 15px;
-    margin-top: 70px;
-    margin-right: 28px;
+    font-size: 20px;
+    margin-top: 65px;
+    margin-right: 0px;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     color: #BBB;
     font-weight: bold;
     cursor: pointer;
@@ -2020,7 +2033,7 @@
   #text-state-card-profile{
     font-size: 15px;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     margin-right: 28px;
     color: #BBB;
     letter-spacing: 2px;
@@ -2031,8 +2044,8 @@
   #text-state-card-profile span{
     font-size: 15px;
     text-transform: uppercase;
-    text-align: right;
-    margin-right: -1px;
+    text-align: left;
+    margin-right: 0px;
     color: #BBB;
     letter-spacing: 2px;
     font-weight: bold;
@@ -2040,9 +2053,9 @@
   }
 
   .image-card-profile img{
-    width: 130px;
-    height: 130px;
-    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
     margin-left: 0px;
     border-radius: 50%;
   }
@@ -2054,10 +2067,10 @@
   }
 
   #image-state-card-profile {
-    width: 45px;
-    height: 45px;
-    margin-left: -18px;
-    margin-top: 75px;
+    width: 30px;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 60px;
   }
 
   .facebook-card-profile img{
@@ -2078,12 +2091,12 @@
   }
 
   #text-name-card-profile{
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 3px;
     text-align: left;
     letter-spacing: 3px;
     font-weight: bold;
-    margin-left: 4px;
+    margin-left: 0px;
   }
 
   #text-election-card-profile{
@@ -2091,16 +2104,15 @@
     margin-top: 3px;
     text-align: left;
     font-weight: bold;
-    margin-left: 4px;
+    margin-left: 0px;
   }
 
   #text-commission-card-profile{
     font-size: 13px;
-    padding-bottom: 5px;
+    margin-top: 3px;
     text-align: left;
     font-weight: bold;
-    margin-left: 4px;
-    margin-bottom: 10px;
+    margin-left: 0px;
   }
 
   #style-trabajo {
