@@ -1428,27 +1428,28 @@
     }
 
     #score-card-profile img {
-      margin-top: 40px;
-      width: 60px;
+      margin-top: 60px;
+      width: 70px;
       margin-left: 0px;
     }
 
     .image-card-profile img {
-      height: 180px;
-      width: 180px;
-      margin-left: 30px;
-      margin-top: 0px;
+      height: auto;
+      width: auto;
+      margin-left: 0px;
+      margin-top: -30px;
       -webkit-margin-before: 30px;
     }
 
     #score-card-profile p {
-      margin-left: 38px;
-      margin-top: -45px;
+      margin-left: 34px;
+      -webkit-margin-start:36px;
+      margin-top: -50px;
       font-size: 25px;
     }
 
     #content-socials-card-profile {
-      margin-top: 60px;
+      margin-top: 40px;
       -webkit-margin-before:90px;
     }
 
@@ -1463,30 +1464,31 @@
     }
 
     .image-party-card-profile img {
-      margin-top: 120px;
-      -webkit-margin-before:150px;
-      margin-left: -22px;
+      width: 65px;
+      margin-top:90px;
+      -webkit-margin-before: 150px;
+      margin-left: -41px;
     }
 
     #text-chamber-card-profile {
       letter-spacing: 5px;
-      margin-top: 130px;
-      -webkit-margin-before:120px;
+      margin-top: 116px;
+      -webkit-margin-before: 116px;
       margin-left: 0px;
-      text-align: left;
+      text-align: right;
     }
 
     #text-state-card-profile span {
       margin-right: 0px;
-      text-align: left;
+      text-align: right;
     }
 
     #image-state-card-profile {
       margin-left: 0px;
       width: 40px;
       height: 40px;
-      margin-top: 130px;
-      -webkit-margin-before: 125px;
+      margin-top: 116px;
+      -webkit-margin-before: 117px;
     }
 
     #text-election-card-profile {
@@ -1514,6 +1516,19 @@
     }
   }
 
+  @media only screen and (max-width: 906px) {
+    #score-card-profile p {
+      -webkit-margin-start:34px;
+    }
+  }
+
+  @media only screen and (max-width: 860px) {
+    #score-card-profile p {
+      -webkit-margin-start:32px;
+      margin-left:30px;
+    }
+  }
+
   @media only screen and (max-width: 812px) {
     #image-card img {
       margin-left: 10px;
@@ -1527,6 +1542,11 @@
     #image-party-card img {
       width: 60px;
     }
+
+    #score-card-profile p {
+      -webkit-margin-start: 29px;
+      margin-left: 27px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -1534,12 +1554,17 @@
       margin-left: 5px;
     }
 
-    #score-card-profile p {
-      margin-left: -2px;
-    }
-
     md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
       margin-left: 130px;
+    }
+
+    #score-card-profile p {
+      -webkit-margin-start: 24px;
+      margin-left: 24px;
+    }
+
+    .image-party-card-profile img {
+      margin-left: -15px;
     }
 
   }
@@ -1550,6 +1575,10 @@
       margin-left: 125px;
     }
 
+    .image-card-profile img {
+      margin-left: 0px;
+      height: 170px;
+    }
   }
 
   @media only screen and (max-width: 732px){
@@ -1567,8 +1596,31 @@
       width: 135px;
       height: 135px;
     }
+
+    .image-card-profile img {
+      height: 150px;
+    }
+
+    .image-party-card-profile img {
+      margin-top: 65px;
+      -webkit-margin-before: 130px;
+      margin-left: -41px;
+    }
+
+    #score-card-profile p {
+      margin-left: 19px;
+    }
   }
 
+  @media only screen and (max-width: 601px) {
+    .image-card-profile img {
+      height: 140px;
+    }
+
+    #score-card-profile p {
+      margin-left: 15px;
+    }
+  }
 
   @media only screen and (max-width: 599px) {
 
@@ -1641,10 +1693,12 @@
 
     #text-chamber-card-profile {
       margin-right: -3px;
+      text-align: left;
     }
 
     #text-state-card-profile span {
       margin-right: -35px;
+      text-align: left;
     }
 
     .image-card-profile img {
