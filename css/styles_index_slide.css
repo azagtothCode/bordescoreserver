@@ -207,6 +207,10 @@
     background-size: 100% 595px;
   }
 
+  #slide-head-profile-dip{
+    min-height: 300px;
+  }
+
   #slide-head {
     min-height: 300px;
   }

@@ -104,13 +104,18 @@
 
           if(val.legislator_chamber_sil == "diputado"){
             document.getElementById("slide-head-profile-dip").style.background = "url(../imgs/png/slide_head_dip.jpg)";
-            document.getElementById("slide-head-profile-dip").style.backgroundSize = "100% 1000px";
-
+            document.getElementById("slide-head-profile-dip").style.backgroundSize = "100%  620px";
+            document.getElementById("slide-head-profile-dip").style.backgroundAttachment = "fixed";
+            document.getElementById("slide-head-profile-dip").style.backgroundRepeat = "no-repeat";
+            document.getElementById("slide-head-profile-dip").style.backgroundWidth = "auto";
           }
 
           if( val.legislator_chamber_sil == "senador"){
               document.getElementById("slide-head-profile-dip").style.background = "url(../imgs/png/slide_head_sen.jpg)";
-              document.getElementById("slide-head-profile-dip").style.backgroundSize = "100%  1000px";
+              document.getElementById("slide-head-profile-dip").style.backgroundSize = "100%  620px";
+              document.getElementById("slide-head-profile-dip").style.backgroundAttachment = "fixed";
+              document.getElementById("slide-head-profile-dip").style.backgroundRepeat = "no-repeat";
+              document.getElementById("slide-head-profile-dip").style.backgroundWidth = "auto";
           }
 
           if( val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil == "diputado"){
@@ -394,155 +399,111 @@
     </div>
   </div>
   <div id="slide-head-profile-dip" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-    <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
-     <div layout-xs="row" layout-sm="row">
-      <div flex-xs="25" flex-sm="35">
-      </div>
-      <div flex-xs="50" flex-sm="30">
-        <div layout-xs="row" layout-sm="row">
-          <div id="califichas-content-happy-profile"  flex-xs="20" flex-sm="25">
-            <a href="http://bordepolitico/pac.com" target="_blank">
-              <img src="../imgs/svg/cali_happy.svg">
-            </a>
+    <div hide show-sm show-xs layout-sm="row">
+      <div flex-sm="50">
+        <div id="content-cards"  hide show-xs show-sm layout-xs="column" layout-sm="column">
+         <div layout-xs="row" layout-sm="row">
+          <div flex-xs="25" flex-sm="20">
           </div>
-          <div id="califichas-content-sad-profile"  flex-xs="20" flex-sm="25">
-            <a href="http://bordepolitico/pac.com" target="_blank">
-              <img src="../imgs/svg/cali_sad.svg">
-            </a>
-          </div>
-          <div id="califichas-content-bad-profile"  flex-xs="20" flex-sm="25">
-            <a href="http://bordepolitico/pac.com" target="_blank">
-              <img src="../imgs/svg/cali_bad.svg">
-            </a>
-          </div>
-          <div id="score-card-profile" style="text-align:center;" flex-xs="40" flex-sm="25">
-            <img  src="../imgs/svg/score.svg">
-            <div class="scoreWho"></div>
-          </div>
-        </div>
-      </div>
-      <div flex-xs="25" flex-sm="35">
-      </div>
-     </div>
-      <div layout-xs="row" layout-sm="row">
-        <div flex-xs="25" flex-sm="35">
-        </div>
-        <div flex-xs="50" flex-sm="30">
-          <div layout-xs="row" layout-sm="row">
-            <div class="image-card-profile" flex-xs="60" flex-sm="60">
+          <div flex-xs="50" flex-sm="60">
+            <div layout-xs="row" layout-sm="row">
+              <div id="califichas-content-happy-profile"  flex-xs="20" flex-sm="20">
+                <a href="http://bordepolitico/pac.com" target="_blank">
+                  <img src="../imgs/svg/cali_happy.svg">
+                </a>
+              </div>
+              <div id="califichas-content-sad-profile"  flex-xs="20" flex-sm="20">
+                <a href="http://bordepolitico/pac.com" target="_blank">
+                  <img src="../imgs/svg/cali_sad.svg">
+                </a>
+              </div>
+              <div id="califichas-content-bad-profile"  flex-xs="20" flex-sm="20">
+                <a href="http://bordepolitico/pac.com" target="_blank">
+                  <img src="../imgs/svg/cali_bad.svg">
+                </a>
+              </div>
+              <div id="score-card-profile" style="text-align:center;" flex-xs="40" flex-sm="40">
+                <img  src="../imgs/svg/score.svg">
+                <div class="scoreWho"></div>
+              </div>
             </div>
-            <div class="image-party-card-profile" ng-controller="OpenPanelScoreController" ng-click="openPartys($event)"  flex-xs="20" flex-sm="20">
-            </div>
-            <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
+          </div>
+          <div flex-xs="25" flex-sm="20">
+          </div>
+         </div>
+         <div layout-xs="row" layout-sm="row">
+          <div flex-xs="25" flex-sm="20">
+          </div>
+          <div flex-xs="50" flex-sm="60">
+            <div layout-xs="row" layout-sm="row">
+              <div class="image-card-profile" flex-xs="60" flex-sm="60">
+              </div>
+              <div class="image-party-card-profile" ng-controller="OpenPanelScoreController" ng-click="openPartys($event)"  flex-xs="20" flex-sm="20">
+              </div>
+              <div id="content-socials-card-profile" flex-xs="20" flex-sm="20">
                 <div style="text-align:right;" layout-xs="column" layout-sm="column">
                   <div class="facebook-card-profile">
-                      <!-- <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.bordepolitico.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                        <img src="../imgs/svg/facebook_cards.svg">
-                      </a> -->
                   </div>
                   <div class="twitter-card-profile">
-                    <!-- <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=Nuevo%20Twit%20Para%20@{{item.twiter}}&via=appbordepolitico.com" target="_blank">
-                      <img src="../imgs/svg/twiter_cards.svg">
-                    </a> -->
                   </div>
                   <div class="mail-card-profile" >
-                    <!-- <a href="mailto:{{item.mail}}">
-                      <img src="../imgs/svg/mail_cards.svg">
-                    </a> -->
                   </div>
                 </div>
+               </div>
               </div>
             </div>
-          </div>
-          <div flex-xs="25" flex-sm="35">
-          </div>
-        </div>
-    </div>
-  <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-    <div flex-xs="25" flex-sm="35">
-    </div>
-    <div ng-controller="OpenPanelScoreController" flex-xs="50" flex-sm="30">
-      <div layout-xs="row" layout-sm="row">
-         <div flex-xs="100" flex-sm="100">
-           <div layout-xs="column" layout-sm="column">
-             <div layout-xs="row" layout-sm="row">
-               <div flex-xs="85" flex-sm="85">
-                  <div id="text-chamber-card-profile" layout-xs="column" layout-sm="column">
-                    <span class="chamberWho"></span>
-                  </div>
-                  <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
-                  <span class="stateWho"></span>
-                  </div>
-                </div>
-                <div class="pickStateWho" ng-controller="OpenPanelScoreController" ng-click="openSatatesProfile($event)" flex-xs="15" flex-sm="15">
-                </div>
-              </div>
-            </div>
-            <div layout-xs="column" layout-sm="column">
-              <div id="text-name-card-profile" layout-xs="column" layout-sm="column">
-                <span class="nameWho"></span>
-              </div>
-              <div id="text-name-card-profile"  layout-xs="column" layout-sm="column">
-                <span class="last_nameWho"></span>
-              </div>
-              <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
-                <span class="representationWho"></span>
-              </div>
-              <!-- <div id="text-commission-card-profile" layout-xs="column" layout-sm="column">
-                <div id="color-btn" ng-controller="OpenPanelGraph" ng-click="showAdvanced($event)">
-                  <img class="icon-search" src="imgs/svg/states/nada.svg">
-                  <span class="btn-text-one">Grafica</span>
-                </div>
-              </div> -->
+            <div flex-xs="25" flex-sm="20">
             </div>
           </div>
         </div>
       </div>
-      <div flex-xs="25" flex-sm="35">
-      </div>
-  </div>
-  <!-- <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-    <div flex-xs="25" flex-sm="35">
-    </div>
-    <div ng-controller="BarCtrlRol" flex-xs="25" flex-sm="15">
-      <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
-       </canvas>
-    </div>
-    <div flex-xs="25" flex-sm="15">
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-trabajo" layout-xs="row" layout-sm="row">
-          <div  flex-xs="20" flex-sm="20">
-            <span class="numberTrabajo"></span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Trabajo</span>
-          </div>
+      <div flex-sm="50">
+        <div hide show-xs show-sm layout-xs="row" layout-sm="row">
+        <div flex-xs="25" flex-sm="0">
         </div>
+        <div ng-controller="OpenPanelScoreController" flex-xs="50" flex-sm="80">
+          <div layout-xs="row" layout-sm="row">
+             <div flex-xs="100" flex-sm="100">
+               <div layout-xs="column" layout-sm="column">
+                 <div layout-xs="row" layout-sm="row">
+                   <div flex-xs="85" flex-sm="85">
+                      <div id="text-chamber-card-profile" layout-xs="column" layout-sm="column">
+                        <span class="chamberWho"></span>
+                      </div>
+                      <div id="text-state-card-profile" layout-xs="column" layout-sm="column">
+                      <span class="stateWho"></span>
+                      </div>
+                    </div>
+                    <div class="pickStateWho" ng-controller="OpenPanelScoreController" ng-click="openSatatesProfile($event)" flex-xs="15" flex-sm="15">
+                    </div>
+                  </div>
+                </div>
+                <div layout-xs="column" layout-sm="column">
+                  <div id="text-name-card-profile" layout-xs="column" layout-sm="column">
+                    <span class="nameWho"></span>
+                  </div>
+                  <div id="text-name-card-profile"  layout-xs="column" layout-sm="column">
+                    <span class="last_nameWho"></span>
+                  </div>
+                  <div id="text-election-card-profile" layout-xs="column" layout-sm="column">
+                    <span class="representationWho"></span>
+                  </div>
+                  <!-- <div id="text-commission-card-profile" layout-xs="column" layout-sm="column">
+                    <div id="color-btn" ng-controller="OpenPanelGraph" ng-click="showAdvanced($event)">
+                      <img class="icon-search" src="imgs/svg/states/nada.svg">
+                      <span class="btn-text-one">Grafica</span>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div flex-xs="25" flex-sm="20">
+          </div>
       </div>
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-rol"  layout-xs="row" layout-sm="row">
-          <div flex-xs="20" flex-sm="20">
-            <span class="numberRol"></span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Rol</span>
-          </div>
-        </div>
-      </div>
-      <div layout-xs="column" layout-sm="column">
-        <div id="style-extra"  layout-xs="row" layout-sm="row">
-          <div flex-xs="20" flex-sm="20">
-            <span class="numberExtra"></span>
-          </div>
-          <div flex-xs="80" flex-sm="80">
-            <span class="letter">Extra</span>
-          </div>
-        </div>
       </div>
     </div>
-    <div flex-xs="25" flex-sm="35">
-    </div>
-  </div> -->
+
   <div hide show-md show-gt-md show-lg show-xl layout-xs="column" layout-sm="column" layout-xl="column">
       <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
         <div flex-offset-xl="20" flex-offset-lg="10" flex-offset-md="10" flex-md="40" flex-lg="40" flex-xl="30">
@@ -1291,6 +1252,12 @@
     		<div class="md-accordion" ng-class="{activeDiv:data.expanded}" ng-repeat="data in accordianData">
     			<md-toolbar  id="headTrabajo" ng-init="data.expanded = true" ng-click="collapseAll(data)">
             <div class="md-toolbar-tools">
+              <div ng-if="data.expanded == true">
+                <img id="imageScoreAccordion" src="{{data.srcno}}">
+              </div>
+              <div ng-if="data.expanded == false">
+                <img id="imageScoreAccordion" src="{{data.src}}">
+              </div>
               <h2>
                 <span id="titleScoreAccordion">{{data.heading}}</span>
               </h2>

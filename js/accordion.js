@@ -2,7 +2,9 @@ app.controller('acorGrap',
   function($scope) {
   $scope.accordianData = [
     {
-      "heading" : "Grafica"
+      "src" : "../imgs/svg/icn-pm.png",
+      "srcno" : "../imgs/svg/icn-pm.png",
+      "heading" : "Gráfica Resultados"
     }
   ];
 
