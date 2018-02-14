@@ -584,29 +584,6 @@
       margin-top: 80px;
     }
 
-    /* #score-card span {
-      margin-top: 27px;
-      margin-left: -64px;
-      -webkit-margin-start: 27px;
-      -webkit-margin-before: -64px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -74px;
-      font-size: 45px;
-      margin-left: -22px;
-      -webkit-margin-start: 33px;
-      -webkit-margin-before: -64px;
-    }
-
-    #score-card-profile span.menorDiez {
-      margin-top: -75px;
-      margin-left: -14px;
-      font-size: 45px;
-      -webkit-margin-start: 36px;
-      -webkit-margin-before: -66px;
-    } */
-
     #score-card-profile p {
       margin-left: 8px;
       font-size: 45px;
@@ -625,8 +602,8 @@
     }
 
     #score-card span.menorVeinte {
-      margin-top: 38px;
-      margin-left: -72px;
+      margin-top: 28px;
+      margin-left: -62px;
       -webkit-margin-start: 30px;
       -webkit-margin-before: -65px;
     }
@@ -1313,36 +1290,138 @@
       font-size: 16px;
     }
 
+    #content-cards-profile {
+        margin-top: 65px;
+    }
+
+    #slide-head-profile-dip {
+      min-height: 300px;
+    }
+
+    #score-card-profile img {
+      margin-top: 30px;
+      width: 70px;
+      margin-left: 0px;
+    }
+
+    #content-cards-profile-graph {
+      margin-top: 0px;
+    }
+
     .image-card-profile img {
-      width: 150px;
-      height: 150px;
-    }
-
-    .image-party-card-profile img {
-      width: 55px;
-      margin-top: 61px;
-    }
-
-    #califichas-content-happy-profile img {
-      width: 30px;
-    }
-
-    #califichas-content-sad-profile img {
-      width: 30px;
-    }
-
-    #califichas-content-bad-profile img {
-      width: 30px;
+      height: auto;
+      width: auto;
+      margin-left: 0px;
+      margin-top: -30px;
+      -webkit-margin-before: -15px;
     }
 
     #score-card-profile p {
-      font-size: 20px;
-      margin-top: 2px;
-      margin-left: 10px;
+      margin-left: 34px;
+      -webkit-margin-start:36px;
+      margin-top: -50px;
+      font-size: 25px;
+    }
+
+    #score-card-profile span.menorVeinte {
+      margin-top: -54px;
+      font-size: 30px;
+      margin-left: -15px;
+    }
+
+    #content-socials-card-profile {
+      margin-top: 40px;
+      -webkit-margin-before:40px;
+    }
+
+    #content-socials-card-profile div{
+      text-align: left;
+    }
+
+    .twitter-card-profile img {
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .mail-card-profile img {
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .image-party-card-profile img {
+      width: 75px;
+      margin-top: 90px;
+      -webkit-margin-before: 100px;
+      margin-left: -21px;
     }
 
     #text-chamber-card-profile {
       letter-spacing: 5px;
+      margin-top: 107px;
+      -webkit-margin-before: 107px;
+      margin-left: 0px;
+      text-align: right;
+    }
+
+    #text-state-card-profile span {
+      margin-right: 0px;
+      text-align: right;
+    }
+
+    #image-state-card-profile {
+      margin-left: 0px;
+      width: 40px;
+      height: 40px;
+      margin-top: 116px;
+      -webkit-margin-before: 117px;
+    }
+
+    #text-election-card-profile {
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-happy-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-sad-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-bad-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #text-name-card-profile {
+      margin-left: 0px;
+    }
+  }
+  @media only screen and (max-width: 1163px) {
+    #score-card-profile p {
+      margin-left: 31px;
+      -webkit-margin-start: 33px;
+    }
+  }
+
+  @media only screen and (max-width: 1085px) {
+    #score-card-profile p {
+      margin-left: 26px;
+      -webkit-margin-start: 29px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    #score-card-profile p {
+      margin-left: 23px;
+      -webkit-margin-start: 26px;
     }
   }
 
@@ -1448,6 +1527,12 @@
       font-size: 25px;
     }
 
+    #score-card-profile span.menorVeinte {
+      margin-top: -54px;
+      font-size: 30px;
+      margin-left: -15px;
+    }
+
     #content-socials-card-profile {
       margin-top: 40px;
       -webkit-margin-before:90px;
@@ -1514,6 +1599,7 @@
       margin-top: 60px;
       margin-left: 0px;
     }
+
   }
 
   @media only screen and (max-width: 906px) {
