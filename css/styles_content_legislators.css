@@ -982,18 +982,6 @@
 
   @media only screen and (max-width: 1520px) {
 
-    #style-trabajo .letter {
-      margin-left: -5px;
-    }
-
-    #style-extra .letter {
-      margin-left: -5px;
-    }
-
-    #style-rol .letter {
-      margin-left: -5px;
-    }
-
     #score-card p {
       margin-left: 16px;
       margin-top: -64px;
