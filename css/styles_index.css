@@ -8,7 +8,7 @@ html, body{  text-decoration: none;}
     width: 100%;
     opacity: 0.8;
     z-index: 3;
-    height: 80px;
+    height: auto;
   }
 
   #icon-logo{

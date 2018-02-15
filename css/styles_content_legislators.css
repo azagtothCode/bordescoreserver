@@ -666,21 +666,179 @@
       margin-top: -65px;
     }
 
+    #slide-head-profile-dip {
+      min-height: 400px;
+    }
 
-}
+    #slide-head-profile-sen {
+      min-height: 400px;
+    }
 
-  @media only screen and (max-width: 1800px) {
+    #score-card-profile img {
+      margin-top: 30px;
+      width: 90px;
+      margin-left: 0px;
+    }
+
     .image-card-profile img {
-      width: 160px;
-      height: 160px;
+      height: auto;
+      width: auto;
+      margin-left: 0px;
       margin-top: -30px;
+      -webkit-margin-before: -15px;
+    }
+
+    #content-cards-profile-graph {
+      margin-top: 165px;
+    }
+
+    #content-cards-profile {
+      margin-top: 65px;
+    }
+
+    #score-card-profile span.menorVeinte {
+      margin-top: -54px;
+      font-size: 30px;
+      margin-left: -15px;
+    }
+
+    #content-socials-card-profile {
+      margin-top: 25px;
+      -webkit-margin-before:25px;
+    }
+
+    #content-socials-card-profile div{
+      text-align: left;
+    }
+
+    .facebook-card-profile img {
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .twitter-card-profile img {
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .mail-card-profile img {
+      width: 35px;
+      margin-top: 10px;
     }
 
     .image-party-card-profile img {
-      margin-left: 0px;
-      width: 60px;
-      margin-top: 70px;
+      width: 75px;
+      margin-top: 90px;
+      -webkit-margin-before: 100px;
+      margin-left: -21px;
     }
+
+    #text-chamber-card-profile {
+      letter-spacing: 5px;
+      margin-top: 104px;
+      -webkit-margin-before: 98px;
+      margin-left: 0px;
+      text-align: right;
+    }
+
+    #text-state-card-profile span {
+      margin-right: 0px;
+      text-align: right;
+    }
+
+    #image-state-card-profile {
+      margin-left: 0px;
+      width: 40px;
+      height: 40px;
+      margin-top: 116px;
+      -webkit-margin-before: 104px;
+    }
+
+    #text-election-card-profile {
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-happy-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-sad-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #califichas-content-bad-profile img {
+      width: 35px;
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    #text-name-card-profile {
+      margin-left: 0px;
+    }
+
+    #style-trabajo {
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    #style-trabajo .letter {
+      margin-left: 20px;
+    }
+
+    #style-rol .letter {
+      margin-left: 20px;
+    }
+
+    #style-extra .letter {
+      margin-left: 20px;
+    }
+
+    #score-card-profile p {
+      margin-left: 38px;
+      -webkit-margin-start: 40px;
+      margin-top: -60px;
+      font-size: 27px;
+    }
+
+    #score-card-profile span {
+      margin-top: -60px;
+      margin-left: -18px;
+      -webkit-margin-start: -18px;
+      -webkit-margin-before: -60px;
+      font-size: 27px;
+    }
+
+    #score-card-profile span.menorVeinte {
+      margin-top: -60px;
+      margin-left: -10px;
+      -webkit-margin-start: -10px;
+      -webkit-margin-before: -60px;
+      font-size: 27px;
+    }
+
+    #score-card-profile span.menorDiez {
+      margin-top: -60px;
+      margin-left: -10px;
+      -webkit-margin-start: -10px;
+      -webkit-margin-before: -60px;
+      font-size: 27px;
+    }
+}
+
+  @media only screen and (max-width: 1860px) {
+    #score-card-profile p {
+      margin-left: 35px;
+      -webkit-margin-start: 37px;
+    }
+  }
+
+  @media only screen and (max-width: 1800px) {
 
     #score-card p {
       margin-left: 28px;
@@ -707,55 +865,17 @@
       -webkit-margin-start: 45px;
       -webkit-margin-before: -72px;
     }
-
-    #score-card-profile p {
-      margin-left: 9px;
-      font-size: 40px;
-      margin-top: -66px;
-    }
-
-    #score-card-profile span {
-      margin-top: -66px;
-      margin-left: -23px;
-      font-size: 40px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -66px;
-      font-size: 40px;
-      margin-left: -16px;
-    }
-
-    #score-card-profile span.menorDiez {
-      margin-top: -69px;
-      margin-left: -13px;
-      font-size: 40px;
-    }
-
-    #califichas-content-happy-profile img {
-      width: 40px;
-    }
-
-    #califichas-content-sad-profile img {
-      width: 40px;
-    }
-
-    #califichas-content-bad-profile img {
-      width: 40px;
-    }
-
-    #text-chamber-card-profile {
-      margin-top: 0;
-    }
-
-    #image-state-card-profile {
-      margin-top: 10px;
-    }
-
     #image-card img {
       margin-top: -57px;
     }
 
+  }
+
+  @media only screen and (max-width: 1740px) {
+    #score-card-profile p {
+      margin-left: 32px;
+      -webkit-margin-start: 33px;
+    }
   }
 
   @media only screen and (max-width: 1680px) {
@@ -817,23 +937,9 @@
     }
 
     #score-card-profile p {
-      margin-left: 7px;
-      margin-top: -65px;
+      margin-left: 30px;
+      -webkit-margin-start: 31px;
     }
-
-    #score-card-profile span {
-      margin-top: -65px;
-      margin-left: -23px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -65px;
-    }
-
-    #score-card-profile span.menorDiez {
-      margin-top: -64px;
-    }
-
   }
 
   @media only screen and (max-width: 1600px) {
@@ -863,96 +969,18 @@
       -webkit-margin-start: 38px;
       -webkit-margin-before: -65px;
     }
-
-    #score-card-profile p {
-      margin-left: 9px;
-      font-size: 35px;
-      margin-top: -59px;
-    }
-
-    #score-card-profile span {
-      margin-top: -60px;
-      margin-left: -21px;
-      font-size: 35px;
-    }
-
-    #score-card-profile span.menorDiez {
-      font-size: 35px;
-      margin-top: -60px;
-      margin-left: -12px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -59px;
-      font-size: 35px;
-      margin-left: -14px;
-    }
-
-    #text-name-card-profile {
-      font-size: 23px;
-    }
-
-    .facebook-card-profile img {
-      width: 40px;
-    }
-
-    .twitter-card-profile img {
-      width: 40px;
-    }
-
-    .mail-card-profile img {
-      width: 40px;
-    }
   }
 
   @media only screen and (max-width: 1550px) {
-
-    .image-card-profile img {
-      width: 150px;
-      height: 150px;
-      margin-top: -20px;
-    }
-
-    #califichas-content-happy-profile img {
-      width: 35px;
-    }
-
-    #califichas-content-sad-profile img {
-      width: 35px;
-    }
-
-    #califichas-content-bad-profile img {
-      width: 35px;
-    }
-
-    #content-socials-card-profile {
-      margin-top: 47px;
-    }
-
-    .facebook-card-profile img {
-      width: 35px;
-    }
-
-
-    .mail-card-profile img {
-      width: 35px;
-    }
-
-    .twitter-card-profile img {
-      width: 35px;
-    }
-
     #image-card img {
       width: 170px;
       height: 170px;
       margin-top: -40px;
     }
+
   }
 
   @media only screen and (max-width: 1520px) {
-    #text-chamber-card-profile {
-      font-size: 25px;
-    }
 
     #style-trabajo .letter {
       margin-left: -5px;
@@ -985,41 +1013,6 @@
       -webkit-margin-before: -65px;
     }
 
-    #text-name-card-profile {
-      font-size: 21px;
-    }
-
-    #text-election-card-profile {
-      font-size: 18px;
-    }
-
-  }
-
-  @media only screen and (max-width: 1500px) {
-    #score-card-profile p {
-      margin-left: 11px;
-      font-size: 30px;
-      margin-top: -53px;
-    }
-
-    #score-card-profile span {
-      margin-top: -53px;
-      margin-left: -18px;
-      font-size: 30px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -55px;
-      font-size: 30px;
-      margin-left: -12px;
-    }
-
-    #score-card-profile span.menorDiez {
-      font-size: 30px;
-      margin-top: -54px;
-      margin-left: -10px;
-    }
-
   }
 
   @media only screen and (max-width: 1486px) {
@@ -1036,6 +1029,13 @@
       margin-left: -56px;
       -webkit-margin-start: 34px;
       -webkit-margin-before: -62px;
+    }
+
+    #score-card-profile p {
+      margin-left: 21px;
+      -webkit-margin-start: 23px;
+      margin-top: -63px;
+      font-size: 30px;
     }
   }
 
@@ -1079,23 +1079,6 @@
       height: 35px;
     }
 
-    #text-state-card-profile span {
-      font-size: 17px;
-    }
-
-    #text-name-card-profile {
-      font-size: 20px;
-    }
-
-    #text-election-card-profile {
-      font-size: 16px;
-    }
-
-    #image-state-card-profile {
-      width: 50px;
-      height: 50px;
-    }
-
     #score-card p {
       margin-left: 15px;
       margin-top: -60px;
@@ -1114,6 +1097,7 @@
       -webkit-margin-start: 34px;
       -webkit-margin-before: -62px;
     }
+
   }
 
   @media only screen and (max-width: 1366px) {
@@ -1165,32 +1149,31 @@
       -webkit-margin-before: -60px;
     }
 
-    #score-card-profile img {
-      margin-top: 75px;
-      width: 120px;
+    #text-name-card-profile {
+      margin-left: 10px;
+    }
+
+    #text-election-card-profile {
+      margin-left: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .image-card-profile img {
+      height: 165px;
+      width: 165px;
     }
 
     #score-card-profile p {
-      font-size: 35px;
-      margin-top: -25px;
-    }
-
-    .image-card-profile img {
-      width: 180px;
-      height: 180px;
-    }
-
-    #content-cards-profile-graph {
-      padding-top: 145px;
+      margin-left: 18px;
+      -webkit-margin-start: 19px;
     }
   }
 
   @media only screen and (max-width: 1279px) {
 
     #score-card img {
-      /*margin-top: 25px;*/
       width: 70px;
-      /* margin-left: 35px; */
       cursor: pointer;
     }
 
@@ -1276,158 +1259,30 @@
     #image-state-card {
       width: 40px;
       height: 35px;
-      /* z-index: 1; */
       margin-top: 0px;
-
     }
 
     #content-cards {
       height: 155px;
     }
 
-
     #text-state-card {
       font-size: 16px;
-    }
-
-    #content-cards-profile {
-        margin-top: 65px;
-    }
-
-    #slide-head-profile-dip {
-      min-height: 300px;
-    }
-
-    #score-card-profile img {
-      margin-top: 30px;
-      width: 70px;
-      margin-left: 0px;
-    }
-
-    #content-cards-profile-graph {
-      margin-top: 0px;
-    }
-
-    .image-card-profile img {
-      height: auto;
-      width: auto;
-      margin-left: 0px;
-      margin-top: -30px;
-      -webkit-margin-before: -15px;
-    }
-
-    #score-card-profile p {
-      margin-left: 34px;
-      -webkit-margin-start:36px;
-      margin-top: -50px;
-      font-size: 25px;
-    }
-
-    #score-card-profile span.menorVeinte {
-      margin-top: -54px;
-      font-size: 30px;
-      margin-left: -15px;
-    }
-
-    #content-socials-card-profile {
-      margin-top: 40px;
-      -webkit-margin-before:40px;
-    }
-
-    #content-socials-card-profile div{
-      text-align: left;
-    }
-
-    .twitter-card-profile img {
-      width: 35px;
-      margin-top: 10px;
-    }
-
-    .mail-card-profile img {
-      width: 35px;
-      margin-top: 10px;
-    }
-
-    .image-party-card-profile img {
-      width: 75px;
-      margin-top: 90px;
-      -webkit-margin-before: 100px;
-      margin-left: -21px;
-    }
-
-    #text-chamber-card-profile {
-      letter-spacing: 5px;
-      margin-top: 107px;
-      -webkit-margin-before: 107px;
-      margin-left: 0px;
-      text-align: right;
-    }
-
-    #text-state-card-profile span {
-      margin-right: 0px;
-      text-align: right;
-    }
-
-    #image-state-card-profile {
-      margin-left: 0px;
-      width: 40px;
-      height: 40px;
-      margin-top: 116px;
-      -webkit-margin-before: 117px;
-    }
-
-    #text-election-card-profile {
-      font-size: 16px;
-      margin-bottom: 10px;
-      margin-left: 0px;
-    }
-
-    #califichas-content-happy-profile img {
-      width: 35px;
-      margin-top: 30px;
-      margin-left: 0px;
-    }
-
-    #califichas-content-sad-profile img {
-      width: 35px;
-      margin-top: 30px;
-      margin-left: 0px;
-    }
-
-    #califichas-content-bad-profile img {
-      width: 35px;
-      margin-top: 30px;
-      margin-left: 0px;
     }
 
     #text-name-card-profile {
       margin-left: 0px;
     }
 
-    #style-trabajo {
+    #text-election-card-profile {
       margin-left: 0px;
-      margin-top: 0px;
     }
-
-    #style-trabajo .letter {
-      margin-left: 20px;
-    }
-
-    #style-rol .letter {
-      margin-left: 20px;
-    }
-
-    #style-extra .letter {
-      margin-left: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 1163px) {
     #score-card-profile p {
       margin-left: 31px;
       -webkit-margin-start: 33px;
     }
   }
+
 
   @media only screen and (max-width: 1085px) {
     #score-card-profile p {
@@ -1438,8 +1293,8 @@
 
   @media only screen and (max-width: 1024px) {
     #score-card-profile p {
-      margin-left: 23px;
-      -webkit-margin-start: 26px;
+      margin-left: 16px;
+      -webkit-margin-start: 18px;
     }
   }
 
@@ -1545,10 +1400,19 @@
       font-size: 25px;
     }
 
+    #score-card-profile span {
+      margin-top: -52px;
+      margin-left: -17px;
+    }
+
     #score-card-profile span.menorVeinte {
       margin-top: -54px;
-      font-size: 30px;
       margin-left: -15px;
+    }
+
+    #score-card-profile span.menorDiez {
+      margin-top: -54px;
+      margin-left: -9px;
     }
 
     #content-socials-card-profile {
@@ -1641,6 +1505,13 @@
       margin-left: 15px;
     }
 
+    #slide-head-profile-dip {
+        min-height: 300px;
+    }
+
+    #slide-head-profile-dip {
+        min-height: 320px;
+    }
   }
 
   @media only screen and (max-width: 906px) {
