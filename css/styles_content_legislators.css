@@ -244,7 +244,7 @@
   }
 
   #score-card-profile span{
-    margin-top: -95px;
+    margin-top: -100px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
@@ -254,7 +254,7 @@
   }
 
   #score-card-profile span.menorVeinte{
-    margin-top: -95px;
+    margin-top: -100px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
@@ -264,7 +264,7 @@
   }
 
   #score-card-profile span.menorDiez {
-    margin-top: -95px;
+    margin-top: -100px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
@@ -274,18 +274,18 @@
   }
 
   #score-card-profile p{
-    margin-top: -95px;
+    margin-top: -100px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 0px;
-    margin-left: 15px;
+    margin-left: 24px;
     font-weight: bold;
     color: #FFF;
   }
 
   #text-chamber-card-profile{
     font-size: 30px;
-    margin-top: 105px;
+    margin-top: 60px;
     text-transform: uppercase;
     text-align: right;
     color: #BBB;
@@ -330,7 +330,7 @@
   #image-state-card-profile {
     width: 75px;
     height: 75px;
-    margin-top: 115px;
+    margin-top: 65px;
     cursor: pointer;
   }
 
@@ -350,7 +350,7 @@
 
   #text-name-card-profile{
     font-size: 25px;
-    margin-top: 3px;
+    margin-top: 0px;
     color: #EE4656;
     text-transform: capitalize;
     text-align: left;
@@ -384,7 +384,7 @@
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 25px;
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   #style-rol{
@@ -414,7 +414,7 @@
   }
 
   #content-cards-profile{
-    margin-top: 180px;
+    margin-top: 120px;
     /*height: 275px;*/
     /*padding: 20px;*/
     /*border: 1px solid red;*/
@@ -424,20 +424,40 @@
     margin-top: 200px;
   }
 
+  #slide-head-profile-dip {
+      min-height: 450px;
+  }
+
+  #slide-head-profile-dip {
+      min-height: 450px;
+  }
+
   @media only screen and (max-width: 2350px) {
     #score-card-profile p {
-      margin-top: -88px;
-      margin-left: 15px;
+      margin-top: -92px;
+      margin-left: 21px;
+      font-size: 50px;
     }
 
     #score-card-profile span {
       margin-top: -92px;
       margin-left: -31px;
+      font-size: 50px;
+
+    }
+
+    #score-card-profile span.menorVeinte {
+      margin-top: -92px;
+      margin-left: -19px;
+      font-size: 50px;
+
     }
 
     #score-card-profile span.menorDiez {
       margin-top: -92px;
       margin-left: -19px;
+      font-size: 50px;
+
     }
   }
 
@@ -1494,7 +1514,7 @@
     }
 
     #slide-head-profile-dip {
-        min-height: 300px;
+        min-height: 320px;
     }
 
     #slide-head-profile-dip {
