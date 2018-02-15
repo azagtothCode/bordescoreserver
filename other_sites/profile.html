@@ -642,7 +642,6 @@
               </div>
             </div>
             <div flex-gt-md="50" flex-md="50" flex-lg="50" flex-xl="35">
-
             </div>
           </div>
         </div>
@@ -1266,43 +1265,45 @@
               <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
             </div>
           </md-toolbar>
-          <div style="background:#EE4455;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
+          <div style="background:#343434;" layout-xs="column" layout-sm="column" ng-class="{dataContent:true, activeContent:data.expanded}">
             <div hide show-xs show-sm layout-xs="row" layout-sm="row">
-              <div ng-controller="BarCtrlRol" flex-xs="50" flex-sm="15">
+              <div ng-controller="BarCtrlRol" flex-offset-xs="10" flex-xs="45" flex-offset-sm="15" flex-sm="45">
                 <canvas  id="doughnut" class="chart chart-doughnut" chart-colors="colors"  chart-data="data" chart-labels="labels">
                  </canvas>
               </div>
-              <div flex-xs="50" flex-sm="15">
+              <div flex-xs="35" flex-sm="25">
                 <div layout-xs="column" layout-sm="column">
                   <div id="style-trabajo" layout-xs="row" layout-sm="row">
                     <div  flex-xs="20" flex-sm="20">
-                      <span class="numberTrabajo"></span>
+                      <div class="numberTrabajo"></div>
                     </div>
                     <div flex-xs="80" flex-sm="80">
-                      <span class="letter">Trabajo</span>
+                      <div class="letter">Trabajo</div>
                     </div>
                   </div>
                 </div>
                 <div layout-xs="column" layout-sm="column">
                   <div id="style-rol"  layout-xs="row" layout-sm="row">
                     <div flex-xs="20" flex-sm="20">
-                      <span class="numberRol"></span>
+                      <div class="numberRol"></div>
                     </div>
                     <div flex-xs="80" flex-sm="80">
-                      <span class="letter">Rol</span>
+                      <div class="letter">Rol</div>
                     </div>
                   </div>
                 </div>
                 <div layout-xs="column" layout-sm="column">
                   <div id="style-extra"  layout-xs="row" layout-sm="row">
                     <div flex-xs="20" flex-sm="20">
-                      <span class="numberExtra"></span>
+                      <div class="numberExtra"></div>
                     </div>
                     <div flex-xs="80" flex-sm="80">
-                      <span class="letter">Extra</span>
+                      <div class="letter">Extra</div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div flex-xs="10" flex-sm="15">
               </div>
             </div>
           </div>

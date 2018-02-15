@@ -1618,6 +1618,29 @@
       margin-left: 0px;
     }
 
+    #style-trabajo {
+      margin-top: 60px;
+    }
+
+    #style-trabajo, #style-rol, #style-extra{
+      font-size: 20px;
+    }
+
+    #style-trabajo .letter {
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    #style-rol .letter {
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    #style-extra .letter {
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
   }
 
   @media only screen and (max-width: 906px) {
@@ -1713,6 +1736,10 @@
 
     #score-card-profile p {
       margin-left: 19px;
+    }
+
+    #style-trabajo {
+      margin-top: 30px;
     }
   }
 
@@ -1898,6 +1925,19 @@
       font-size: 16px;
       margin-bottom: 10px;
     }
+
+    #style-trabajo {
+      margin-top: 10px;
+    }
+
+    #style-trabajo, #style-rol, #style-extra {
+      font-size: 17px;
+    }
+
+    #style-trabajo .letter, #style-rol .letter, #style-extra .letter {
+      font-size: 17px;
+
+    }
   }
 
   @media only screen and (max-width: 568px) {
@@ -1976,6 +2016,15 @@
   #score-card-profile p {
     margin-left: 27px;
   }
+
+  #style-trabajo, #style-rol, #style-extra {
+    font-size: 15px;
+  }
+
+  #style-trabajo .letter, #style-rol .letter, #style-extra .letter {
+    font-size: 15px;
+  }
+
  }
 
   @media only screen and (max-width: 414px) {
@@ -2372,7 +2421,7 @@
   }
 
   #style-trabajo {
-    color: #FFF;
+    /* color: #FFF; */
     font-weight: normal;
     margin-top: 0px;
     letter-spacing: 1px;
@@ -2380,14 +2429,14 @@
   }
 
   #style-rol{
-    color:#FFF;
+    /* color:#FFF; */
     font-weight: normal;
     letter-spacing: 1px;
     font-size: 20px;
   }
 
   #style-extra{
-    color:#FFF;
+    /* color:#FFF; */
     font-weight: normal;
     letter-spacing: 1px;
     font-size: 20px;
@@ -2400,16 +2449,28 @@
     font-size: 10px
   }
 
-  #style-trabajo .letter{
-    margin-left: 10px;
+  #style-trabajo .letter {
+    font-size: 16px;
   }
 
-  #style-rol .letter{
-    margin-left: 10px;
+  #style-rol .letter {
+    font-size: 16px;
   }
 
-  #style-extra .letter{
-    margin-left: 10px;
+  #style-extra .letter {
+    font-size: 16px;
+  }
+
+  #style-trabajo {
+    font-size: 16px;
+  }
+
+  #style-rol  {
+    font-size: 16px;
+  }
+
+  #style-extra{
+    font-size: 16px;
   }
 
   #image-card img {
