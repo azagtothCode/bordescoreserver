@@ -1403,7 +1403,25 @@
     #text-name-card-profile {
       margin-left: 0px;
     }
+
+    #style-trabajo {
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    #style-trabajo .letter {
+      margin-left: 20px;
+    }
+
+    #style-rol .letter {
+      margin-left: 20px;
+    }
+
+    #style-extra .letter {
+      margin-left: 20px;
+    }
   }
+
   @media only screen and (max-width: 1163px) {
     #score-card-profile p {
       margin-left: 31px;
