@@ -243,42 +243,42 @@
     /*margin-left: -5px;*/
   }
 
+  #score-card-profile p{
+    margin-top: -96px;
+    position: absolute;
+    font-size: 45px;
+    letter-spacing: 0px;
+    margin-left: 34px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
   #score-card-profile span{
-    margin-top: -100px;
+    margin-top: -103px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
-    margin-left: -35px;
+    margin-left: -32px;
     font-weight: bold;
     color: #FFF;
   }
 
   #score-card-profile span.menorVeinte{
-    margin-top: -100px;
+    margin-top: -103px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
-    margin-left: -28px;
+    margin-left: -24px;
     font-weight: bold;
     color: #FFF;
   }
 
   #score-card-profile span.menorDiez {
-    margin-top: -100px;
+    margin-top: -103px;
     position: absolute;
     font-size: 55px;
     letter-spacing: 2px;
-    margin-left: -17px;
-    font-weight: bold;
-    color: #FFF;
-  }
-
-  #score-card-profile p{
-    margin-top: -100px;
-    position: absolute;
-    font-size: 55px;
-    letter-spacing: 0px;
-    margin-left: 24px;
+    margin-left: -13px;
     font-weight: bold;
     color: #FFF;
   }
@@ -432,7 +432,7 @@
       min-height: 450px;
   }
 
-  @media only screen and (max-width: 2350px) {
+  /* @media only screen and (max-width: 2350px) {
     #score-card-profile p {
       margin-top: -92px;
       margin-left: 21px;
@@ -459,7 +459,7 @@
       font-size: 50px;
 
     }
-  }
+  } */
 
   @media only screen and (max-width: 2250px) {
     .image-card-profile img {
@@ -605,9 +605,9 @@
     }
 
     #score-card-profile p {
-      margin-left: 8px;
-      font-size: 45px;
-      margin-top: -75px;
+      margin-top: -86px;
+      margin-left: 12px;
+      font-size: 50px;
     }
 
     /* #score-card p {
@@ -616,9 +616,21 @@
     } */
 
     #score-card-profile span {
-      margin-top: -75px;
-      margin-left: -26px;
-      font-size: 45px;
+      margin-top: -86px;
+      margin-left: -36px;
+      -webkit-margin-start: -33px;
+      -webkit-margin-before: -82px;
+    }
+
+    #score-card-profile span.menorVeinte {
+      margin-top: -86px;
+      margin-left: -27px;
+      -webkit-margin-start: -25px;
+      -webkit-margin-before: -82px;
+    }
+
+    #score-card-profile span.menorDiez {
+      margin-top: -86px;
     }
 
     #score-card span.menorVeinte {
