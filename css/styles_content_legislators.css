@@ -240,12 +240,12 @@
     /*margin-left: -5px;*/
   }
 
-  #score-card-profile p{
-    margin-top: -96px;
+  #score-card-profile p {
+    margin-top: -95px;
     position: absolute;
     font-size: 45px;
     letter-spacing: 0px;
-    margin-left: 34px;
+    margin-left: 31px;
     font-weight: bold;
     color: #FFF;
   }
@@ -312,22 +312,22 @@
   .image-card-profile img{
     width: 220px;
     height: 220px;
-    margin-top: -45px;
+    margin-top: -53px;
     margin-left: 0px;
     border-radius: 50%;
   }
 
   .image-party-card-profile img{
     width: 95px;
-    margin-left: -12px;
-    margin-top: 80px;
+    margin-left: -30px;
+    margin-top: 75px;
     cursor: pointer;
   }
 
   #image-state-card-profile {
     width: 75px;
     height: 75px;
-    margin-top: 65px;
+    margin-top: 58px;
     cursor: pointer;
   }
 
@@ -429,6 +429,13 @@
       min-height: 450px;
   }
 
+  @media only screen and (max-width: 2450px) {
+    #score-card-profile p {
+      margin-top: -90px;
+      margin-left: 31px;
+    }
+  }
+
   @media only screen and (max-width: 2250px) {
     .image-card-profile img {
       width: 200px;
@@ -442,6 +449,12 @@
     #image-card img {
       margin-left: 15px;
     }
+
+    #score-card-profile p {
+      margin-top: -85px;
+      margin-left: 21px;
+    }
+
   }
 
   @media only screen and (max-width: 2000px) {
@@ -502,6 +515,11 @@
       -webkit-margin-start: 45px;
       -webkit-margin-before: -82px;
     }
+
+    #score-card-profile p {
+      margin-top: -80px;
+      margin-left: 17px;
+    }
   }
 
   @media only screen and (max-width: 1920px) {
@@ -538,9 +556,7 @@
     }
 
     #score-card-profile p {
-      margin-top: -86px;
       margin-left: 12px;
-      font-size: 50px;
     }
 
     #score-card-profile span {
@@ -597,11 +613,6 @@
 
     .mail-card-profile img {
       width: 45px;
-    }
-
-    .image-card-profile img {
-      width: 180px;
-      height: 180px;
     }
 
     #text-chamber-card-profile {
@@ -1055,6 +1066,18 @@
       margin-left: 10px;
     }
   }
+  @media only screen and (max-width: 1280px) {
+    .image-card-profile img {
+      height: 165px;
+      width: 165px;
+    }
+
+    #score-card-profile p {
+      margin-left: 18px;
+      -webkit-margin-start: 19px;
+    }
+  }
+
 
   @media only screen and (max-width: 1279px) {
 
@@ -1169,25 +1192,8 @@
     #text-election-card-profile {
       margin-left: 0px;
     }
-    #score-card-profile p {
-      margin-left: 31px;
-      -webkit-margin-start: 33px;
-    }
+
   }
-
-
-  @media only screen and (max-width: 1280px) {
-    .image-card-profile img {
-      height: 165px;
-      width: 165px;
-    }
-
-    #score-card-profile p {
-      margin-left: 18px;
-      -webkit-margin-start: 19px;
-    }
-  }
-
 
   @media only screen and (max-width: 1239px) {
     #score-card span {
