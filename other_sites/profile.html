@@ -51,6 +51,7 @@
     supurl='http://104.239.248.102:8000'
     var URl = window.location.href;
     var res = URl.substr(-7);
+    var name ="";
 
     function getQueryVariable(variable) {
        // Estoy asumiendo que query es window.location.search.substring(1);
@@ -300,8 +301,6 @@
       }
 
      });
-
-
      app.controller("BarCtrlRol", function ($scope) {
        $scope.colors = ["rgb(238,68,85)","rgb(255,151,76)","rgb(255,199,63)",];
                $scope.labels = ["Trabajo Legislativo", "Rol Politico", "Extra Legislativo"];
@@ -321,63 +320,123 @@
      })
 
      app.controller("BarCtrlIniciativas", function ($scope) {
-       $scope.labels = ['Aprobadas', 'Presentadas', 'Retiradas', 'Desechadas', 'Pendientes'];
+       $scope.labels = ['Aprobadas',  'Pendientes', 'Retiradas', 'Desechadas'];
        $scope.series = ['Iniciativas'];
 
        $scope.data = [
-         [(getQueryVariable('iap')), (getQueryVariable('ipr')), (getQueryVariable('ire')), (getQueryVariable('ide')), (getQueryVariable('ipe'))]
+         [(getQueryVariable('iap')), (getQueryVariable('ipe')), (getQueryVariable('ire')), (getQueryVariable('ide'))]
        ];
      })
 
      app.controller("BarCtrlPuntos", function ($scope) {
-       $scope.labels = ['Aprobados', 'Presentados', 'Retirados', 'Desechados', 'Pendientes'];
+       $scope.labels = ['Aprobados', 'Pendientes', 'Retirados', 'Desechados' ];
        $scope.series = ['P. de Acuerdo'];
 
        $scope.data = [
-         [(getQueryVariable('pap')), (getQueryVariable('ppr')), (getQueryVariable('pre')), (getQueryVariable('pde')), (getQueryVariable('ppe'))]
+         [(getQueryVariable('pap')), (getQueryVariable('ppe')), (getQueryVariable('pre')), (getQueryVariable('pde'))]
        ];
      })
 
-
      $.ajax({
-       url: supurl+'/diputados/ini/dip/get',
+       url: supurl+'/diputados/dip/get',
        method: "POST",
-       data: {author_id: ((getQueryVariable('id'))) },
+       data: {author_id:(getQueryVariable('id'))},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
        for (var i = 0; i < subject.length; i++) {
          val=subject[i];
-         if(val.work_description != ""){
-           var body_ini = val.work_description
-         }
-         $(".iniciativaBody").append('\
-         <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" >\
-            <span>"'+body_ini+'"</span><br><br>\
-            <!-- <  span style="color:#EE4656;"><a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span > -->\
-         </div>');
        }
+       // var nameQuery =  " Sen. María Cristina Díaz Salazar ";
+       if(val.legislator_chamber_sil="diputado" ){
+         var nameQuery =  " Dip. "+ val.legislator_name_sil+" ";
+       }else{
+         var nameQuery =  " Sen. "+ val.legislator_name_sil+" ";
+       }
+
+       $.ajax({
+         url: supurl+'/diputados/ini/dip/get',
+         method: "POST",
+         data: {work_author_present: nameQuery},
+         dataType: "json"
+       }).done(function(data) {
+         subject=data.dip;
+         for (var i = 0; i < subject.length; i++) {
+           val=subject[i];
+           if(val.work_description){
+             var body_ini = val.work_description;
+           }
+
+           var liga = "";
+
+           if(val.legislator_ini_pdf_sil  == null){
+             liga = "http://sil.gobernacion.gob.mx/Librerias/pp_ContenidoAsuntos.php?SID=b4d63e64db3dd79653c6eea8e1d9063a&Clave="+val.id_legislative_work;
+           }else{
+             liga = val.legislator_ini_pdf_sil;
+           }
+
+           $(".iniciativaBody").append('\
+           <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" >\
+              <span>"'+body_ini+'"</span><br><br>\
+               <span style="color:#EE4656;">\
+                 <a style="color:#EE4656;" href="' + liga + ' " target="_blank">\
+                  Iniciativa adjunta\
+                 </a>\
+               </span>\
+           </div>');
+         }
+       });
      });
 
      $.ajax({
-       url: supurl+'/diputados/pda/dip/get',
+       url: supurl+'/diputados/dip/get',
        method: "POST",
-       data: {author_id: ((getQueryVariable('id'))) },
+       data: {author_id:(getQueryVariable('id'))},
        dataType: "json"
      }).done(function(data) {
        subject=data.dip;
        for (var i = 0; i < subject.length; i++) {
          val=subject[i];
-         if(val.work_description != ""){
-           var body_ini = val.work_description
-         }
-         $(".pointBody").append('\
-         <div id="PuntosDivContent" style=" border-bottom: 3px solid #EE4656;" >\
-            <span>"'+body_ini+'"</span><br><br>\
-            <!-- <  span style="color:#EE4656;"><a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span > -->\
-         </div>');
        }
+       // var nameQuery =  " Sen. María Cristina Díaz Salazar ";
+       if(val.legislator_chamber_sil="diputado" ){
+         var nameQuery =  " Dip. "+ val.legislator_name_sil+" ";
+       }else{
+         var nameQuery =  " Sen. "+ val.legislator_name_sil+" ";
+       }
+
+       $.ajax({
+         url: supurl+'/diputados/pda/dip/get',
+         method: "POST",
+         data: {work_author_present: nameQuery},
+         dataType: "json"
+       }).done(function(data) {
+         subject=data.dip;
+         for (var i = 0; i < subject.length; i++) {
+           val=subject[i];
+           if(val.work_description != null){
+             var body_ini = val.work_description;
+           }
+           var liga = "";
+
+           if(val.legislator_pda_pdf_sil  == null){
+             liga = "http://sil.gobernacion.gob.mx/Librerias/pp_ContenidoAsuntos.php?SID=b4d63e64db3dd79653c6eea8e1d9063a&Clave="+val.id_legislative_work_point;
+           }else{
+             liga = val.legislator_pda_pdf_sil;
+           }
+           $(".pointBody").append('\
+           <div id="pointDivContent" style=" border-bottom: 3px solid #EE4656;" >\
+              <span>"'+body_ini+'"</span><br><br>\
+               <span style="color:#EE4656;">\
+                 <a style="color:#EE4656;" href="' + liga + ' " target="_blank">\
+                  Iniciativa adjunta\
+                 </a>\
+               </span>\
+           </div>');
+         }
+       });
      });
+
 
 
 
@@ -877,7 +936,8 @@
              </div>
            </div>
            <div id="bodyPuntos" ng-controller="PuntosController" layout-xl="column" layout-lg="column" layout-md="column">
-             <div hide layout-xl="row" layout-lg="row" layout-md="row">
+
+             <div  hide layout-xl="row" layout-lg="row" layout-md="row">
                <div flex-xl="5" flex-lg="5" flex-md="5">
                </div>
                <div flex-xl="90" flex-lg="90" flex-md="90">
