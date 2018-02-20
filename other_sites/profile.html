@@ -66,7 +66,7 @@
        }
        return false;
     }
-    
+
   (getQueryVariable('id'));
   (getQueryVariable('rol'));
   (getQueryVariable('ext'));
@@ -350,12 +350,12 @@
          val=subject[i];
        }
        // var nameQuery =  " Sen. María Cristina Díaz Salazar ";
-       if(val.legislator_chamber_sil="diputado" ){
+       if(val.legislator_chamber_sil=="diputado" ){
          var nameQuery =  " Dip. "+ val.legislator_name_sil+" ";
        }else{
          var nameQuery =  " Sen. "+ val.legislator_name_sil+" ";
        }
-
+       
        $.ajax({
          url: supurl+'/diputados/ini/dip/get',
          method: "POST",
