@@ -83,7 +83,8 @@
       url: supurl+'/diputados/profile/dip/get',
       method: "POST",
       data: {id_legislator_sil:(getQueryVariable('id'))},
-      dataType: "json"
+      dataType: "json",
+      cache:false
     }).done(function(data) {
       subject=data.dip;
       nuevoarray = [];
@@ -341,7 +342,8 @@
        url: supurl+'/diputados/dip/get',
        method: "POST",
        data: {author_id:(getQueryVariable('id'))},
-       dataType: "json"
+       dataType: "json",
+       cache:false
      }).done(function(data) {
        subject=data.dip;
        for (var i = 0; i < subject.length; i++) {
@@ -358,13 +360,16 @@
          url: supurl+'/diputados/ini/dip/get',
          method: "POST",
          data: {work_author_present: nameQuery},
-         dataType: "json"
+         dataType: "json",
+         cache:false
        }).done(function(data) {
          subject=data.dip;
          for (var i = 0; i < subject.length; i++) {
            val=subject[i];
            if(val.work_description){
              var body_ini = val.work_description;
+             
+             // alert(remplax)
            }
 
            var liga = "";
@@ -377,7 +382,7 @@
 
            $(".iniciativaBody").append('\
            <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" >\
-              <span>"'+body_ini+'"</span><br><br>\
+              <span>"'+body_ini.trim()+'"</span><br><br>\
                <span style="color:#EE4656;">\
                  <a style="color:#EE4656;" href="' + liga + ' " target="_blank">\
                   Iniciativa adjunta\
@@ -392,7 +397,8 @@
        url: supurl+'/diputados/dip/get',
        method: "POST",
        data: {author_id:(getQueryVariable('id'))},
-       dataType: "json"
+       dataType: "json",
+       cache:false
      }).done(function(data) {
        subject=data.dip;
        for (var i = 0; i < subject.length; i++) {
@@ -409,7 +415,8 @@
          url: supurl+'/diputados/pda/dip/get',
          method: "POST",
          data: {work_author_present: nameQuery},
-         dataType: "json"
+         dataType: "json",
+         cache:false
        }).done(function(data) {
          subject=data.dip;
          for (var i = 0; i < subject.length; i++) {
@@ -425,7 +432,7 @@
              liga = val.legislator_pda_pdf_sil;
            }
            $(".pointBody").append('\
-           <div id="pointDivContent" style=" border-bottom: 3px solid #EE4656;" >\
+           <div id="puntosDivContent" style=" border-bottom: 3px solid #EE4656;" >\
               <span>"'+body_ini+'"</span><br><br>\
                <span style="color:#EE4656;">\
                  <a style="color:#EE4656;" href="' + liga + ' " target="_blank">\
@@ -786,7 +793,7 @@
      <div flex-xl="20" flex-lg="10"  flex-md="0">
      </div>
     </div>
-        <div style="text-align:center;" layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
+        <div  layout-xl="row" layout-lg="row" layout-md="row" ng-show="isSet(1)" >
          <div flex-xl="20" flex-lg="10" flex-md="0">
          </div>
          <div id="contentIniciativasProfile" ng-controller="BarCtrlIniciativas" flex-xl="30" flex-lg="40" flex-md="50">
@@ -1489,14 +1496,12 @@
                       </div>
                     </div>
                     <md-content id="iniciativasTextContentMobile">
-                      <div layout-xs="row" layout-sm="row" ng-repeat="item in iniciativas">
+                      <div layout-xs="row" layout-sm="row">
                       <div id="iniciativasDivContentMobile" flex-xs="100" flex-sm="100" >
                         <div layout-xs="row" layout-sm="row">
                           <div flex-xs="5" flex-sm="5" >
                           </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
-                             <span>{{item.body}}</span><br><br>
-                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Iniciativa adjunta</a></span>
+                          <div class="iniciativaBody" style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
                           </div>
                           <div flex-xs="5" flex-sm="5">
                           </div>
@@ -1517,7 +1522,7 @@
                 </div>
               </div>
               <div id="bodyPuntosMobile" ng-controller="PuntosController" layout-sm="column" layout-xs="column">
-                <div hidelayout-sm="row" layout-xs="row">
+                <div hide layout-sm="row" layout-xs="row">
                   <div flex-sm="100" flex-xs="100">
                     <div id="imagePuntosThemeMobile" layout-sm="row" layout-xs="row">
                       <div flex-sm="5" flex-xs="5">
@@ -1546,7 +1551,7 @@
                   </div>
                 </div>
                 <div id="valuePuntosThemeMobile" layout-sm="row" layout-xs="row">
-                  <div flex-sm="100" flex-xs="100">
+                  <div hide flex-sm="100" flex-xs="100">
                     <div layout-sm="row" layout-xs="row" >
                       <div flex-sm="5" flex-xs="5" >
                       </div>
@@ -1575,7 +1580,7 @@
                 </div>
                 <div id="themePuntosThemeMobile" layout-sm="row" layout-xs="row">
                   <div  flex-xs="100" flex-sm="100">
-                    <div layout-xs="row" layout-sm="row">
+                    <div hide layout-xs="row" layout-sm="row">
                       <div flex-xs="5" flex-sm="5">
                       </div>
                       <div flex-xs="15" flex-sm="15">
@@ -1600,14 +1605,12 @@
                       </div>
                     </div>
                     <md-content id="puntosTextContentMobile">
-                      <div layout-xs="row" layout-sm="row" ng-repeat="item in puntos">
+                      <div layout-xs="row" layout-sm="row">
                       <div id="puntosDivContentMobile" flex-xs="100" flex-sm="100" >
                         <div layout-xs="row" layout-sm="row">
                           <div flex-xs="5" flex-sm="5" >
                           </div>
-                          <div style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-bottom:10px;" flex-xs="90" flex-sm="90">
-                             <span>{{item.body}}</span><br><br>
-                             <span style="color:#EE4656;">{{item.theme}} / <a style="color:#EE4656;" href="{{item.src}}" target="_blank">Documento adjunto</a></span>
+                          <div class="pointBody" style="border-bottom: 3px solid #EE4656; margin-top:5px; margin-top:10px;" flex-xs="90" flex-sm="90">
                           </div>
                           <div flex-xs="5" flex-sm="5">
                           </div>

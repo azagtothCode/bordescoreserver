@@ -178,7 +178,7 @@
 }
 
 #iniciativasDivContent{
-  padding:15px;  text-align:justify; letter-spacing:2px;
+  padding:15px;   letter-spacing:2px;
 }
 
 #iniciativasDivContent span{
@@ -218,7 +218,7 @@
 }
 
 #PuntosDivContent{
-  padding:20px;  text-align:justify; letter-spacing:2px;
+  padding:20px;   letter-spacing:2px;
 }
 
 #PuntosDivContent span{
@@ -318,7 +318,7 @@
 
 #NoticiasDivContent{
   padding:5px;
-  text-align:justify;
+
   letter-spacing:2px;
   font-size: 15px;
 }
@@ -519,7 +519,7 @@
   #bodyIniciativasMobile{
     background: #FFF;
     padding-top: 20px;
-    text-align: center;
+
   }
 
   #imageIniciativasThemeMobile img{
@@ -529,13 +529,13 @@
   #valueIniciativasThemeMobile{
     background: #FFF;
     padding-top: 5px;
-    text-align: center;
+
   }
 
   #themeIniciativasThemeMobile{
     color: #343434;
     padding-bottom: 5px;
-    text-align: center;
+
     background: #FFF;
     font-size: 7px;
 
@@ -546,7 +546,7 @@
     height:250px;
     margin-top: 10px;
     font-size: 11px;
-    text-align: justify;
+
     padding: 10px;
     letter-spacing: 2px;
   }
@@ -555,7 +555,7 @@
   #bodyPuntosMobile{
     background: #FFF;
     padding-top: 20px;
-    text-align: center;
+
   }
 
   #imagePuntosThemeMobile img{
@@ -565,13 +565,13 @@
   #valuePuntosThemeMobile{
     background: #FFF;
     padding-top: 5px;
-    text-align: center;
+
   }
 
   #themePuntosThemeMobile{
     color: #343434;
     padding-bottom: 5px;
-    text-align: center;
+
     font-size: 7px;
   }
 
@@ -580,7 +580,7 @@
     height:250px;
     margin-top: 10px;
     font-size: 11px;
-    text-align: justify;
+
     padding: 10px;
     letter-spacing: 2px;
   }
@@ -744,7 +744,7 @@
   #bodyIniciativasMobile{
     background: #FFF;
     padding-top: 20px;
-    text-align: center;
+
   }
 
   #imageIniciativasThemeMobile img{
@@ -754,25 +754,25 @@
   #valueIniciativasThemeMobile{
     background: #FFF;
     padding-top: 5px;
-    text-align: center;
+
   }
 
   #themeIniciativasThemeMobile{
     color: #343434;
     padding-bottom: 5px;
-    text-align: center;
+
     background: #FFF;
     font-size: 7px;
 
   }
 
-  #iniciativasTextContentMobile{
-    background:#FFF;
-    height:250px;
-    margin-top: 10px;
+  #iniciativasTextContentMobile {
+    background: #FFF;
+    height: 250px;
+    margin-top: 0px;
     font-size: 11px;
-    text-align: justify;
-    padding: 10px;
+
+    padding: 0px;
     letter-spacing: 2px;
   }
 
@@ -780,7 +780,7 @@
   #bodyPuntosMobile{
     background: #FFF;
     padding-top: 20px;
-    text-align: center;
+
   }
 
   #imagePuntosThemeMobile img{
@@ -790,23 +790,23 @@
   #valuePuntosThemeMobile{
     background: #FFF;
     padding-top: 5px;
-    text-align: center;
+
   }
 
   #themePuntosThemeMobile{
     color: #343434;
     padding-bottom: 5px;
-    text-align: center;
+
     font-size: 7px;
   }
 
   #PuntosTextContentMobile{
-    background:#FFF;
-    height:250px;
-    margin-top: 10px;
+    background: #FFF;
+    height: 250px;
+    margin-top: 0px;
     font-size: 11px;
-    text-align: justify;
-    padding: 10px;
+
+    padding: 0px;
     letter-spacing: 2px;
   }
 
@@ -910,6 +910,14 @@
   #contentGraphsIniciativas{
     margin-left: -15px;
   }
+
+  #iniciativasDivContent a {
+    font-size: 20px;
+  }
+
+  #puntosDivContent a {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 414px){
@@ -928,5 +936,23 @@
 
   .valueScoreRol {
     margin-left: -10px;
+  }
+
+  #iniciativasDivContent span {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  #puntosDivContent span {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  #iniciativasDivContent a {
+    font-size: 15px;
+  }
+
+  #puntosDivContent a {
+    font-size: 15px;
   }
 }
