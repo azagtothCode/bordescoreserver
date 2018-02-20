@@ -9536,7 +9536,8 @@ md-backdrop {
   md-backdrop.md-click-catcher {
     position: absolute; }
   md-backdrop.md-opaque {
-    opacity: .48; }
+    opacity: .48;
+    height:2000px; }
     md-backdrop.md-opaque.ng-enter {
       opacity: 0; }
     md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {

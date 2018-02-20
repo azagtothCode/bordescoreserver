@@ -164,7 +164,7 @@
 
            var pick_party = val.legislator_party_sil;
            var res_pick_party = pick_party.toLowerCase();
-           var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
+           var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?party="+res_pick_party+"&chamber="+val.legislator_chamber_sil+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
 
            if(val.id_photo_sil){
@@ -193,7 +193,7 @@
 
            var facebook = val.legislator_facebook_sil;
 
-             if(facebook == "FACEBOOK"){
+             if(facebook == "FACEBOOK" || facebook == null){
                var class_none_facebook = "none";
              }else{
                var class_none_facebook = "block";
@@ -201,7 +201,7 @@
 
            var twitter = val.legislator_twitter_senate;
 
-             if(twitter == ""){
+             if(twitter == null){
                var class_none_twitter = "none";
              }else{
                var class_none_twitter = "block";
@@ -209,7 +209,7 @@
 
            var mail = val.legislator_mail_sil;
 
-             if(mail == ""){
+             if(mail == null){
                var class_none_mail = "none";
              }else{
                var class_none_mail = "block";
@@ -224,10 +224,8 @@
                  var chamber = "Diputada";
              }
 
-             var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?id="+val.legislator_chamber_sil+"&sex="+val.legislator_gender_senate+"')>"+chamber+"</span>";
+           var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?chamber="+val.legislator_chamber_sil+"')>"+chamber+"</span>";
            var state = val.legislator_state_sil;
-
-
 
            var score = val.legislator_score_sil;
 
@@ -358,7 +356,7 @@
                representation = "Representación Proporcional"
              }
 
-             var label_representation = "<span onClick=openPerfilPage('other_sites/representation.html?id="+val.legislator_election_sil+"')>"+representation+"</span>";;
+             var label_representation = "<span onClick=openPerfilPage('other_sites/representation.html?rep="+val.legislator_election_sil+"&chamber="+val.legislator_chamber_sil+"')>"+representation+"</span>";;
 
 
              var post_commision = val.legislator_commission_sil;
@@ -736,7 +734,7 @@
 
            var pick_party = val.legislator_party_sil;
            var res_pick_party = pick_party.toLowerCase();
-           var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?id="+res_pick_party+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
+           var pick_party_label = "<img onmouseover=this.src=\'imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'imgs/svg/partys/"+res_pick_party+".svg\' src='imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('other_sites/party.html?party="+res_pick_party+"&chamber="+val.legislator_chamber_sil+"') src='imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
 
            if(val.id_photo_sil){
              var pick_legis = val.id_photo_sil;
@@ -763,11 +761,9 @@
            "&ppr="+val.legislator_pda_pr_sil+
            "&pre="+val.legislator_pda_re_sil+"') src='imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >"
 
-
-
            var facebook = val.legislator_facebook_sil;
 
-             if(facebook == "FACEBOOK"){
+             if(facebook == "FACEBOOK" || facebook == null){
                var class_none_facebook = "none";
              }else{
                var class_none_facebook = "block";
@@ -775,7 +771,7 @@
 
            var twitter = val.legislator_twitter_senate;
 
-             if(twitter == ""){
+             if(twitter == null){
                var class_none_twitter = "none";
              }else{
                var class_none_twitter = "block";
@@ -783,7 +779,7 @@
 
            var mail = val.legislator_mail_sil;
 
-             if(mail == ""){
+             if(mail == null){
                var class_none_mail = "none";
              }else{
                var class_none_mail = "block";
@@ -801,7 +797,7 @@
                  var chamber = "Senador";
              }
 
-           var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?id="+val.legislator_chamber_sil+"&sex="+val.legislator_gender_senate+"')>"+chamber+"</span>";
+           var chamber_label = "<span onClick=openPerfilPage('other_sites/chamber.html?chamber="+val.legislator_chamber_sil+"')>"+chamber+"</span>";
 
            var state = val.legislator_state_sil;
 
@@ -935,12 +931,9 @@
                representation = "Representación Proporcional"
              }
 
-             var label_representation = "<span onClick=openPerfilPage('other_sites/representation.html?id="+val.legislator_election_sil+"')>"+representation+"</span>";;
-
-
+             var label_representation = "<span onClick=openPerfilPage('other_sites/representation.html?rep="+val.legislator_election_sil+"&chamber="+val.legislator_chamber_sil+"')>"+representation+"</span>";;
              var post_commision = val.legislator_commission_sil;
-
-            var commission_string  = JSON.stringify(post_commision);
+             var commission_string  = JSON.stringify(post_commision);
 
 
            var label_post_commision = "<span onClick=openPerfilPage('other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
@@ -1341,15 +1334,6 @@
     </md-toolbar>
     <!--panel section content-->
     <md-content ng-controller="RightCtrl" layout-padding="">
-      <!-- <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
-      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
-        <md-list-item id="NoHover" ng-href="{{item.address}}"  ng-cloak target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
-          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" ng-cloak class="md-avatar" alt="{{item.who}}" />
-          <div class="md-list-item-text" layout="column">
-            <span class="links-panel">{{ item.who }}</span>
-          </div>
-        </md-list-item>
-      </md-list> -->
       <md-subheader class="md-no-sticky">Redes Sociales</md-subheader>
       <div style="text-align:center;" ng-cloak=""  >
         <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
@@ -1368,6 +1352,21 @@
         </md-button>
       </div>
       <md-divider ></md-divider>
+      <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+      <md-list style="cursor:pointer;" ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" layout="row" ng-cloak class="md-3-line" >
+          <img id="icon-panel" src="imgs/svg/logo_borde.svg" ng-cloak class="md-avatar" onClick="openPerfilPage('other_sites/chamber.html?chamber=diputado')"/>
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel" onClick="openPerfilPage('other_sites/chamber.html?chamber=diputado')">Diputados</span>
+          </div>
+        </md-list-item>
+        <md-list-item id="NoHover" layout="row" ng-cloak class="md-3-line" >
+          <img id="icon-panel" src="imgs/svg/logo_borde.svg" ng-cloak class="md-avatar" onClick="openPerfilPage('other_sites/chamber.html?chamber=diputado')"/>
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel" onClick="openPerfilPage('other_sites/chamber.html?chamber=senador')">Senadores</span>
+          </div>
+        </md-list-item>
+      </md-list>
       <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
       <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
         <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">

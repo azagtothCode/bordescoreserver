@@ -146,20 +146,6 @@ app.controller('PanelContentProfileController', function($scope) {
   var imagePathInco    = '../svg/logo_inco.svg';
   var imagePathPhone   = '../svg/logo_politico.svg';
 
-  $scope.linksDirectory = [
-    {
-      face : imagePathLegis,
-      who: 'Legisladores Perfiles',
-      // address: 'index.html'
-    },
-    {
-      face : imagePathSen,
-      who: 'Senadores Perfiles',
-      // address: 'index.html'
-
-    }
-  ];
-
   $scope.linksDirectoryOtherSites = [
     {
       face : imagePathIub,

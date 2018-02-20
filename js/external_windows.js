@@ -144,7 +144,7 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.openSatates = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'other_sites/states.score.html',
+      templateUrl: '../other_sites/states.profile.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
@@ -163,7 +163,7 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.openPartys = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: '../other_sites/partys.profile.score.html',
+      templateUrl: '../other_sites/party.profile.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
