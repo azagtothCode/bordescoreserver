@@ -298,8 +298,15 @@
   font-size:18px;
   letter-spacing:1px;
 }
+
 #commissionsRolExtra span{
   color:#FFF;
+  font-size:17px;
+  letter-spacing:1px;
+}
+
+#commissionsRolExtra .tit_post{
+  color:#990000;
   font-size:17px;
   letter-spacing:1px;
 }

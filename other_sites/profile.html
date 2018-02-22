@@ -91,7 +91,6 @@
       for (var i = 0; i < subject.length; i++) {
           val=subject[i];
 
-
           // alert(val.legislator_extra_score_sil+val.legislator_rol_score_sil+val.legislator_news_score_sil)
           var pick_party = val.legislator_party_sil;
 
@@ -174,14 +173,22 @@
               representation = "Representación Proporcional"
             }
 
-          // var post_commision = val.legislator_commission_sil;
-          //
-          // var commission_string  = JSON.stringify(post_commision);
-          //
-          // var npres = commission_string.indexOf("Presidente");
-          // var nsec = commission_string.indexOf("Secretario");
-          // var nint = commission_string.indexOf("Integrante");
+          var post_commision = val.legislator_commission_sil;
+          for (var j = 0; j < post_commision.length; j++) {
+            resul = post_commision[j];
+            namecom = resul.legislator_namecom_sil;
+            namepost = resul.legislator_post_sil;
+            $(".commissionWho").append('<span class=tit_post>'+namepost+'</span><br>'+'<span >'+namecom+'</span><br>');
 
+          }
+
+          console.log(val)
+
+
+          //
+          var npres = post_commision.indexOf("Presidente");
+          var nsec = post_commision.indexOf("Secretario");
+          var nint = post_commision.indexOf("Integrante");
           // if(npres != -1){
           //   var post = "Presidente";
           // }else {
@@ -382,7 +389,7 @@
 
            $(".iniciativaBody").append('\
            <div id="iniciativasDivContent" style=" border-bottom: 3px solid #EE4656;" >\
-              <span>"'+body_ini.trim()+'"</span><br><br>\
+              <span>"'+body_ini+'"</span><br><br>\
                <span style="color:#EE4656;">\
                  <a style="color:#EE4656;" href="' + liga + ' " target="_blank">\
                   Iniciativa adjunta\
@@ -483,17 +490,17 @@
           <div flex-xs="50" flex-sm="60">
             <div layout-xs="row" layout-sm="row">
               <div id="califichas-content-happy-profile"  flex-xs="20" flex-sm="20">
-                <a href="http://bordepolitico/pac.com" target="_blank">
+                <a href="http://pac.bordepolitico.com/" target="_blank">
                   <img src="../imgs/svg/cali_happy.svg">
                 </a>
               </div>
               <div id="califichas-content-sad-profile"  flex-xs="20" flex-sm="20">
-                <a href="http://bordepolitico/pac.com" target="_blank">
+                <a href="http://pac.bordepolitico.com/" target="_blank">
                   <img src="../imgs/svg/cali_sad.svg">
                 </a>
               </div>
               <div id="califichas-content-bad-profile"  flex-xs="20" flex-sm="20">
-                <a href="http://bordepolitico/pac.com" target="_blank">
+                <a href="http://pac.bordepolitico.com/" target="_blank">
                   <img src="../imgs/svg/cali_bad.svg">
                 </a>
               </div>
@@ -589,17 +596,17 @@
                    <div flex-gt-md="100" flex-md="100" flex-lg="100" flex-xl="100">
                      <div layout-gt-md="row" layout-md="row" layout-lg="row" layout-xl="row">
                        <div id="califichas-content-happy-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="http://bordepolitico/pac.com" target="_blank">
+                         <a href="http://pac.bordepolitico.com/" target="_blank">
                            <img onmouseover=this.src="../imgs/svg/cali_happy_color.svg" onmouseout=this.src="../imgs/svg/cali_happy.svg" src="../imgs/svg/cali_happy.svg">
                          </a>
                        </div>
                        <div id="califichas-content-sad-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="http://bordepolitico/pac.com" target="_blank">
+                         <a href="http://pac.bordepolitico.com/" target="_blank">
                            <img onmouseover=this.src="../imgs/svg/cali_sad_color.svg" onmouseout=this.src="../imgs/svg/cali_sad.svg" src="../imgs/svg/cali_sad.svg">
                          </a>
                        </div>
                        <div id="califichas-content-bad-profile"  flex-gt-md="20" flex-md="20" flex-lg="20" flex-xl="20">
-                         <a href="http://bordepolitico/pac.com" target="_blank">
+                         <a href="http://pac.bordepolitico.com/" target="_blank">
                            <img onmouseover=this.src="../imgs/svg/cali_bad_color.svg" onmouseout=this.src="../imgs/svg/cali_bad.svg" src="../imgs/svg/cali_bad.svg">
                          </a>
                        </div>
@@ -1077,7 +1084,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="http://bordepolitico/pac.com" target="_blank">
+                              <a href="http://pac.bordepolitico.com/" target="_blank">
                                 <img src="../imgs/svg/cali_happy.svg">
                               </a>
                             </div>
@@ -1089,7 +1096,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="http://bordepolitico/pac.com" target="_blank">
+                              <a href="http://pac.bordepolitico.com/" target="_blank">
                                 <img src="../imgs/svg/cali_sad.svg">
                               </a>
                             </div>
@@ -1101,7 +1108,7 @@
                         <div layout-xl="column" layout-lg="column" layout-md="column">
                           <div layout-xl="row" layout-lg="row" layout-md="row">
                             <div flex-xl="50" flex-lg="50" flex-md"50">
-                              <a href="http://bordepolitico/pac.com" target="_blank">
+                              <a href="http://pac.bordepolitico.com/" target="_blank">
                                 <img src="../imgs/svg/cali_bad.svg">
                               </a>
                             </div>
@@ -1133,7 +1140,7 @@
                   </div>
                 </div>
                 <div id="commissionsRolExtra" layout-xl="column" layout-lg="column" layout-md="column">
-                  <md-content hide style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                  <md-content  style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
                     <p>Comisiones Ordinarias</p>
                       <span class="commissionWho"></span>
                   </md-content>
@@ -1660,7 +1667,7 @@
                              <div layout-xs="column" layout-sm="column" >
                                <div layout-xs="row" layout-sm="row" >
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="http://bordepolitico/pac.com" target="_blank">
+                                   <a href="http://pac.bordepolitico.com/" target="_blank">
                                      <img src="../imgs/svg/cali_happy.svg">
                                    </a>
                                  </div>
@@ -1672,7 +1679,7 @@
                              <div layout-xs="column" layout-sm="column" >
                                <div layout-xs="row" layout-sm="row">
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="http://bordepolitico/pac.com" target="_blank">
+                                   <a href="http://pac.bordepolitico.com/" target="_blank">
                                      <img src="../imgs/svg/cali_sad.svg">
                                    </a>
                                  </div>
@@ -1684,7 +1691,7 @@
                              <div layout-xs="column" layout-sm="column">
                                <div layout-xs="row" layout-sm="row" >
                                  <div flex-xs="50" flex-sm="50" >
-                                   <a href="http://bordepolitico/pac.com" target="_blank">
+                                   <a href="http://pac.bordepolitico.com/" target="_blank">
                                      <img src="../imgs/svg/cali_bad.svg">
                                    </a>
                                  </div>
@@ -1716,19 +1723,9 @@
                        </div>
                      </div>
                      <div id="commissionsRolExtra" layout-xs="column" layout-sm="column">
-                       <md-content hide style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
+                       <md-content  style=" -webkit-mask-image: -webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));">
                          <p>Comisiones Ordinarias</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Comisiones Especiales</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Comites</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
-                         <p>Grupos de amistad</p>
-                           <span>Economia</span><br>
-                           <span>Proteccion Civil</span> <span>(Secretaria)</span><br>
+                         <span class="commissionWho"></span>
                        </md-content>
                      </div>
                   </div>
