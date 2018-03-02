@@ -325,13 +325,16 @@
 
 #NoticiasDivContent{
   padding:5px;
-
   letter-spacing:2px;
   font-size: 15px;
 }
 
+#NoticiasDivContent span{
+  color:#343434;
+}
+
 #paddingRolProfile{
-  padding-top: 35px;
+  padding-top: 20px;
 }
 /*Content nav tabs set(1),set(2),set(3) Mobile*/
 
@@ -927,24 +930,7 @@
   }
 }
 
-@media only screen and (max-width: 414px){
-  .valueScoreRol {
-      margin-left: -21px;
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .valueScoreRol {
-      margin-left: -16px;
-  }
-}
-
-@media only screen and (max-width: 320px){
-
-  .valueScoreRol {
-    margin-left: -10px;
-  }
-
+@media only screen and (max-width: 480px){
   #iniciativasDivContent span {
     font-size: 16px;
     letter-spacing: 1px;
@@ -961,5 +947,67 @@
 
   #puntosDivContent a {
     font-size: 15px;
+  }
+
+  #commissionsRolExtra md-content {
+    height: 50px;
+    margin-top: 0px;
+  }
+
+  #commissionsRolExtra p {
+    font-size: 16px;
+  }
+
+  #commissionsRolExtra .tit_post {
+    font-size: 16px;
+  }
+
+  #commissionsRolExtra span {
+    font-size: 16px;
+  }
+
+  .valueRankingRol {
+    font-size: 16px;
+  }
+
+  .scoreRol {
+    font-size: 16px;
+  }
+
+  #titleNewsAccordion {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #NoticiasDivContent {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  #contentNoticias {
+    padding: 15px;
+  }
+
+  .md-accordion .activeContent .HeightRol{
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 414px){
+  .valueScoreRol {
+      margin-left: -21px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .valueScoreRol {
+      margin-left: -16px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+
+  .valueScoreRol {
+    margin-left: -10px;
   }
 }
